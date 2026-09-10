@@ -21,7 +21,7 @@ const TEAM = [
     name: "Daniel Perini",
     role: "Gestão de Projetos Socioeconômicos",
     bio:
-      "Mais de 20 anos de experiência na gestão, planejamento e implementação de projetos sociais, culturais, educacionais e de direitos humanos.",
+      "Bacharel em Ciências Sociais pela UFMG, com especialização em avaliação de projetos sociais também pela UFMG, e especialista em ESG pela ESPM (Escola Superior de Propaganda e Marketing de São Paulo). Atua em doação e economia circular. Mais de 20 anos de experiência na gestão, planejamento e implementação de projetos sociais, culturais, educacionais e de direitos humanos.",
     linkedin: "https://www.linkedin.com/in/daniel-perini-esg/",
   },
   {
