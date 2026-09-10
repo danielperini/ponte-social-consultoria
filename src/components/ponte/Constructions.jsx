@@ -7,28 +7,34 @@ import { base44 } from "@/api/base44Client";
 
 const CASES = [
   {
-    title: "Diagnóstico territorial para investimento em infraestrutura",
-    tag: "Diagnóstico Territorial",
-    text: "Mapeamento de stakeholders e percepções locais em um projeto de infraestrutura, identificando pontos críticos de relacionamento antes da fase de implantação.",
+    title: "Risco social começa antes da implantação",
+    tag: "Mineração · 2014–2015",
+    text: "Numa expansão de operação de mineração em Goiás, a dimensão social foi incorporada desde as etapas iniciais de viabilidade (FEL), lado a lado com os estudos técnicos e ambientais. O aprendizado: risco social não começa quando surge um conflito — começa nas decisões de projeto.",
     img: "https://images.unsplash.com/photo-1695169152303-fdbd96a95cc2?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "Mediação de conflitos em operação industrial",
-    tag: "Gestão de Conflitos",
-    text: "Construção de estratégia de diálogo entre empresa e comunidades vizinhas, reduzindo tensões e estabelecendo canais de relacionamento duradouros.",
+    title: "Divergência não se elimina. Diálogo se constrói.",
+    tag: "Energia · 2009–2010",
+    text: "Antes da audiência pública de uma PCH no Centro-Oeste, agendas individuais e coletivas com grupos contrários ampliaram o acesso à informação e prepararam a empresa para um debate mais qualificado, reduzindo a tensão do processo.",
     img: "https://images.unsplash.com/photo-1632798121054-c6b73cc9e8b0?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "Estruturação da agenda ESG em holding familiar",
-    tag: "Marco ESG",
-    text: "Aplicação da metodologia Marco ESG para avaliar maturidade e definir prioridades de evolução, integrando a dimensão social aos processos de decisão.",
+    title: "Inteligência territorial: comunicação e mobilização",
+    tag: "Telecomunicações · 2022–2025",
+    text: "Para levar a migração da parabólica digital a famílias de menor renda em todo o país, mapeamos redes locais de confiança e canais hiperlocais — rádios comunitárias, lideranças, igrejas — mobilizando 955 municípios e mais de 5 milhões de famílias.",
     img: "https://images.unsplash.com/photo-1585413145330-d093b633f303?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "Estruturação de projetos com a Ponte ODS 2030",
-    tag: "Ponte ODS 2030",
-    text: "Diagnóstico territorial e estruturação de projetos em um município, conectando oportunidades de financiamento a resultados concretos para a população.",
+    title: "Quando o território já tem respostas",
+    tag: "Mineração · 2019",
+    text: "Um levantamento junto a uma comunidade quilombola no Espírito Santo revelou que investir no território exige compreender o que já existe: iniciativas comunitárias foram fortalecidas em sua organização e gestão, não apenas em infraestrutura.",
     img: "https://images.unsplash.com/photo-1587944333503-ef66108afa79?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Stakeholders como evidência de governança",
+    tag: "Siderurgia · 2024",
+    text: "Na preparação para a certificação internacional ResponsibleSteel™, diagnósticos socioparticipativos foram transformados em evidências de governança, conectando a percepção de comunidades e lideranças às práticas declaradas pela empresa perante investidores.",
+    img: "https://images.unsplash.com/photo-1658877556576-41341f9bfaf5?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
 ];
 
