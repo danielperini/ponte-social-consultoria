@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Image } from "@/components/ui/image";
-import { Compass, Globe2 } from "lucide-react";
+import { Compass, Globe2, Layers } from "lucide-react";
+import SocietarScreens from "./SocietarScreens";
 
 const SOLUTIONS = [
   {
@@ -19,6 +20,14 @@ const SOLUTIONS = [
     audience: "Municípios e organizações que buscam ampliar sua capacidade de transformar necessidades e oportunidades em projetos viáveis e recursos para o desenvolvimento sustentável.",
   },
 ];
+
+const SOCIETAR = {
+  subtitle:
+    "A plataforma que integra gestão de stakeholders, monitoramento de riscos sociais e inteligência territorial em um só ambiente.",
+  text: "O Societar é a plataforma digital da Ponte Social. Ele reúne, em um único ambiente, as três dimensões do nosso trabalho: o mapeamento e a gestão de stakeholders e de seus relacionamentos; o monitoramento contínuo de riscos sociais, com sinais de alerta que antecipam tensões; e a inteligência territorial, com dados e contexto que sustentam cada decisão. Mais do que registrar informações, o Societar transforma o conhecimento disperso sobre pessoas, relações e territórios em informação estratégica organizada — pronta para apoiar decisões em diferentes momentos de projetos e operações. Ele também compõe a carteira de soluções da Ponte Social, ao lado do MARCO ESG e da PONTE ODS 2030.",
+  audience:
+    "Empresas, municípios e organizações que precisam organizar, monitorar e visualizar a dimensão social de seus projetos e operações em uma plataforma integrada.",
+};
 
 export default function Solutions() {
   return (
@@ -84,6 +93,39 @@ export default function Solutions() {
               </motion.div>
             );
           })}
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7 }}
+            className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-10 lg:pt-14 mt-6 lg:mt-10 border-t border-[#D6CDBF]/60"
+          >
+            <div className="lg:col-span-5">
+              <div className="flex items-center gap-4 mb-5">
+                <div className="w-12 h-12 rounded-full bg-[#3C2F2F] flex items-center justify-center">
+                  <Layers size={22} className="text-[#C87A53]" />
+                </div>
+                <h3 className="font-display text-2xl lg:text-3xl font-medium text-[#3C2F2F] tracking-tight">
+                  SOCIETAR
+                </h3>
+              </div>
+              <p className="text-[#C87A53] font-medium mb-5 text-[15px]">{SOCIETAR.subtitle}</p>
+              <p className="text-[#3C2F2F]/80 leading-relaxed mb-6">{SOCIETAR.text}</p>
+              <div className="border-l-2 border-[#C87A53] pl-4">
+                <span className="text-xs font-medium tracking-[0.12em] uppercase text-[#3C2F2F]/50 block mb-1">
+                  Para quem
+                </span>
+                <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{SOCIETAR.audience}</p>
+              </div>
+              <p className="mt-6 text-[11px] tracking-[0.14em] uppercase text-[#3C2F2F]/40">
+                Texto: Daniel Perini
+              </p>
+            </div>
+            <div className="lg:col-span-7">
+              <SocietarScreens />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
