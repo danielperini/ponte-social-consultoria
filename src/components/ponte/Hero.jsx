@@ -17,8 +17,8 @@ export default function Hero() {
     <section id="top" className="relative h-screen min-h-[680px] w-full overflow-hidden bg-[#3C2F2F]">
       <motion.div style={{ y: imgY, scale: imgScale }} className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1658877556576-41341f9bfaf5?fm=jpg&q=80&w=2000&auto=format&fit=crop"
-          alt="Vista aérea de território onde natureza e infraestrutura se encontram"
+          src="https://images.unsplash.com/photo-1544025079-1f35eea2418c?fm=jpg&q=80&w=2000&auto=format&fit=crop"
+          alt="Paisagem de território mineiro — montanhas de Minas Gerais"
           fittingType="fill"
           className="w-full h-full object-cover"
         />
