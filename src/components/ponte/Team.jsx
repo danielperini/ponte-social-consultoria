@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Network, Layers } from "lucide-react";
+import { Network, Layers, BadgeCheck } from "lucide-react";
 
 export default function Team() {
   return (
@@ -62,6 +62,25 @@ export default function Team() {
               <p className="text-[#F4EFEA]/70 text-[15px] leading-relaxed">
                 Profissionais que representam a Ponte Social, conduzem os projetos e respondem pela
                 relação com o cliente, pela estratégia e pela integração das entregas.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-[#EFE8E0] border border-[#D6CDBF] rounded-xl p-7 lg:p-8"
+            >
+              <BadgeCheck size={28} className="text-[#C87A53] mb-4" />
+              <h3 className="font-display text-xl font-medium text-[#3C2F2F] mb-3">
+                Profissionais certificados
+              </h3>
+              <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">
+                Especialistas com pós-graduação e formação em sustentabilidade, trajetória
+                construída em cargos de direção, coordenação e gerência em organizações. Reúnem
+                prática extensiva em relacionamento comunitário, projetos sociais, avaliação de
+                projetos e desenvolvimento de estratégias.
               </p>
             </motion.div>
 
