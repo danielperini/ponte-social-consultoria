@@ -22,9 +22,9 @@ export default function Home() {
         <HowWeWork />
         <HowWeCross />
         <Solutions />
-        <Team />
         <Constructions />
         <Articles />
+        <Team />
       </main>
       <Footer />
     </div>
