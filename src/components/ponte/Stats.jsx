@@ -1,0 +1,67 @@
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+
+const STATS = [
+  { value: 20, suffix: "+", label: "Anos de experiência combinada" },
+  { value: 4, suffix: "", label: "Setores atendidos" },
+  { value: 9, suffix: "", label: "Publicações autorais" },
+  { text: "Nacional", label: "Abrangência da atuação" },
+];
+
+function CountUp({ to, duration = 1600 }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return;
+    let start = null;
+    let raf;
+    const step = (ts) => {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / duration, 1);
+      setVal(Math.floor(p * to));
+      if (p < 1) raf = requestAnimationFrame(step);
+      else setVal(to);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [inView, to, duration]);
+
+  return <span ref={ref}>{val}</span>;
+}
+
+export default function Stats() {
+  return (
+    <section className="relative py-16 lg:py-20 bg-[#EFE8E0] border-y border-[#D6CDBF]/60">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
+          {STATS.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="text-center lg:text-left"
+            >
+              <div className="font-display text-4xl lg:text-5xl font-light text-[#3C2F2F] tracking-tight">
+                {s.text ? (
+                  <span>{s.text}</span>
+                ) : (
+                  <span>
+                    <CountUp to={s.value} />
+                    {s.suffix}
+                  </span>
+                )}
+              </div>
+              <p className="mt-2 text-[12px] lg:text-[13px] tracking-[0.14em] uppercase text-[#3C2F2F]/55">
+                {s.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

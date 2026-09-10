@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "@/components/ponte/Navbar";
 import Hero from "@/components/ponte/Hero";
 import APonte from "@/components/ponte/APonte";
+import Stats from "@/components/ponte/Stats";
+import Sectors from "@/components/ponte/Sectors";
 import Pillars from "@/components/ponte/Pillars";
 import HowWeWork from "@/components/ponte/HowWeWork";
 import HowWeCross from "@/components/ponte/HowWeCross";
@@ -18,6 +20,8 @@ export default function Home() {
       <main>
         <Hero />
         <APonte />
+        <Stats />
+        <Sectors />
         <Pillars />
         <HowWeWork />
         <HowWeCross />
