@@ -7,6 +7,7 @@ const MENU = [
   { label: "COMO ATRAVESSAMOS", target: "como-atravessamos" },
   { label: "QUEM CONSTRÓI", target: "quem-constroi" },
   { label: "CONSTRUÇÕES", target: "construcoes" },
+  { label: "ARTIGOS", target: "artigos" },
 ];
 
 function scrollTo(target) {

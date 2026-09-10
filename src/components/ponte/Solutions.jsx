@@ -24,7 +24,7 @@ const SOLUTIONS = [
 const SOCIETAR = {
   subtitle:
     "A plataforma que integra gestão de stakeholders, monitoramento de riscos sociais e inteligência territorial em um só ambiente.",
-  text: "O Societar é a plataforma digital da Ponte Social. Ele reúne, em um único ambiente, as três dimensões do nosso trabalho: o mapeamento e a gestão de stakeholders e de seus relacionamentos; o monitoramento contínuo de riscos sociais, com sinais de alerta que antecipam tensões; e a inteligência territorial, com dados e contexto que sustentam cada decisão. Mais do que registrar informações, o Societar transforma o conhecimento disperso sobre pessoas, relações e territórios em informação estratégica organizada — pronta para apoiar decisões em diferentes momentos de projetos e operações. Ele também compõe a carteira de soluções da Ponte Social, ao lado do MARCO ESG e da PONTE ODS 2030.",
+  text: "O Societá é a plataforma digital da Ponte Social. Ele reúne, em um único ambiente, as três dimensões do nosso trabalho: o mapeamento e a gestão de stakeholders e de seus relacionamentos; o monitoramento contínuo de riscos sociais, com sinais de alerta que antecipam tensões; e a inteligência territorial, com dados e contexto que sustentam cada decisão. Mais do que registrar informações, o Societá transforma o conhecimento disperso sobre pessoas, relações e territórios em informação estratégica organizada — pronta para apoiar decisões em diferentes momentos de projetos e operações. Ele também compõe a carteira de soluções da Ponte Social, ao lado do MARCO ESG e da PONTE ODS 2030.",
   audience:
     "Empresas, municípios e organizações que precisam organizar, monitorar e visualizar a dimensão social de seus projetos e operações em uma plataforma integrada.",
 };
@@ -107,7 +107,7 @@ export default function Solutions() {
                   <Layers size={22} className="text-[#C87A53]" />
                 </div>
                 <h3 className="font-display text-2xl lg:text-3xl font-medium text-[#3C2F2F] tracking-tight">
-                  SOCIETAR
+                  SOCIETÁ
                 </h3>
               </div>
               <p className="text-[#C87A53] font-medium mb-5 text-[15px]">{SOCIETAR.subtitle}</p>

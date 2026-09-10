@@ -8,6 +8,7 @@ import HowWeCross from "@/components/ponte/HowWeCross";
 import Solutions from "@/components/ponte/Solutions";
 import Team from "@/components/ponte/Team";
 import Constructions from "@/components/ponte/Constructions";
+import Articles from "@/components/ponte/Articles";
 import Footer from "@/components/ponte/Footer";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <Solutions />
         <Team />
         <Constructions />
+        <Articles />
       </main>
       <Footer />
     </div>
