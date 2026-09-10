@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageProvider";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const MENU = [
-  { label: "A PONTE", target: "a-ponte" },
-  { label: "O QUE CONSTRUÍMOS", target: "pilares" },
-  { label: "COMO ATRAVESSAMOS", target: "como-atravessamos" },
-  { label: "QUEM CONSTRÓI", target: "quem-constroi" },
-  { label: "CONSTRUÇÕES", target: "construcoes" },
-  { label: "ARTIGOS", target: "artigos" },
+  { label: "nav.about", target: "a-ponte" },
+  { label: "nav.solutions", target: "pilares" },
+  { label: "nav.howWeWork", target: "como-atravessamos" },
+  { label: "nav.team", target: "quem-constroi" },
+  { label: "nav.cases", target: "construcoes" },
+  { label: "nav.insights", target: "artigos" },
 ];
 
 function scrollTo(target) {
@@ -16,6 +18,7 @@ function scrollTo(target) {
 }
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,6 +32,8 @@ export default function Navbar() {
     setOpen(false);
     scrollTo(target);
   };
+
+  const dividerClass = scrolled ? "bg-[#D6CDBF]" : "bg-[#F4EFEA]/40";
 
   return (
     <header
@@ -50,7 +55,7 @@ export default function Navbar() {
               scrolled ? "text-[#3C2F2F]" : "text-[#F4EFEA]"
             }`}
           >
-            Ponte Social
+            {t("nav.brand")}
           </span>
         </button>
 
@@ -65,19 +70,24 @@ export default function Navbar() {
                   : "text-[#F4EFEA] hover:text-[#C87A53]"
               }`}
             >
-              {item.label}
+              {t(item.label)}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#C87A53] transition-all duration-300 ease-out group-hover:w-full" />
             </button>
           ))}
+          <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
+          <LanguageSwitcher scrolled={scrolled} />
         </nav>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="lg:hidden text-[#3C2F2F] p-1"
-          aria-label="Menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="lg:hidden flex items-center gap-3">
+          <LanguageSwitcher scrolled={scrolled} />
+          <button
+            onClick={() => setOpen(!open)}
+            className={`p-1 ${scrolled ? "text-[#3C2F2F]" : "text-[#F4EFEA]"}`}
+            aria-label="Menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -89,7 +99,7 @@ export default function Navbar() {
                 onClick={() => handleClick(item.target)}
                 className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#3C2F2F]/80 hover:text-[#C87A53] transition-all duration-300 ease-out py-1"
               >
-                {item.label}
+                {t(item.label)}
                 <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#C87A53] transition-all duration-300 ease-out group-hover:w-full" />
               </button>
             ))}

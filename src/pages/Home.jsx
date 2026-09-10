@@ -14,10 +14,14 @@ import Governance from "@/components/ponte/Governance";
 import Constructions from "@/components/ponte/Constructions";
 import Articles from "@/components/ponte/Articles";
 import Footer from "@/components/ponte/Footer";
+import Seo from "@/components/ponte/Seo";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <div className="bg-[#F4EFEA]">
+      <Seo title={t("seo.title")} description={t("seo.description")} />
       <Navbar />
       <main>
         <Hero />

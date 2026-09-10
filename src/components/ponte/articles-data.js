@@ -1,367 +1,48 @@
-export const ARTICLES = [
-  {
-    slug: "mapeamento-stakeholders-inteligencia-territorial",
-    category: "Inteligência Territorial",
-    title: "Mapeamento de stakeholders como inteligência territorial",
-    author: "Daniel Perini-Santos",
-    date: "Setembro de 2026",
-    excerpt:
-      "Como identificar, compreender e priorizar relações estratégicas para empresas, comunidades e territórios.",
-    description:
-      "Entenda como o mapeamento de stakeholders transforma informações sobre pessoas, comunidades e instituições em inteligência para o relacionamento, a prevenção de riscos e a tomada de decisões.",
-    keywords:
-      "mapeamento de stakeholders, gestão de stakeholders, inteligência territorial, relacionamento comunitário, riscos sociais, ESG, diálogo social",
-    image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Mapear stakeholders não significa apenas produzir uma lista de pessoas, instituições e contatos. Uma relação de nomes, cargos e telefones pode ajudar na organização do trabalho, mas não explica como o território funciona, quem influencia as decisões, quais grupos são afetados ou onde estão os riscos e as oportunidades.",
-      "Um mapeamento consistente precisa mostrar como os atores se relacionam, quais interesses estão presentes e como cada parte percebe a organização. Ele deve revelar alianças, dependências, conflitos, vulnerabilidades e níveis de confiança.",
-      "Quando desenvolvido com método, o mapeamento transforma informações dispersas em inteligência territorial. Essa inteligência permite planejar relacionamentos mais coerentes, direcionar esforços, prevenir conflitos e apoiar decisões empresariais conectadas à realidade.",
-      { type: "heading", text: "Do cadastro de contatos à inteligência para o relacionamento" },
-      "O primeiro passo é reconhecer que os stakeholders não existem de forma isolada. Cada pessoa ou instituição participa de redes familiares, políticas, econômicas, profissionais, comunitárias ou culturais.",
-      "Uma liderança comunitária pode manter relações com associações de moradores, poder público, igrejas, escolas, comerciantes e movimentos sociais. Um fornecedor local pode influenciar a geração de empregos e, ao mesmo tempo, participar de organizações empresariais. Um órgão público pode fiscalizar a empresa, apoiar projetos e mediar demandas apresentadas pela população.",
-      "Por isso, identificar quem são os stakeholders representa apenas o início do processo. Também é necessário compreender:",
-      { type: "list", items: [
-        "como eles se relacionam;",
-        "quais temas mobilizam cada ator;",
-        "como percebem a organização;",
-        "que capacidade possuem para influenciar outras pessoas;",
-        "quais impactos podem sofrer;",
-        "quais responsabilidades a empresa mantém em relação a eles;",
-        "como essas relações mudam ao longo do tempo.",
-      ] },
-      "Essa leitura amplia a capacidade da empresa de decidir com quem dialogar, sobre quais assuntos, por meio de quais canais e com que frequência.",
-      { type: "heading", text: "Sete lentes para identificar stakeholders" },
-      "Um mapa mais completo pode ser construído a partir de sete lentes de análise. Cada uma responde a uma pergunta diferente e ajuda a evitar que atores relevantes permaneçam invisíveis.",
-      { type: "heading", text: "Impacto" },
-      "Identifica pessoas, grupos ou instituições que são ou podem ser afetados pelas atividades da organização.",
-      "O impacto pode ser positivo ou negativo, direto ou indireto. Moradores próximos a uma operação, trabalhadores, fornecedores, usuários de serviços públicos e comunidades localizadas em rotas de transporte podem apresentar formas distintas de exposição.",
-      { type: "heading", text: "Interesse" },
-      "Considera quem possui interesse legítimo ou preocupação relacionada à atuação da empresa.",
-      "Esse interesse pode envolver meio ambiente, emprego, renda, infraestrutura, saúde, segurança, desenvolvimento local, direitos humanos ou continuidade das atividades econômicas.",
-      { type: "heading", text: "Influência" },
-      "Analisa quem consegue influenciar decisões, opiniões, comportamentos ou outros atores.",
-      "A influência não decorre apenas de cargos formais. Lideranças informais, educadores, comerciantes, representantes religiosos e integrantes de coletivos podem exercer grande capacidade de mobilização e circulação de informações.",
-      { type: "heading", text: "Dependência" },
-      "Avalia quem depende da organização, de seus projetos ou de seus recursos e, no sentido inverso, de quais atores a empresa depende.",
-      "Essa análise ajuda a reconhecer relações econômicas, institucionais e sociais que podem gerar oportunidades, expectativas ou vulnerabilidades.",
-      { type: "heading", text: "Responsabilidade" },
-      "Identifica pessoas e instituições com as quais existem responsabilidades legais, contratuais, econômicas, ambientais, sociais ou éticas.",
-      "Essa lente evita que o planejamento do relacionamento considere apenas os públicos com maior capacidade de pressão.",
-      { type: "heading", text: "Vulnerabilidade e representatividade" },
-      "Permite reconhecer grupos mais expostos aos impactos ou com menor possibilidade de participação.",
-      "Crianças, pessoas idosas, pessoas com deficiência, comunidades tradicionais, trabalhadores informais e grupos pouco organizados podem não aparecer espontaneamente nos espaços institucionais. A baixa capacidade de influência não reduz a relevância desses públicos. Em muitos casos, aumenta a responsabilidade da organização.",
-      { type: "heading", text: "Tensões e diversidade de perspectivas" },
-      "Identifica divergências, conflitos existentes e opiniões que ainda não foram incorporadas ao diagnóstico.",
-      "Nenhuma comunidade possui uma única visão. Diferentes grupos podem interpretar o mesmo impacto de maneiras distintas. Um mapeamento que registra apenas a opinião das lideranças mais próximas da empresa corre o risco de reproduzir assimetrias e ocultar conflitos importantes.",
-      { type: "heading", text: "Como construir um mapa confiável" },
-      "A qualidade do mapeamento depende da combinação de diferentes fontes e técnicas. Nenhuma ferramenta, utilizada isoladamente, consegue representar toda a complexidade territorial.",
-      "A pesquisa documental constitui uma etapa inicial importante. Ela pode reunir dados públicos, estudos existentes, registros de relacionamento, notícias, informações sobre organizações locais e documentos institucionais.",
-      "As entrevistas exploratórias ajudam a compreender percepções, interesses, redes e experiências anteriores. As conversas devem envolver diferentes atores, evitando que o diagnóstico dependa de uma única fonte.",
-      "A observação e a leitura territorial permitem entender dinâmicas que não aparecem nos documentos. A circulação de pessoas, a utilização dos espaços públicos, a localização dos equipamentos sociais e as formas de organização comunitária oferecem informações importantes sobre a vida cotidiana.",
-      "Outra técnica relevante é o mapeamento em rede, também conhecido como bola de neve. A partir dos primeiros stakeholders identificados, cada interlocutor indica outros atores que considera importantes. Essa abordagem amplia progressivamente o mapa e revela conexões que poderiam permanecer desconhecidas.",
-      "As informações precisam passar por validação cruzada. Uma percepção deve ser comparada com outros relatos, registros e evidências antes de orientar decisões. Essa verificação não procura determinar quem está certo ou errado. Seu objetivo é compreender por que diferentes versões existem e qual significado elas possuem no território.",
-      { type: "heading", text: "Como definir prioridades de relacionamento" },
-      "Nem todos os stakeholders exigem o mesmo tipo de interação. A priorização ajuda a direcionar tempo, equipes e recursos sem abandonar públicos relevantes.",
-      "A análise pode considerar:",
-      { type: "list", items: [
-        "intensidade dos impactos;",
-        "interesse nos temas relacionados à empresa;",
-        "capacidade de influência;",
-        "vulnerabilidade;",
-        "materialidade dos assuntos;",
-        "responsabilidades existentes;",
-        "situação atual do relacionamento;",
-        "possibilidade de agravamento de conflitos.",
-      ] },
-      "Influência e prioridade não são sinônimos. Um grupo com baixa capacidade de mobilização pode ter prioridade elevada por estar fortemente exposto a determinado impacto. Da mesma forma, um ator influente pode demandar acompanhamento institucional, mesmo quando não sofre efeitos diretos da operação.",
-      "A priorização deve orientar o planejamento, não excluir públicos. Stakeholders classificados com menor necessidade de interação continuam fazendo parte do mapa e podem mudar de posição conforme o contexto.",
-      { type: "heading", text: "A ficha do stakeholder prioritário" },
-      "Os atores considerados prioritários podem receber uma análise mais aprofundada. Uma ficha individual ou institucional ajuda a organizar informações necessárias ao planejamento do relacionamento.",
-      "Essa ficha pode conter:",
-      { type: "list", items: [
-        "identificação e função no território;",
-        "organização ou grupo ao qual está vinculado;",
-        "temas de interesse;",
-        "impactos e riscos relacionados;",
-        "conexões com outros atores;",
-        "nível de influência;",
-        "situação atual do relacionamento;",
-        "histórico de interações;",
-        "demandas e compromissos;",
-        "objetivo do relacionamento;",
-        "canais mais adequados;",
-        "frequência das interações;",
-        "profissional ou área responsável.",
-      ] },
-      "A ficha não deve servir para rotular pessoas ou produzir julgamentos pessoais. Sua função é preservar a memória institucional e apoiar um relacionamento ético, coerente e baseado em informações legítimas.",
-      "O tratamento desses dados também exige critérios de privacidade, controle de acesso e atualização. Informações sensíveis devem ser utilizadas apenas para finalidades profissionais claramente definidas.",
-      { type: "heading", text: "Do mapeamento ao plano de engajamento" },
-      "O mapa ganha valor quando orienta ações. Depois de identificar e priorizar os stakeholders, a organização pode elaborar um plano de engajamento.",
-      "Para cada público, o plano deve definir o objetivo da relação, os assuntos que precisam ser tratados, os canais adequados, a frequência do contato e os responsáveis internos.",
-      "Uma comunidade diretamente afetada pode exigir presença territorial contínua, reuniões periódicas e canais acessíveis para registro de demandas. Órgãos públicos podem demandar reuniões institucionais e compartilhamento regular de informações. Organizações sociais podem participar de fóruns, consultas ou projetos construídos de forma colaborativa.",
-      "Cada relação exige uma estratégia compatível com seu contexto. Utilizar o mesmo canal e a mesma mensagem para todos os públicos reduz a efetividade do diálogo e pode ampliar desigualdades de participação.",
-      { type: "heading", text: "Um mapa vivo e permanentemente atualizado" },
-      "Stakeholders, interesses e relações mudam. Novas lideranças surgem, conflitos são reorganizados, projetos alteram a dinâmica local e determinados temas ganham importância. Um mapa produzido uma única vez registra apenas um momento do território.",
-      "Por isso, a atualização precisa integrar a rotina de relacionamento. As equipes devem registrar mudanças, revisar prioridades e verificar se os canais continuam adequados. A periodicidade depende da intensidade das transformações e dos riscos existentes.",
-      "Alguns indicadores podem apoiar esse acompanhamento:",
-      { type: "list", items: [
-        "percentual de stakeholders com informações atualizadas;",
-        "presença de grupos vulneráveis ou sub-representados;",
-        "quantidade de stakeholders prioritários;",
-        "frequência dos engajamentos;",
-        "cumprimento das ações planejadas;",
-        "evolução da maturidade dos relacionamentos;",
-        "demandas recorrentes;",
-        "mudanças nos temas de interesse;",
-        "alterações nas redes de influência;",
-        "riscos emergentes identificados.",
-      ] },
-      "Esses indicadores precisam ser interpretados em conjunto com os registros qualitativos. O número de interações não demonstra, sozinho, a qualidade do relacionamento.",
-      { type: "heading", text: "Inteligência territorial para decisões mais responsáveis" },
-      "O mapeamento de stakeholders conecta território e governança. Ele permite que as percepções externas cheguem às áreas responsáveis por decisões operacionais, ambientais, sociais e institucionais.",
-      "Essa integração ajuda a antecipar riscos, reconhecer oportunidades de parceria, definir prioridades de investimento social e planejar processos participativos. Também reduz a dependência da memória individual dos profissionais, preservando conhecimentos importantes para a organização.",
-      "Um mapa de stakeholders não deve ser tratado como fotografia estática ou cadastro administrativo. Ele representa uma leitura dinâmica das relações que estruturam o território.",
-      "Quando a organização compreende quem é afetado, quem influencia, quem permanece pouco representado e como os atores se conectam, o relacionamento deixa de ser reativo. A empresa passa a atuar com maior clareza, responsabilidade e capacidade de construir confiança ao longo do tempo.",
-      { type: "footnote", text: "Autoria: Daniel Perini-Santos. Base conceitual: Relacionamento Comunitário: um Diálogo Social e metodologia de mapeamento e gestão de stakeholders da Ponte Social Consultoria." },
-    ],
-  },
-  {
-    slug: "risco-social-antes-do-conflito",
-    category: "Riscos Sociais",
-    title: "Risco social começa antes do conflito",
-    author: "Daniel Perini",
-    date: "Setembro de 2026",
-    excerpt:
-      "O risco social não nasce quando um conflito aparece. Ele se forma nas decisões de projeto — muito antes da implantação. Compreendê-lo nessas etapas é o que permite antecipá-lo.",
-    image:
-      "https://images.unsplash.com/photo-1658877556576-41341f9bfaf5?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Poucas ideias são mais equivocadas sobre risco social do que a de que ele começa quando o conflito aparece. Na prática, o risco se forma muito antes — nas decisões de projeto, na escolha de rota, na definição de área de influência, nos estudos que incluem ou excluem pessoas.",
-      "Numa expansão de operação de mineração em Goiás, incorporamos a dimensão social desde as etapas iniciais de viabilidade, lado a lado com os estudos técnicos e ambientais. Não como um item de checklist, mas como uma camada de leitura do território que antecipa onde a decisão vai encontrar resistência — e onde pode encontrar construção.",
-      "O aprendizado é simples, mas exige mudança de postura: risco social não se gestiona reagindo. Ele se gestiona compreendendo. E compreender custa menos — em tempo, em reputação e em continuidade — do que remediar.",
-    ],
-  },
-  {
-    slug: "stakeholders-sao-partes-nao-publicos",
-    category: "Stakeholders",
-    title: "Stakeholders não são públicos. São partes.",
-    author: "Daniel Perini",
-    date: "Agosto de 2026",
-    excerpt:
-      "Tratar stakeholders como público reduz o relacionamento a comunicação. Tratá-los como partes reconhece que têm interesse, influência e legitimidade sobre a decisão — e muda a forma de dialogar.",
-    image:
-      "https://images.unsplash.com/photo-1632798121054-c6b73cc9e8b0?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "A palavra 'público' carrega uma distância. Tratar stakeholders como público reduz o relacionamento a comunicação: fala-se para, informa-se, ouve-se pouco. Mas stakeholders não são público. São partes — têm interesse legítimo, influência real e capacidade de afetar e ser afetados pela decisão.",
-      "Quando uma empresa prepara uma audiência pública, a diferença entre tratar os grupos contrários como público ou como partes define o resultado. Como público, prepara-se para responder. Como partes, prepara-se para dialogar — agenda individual, coleta de percepções, acesso à informação antes do debate.",
-      "Esse foi o caminho antes de uma audiência de uma PCH no Centro-Oeste. Não eliminou a divergência — isso nunca é o objetivo —, mas reduziu a tensão e elevou a qualidade do debate. Divergência não se elimina. Diálogo se constrói.",
-    ],
-  },
-  {
-    slug: "o-territorio-ja-tem-respostas",
-    category: "Inteligência Territorial",
-    title: "O território já tem respostas",
-    author: "Daniel Perini",
-    date: "Julho de 2026",
-    excerpt:
-      "Investir em um território sem compreender o que ele já possui é reproduzir dependência. As comunidades têm organização, conhecimento e iniciativas — o papel da inteligência territorial é reconhecer o que existe.",
-    image:
-      "https://images.unsplash.com/photo-1587944333503-ef66108afa79?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Chegar a um território com a ideia de que ele é um espaço vazio a ser preenchido é o primeiro erro. Todo território já tem respostas: formas de organização, redes de confiança, iniciativas comunitárias, conhecimento acumulado sobre o que funciona e o que não funciona.",
-      "Num levantamento junto a uma comunidade quilombola no Espírito Santo, isso ficou evidente. O investimento que fazia sentido não era o que faltava — era o que fortalecia o que já existia: iniciativas comunitárias em sua organização e gestão, não apenas em infraestrutura.",
-      "Inteligência territorial é, antes de tudo, humildade metodológica. Reconhecer o que existe, mapear quem já faz e conectar a decisão do projeto a essa realidade — em vez de importar um modelo pronto. O território já tem respostas. O trabalho é saber ouvir.",
-    ],
-  },
-  {
-    slug: "responsabilidade-social-modo-de-operar",
-    category: "Responsabilidade Social",
-    title: "Responsabilidade social começa no modo de operar",
-    author: "Daniel Perini-Santos",
-    date: "Junho de 2026",
-    excerpt:
-      "Entenda por que responsabilidade social empresarial não se resume a doações e projetos, mas orienta decisões, impactos e relações com comunidades.",
-    image:
-      "https://images.unsplash.com/photo-1639344763337-e75c43c50aa8?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Durante muito tempo, responsabilidade social foi associada principalmente a doações, campanhas solidárias e projetos patrocinados por empresas. Essas iniciativas podem produzir benefícios relevantes, mas não definem, por si mesmas, uma organização socialmente responsável. A responsabilidade social começa antes do investimento externo: ela aparece na forma como a empresa toma decisões, reconhece seus impactos e se relaciona com trabalhadores, fornecedores, governos e comunidades.",
-      "Essa diferença é essencial. Uma organização pode financiar um bom projeto cultural e, ao mesmo tempo, manter uma relação pouco transparente com o território onde atua. Pode divulgar resultados sociais positivos e não oferecer respostas claras sobre poeira, ruído, trânsito, segurança ou mudanças que afetam a rotina local. Quando isso acontece, a distância entre discurso e prática compromete a confiança e transforma uma agenda que deveria fortalecer vínculos em fonte de desconfiança.",
-      { type: "heading", text: "Responsabilidade social é uma forma de gestão" },
-      "A responsabilidade social empresarial deve orientar o comportamento da organização. Ela envolve ética, transparência, respeito aos direitos humanos, cumprimento da legislação, diversidade, equidade e disposição para prevenir ou reduzir impactos negativos. Não é um departamento isolado nem uma agenda que funciona apenas em datas comemorativas. É um critério para decidir como a empresa opera e como presta contas de suas escolhas.",
-      "No relacionamento comunitário, essa visão exige coerência. A qualidade do vínculo depende menos da quantidade de mensagens divulgadas e mais da correspondência entre o que a empresa afirma e o que as pessoas vivem. Se uma decisão produz consequências no território, a comunidade precisa compreender o que ocorrerá, quais riscos foram avaliados, quais medidas serão adotadas e como poderá apresentar dúvidas ou reclamações. Transparência, nesse caso, não significa despejar informação técnica. Significa tornar o processo compreensível.",
-      { type: "heading", text: "O território não é apenas o entorno da operação" },
-      "Todo território possui história, memória, redes de solidariedade, disputas, lideranças e formas próprias de interpretar mudanças. Uma empresa não chega a um espaço vazio. Sua presença passa a dialogar com experiências anteriores, expectativas acumuladas e percepções sobre outros atores institucionais. Por isso, decisões tecnicamente corretas podem gerar resistência quando ignoram a dimensão social da realidade.",
-      "Conhecer o território demanda contato regular com diferentes grupos, e não apenas com as lideranças mais visíveis. Jovens, mulheres, comerciantes, trabalhadores informais, coletivos culturais, organizações religiosas e moradores antigos podem perceber o mesmo impacto de maneiras distintas. Uma leitura responsável reúne essas perspectivas, identifica desigualdades e evita que uma única voz seja apresentada como se representasse toda a comunidade.",
-      { type: "heading", text: "Da obrigação à legitimidade" },
-      "Licenças e autorizações formais são indispensáveis, mas não garantem aceitação social. A legitimidade é construída diariamente, por meio de presença, escuta, informação clara, respeito aos acordos e capacidade de resposta. Ela pode se fortalecer quando a organização demonstra consistência e pode se desfazer quando compromissos são esquecidos ou quando a comunidade só encontra a empresa em momentos de crise.",
-      "É nesse ponto que o relacionamento comunitário deixa de ser uma atividade acessória. Ele permite traduzir percepções do território para dentro da empresa, orientar áreas operacionais e antecipar efeitos que não aparecem em planilhas. Também ajuda a explicar limites institucionais, diferenciar responsabilidades da empresa e do poder público e organizar expectativas sem criar promessas que não poderão ser cumpridas.",
-      { type: "heading", text: "Investimento social não corrige incoerência operacional" },
-      "O investimento social privado é uma aplicação voluntária e planejada de recursos em finalidades públicas. Pode apoiar educação, cultura, esporte, geração de renda, meio ambiente e fortalecimento de organizações locais. Seu potencial cresce quando nasce de um diagnóstico territorial e se conecta às prioridades da comunidade. Ainda assim, ele não deve ser tratado como compensação genérica por uma operação mal conduzida.",
-      "Um projeto social consistente amplia oportunidades e fortalece capacidades locais. Mas sua credibilidade depende do comportamento geral da empresa. Quando responsabilidade social, operação e investimento caminham separados, o território percebe a contradição. Quando atuam de forma integrada, a empresa demonstra que o compromisso social não está apenas no orçamento de projetos, mas no centro de sua governança.",
-      { type: "heading", text: "Um teste simples de coerência" },
-      "Uma organização pode avaliar sua maturidade com algumas perguntas: as comunidades influenciam decisões que afetam sua vida? Os impactos negativos são reconhecidos com a mesma clareza usada para divulgar resultados positivos? Há canais acessíveis, registros confiáveis e devolutivas dentro de prazos definidos? As equipes operacionais conhecem as questões sociais do território? Os investimentos fortalecem atores locais ou criam dependência?",
-      "Responsabilidade social começa quando essas perguntas deixam de ser apenas institucionais e passam a orientar decisões concretas. O principal desafio não é parecer responsável, mas construir uma forma de atuação em que ética, escuta e coerência possam ser reconhecidas pelas pessoas que convivem diariamente com a empresa.",
-      { type: "footnote", text: "Base conceitual: PERINI-SANTOS, Daniel. Relacionamento Comunitário: um Diálogo Social. 2025." },
-    ],
-  },
-  {
-    slug: "relacionamento-comunitario-licenca-social",
-    category: "Relacionamento Comunitário",
-    title: "Relacionamento comunitário e licença social para operar",
-    author: "Daniel Perini-Santos",
-    date: "Maio de 2026",
-    excerpt:
-      "Saiba como o relacionamento comunitário fortalece a licença social para operar e reduz a distância entre empresas e territórios.",
-    image:
-      "https://images.unsplash.com/photo-1642894481767-e62ebc91a125?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Uma empresa pode possuir todas as licenças legais necessárias e ainda enfrentar resistência, mobilizações e perda de confiança. Isso ocorre porque a autorização formal não substitui a legitimidade social. A chamada licença social para operar não é um documento emitido por um órgão público. É o reconhecimento cotidiano, sempre provisório, de que a presença da organização é compreensível, respeitosa e capaz de conviver com o território.",
-      "Essa licença se forma na experiência direta. Moradores observam como a empresa se comunica, se cumpre o que promete, se aparece apenas quando precisa e se considera as consequências de suas decisões. Cada contato contribui para aproximar ou afastar a organização da comunidade. Por isso, relacionamento comunitário não pode ser confundido com uma sequência de reuniões ou ações de comunicação. Ele é uma construção contínua de vínculo.",
-      { type: "heading", text: "Presença não é visita protocolar" },
-      "A presença institucional ganha valor quando tem continuidade. Equipes que conhecem o território, acompanham mudanças e mantêm interlocução regular conseguem interpretar sinais que dificilmente aparecem em pesquisas pontuais. Uma pergunta repetida, uma liderança que deixa de participar, um rumor que se espalha ou uma mudança no tom das conversas podem indicar tensões em formação.",
-      "Estar presente também significa reconhecer o tempo comunitário. Nem toda questão pode ser resolvida em uma reunião, e nem toda resposta técnica produz entendimento imediato. Relações duradouras exigem disponibilidade para explicar, ouvir novamente e ajustar abordagens. A comunidade precisa saber quem representa a empresa, quais são os canais legítimos e o que pode esperar de cada instância.",
-      { type: "heading", text: "Participação precisa produzir influência" },
-      "Convidar pessoas para uma reunião não garante participação. Um processo participativo é legítimo quando diferentes grupos conseguem falar, compreender o tema e influenciar decisões. Se todas as escolhas já foram feitas, a atividade é informativa, não participativa. Essa distinção deve ser apresentada com honestidade para evitar frustração.",
-      "Há diversos formatos possíveis: diálogos individuais, visitas domiciliares, rodas de conversa, reuniões comunitárias, assembleias e fóruns permanentes. A escolha depende do objetivo. Uma assembleia é adequada para deliberar e formalizar escolhas; uma roda de conversa pode revelar dimensões afetivas e simbólicas; uma visita permite compreender vulnerabilidades específicas. Nenhuma ferramenta serve para todas as situações.",
-      { type: "heading", text: "Confiança nasce da previsibilidade" },
-      "Confiança não significa concordância permanente. Uma comunidade pode discordar da empresa e, ainda assim, reconhecer que o diálogo é sério. Isso acontece quando existe previsibilidade: as informações são consistentes, os prazos são respeitados, as respostas seguem critérios compreensíveis e os compromissos podem ser acompanhados.",
-      "O oposto também é verdadeiro. Mudanças frequentes de posicionamento, respostas diferentes para situações semelhantes e promessas sem registro alimentam a percepção de arbitrariedade. A confiança se enfraquece principalmente quando a comunidade oferece informações, relata problemas e não recebe retorno. Sem devolutiva, a escuta parece apenas coleta de dados.",
-      { type: "heading", text: "A empresa precisa escutar por dentro" },
-      "O relacionamento comunitário só gera resultado quando a organização também consegue processar internamente o que ouve. Não basta registrar demandas se operação, meio ambiente, segurança, comunicação e liderança não participam das respostas. A equipe territorial precisa ter acesso a fluxos claros, responsáveis definidos e instâncias capazes de decidir.",
-      "Essa integração transforma a percepção comunitária em informação estratégica. Questões aparentemente pequenas podem revelar mudanças relevantes no território. Ao mesmo tempo, a empresa consegue explicar melhor suas limitações e evitar compromissos fora de sua competência. Relacionar-se bem não significa aceitar toda solicitação; significa tratar cada demanda com respeito, critério e transparência.",
-      { type: "heading", text: "Licença social é renovada todos os dias" },
-      "Não existe um momento em que a licença social esteja definitivamente conquistada. Novas lideranças surgem, a operação muda, impactos se acumulam e expectativas se transformam. A legitimidade depende da capacidade de aprender com essas mudanças e manter o diálogo vivo.",
-      "Empresas maduras tratam o relacionamento comunitário como parte da governança, e não como resposta emergencial. Planejam a presença, registram compromissos, acompanham percepções e criam condições para que a participação tenha consequências reais. A licença social emerge desse conjunto de práticas: não como concessão abstrata da comunidade, mas como resultado verificável de uma convivência construída com respeito.",
-      { type: "footnote", text: "Base conceitual: PERINI-SANTOS, Daniel. Relacionamento Comunitário: um Diálogo Social. 2025." },
-    ],
-  },
-  {
-    slug: "escuta-ativa-devolutiva-confianca",
-    category: "Escuta & Devolutiva",
-    title: "Escuta ativa sem devolutiva não constrói confiança",
-    author: "Daniel Perini-Santos",
-    date: "Abril de 2026",
-    excerpt:
-      "Veja como organizar escuta ativa, registro, análise e devolutiva para transformar participação comunitária em confiança e decisão.",
-    image:
-      "https://images.unsplash.com/photo-1542315099045-93937d70c67a?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Empresas realizam reuniões, entrevistas, pesquisas e consultas para compreender comunidades. O problema começa quando a escuta termina no registro. A pessoa compartilha uma preocupação, revela uma vulnerabilidade ou oferece conhecimento sobre o território, mas não sabe o que aconteceu depois. Com o tempo, novas consultas são percebidas como repetição, e a participação perde credibilidade.",
-      "Escuta ativa é mais do que ouvir com atenção. É um processo que inclui acolher, interpretar, registrar, analisar, encaminhar, responder e acompanhar. A devolutiva fecha esse ciclo. Mesmo quando a empresa não pode atender a uma demanda, ela precisa explicar o motivo, apresentar os critérios utilizados e indicar o que acontecerá em seguida.",
-      { type: "heading", text: "Toda escuta cria uma expectativa" },
-      "Ao abrir um canal, a organização sinaliza que está disposta a receber algo. Essa abertura cria expectativa legítima de consideração. Isso não significa que toda solicitação deverá ser aceita, mas que nenhuma contribuição deve desaparecer sem tratamento. A ausência de resposta pode ser interpretada como indiferença, manipulação ou falta de capacidade institucional.",
-      "O cuidado começa antes do encontro. É necessário informar o objetivo da escuta, o grau de influência dos participantes, os temas que podem ser tratados e os limites existentes. Uma reunião destinada a comunicar uma decisão não deve ser apresentada como consulta. Clareza metodológica também é uma forma de respeito.",
-      { type: "heading", text: "Do relato individual à materialidade social" },
-      "Uma fala isolada pode revelar um problema específico ou o início de uma tendência coletiva. Por isso, os registros precisam ser organizados sem apagar o contexto. Tema, local, público afetado, recorrência, urgência, vínculo com a operação e expectativa de resposta são dimensões úteis para a análise.",
-      "Quando percepções semelhantes aparecem em diferentes canais, tornam-se evidência relevante para a gestão. A materialidade social ajuda a reconhecer quais questões importam para a comunidade e como elas se relacionam com impactos, riscos e decisões empresariais. Não é uma lista produzida apenas para relatórios. É uma forma de traduzir a realidade territorial para a governança.",
-      { type: "heading", text: "Devolutiva não é propaganda" },
-      "Uma boa devolutiva informa o que foi compreendido, o que foi decidido, o que ainda está em análise e quais limites impedem determinada resposta. Deve utilizar linguagem acessível, indicar responsáveis e trazer prazos realistas. Quando houver mudança de prazo, a atualização precisa ocorrer antes que o silêncio seja preenchido por rumores.",
-      "Também é importante devolver ao coletivo aquilo que foi escutado coletivamente. Demandas individuais exigem cuidado com dados pessoais; temas comunitários podem ser apresentados em reuniões, boletins, canais digitais ou fóruns. O formato deve considerar acesso à internet, escolaridade, hábitos locais e necessidades de acessibilidade.",
-      { type: "heading", text: "A reciprocidade que sustenta o vínculo" },
-      "A comunidade oferece à empresa informações valiosas: percepções, alertas, memórias, prioridades e conhecimento prático. Ao receber esse conteúdo, a organização assume responsabilidade sobre seu uso. A resposta pode ser uma mudança operacional, um esclarecimento, uma medida de mitigação, o encaminhamento a outro ator ou uma negativa fundamentada. Em todos os casos, é necessário reconhecer a contribuição recebida.",
-      "Essa reciprocidade sustenta a confiança. Quando a fala comunitária influencia decisões, o território percebe que participar vale a pena. Quando nada muda e nenhuma explicação é oferecida, o processo perde legitimidade. A devolutiva é o ponto em que a organização demonstra se realmente estava aberta ao diálogo.",
-      { type: "heading", text: "Como estruturar o ciclo" },
-      "Um fluxo simples pode conter sete etapas: definir o objetivo da interação; escolher públicos e ferramentas; realizar a escuta; registrar com qualidade; classificar e analisar; encaminhar aos responsáveis; devolver e monitorar. Cada demanda deve ter situação atual, prazo e histórico de resposta. Temas recorrentes precisam ser consolidados para análise gerencial.",
-      "Indicadores quantitativos ajudam a acompanhar volume, prazo e recorrência, mas não substituem a interpretação qualitativa. Cem atendimentos respondidos rapidamente podem esconder respostas pouco resolutivas. Por isso, é preciso avaliar também compreensão, satisfação com o processo, mudanças realizadas e percepção de justiça.",
-      "A escuta se transforma em confiança quando a comunidade consegue reconhecer o caminho percorrido por sua contribuição. Esse caminho deve ser visível, coerente e contínuo. Sem isso, a organização coleta palavras; com isso, constrói relação.",
-      { type: "footnote", text: "Base conceitual: PERINI-SANTOS, Daniel. Relacionamento Comunitário: um Diálogo Social. 2025." },
-    ],
-  },
-  {
-    slug: "conflitos-riscos-sociais-antecipados",
-    category: "Riscos Sociais",
-    title: "Conflitos comunitários e riscos sociais podem ser antecipados",
-    author: "Daniel Perini-Santos",
-    date: "Março de 2026",
-    excerpt:
-      "Aprenda a identificar sinais de risco social e a integrar escuta comunitária, operação e governança na prevenção de conflitos.",
-    image:
-      "https://images.unsplash.com/photo-1604990830224-5aeb2863fbbe?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Conflitos não surgem do nada. Antes de uma mobilização, de um bloqueio ou de uma judicialização, o território costuma emitir sinais: queixas recorrentes, respostas consideradas insuficientes, circulação de rumores, afastamento de lideranças, mudanças no uso de espaços e aumento da desconfiança. O desafio das empresas é reconhecer esses sinais enquanto ainda há condições favoráveis para o diálogo.",
-      "Risco social não está apenas no fato objetivo. Ele se forma na interação entre impacto, vulnerabilidade, memória, percepção e qualidade das relações institucionais. Uma ocorrência tecnicamente limitada pode ganhar grande repercussão se estiver associada a experiências negativas anteriores. Em outro contexto, uma situação mais complexa pode ser tratada sem ruptura quando existe confiança e informação clara.",
-      { type: "heading", text: "Compreender antes de classificar" },
-      "Matrizes de probabilidade e severidade são úteis, mas não devem ser preenchidas longe do território. A análise precisa considerar quem é afetado, como diferentes grupos percebem o tema, quais desigualdades estão presentes e que experiências anteriores influenciam a leitura atual. A mesma mudança operacional pode ser percebida de forma distinta por moradores, comerciantes, agricultores, jovens ou trabalhadores.",
-      "A equipe de relacionamento comunitário contribui com elementos que dados técnicos não capturam sozinhos: intensidade da preocupação, legitimidade das lideranças envolvidas, velocidade de circulação da informação, capacidade de mobilização e nível de confiança na empresa. Esses fatores não substituem a análise operacional; tornam-na mais completa.",
-      { type: "heading", text: "O conflito também produz informação" },
-      "Tratar toda divergência como ameaça impede a organização de aprender. O conflito revela interesses, posições de poder, expectativas e falhas de comunicação. Pode mostrar que uma medida de mitigação não alcançou determinado grupo ou que responsabilidades da empresa e do poder público estão sendo confundidas.",
-      "A postura profissional exige ouvir o mérito da reivindicação, garantir o direito à manifestação e evitar que a própria empresa amplifique disputas internas. Em territórios com mais de uma liderança, oferecer informações diferentes ou negociar apenas com um grupo pode aumentar antagonismos. Isonomia, registro e critérios claros são indispensáveis.",
-      { type: "heading", text: "Prevenção depende de integração interna" },
-      "Riscos sociais atravessam várias áreas. Uma alteração de rota pode envolver operação, segurança, meio ambiente, comunicação e relacionamento comunitário. Se essas áreas analisam o tema separadamente, parte do risco permanece invisível. A avaliação integrada combina conhecimento técnico e percepção social para antecipar efeitos e planejar respostas.",
-      "Esse trabalho deve começar antes das intervenções. Um plano de relacionamento comunitário pode mapear públicos, impactos potenciais, temas sensíveis, canais, responsabilidades, medidas preventivas e protocolos de escalonamento. Assim, a organização reduz a chance de chegar ao território apenas depois que a tensão já se tornou crise.",
-      { type: "heading", text: "Comunicação reduz incerteza, não substitui ação" },
-      "Em cenários sensíveis, lacunas de informação são rapidamente preenchidas por interpretações espontâneas. A comunicação deve ser frequente, acessível e compatível com o nível de risco. Porém, mensagens bem produzidas não resolvem impactos reais. Se a causa da tensão exige ajuste operacional, mitigação ou reparação, a comunicação precisa acompanhar a ação concreta.",
-      "Também não basta responder uma única vez. Percepções mudam à medida que fatos novos aparecem. Monitorar o território permite verificar se a medida adotada foi compreendida e se reduziu a preocupação. A resposta só pode ser considerada concluída quando há evidência de que o problema e seus efeitos foram tratados de maneira adequada.",
-      { type: "heading", text: "Da reação à governança preventiva" },
-      "Uma abordagem madura organiza riscos sociais por níveis, define responsáveis e estabelece respostas proporcionais. Situações baixas podem exigir registro e observação; temas recorrentes demandam plano de ação; riscos altos podem requerer comitê interáreas e medidas corretivas; cenários críticos exigem estrutura de crise, proteção de direitos e capacidade de reparação.",
-      "O objetivo não é eliminar todo conflito, algo impossível em relações sociais, mas criar condições para tratá-lo sem ruptura. Empresas que integram leitura territorial, participação e decisão interna ampliam sua capacidade de prevenir danos, proteger comunidades e preservar a continuidade operacional. O risco social deixa de ser surpresa quando o território passa a ser ouvido como fonte legítima de inteligência.",
-      { type: "footnote", text: "Base conceitual: PERINI-SANTOS, Daniel. Relacionamento Comunitário: um Diálogo Social. 2025." },
-    ],
-  },
-  {
-    slug: "investimento-social-privado-territorio",
-    category: "Investimento Social",
-    title: "Investimento social privado com raízes no território",
-    author: "Daniel Perini-Santos",
-    date: "Fevereiro de 2026",
-    excerpt:
-      "Descubra como planejar investimento social privado com diagnóstico territorial, participação e fortalecimento das capacidades locais.",
-    image:
-      "https://images.unsplash.com/photo-1601689892697-b64daa00ff6d?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "O valor de um investimento social não pode ser medido apenas pelo montante aplicado. Um projeto pode ter orçamento expressivo e baixa aderência às prioridades locais. Outro, com menos recursos, pode fortalecer organizações, ampliar repertórios e produzir continuidade. A diferença está na conexão com o território e na qualidade do processo que transforma recursos privados em valor público.",
-      "Investimento social privado é a aplicação voluntária, planejada e monitorada de recursos em finalidades de interesse coletivo. Ele se distingue da responsabilidade social empresarial, que diz respeito ao modo como a empresa opera. Um programa social não substitui a obrigação de prevenir impactos, respeitar direitos e agir com transparência. Seu papel é ampliar a contribuição da organização para o desenvolvimento.",
-      { type: "heading", text: "O diagnóstico vem antes da solução" },
-      "Projetos desenhados apenas a partir da visão corporativa correm o risco de responder a problemas que não são prioritários ou de repetir iniciativas já existentes. O diagnóstico socioterritorial identifica vocações, equipamentos públicos, redes comunitárias, políticas em andamento, desigualdades, capacidades organizacionais e expectativas.",
-      "Esse diagnóstico deve combinar dados secundários com escuta local. Indicadores de educação, renda ou saúde ajudam a dimensionar desafios, mas não explicam sozinhos como as pessoas vivem o território. Lideranças, escolas, coletivos, serviços públicos, grupos culturais e moradores oferecem conhecimento indispensável para interpretar números e construir prioridades.",
-      { type: "heading", text: "Fazer com a comunidade" },
-      "A participação não deve ocorrer apenas na validação final. Comunidades podem contribuir para definir problemas, públicos, estratégias, critérios de seleção, formas de acompanhamento e resultados esperados. Essa construção compartilhada aumenta a aderência do projeto e reduz a dependência de soluções prontas.",
-      "Fazer com a comunidade não significa transferir todas as responsabilidades. A empresa continua responsável pela qualidade da parceria, pelo uso adequado dos recursos e pelos compromissos assumidos. O que muda é a posição dos atores locais: deixam de ser apenas beneficiários e passam a participar como sujeitos do processo.",
-      { type: "heading", text: "Fortalecer capacidades, não criar dependência" },
-      "Um investimento consistente deixa ativos no território. Pode formar equipes, apoiar a gestão de organizações sociais, desenvolver metodologias, ampliar redes, melhorar espaços coletivos ou facilitar o acesso a editais e políticas públicas. Esses resultados aumentam a autonomia local e favorecem a continuidade após o encerramento do apoio empresarial.",
-      "A dependência surge quando a empresa se torna a única porta para demandas legítimas ou quando o projeto não desenvolve meios de sustentação. Diversificar parceiros, conectar iniciativas a políticas públicas e apoiar a capacidade de captação são estratégias que tornam o ecossistema mais resiliente. A organização passa a ser uma parceira relevante, não o centro permanente da vida comunitária.",
-      { type: "heading", text: "Cultura, educação e esporte exigem desenho próprio" },
-      "Áreas diferentes pedem estratégias diferentes. Projetos culturais trabalham com criação, identidade e circulação; iniciativas educacionais precisam de coerência pedagógica e objetivos de aprendizagem; ações esportivas demandam segurança, metodologia e organização de turmas. Indicadores e cronogramas devem refletir essas especificidades.",
-      "Leis de incentivo e editais acrescentam exigências de orçamento, metas, contrapartidas e prestação de contas. Apoiar organizações locais na elaboração pode ampliar seu acesso a recursos, desde que a empresa preserve sua autoria e fortaleça sua autonomia. O bom projeto é aquele que cabe na capacidade real de execução e respeita o tempo necessário para amadurecer.",
-      { type: "heading", text: "Resultado social precisa ser acompanhado" },
-      "Monitorar não é apenas contar atividades. Número de oficinas, participantes e eventos mostra alcance, mas não revela sozinho o que mudou. É preciso observar permanência, aprendizagem, fortalecimento organizacional, ocupação de espaços, articulação de redes e percepção do público. Indicadores quantitativos e qualitativos devem ser lidos em conjunto.",
-      "O investimento social privado ganha sentido estratégico quando se conecta à materialidade, à presença comunitária e à governança da empresa. Recursos aplicados com escuta, participação e acompanhamento podem fortalecer capacidades que permanecem no território. Esse é o ponto em que o investimento deixa de ser ação periférica e se torna parte de uma relação responsável com o futuro local.",
-      { type: "footnote", text: "Base conceitual: PERINI-SANTOS, Daniel. Relacionamento Comunitário: um Diálogo Social. 2025." },
-    ],
-  },
-  {
-    slug: "indicadores-relacionamento-comunitario",
-    category: "Indicadores & Governança",
-    title: "Indicadores que revelam a qualidade do relacionamento comunitário",
-    author: "Daniel Perini-Santos",
-    date: "Janeiro de 2026",
-    excerpt:
-      "Conheça indicadores quantitativos e qualitativos para monitorar relacionamento comunitário, compromissos, percepções e riscos sociais.",
-    image:
-      "https://images.unsplash.com/photo-1566830790860-f9cad9d4cfbd?fm=jpg&q=80&w=1600&auto=format&fit=crop",
-    body: [
-      "Aquilo que não é registrado tende a desaparecer da memória institucional. No relacionamento comunitário, essa perda é especialmente grave: compromissos podem ser esquecidos, demandas recorrentes parecem isoladas e mudanças de percepção deixam de ser identificadas. Planejamento e monitoramento transformam interações dispersas em inteligência para a tomada de decisão.",
-      "O desafio é medir sem reduzir a complexidade do território a uma sequência de números. Quantidade de reuniões, participantes ou atendimentos é importante, mas não demonstra, sozinha, qualidade da relação. Indicadores precisam combinar evidências quantitativas com leitura qualitativa e contexto social.",
-      { type: "heading", text: "Começar pelos objetivos" },
-      "Todo indicador deve responder a uma pergunta de gestão. Se o objetivo é ampliar acesso à informação, podem ser acompanhados alcance dos canais, compreensão das mensagens e dúvidas recorrentes. Se o objetivo é melhorar a resposta às demandas, interessam prazo, resolutividade, reincidência e satisfação com a devolutiva. Se a prioridade é prevenir conflitos, é preciso observar temas sensíveis, grupos afetados, intensidade das percepções e sinais de mobilização.",
-      "Medir tudo produz sistemas pesados e pouco úteis. O conjunto de indicadores deve ser suficientemente enxuto para manter atualização regular e suficientemente completo para apoiar decisões. A seleção precisa refletir os impactos, riscos e compromissos materiais de cada território.",
-      { type: "heading", text: "O que os números mostram" },
-      "Indicadores quantitativos ajudam a enxergar volume, frequência e tendência. Entre os exemplos estão número de interações, públicos alcançados, demandas recebidas, percentual respondido no prazo, tempo médio de resposta, temas mais frequentes, compromissos vencidos, participação por grupo e recorrência de reclamações.",
-      "Esses dados permitem comparar períodos e identificar alterações. Um aumento de registros pode significar agravamento de um problema, mas também maior confiança no canal. Por isso, nenhum número deve ser interpretado de forma automática. A equipe precisa verificar o contexto antes de concluir.",
-      { type: "heading", text: "O que a leitura qualitativa revela" },
-      "Registros qualitativos mostram tom, argumentos, expectativas, memórias e diferenças entre públicos. Permitem saber não apenas que um tema apareceu, mas por que importa, como é interpretado e que resposta é considerada justa. Diários de campo, sínteses de reuniões, entrevistas, grupos focais e análises de percepção são fontes valiosas.",
-      "A qualidade desses registros depende de critérios comuns. Opinião do profissional e fala da comunidade não devem ser confundidas. É útil separar relato, contexto observado, interpretação técnica e encaminhamento. Essa distinção melhora a rastreabilidade e permite que outras áreas compreendam como a análise foi construída.",
-      { type: "heading", text: "Matrizes e painéis a serviço da decisão" },
-      "Uma matriz de acompanhamento pode reunir objetivo, ação, indicador, responsável, prazo, situação e evidência. Para demandas e compromissos, o histórico de movimentações evita perda de contexto. Painéis facilitam a leitura de tendências, desde que estejam conectados aos registros que explicam os dados.",
-      "O painel não substitui a conversa com a equipe de campo. Um gráfico pode indicar queda nas reclamações enquanto a presença institucional diminuiu e os moradores deixaram de utilizar o canal. A combinação entre visualização, análise territorial e validação com diferentes públicos reduz interpretações equivocadas.",
-      { type: "heading", text: "Evidências para governança e auditoria" },
-      "Relatórios de sustentabilidade e auditorias sociais exigem coerência entre procedimentos, registros e percepções externas. Atas, listas de presença, devolutivas, planos de ação, evidências de cumprimento e séries históricas demonstram que o relacionamento possui método. Mas documentação não deve existir apenas para a auditoria. Ela precisa refletir o processo real.",
-      "Se o registro informa que houve consulta, deve ser possível demonstrar quem participou, qual era o objetivo e como as contribuições influenciaram a decisão. Se existe um compromisso, seu responsável e sua situação precisam estar claros. A rastreabilidade protege a comunidade, a equipe e a própria organização.",
-      { type: "heading", text: "Monitorar para aprender" },
-      "A principal função do monitoramento é apoiar ajustes. Indicadores devem chegar a instâncias capazes de decidir, e os resultados precisam retornar às equipes e às comunidades. Quando um padrão muda, a organização deve perguntar o que ocorreu, testar respostas e acompanhar seus efeitos.",
-      "Um sistema maduro diferencia oscilações circunstanciais de tendências profundas, combina dados e narrativas e preserva a memória do território. Assim, o relacionamento comunitário deixa de depender apenas da experiência individual de determinados profissionais e passa a constituir capacidade institucional. Monitorar bem é transformar presença em aprendizagem e aprendizagem em decisões mais responsáveis.",
-      { type: "footnote", text: "Base conceitual: PERINI-SANTOS, Daniel. Relacionamento Comunitário: um Diálogo Social. 2025." },
-    ],
-  },
-];
+import a1 from "./articles/a1";
+import a2 from "./articles/a2";
+import a3 from "./articles/a3";
+import a4 from "./articles/a4";
+import a5 from "./articles/a5";
+import a6 from "./articles/a6";
+import a7 from "./articles/a7";
+import a8 from "./articles/a8";
+import a9 from "./articles/a9";
+import a10 from "./articles/a10";
+import { useTranslation } from "@/i18n/LanguageProvider";
+
+export const ARTICLES_RAW = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
+
+export function localizeArticle(article, lang) {
+  const tr = article.translations[lang] || article.translations["pt-BR"];
+  return {
+    slug: article.slug,
+    image: article.image,
+    author: article.author,
+    category: tr.category,
+    title: tr.title,
+    date: tr.date,
+    excerpt: tr.excerpt,
+    description: tr.description || tr.excerpt,
+    keywords: tr.keywords || [],
+    metaTitle: tr.metaTitle || `${tr.title} | Ponte Social`,
+    metaDescription: tr.metaDescription || tr.description || tr.excerpt,
+    imageAlt: tr.imageAlt || tr.title,
+    body: tr.body,
+  };
+}
+
+export function useArticles() {
+  const { lang } = useTranslation();
+  return ARTICLES_RAW.map((a) => localizeArticle(a, lang));
+}
+
+export function useArticle(slug) {
+  const { lang } = useTranslation();
+  const raw = ARTICLES_RAW.find((a) => a.slug === slug);
+  return raw ? localizeArticle(raw, lang) : null;
+}
+
+export function useOtherArticles(slug) {
+  const { lang } = useTranslation();
+  return ARTICLES_RAW.filter((a) => a.slug !== slug).map((a) => localizeArticle(a, lang));
+}

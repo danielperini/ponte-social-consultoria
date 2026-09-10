@@ -1,29 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ConnectingArc from "./ConnectingArc";
-
-const QUESTIONS = [
-  { q: "O que está acontecendo?", a: "Entender o contexto." },
-  { q: "Quem está envolvido?", a: "Compreender relações, interesses e influências." },
-  { q: "O que precisa ser construído?", a: "Transformar essa leitura em estratégia." },
-];
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 export default function HowWeCross() {
+  const { t } = useTranslation();
+  const questions = t("howWeCross.questions");
+
   return (
     <section id="como-atravessamos" className="relative py-24 lg:py-40 bg-[#F4EFEA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
             <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
-              Como atravessamos
+              {t("howWeCross.kicker")}
             </span>
             <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance mb-8">
-              Não acreditamos em soluções prontas.
+              {t("howWeCross.title")}
             </h2>
-            <p className="text-[#3C2F2F]/75 leading-relaxed mb-6">
-              Cada organização está inserida em um território diferente, com histórias, relações,
-              expectativas e conflitos próprios. Por isso, nosso trabalho parte de três perguntas:
-            </p>
+            <p className="text-[#3C2F2F]/75 leading-relaxed mb-6">{t("howWeCross.intro")}</p>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -33,11 +28,10 @@ export default function HowWeCross() {
               className="mt-10 bg-[#3C2F2F] rounded-xl p-7 lg:p-8"
             >
               <p className="font-display text-lg lg:text-xl text-[#F4EFEA] leading-relaxed">
-                Território <span className="text-[#C87A53] mx-1">+</span> Pessoas{" "}
-                <span className="text-[#C87A53] mx-1">+</span> Estratégia
+                {t("howWeCross.formula1")}
               </p>
               <p className="font-display text-2xl lg:text-3xl text-[#C87A53] mt-3 font-light tracking-tight">
-                = Sustentabilidade do negócio
+                {t("howWeCross.formula2")}
               </p>
             </motion.div>
           </div>
@@ -45,7 +39,7 @@ export default function HowWeCross() {
           <div className="lg:col-span-6 lg:col-start-7 relative">
             <ConnectingArc className="-top-12" height={120} />
             <div className="space-y-5 relative">
-              {QUESTIONS.map((item, i) => (
+              {questions.map((item, i) => (
                 <motion.div
                   key={item.q}
                   initial={{ opacity: 0, x: 40 }}

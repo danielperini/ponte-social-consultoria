@@ -1,8 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ConnectingArc from "./ConnectingArc";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 export default function APonte() {
+  const { t } = useTranslation();
+  const axes = t("aponte.axes");
+
   return (
     <section id="a-ponte" className="relative py-24 lg:py-40 bg-[#F4EFEA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -15,10 +19,10 @@ export default function APonte() {
             className="lg:col-span-4"
           >
             <span className="block text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5">
-              A Ponte
+              {t("aponte.kicker")}
             </span>
             <h2 className="font-display text-3xl lg:text-4xl xl:text-5xl font-light text-[#3C2F2F] leading-[1.12] tracking-tight text-balance">
-              Entre o território e a decisão existe uma complexidade que precisa ser compreendida.
+              {t("aponte.title")}
             </h2>
           </motion.div>
 
@@ -29,10 +33,7 @@ export default function APonte() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Projetos e operações empresariais envolvem pessoas, relações, interesses e diferentes
-              percepções sobre o negócio. Quando esses fatores não são compreendidos, podem gerar
-              incertezas, conflitos, resistência e impactos sobre prazos, custos, reputação e
-              continuidade.
+              {t("aponte.p1")}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -41,8 +42,7 @@ export default function APonte() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-[#3C2F2F] font-medium"
             >
-              O desafio não é eliminar a complexidade. É compreendê-la antes que ela se transforme em
-              risco. É nesse espaço que a Ponte Social atua.
+              {t("aponte.p2")}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -50,8 +50,7 @@ export default function APonte() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              Transformamos conhecimento sobre pessoas, relações e contextos em informação estratégica
-              para apoiar decisões mais seguras.
+              {t("aponte.p3")}
             </motion.p>
           </div>
         </div>
@@ -59,20 +58,7 @@ export default function APonte() {
         <div className="relative mt-20 lg:mt-28">
           <ConnectingArc className="-top-10" height={140} />
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
-            {[
-              {
-                title: "Contexto à decisão",
-                text: "Conectamos contextos à decisão, informação à estratégia e divergências à construção de caminhos possíveis.",
-              },
-              {
-                title: "Informação à estratégia",
-                text: "Porque informação, sozinha, não basta. É preciso transformá-la em estratégia.",
-              },
-              {
-                title: "Conflitos a caminhos",
-                text: "Porque conflitos não se resolvem apenas quando surgem. É preciso compreender suas origens para antecipar riscos.",
-              },
-            ].map((item, i) => (
+            {axes.map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 30 }}

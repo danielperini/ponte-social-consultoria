@@ -8,6 +8,7 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 import Home from '@/pages/Home';
 import ArticleDetail from '@/pages/ArticleDetail';
+import { LanguageProvider } from '@/i18n/LanguageProvider';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -52,7 +53,9 @@ function App() {
       <QueryClientProvider client={queryClientInstance}>
         <Router>
           <ScrollToTop />
-          <AuthenticatedApp />
+          <LanguageProvider>
+            <AuthenticatedApp />
+          </LanguageProvider>
         </Router>
         <Toaster />
       </QueryClientProvider>

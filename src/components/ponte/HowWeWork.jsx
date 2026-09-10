@@ -1,38 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Eye, Lightbulb, Share2, Sparkles } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
-const STEPS = [
-  {
-    icon: Eye,
-    word: "Olhar",
-    title: "Olhar para Compreender",
-    text: "Diagnosticar contexto, território, stakeholders, riscos e oportunidades.",
-  },
-  {
-    icon: Lightbulb,
-    word: "Compreender",
-    title: "Compreender para Conectar",
-    text: "Interpretar percepções, interesses, expectativas, relações e conflitos.",
-  },
-  {
-    icon: Share2,
-    word: "Conectar",
-    title: "Conectar para Transformar",
-    text: "Articular informações, perspectivas e atores para construir estratégias.",
-  },
-  {
-    icon: Sparkles,
-    word: "Transformar",
-    title: "Converter em ação",
-    text: "Converter conhecimento em decisões, planos de ação e resultados.",
-  },
-];
+const ICONS = [Eye, Lightbulb, Share2, Sparkles];
 
 export default function HowWeWork() {
+  const { t } = useTranslation();
+  const steps = t("howWeWork.steps");
+
   return (
     <section className="relative py-24 lg:py-36 bg-[#3C2F2F] overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.04]"
+      <div
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
             "radial-gradient(circle at 20% 30%, #C87A53 0, transparent 40%), radial-gradient(circle at 80% 70%, #C87A53 0, transparent 40%)",
@@ -41,15 +21,20 @@ export default function HowWeWork() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-16 lg:mb-24">
           <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
-            Como atuamos
+            {t("howWeWork.kicker")}
           </span>
           <h2 className="font-display text-3xl lg:text-5xl font-light text-[#F4EFEA] leading-[1.1] tracking-tight text-balance">
-            Um ciclo que transforma conhecimento em estratégia.
+            {t("howWeWork.title")}
           </h2>
         </div>
 
         <div className="relative">
-          <svg className="absolute -top-6 left-0 w-full h-full pointer-events-none" viewBox="0 0 1200 200" preserveAspectRatio="none" fill="none">
+          <svg
+            className="absolute -top-6 left-0 w-full h-full pointer-events-none"
+            viewBox="0 0 1200 200"
+            preserveAspectRatio="none"
+            fill="none"
+          >
             <motion.path
               d="M60 40 C 380 180, 820 180, 1140 40"
               stroke="#C87A53"
@@ -63,8 +48,8 @@ export default function HowWeWork() {
           </svg>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
-            {STEPS.map((s, i) => {
-              const Icon = s.icon;
+            {steps.map((s, i) => {
+              const Icon = ICONS[i];
               return (
                 <motion.div
                   key={s.word}

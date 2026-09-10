@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 const STATS = [
-  { value: 20, suffix: "+", label: "Anos de experiência combinada" },
-  { value: 4, suffix: "", label: "Setores atendidos" },
-  { value: 9, suffix: "", label: "Publicações autorais" },
-  { text: "Nacional", label: "Abrangência da atuação" },
+  { value: 20, suffix: "+" },
+  { value: 4, suffix: "" },
+  { value: 9, suffix: "" },
+  { text: true },
 ];
 
 function CountUp({ to, duration = 1600 }) {
@@ -32,13 +33,16 @@ function CountUp({ to, duration = 1600 }) {
 }
 
 export default function Stats() {
+  const { t } = useTranslation();
+  const items = t("stats.items");
+
   return (
     <section className="relative py-16 lg:py-20 bg-[#EFE8E0] border-y border-[#D6CDBF]/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
           {STATS.map((s, i) => (
             <motion.div
-              key={s.label}
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -47,7 +51,7 @@ export default function Stats() {
             >
               <div className="font-display text-4xl lg:text-5xl font-light text-[#3C2F2F] tracking-tight">
                 {s.text ? (
-                  <span>{s.text}</span>
+                  <span>{items[i].text}</span>
                 ) : (
                   <span>
                     <CountUp to={s.value} />
@@ -56,7 +60,7 @@ export default function Stats() {
                 )}
               </div>
               <p className="mt-2 text-[12px] lg:text-[13px] tracking-[0.14em] uppercase text-[#3C2F2F]/55">
-                {s.label}
+                {items[i].label}
               </p>
             </motion.div>
           ))}

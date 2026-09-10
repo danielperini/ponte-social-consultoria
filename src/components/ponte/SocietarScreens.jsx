@@ -1,11 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Users, AlertTriangle, MapPin } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
-/**
- * SocietarScreens — três mockups ilustrativos do app Societar:
- * mapa de stakeholders, painel de riscos sociais e inteligência territorial.
- */
+const ACTOR_POS = [
+  { x: 80, y: 22, s: 24 },
+  { x: 28, y: 18, s: 18 },
+  { x: 70, y: 60, s: 15 },
+  { x: 24, y: 74, s: 17 },
+  { x: 56, y: 44, s: 13 },
+];
+
 function ScreenFrame({ title, icon: Icon, children }) {
   return (
     <div className="rounded-xl overflow-hidden border border-[#D6CDBF]/70 bg-[#F4EFEA] shadow-lg shadow-[#3C2F2F]/10 flex flex-col h-full">
@@ -26,15 +31,10 @@ function ScreenFrame({ title, icon: Icon, children }) {
 }
 
 function StakeholderMapScreen() {
-  const actors = [
-    { label: "Comunidade", x: 80, y: 22, s: 24 },
-    { label: "Prefeitura", x: 28, y: 18, s: 18 },
-    { label: "ONG Rio", x: 70, y: 60, s: 15 },
-    { label: "Parceiro", x: 24, y: 74, s: 17 },
-    { label: "Sindicato", x: 56, y: 44, s: 13 },
-  ];
+  const { t } = useTranslation();
+  const labels = t("societarScreens.actorLabels");
   return (
-    <ScreenFrame title="Mapa de Stakeholders" icon={Users}>
+    <ScreenFrame title={t("societarScreens.titles.map")} icon={Users}>
       <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
           <div style={{ backgroundColor: "rgba(60,47,47,0.04)" }} />
@@ -44,28 +44,28 @@ function StakeholderMapScreen() {
         </div>
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#3C2F2F]/15" />
         <div className="absolute top-1/2 left-0 right-0 h-px bg-[#3C2F2F]/15" />
-        {actors.map((a) => (
+        {labels.map((label, i) => (
           <div
-            key={a.label}
+            key={label}
             className="absolute -translate-x-1/2 -translate-y-1/2"
-            style={{ left: `${a.x}%`, top: `${a.y}%` }}
+            style={{ left: `${ACTOR_POS[i].x}%`, top: `${ACTOR_POS[i].y}%` }}
           >
             <div
               className="rounded-full bg-[#3C2F2F]/90 border-2 border-[#C87A53] flex items-center justify-center"
-              style={{ width: a.s, height: a.s }}
+              style={{ width: ACTOR_POS[i].s, height: ACTOR_POS[i].s }}
             >
               <span className="w-1 h-1 rounded-full bg-[#C87A53]" />
             </div>
             <span className="absolute left-1/2 -translate-x-1/2 top-full mt-0.5 text-[8px] whitespace-nowrap text-[#3C2F2F]/65 font-medium">
-              {a.label}
+              {label}
             </span>
           </div>
         ))}
         <span className="absolute top-1.5 left-2 text-[8px] uppercase tracking-wider text-[#3C2F2F]/40 font-medium">
-          Influência ↑
+          {t("societarScreens.influence")} ↑
         </span>
         <span className="absolute bottom-1.5 right-2 text-[8px] uppercase tracking-wider text-[#3C2F2F]/40 font-medium">
-          Interesse →
+          {t("societarScreens.interest")} →
         </span>
       </div>
     </ScreenFrame>
@@ -73,19 +73,18 @@ function StakeholderMapScreen() {
 }
 
 function RiskPanelScreen() {
-  const alerts = [
-    { t: "Tensão em comunidade vizinha", lv: "Alto", c: "bg-[#C87A53]" },
-    { t: "Atraso em audiência pública", lv: "Médio", c: "bg-[#3C2F2F]/60" },
-    { t: "Novo stakeholder mapeado", lv: "Baixo", c: "bg-[#3C2F2F]/30" },
+  const { t } = useTranslation();
+  const alerts = t("societarScreens.alertItems");
+  const levelColors = ["bg-[#C87A53]", "bg-[#3C2F2F]/60", "bg-[#3C2F2F]/30"];
+  const metrics = [
+    { l: t("societarScreens.riskTotal"), v: t("societarScreens.riskLevel"), accent: true },
+    { l: t("societarScreens.alerts"), v: "07" },
+    { l: t("societarScreens.actors"), v: "124" },
   ];
   return (
-    <ScreenFrame title="Painel de Riscos" icon={AlertTriangle}>
+    <ScreenFrame title={t("societarScreens.titles.risk")} icon={AlertTriangle}>
       <div className="grid grid-cols-3 gap-2 mb-3">
-        {[
-          { l: "Risco total", v: "Médio", accent: true },
-          { l: "Alertas", v: "07" },
-          { l: "Atores", v: "124" },
-        ].map((m) => (
+        {metrics.map((m) => (
           <div key={m.l} className="rounded-lg bg-[#3C2F2F]/5 border border-[#D6CDBF]/60 p-2">
             <span className="text-[8px] uppercase tracking-wider text-[#3C2F2F]/45 block">{m.l}</span>
             <p className={`font-display text-base font-medium ${m.accent ? "text-[#C87A53]" : "text-[#3C2F2F]"}`}>
@@ -105,7 +104,7 @@ function RiskPanelScreen() {
             key={i}
             className="flex items-center gap-2 rounded-md bg-[#EFE8E0] border border-[#D6CDBF]/50 px-2.5 py-1.5"
           >
-            <span className={`w-1.5 h-1.5 rounded-full ${a.c}`} />
+            <span className={`w-1.5 h-1.5 rounded-full ${levelColors[i]}`} />
             <span className="text-[10px] text-[#3C2F2F]/75 flex-1 truncate">{a.t}</span>
             <span className="text-[8px] uppercase tracking-wider text-[#3C2F2F]/40">{a.lv}</span>
           </div>
@@ -116,14 +115,15 @@ function RiskPanelScreen() {
 }
 
 function TerritoryScreen() {
+  const { t } = useTranslation();
+  const layers = t("societarScreens.layers");
   const pins = [
     { x: 30, y: 35 },
     { x: 62, y: 28 },
     { x: 48, y: 68 },
   ];
-  const layers = ["Demografia", "Infraestrutura", "Conflitos", "Meio ambiente"];
   return (
-    <ScreenFrame title="Inteligência Territorial" icon={MapPin}>
+    <ScreenFrame title={t("societarScreens.titles.territory")} icon={MapPin}>
       <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-[#EFE8E0] border border-[#D6CDBF]/60">
         <svg viewBox="0 0 100 75" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
           <path

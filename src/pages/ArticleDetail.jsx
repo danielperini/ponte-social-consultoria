@@ -1,47 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import Navbar from "@/components/ponte/Navbar";
 import Footer from "@/components/ponte/Footer";
-import { ARTICLES } from "@/components/ponte/articles-data";
+import Seo from "@/components/ponte/Seo";
+import { useTranslation } from "@/i18n/LanguageProvider";
+import { useArticle, useOtherArticles } from "@/components/ponte/articles-data";
 
 export default function ArticleDetail() {
   const { slug } = useParams();
-  const article = ARTICLES.find((a) => a.slug === slug);
-  const others = ARTICLES.filter((a) => a.slug !== slug);
-
-  useEffect(() => {
-    const prevTitle = document.title;
-    document.title = article ? `${article.title} | Ponte Social` : "Ponte Social";
-    const setMeta = (name, content) => {
-      if (!content) return;
-      let el = document.querySelector(`meta[name="${name}"]`);
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute("name", name);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
-    };
-    if (article) {
-      setMeta("description", article.description || article.excerpt);
-      setMeta("keywords", article.keywords);
-    }
-    return () => {
-      document.title = prevTitle;
-    };
-  }, [article]);
+  const { t } = useTranslation();
+  const article = useArticle(slug);
+  const others = useOtherArticles(slug);
 
   if (!article) {
     return (
       <div className="bg-[#F4EFEA] min-h-screen">
+        <Seo title={`${t("articles.notFoundTitle")} | Ponte Social`} description={t("seo.description")} />
         <Navbar />
         <main className="max-w-3xl mx-auto px-6 py-40 text-center">
-          <h1 className="font-display text-3xl text-[#3C2F2F] mb-4">Artigo não encontrado</h1>
+          <h1 className="font-display text-3xl text-[#3C2F2F] mb-4">{t("articles.notFoundTitle")}</h1>
           <Link to="/#artigos" className="text-[#C87A53] hover:underline">
-            Voltar aos artigos
+            {t("articles.backToArticles")}
           </Link>
         </main>
         <Footer />
@@ -51,6 +33,12 @@ export default function ArticleDetail() {
 
   return (
     <div className="bg-[#F4EFEA]">
+      <Seo
+        title={article.metaTitle}
+        description={article.metaDescription}
+        keywords={(article.keywords || []).join(", ")}
+        image={article.image}
+      />
       <Navbar />
       <main>
         <article>
@@ -60,7 +48,7 @@ export default function ArticleDetail() {
                 to="/#artigos"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#C87A53] transition-colors mb-8"
               >
-                <ArrowLeft size={15} /> Artigos
+                <ArrowLeft size={15} /> {t("nav.insights")}
               </Link>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -82,7 +70,7 @@ export default function ArticleDetail() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-[#3C2F2F]">{article.author}</p>
-                    <p className="text-xs text-[#3C2F2F]/50">Ponte Social</p>
+                    <p className="text-xs text-[#3C2F2F]/50">{t("articles.authorRole")}</p>
                   </div>
                 </div>
               </motion.div>
@@ -96,7 +84,7 @@ export default function ArticleDetail() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#D6CDBF]/60"
             >
-              <Image src={article.image} alt={article.title} fittingType="fill" className="w-full h-full" />
+              <Image src={article.image} alt={article.imageAlt} fittingType="fill" className="w-full h-full" />
             </motion.div>
           </div>
 
@@ -144,9 +132,7 @@ export default function ArticleDetail() {
                     </motion.p>
                   );
                 }
-                return (
-                  <motion.p key={i} {...anim}>{p}</motion.p>
-                );
+                return <motion.p key={i} {...anim}>{p}</motion.p>;
               })}
             </div>
 
@@ -155,7 +141,7 @@ export default function ArticleDetail() {
                 to="/#artigos"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#C87A53] transition-colors"
               >
-                <ArrowLeft size={15} /> Voltar aos artigos
+                <ArrowLeft size={15} /> {t("articles.backToArticles")}
               </Link>
             </div>
           </div>
@@ -165,7 +151,7 @@ export default function ArticleDetail() {
           <section className="py-20 lg:py-28 bg-[#EFE8E0] border-t border-[#D6CDBF]/60">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <h2 className="font-display text-2xl lg:text-3xl font-light text-[#3C2F2F] mb-10">
-                Continue lendo
+                {t("articles.continueReading")}
               </h2>
               <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                 {others.map((a) => (
@@ -174,7 +160,7 @@ export default function ArticleDetail() {
                       <div className="relative w-28 h-28 shrink-0 overflow-hidden rounded-lg border border-[#D6CDBF]/60">
                         <Image
                           src={a.image}
-                          alt={a.title}
+                          alt={a.imageAlt}
                           fittingType="fill"
                           className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700"
                         />
