@@ -118,9 +118,6 @@ export default function Solutions() {
                 </span>
                 <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{SOCIETAR.audience}</p>
               </div>
-              <p className="mt-6 text-[11px] tracking-[0.14em] uppercase text-[#3C2F2F]/40">
-                Metodologia: Daniel Perini-Santos
-              </p>
             </div>
             <div className="lg:col-span-7">
               <SocietarScreens />
