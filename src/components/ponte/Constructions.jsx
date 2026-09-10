@@ -9,30 +9,35 @@ const CASES = [
   {
     title: "Risco social começa antes da implantação",
     tag: "Mineração · 2014–2015",
+    category: "Risco social & viabilidade",
     text: "Numa expansão de operação de mineração em Goiás, a dimensão social foi incorporada desde as etapas iniciais de viabilidade (FEL), lado a lado com os estudos técnicos e ambientais. O aprendizado: risco social não começa quando surge um conflito — começa nas decisões de projeto.",
     img: "https://images.unsplash.com/photo-1695169152303-fdbd96a95cc2?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Divergência não se elimina. Diálogo se constrói.",
     tag: "Energia · 2009–2010",
+    category: "Diálogo & audiência pública",
     text: "Antes da audiência pública de uma PCH no Centro-Oeste, agendas individuais e coletivas com grupos contrários ampliaram o acesso à informação e prepararam a empresa para um debate mais qualificado, reduzindo a tensão do processo.",
     img: "https://images.unsplash.com/photo-1632798121054-c6b73cc9e8b0?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Inteligência territorial: comunicação e mobilização",
     tag: "Telecomunicações · 2022–2025",
+    category: "Inteligência territorial & mobilização",
     text: "Para levar a migração da parabólica digital a famílias de menor renda em todo o país, mapeamos redes locais de confiança e canais hiperlocais — rádios comunitárias, lideranças, igrejas — mobilizando 955 municípios e mais de 5 milhões de famílias.",
     img: "https://images.unsplash.com/photo-1585413145330-d093b633f303?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Quando o território já tem respostas",
     tag: "Mineração · 2019",
+    category: "Relacionamento comunitário",
     text: "Um levantamento junto a uma comunidade quilombola no Espírito Santo revelou que investir no território exige compreender o que já existe: iniciativas comunitárias foram fortalecidas em sua organização e gestão, não apenas em infraestrutura.",
     img: "https://images.unsplash.com/photo-1587944333503-ef66108afa79?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Stakeholders como evidência de governança",
     tag: "Siderurgia · 2024",
+    category: "Stakeholders & certificação",
     text: "Na preparação para a certificação internacional ResponsibleSteel™, diagnósticos socioparticipativos foram transformados em evidências de governança, conectando a percepção de comunidades e lideranças às práticas declaradas pela empresa perante investidores.",
     img: "https://images.unsplash.com/photo-1658877556576-41341f9bfaf5?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
@@ -99,6 +104,9 @@ export default function Constructions() {
                 </span>
               </div>
               <div className="p-7">
+                <span className="inline-block text-[#C87A53] text-[11px] font-medium tracking-[0.14em] uppercase mb-3">
+                  {c.category}
+                </span>
                 <h3 className="font-display text-xl font-medium text-[#3C2F2F] leading-snug mb-3">
                   {c.title}
                 </h3>

@@ -4,11 +4,13 @@ import Hero from "@/components/ponte/Hero";
 import APonte from "@/components/ponte/APonte";
 import Stats from "@/components/ponte/Stats";
 import Sectors from "@/components/ponte/Sectors";
+import Segments from "@/components/ponte/Segments";
 import Pillars from "@/components/ponte/Pillars";
 import HowWeWork from "@/components/ponte/HowWeWork";
 import HowWeCross from "@/components/ponte/HowWeCross";
 import Solutions from "@/components/ponte/Solutions";
 import Team from "@/components/ponte/Team";
+import Governance from "@/components/ponte/Governance";
 import Constructions from "@/components/ponte/Constructions";
 import Articles from "@/components/ponte/Articles";
 import Footer from "@/components/ponte/Footer";
@@ -22,6 +24,7 @@ export default function Home() {
         <APonte />
         <Stats />
         <Sectors />
+        <Segments />
         <Pillars />
         <HowWeWork />
         <HowWeCross />
@@ -29,6 +32,7 @@ export default function Home() {
         <Constructions />
         <Articles />
         <Team />
+        <Governance />
       </main>
       <Footer />
     </div>
