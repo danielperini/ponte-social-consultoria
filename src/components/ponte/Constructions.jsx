@@ -1,0 +1,182 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Image } from "@/components/ui/image";
+import { Mail, Phone, Send } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { base44 } from "@/api/base44Client";
+
+const CASES = [
+  {
+    title: "Diagnóstico territorial para investimento em infraestrutura",
+    tag: "Diagnóstico Territorial",
+    text: "Mapeamento de stakeholders e percepções locais em um projeto de infraestrutura, identificando pontos críticos de relacionamento antes da fase de implantação.",
+    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e1609?auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    title: "Mediação de conflitos em operação industrial",
+    tag: "Gestão de Conflitos",
+    text: "Construção de estratégia de diálogo entre empresa e comunidades vizinhas, reduzindo tensões e estabelecendo canais de relacionamento duradouros.",
+    img: "https://images.unsplash.com/photo-1545558014-861207e1c2db?auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    title: "Estruturação da agenda ESG em holding familiar",
+    tag: "Marco ESG",
+    text: "Aplicação da metodologia Marco ESG para avaliar maturidade e definir prioridades de evolução, integrando a dimensão social aos processos de decisão.",
+    img: "https://images.unsplash.com/photo-1502920917128-1aae923081a8?auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    title: "Estruturação de projetos com a Ponte ODS 2030",
+    tag: "Ponte ODS 2030",
+    text: "Diagnóstico territorial e estruturação de projetos em um município, conectando oportunidades de financiamento a resultados concretos para a população.",
+    img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80",
+  },
+];
+
+export default function Constructions() {
+  const { toast } = useToast();
+  const [form, setForm] = useState({ nome: "", email: "", empresa: "", mensagem: "" });
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!form.nome || !form.email || !form.mensagem) {
+      toast({ title: "Preencha nome, e-mail e mensagem para continuar." });
+      return;
+    }
+    setSending(true);
+    try {
+      await base44.integrations.Core.SendEmail({
+        to: "contato@pontesocial.com.br",
+        subject: `Novo contato pelo site — ${form.nome}`,
+        text: `Nome: ${form.nome}\nEmail: ${form.email}\nEmpresa: ${form.empresa || "—"}\n\n${form.mensagem}`,
+      });
+      toast({ title: "Mensagem enviada. Entraremos em contato em breve." });
+      setForm({ nome: "", email: "", empresa: "", mensagem: "" });
+    } catch (err) {
+      toast({ title: "Não foi possível enviar. Tente novamente.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
+  };
+
+  return (
+    <section id="construcoes" className="relative py-24 lg:py-40 bg-[#EFE8E0] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-3xl mb-16">
+          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+            Construções
+          </span>
+          <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">
+            Cases que conectam contexto à decisão.
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-20 lg:mb-28">
+          {CASES.map((c, i) => (
+            <motion.article
+              key={c.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: (i % 2) * 0.12 }}
+              className="group bg-[#F4EFEA] rounded-xl overflow-hidden border border-[#D6CDBF]/60"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src={c.img}
+                  alt={c.title}
+                  fittingType="fill"
+                  className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                />
+                <span className="absolute top-4 left-4 bg-[#3C2F2F]/85 text-[#F4EFEA] text-[11px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full backdrop-blur-sm">
+                  {c.tag}
+                </span>
+              </div>
+              <div className="p-7">
+                <h3 className="font-display text-xl font-medium text-[#3C2F2F] leading-snug mb-3">
+                  {c.title}
+                </h3>
+                <p className="text-[#3C2F2F]/70 text-[15px] leading-relaxed">{c.text}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <h3 className="font-display text-3xl lg:text-4xl font-light text-[#3C2F2F] leading-tight mb-6">
+              Vamos construir caminhos juntos.
+            </h3>
+            <p className="text-[#3C2F2F]/75 leading-relaxed mb-8">
+              Conte sobre seu desafio. Retornaremos para compreender seu contexto e propor os próximos
+              passos.
+            </p>
+            <div className="space-y-4">
+              <a href="mailto:contato@pontesocial.com.br" className="flex items-center gap-3 text-[#3C2F2F]/80 hover:text-[#C87A53] transition-colors">
+                <Mail size={18} className="text-[#C87A53]" />
+                contato@pontesocial.com.br
+              </a>
+              <a href="tel:+551130000000" className="flex items-center gap-3 text-[#3C2F2F]/80 hover:text-[#C87A53] transition-colors">
+                <Phone size={18} className="text-[#C87A53]" />
+                +55 11 3000-0000
+              </a>
+            </div>
+          </div>
+
+          <motion.form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 bg-[#F4EFEA] rounded-xl p-7 lg:p-10 border border-[#D6CDBF]"
+          >
+            <div className="grid sm:grid-cols-2 gap-5">
+              <Field label="Nome*" value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} />
+              <Field label="E-mail*" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} />
+            </div>
+            <div className="mt-5">
+              <Field label="Empresa / Organização" value={form.empresa} onChange={(v) => setForm({ ...form, empresa: v })} />
+            </div>
+            <div className="mt-5">
+              <label className="block text-xs font-medium tracking-[0.1em] uppercase text-[#3C2F2F]/60 mb-2">
+                Mensagem*
+              </label>
+              <textarea
+                value={form.mensagem}
+                onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
+                rows={4}
+                className="w-full bg-transparent border-b border-[#D6CDBF] focus:border-[#C87A53] outline-none py-2 text-[#3C2F2F] resize-none transition-colors"
+                placeholder="Como podemos ajudar?"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={sending}
+              className="mt-8 inline-flex items-center gap-2 bg-[#3C2F2F] text-[#F4EFEA] px-7 py-3.5 rounded-full text-sm font-medium tracking-wide hover:bg-[#C87A53] transition-colors disabled:opacity-50"
+            >
+              {sending ? "Enviando..." : "Enviar mensagem"}
+              <Send size={15} />
+            </button>
+          </motion.form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Field({ label, value, onChange, type = "text" }) {
+  return (
+    <div>
+      <label className="block text-xs font-medium tracking-[0.1em] uppercase text-[#3C2F2F]/60 mb-2">
+        {label}
+      </label>
+      <input
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="w-full bg-transparent border-b border-[#D6CDBF] focus:border-[#C87A53] outline-none py-2 text-[#3C2F2F] transition-colors"
+      />
+    </div>
+  );
+}
