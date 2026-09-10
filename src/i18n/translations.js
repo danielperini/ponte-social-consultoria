@@ -253,6 +253,12 @@ export const translations = {
           bio: "Executiva de ESG com MBA pelo IBMEC, especialização em Neurociência e Comportamento. Palestrante TEDx, com experiência em estruturação de investimento socioambiental.",
           linkedin: "https://www.linkedin.com/in/reisdaniela/",
         },
+        {
+          name: "Bernardo Pinheiro Moreira Lage",
+          role: "",
+          bio: "",
+          linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
+        },
       ],
     },
     governance: {
@@ -528,6 +534,12 @@ export const translations = {
           bio: "ESG executive with an MBA from IBMEC, and a specialization in Neuroscience and Behavior. TEDx speaker, with experience in structuring socio-environmental investment.",
           linkedin: "https://www.linkedin.com/in/reisdaniela/",
         },
+        {
+          name: "Bernardo Pinheiro Moreira Lage",
+          role: "",
+          bio: "",
+          linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
+        },
       ],
     },
     governance: {
@@ -802,6 +814,12 @@ export const translations = {
           role: "Liderazgo, ESG y Neurociencia aplicada a equipos",
           bio: "Ejecutiva de ESG con MBA por el IBMEC, especialización en Neurociencia y Comportamiento. Conferencista TEDx, con experiencia en la estructuración de inversión socioambiental.",
           linkedin: "https://www.linkedin.com/in/reisdaniela/",
+        },
+        {
+          name: "Bernardo Pinheiro Moreira Lage",
+          role: "",
+          bio: "",
+          linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],
     },
