@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Search, X } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import { ARTICLES } from "./articles-data";
 
 export default function Articles() {
+  const [query, setQuery] = useState("");
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return ARTICLES;
+    return ARTICLES.filter((a) =>
+      [a.title, a.category, a.excerpt, a.keywords, a.author]
+        .filter(Boolean)
+        .some((f) => f.toLowerCase().includes(q))
+    );
+  }, [query]);
+
   return (
     <section id="artigos" className="relative py-24 lg:py-40 bg-[#F4EFEA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
           <div className="max-w-2xl">
             <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               Artigos
@@ -23,8 +35,34 @@ export default function Articles() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {ARTICLES.map((a, i) => (
+        <div className="relative max-w-xl mb-12">
+          <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#3C2F2F]/40" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Buscar por tema, palavra-chave ou título..."
+            className="w-full bg-[#EFE8E0] border border-[#D6CDBF] rounded-full pl-12 pr-11 py-3.5 text-[15px] text-[#3C2F2F] placeholder:text-[#3C2F2F]/40 outline-none focus:border-[#C87A53] transition-colors"
+          />
+          {query && (
+            <button
+              onClick={() => setQuery("")}
+              aria-label="Limpar busca"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#3C2F2F]/40 hover:text-[#C87A53] transition-colors"
+            >
+              <X size={18} />
+            </button>
+          )}
+        </div>
+
+        {filtered.length === 0 ? (
+          <div className="text-center py-20 text-[#3C2F2F]/60">
+            <p className="font-display text-xl mb-2">Nenhum artigo encontrado.</p>
+            <p className="text-[15px]">Tente outro termo ou limpe a busca.</p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {filtered.map((a, i) => (
             <motion.article
               key={a.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -61,8 +99,10 @@ export default function Articles() {
                 </div>
               </Link>
             </motion.article>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
+
       </div>
     </section>
   );
