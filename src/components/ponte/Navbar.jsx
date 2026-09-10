@@ -59,13 +59,14 @@ export default function Navbar() {
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
-              className={`text-sm font-medium tracking-[0.12em] transition-colors cursor-pointer ${
+              className={`group relative text-sm font-medium tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
                 scrolled
                   ? "text-[#3C2F2F] hover:text-[#C87A53]"
                   : "text-[#F4EFEA] hover:text-[#C87A53]"
               }`}
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#C87A53] transition-all duration-300 ease-out group-hover:w-full" />
             </button>
           ))}
         </nav>
@@ -86,9 +87,10 @@ export default function Navbar() {
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="text-left text-sm font-medium tracking-[0.12em] text-[#3C2F2F]/80 hover:text-[#C87A53] transition-colors"
+                className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#3C2F2F]/80 hover:text-[#C87A53] transition-all duration-300 ease-out py-1"
               >
                 {item.label}
+                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#C87A53] transition-all duration-300 ease-out group-hover:w-full" />
               </button>
             ))}
           </nav>
