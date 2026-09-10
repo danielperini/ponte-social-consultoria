@@ -30,15 +30,6 @@ export default function Hero() {
         style={{ y: textY, opacity: textOpacity }}
         className="relative z-10 flex flex-col justify-end h-full max-w-7xl mx-auto px-6 lg:px-10 pb-20 lg:pb-28"
       >
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={mounted ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="text-[#C87A53] text-xs font-medium tracking-[0.28em] uppercase mb-6"
-        >
-          A dimensão social dos negócios
-        </motion.span>
-
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={mounted ? { opacity: 1, y: 0 } : {}}
