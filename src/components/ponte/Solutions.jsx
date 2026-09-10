@@ -23,10 +23,10 @@ const SOLUTIONS = [
 
 const SOCIETAR = {
   subtitle:
-    "A plataforma que integra gestão de stakeholders, monitoramento de riscos sociais e inteligência territorial em um só ambiente.",
-  text: "O Societá é a plataforma digital da Ponte Social. Ele reúne, em um único ambiente, as três dimensões do nosso trabalho: o mapeamento e a gestão de stakeholders e de seus relacionamentos; o monitoramento contínuo de riscos sociais, com sinais de alerta que antecipam tensões; e a inteligência territorial, com dados e contexto que sustentam cada decisão. Mais do que registrar informações, o Societá transforma o conhecimento disperso sobre pessoas, relações e territórios em informação estratégica organizada — pronta para apoiar decisões em diferentes momentos de projetos e operações. Ele também compõe a carteira de soluções da Ponte Social, ao lado do MARCO ESG e da PONTE ODS 2030.",
+    "A plataforma de inteligência social que transforma escuta em gestão territorial.",
+  text: "O Societa.ai registra cada interação no território — do campo ao conselho, do WhatsApp à ata da reunião — e transforma a escuta do dia a dia em informação estratégica. Em um só ambiente, reúne escuta e registro com transcrição e classificação inteligente; mapeamento de comunidades e território; gestão de stakeholders, agendas e compromissos conectada ao ciclo de devolutiva; e relatórios rastreáveis alinhados a GRI, ODS e Pacto Global. Toda demanda registrada tem um caminho de resposta, comprovado e auditável, e um motor de decisões detecta tendências, riscos e oportunidades a partir dos próprios registros do território. É devolver ao território o que nele é produzido: demanda que vira resposta, relação que vira confiança.",
   audience:
-    "Empresas, municípios e organizações que precisam organizar, monitorar e visualizar a dimensão social de seus projetos e operações em uma plataforma integrada.",
+    "Empresas, institutos e órgãos públicos que atuam em territórios de influência e precisam gerenciar o relacionamento com comunidades de forma profissional, transparente e auditável.",
 };
 
 export default function Solutions() {
@@ -107,7 +107,7 @@ export default function Solutions() {
                   <Layers size={22} className="text-[#C87A53]" />
                 </div>
                 <h3 className="font-display text-2xl lg:text-3xl font-medium text-[#3C2F2F] tracking-tight">
-                  SOCIETÁ
+                  SOCIETA.AI
                 </h3>
               </div>
               <p className="text-[#C87A53] font-medium mb-5 text-[15px]">{SOCIETAR.subtitle}</p>
@@ -119,7 +119,7 @@ export default function Solutions() {
                 <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{SOCIETAR.audience}</p>
               </div>
               <p className="mt-6 text-[11px] tracking-[0.14em] uppercase text-[#3C2F2F]/40">
-                Texto: Daniel Perini
+                Metodologia: Daniel Perini-Santos
               </p>
             </div>
             <div className="lg:col-span-7">
