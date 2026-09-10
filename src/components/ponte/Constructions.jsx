@@ -10,25 +10,25 @@ const CASES = [
     title: "Diagnóstico territorial para investimento em infraestrutura",
     tag: "Diagnóstico Territorial",
     text: "Mapeamento de stakeholders e percepções locais em um projeto de infraestrutura, identificando pontos críticos de relacionamento antes da fase de implantação.",
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e1609?auto=format&fit=crop&w=1000&q=80",
+    img: "https://images.unsplash.com/photo-1695169152303-fdbd96a95cc2?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Mediação de conflitos em operação industrial",
     tag: "Gestão de Conflitos",
     text: "Construção de estratégia de diálogo entre empresa e comunidades vizinhas, reduzindo tensões e estabelecendo canais de relacionamento duradouros.",
-    img: "https://images.unsplash.com/photo-1545558014-861207e1c2db?auto=format&fit=crop&w=1000&q=80",
+    img: "https://images.unsplash.com/photo-1632798121054-c6b73cc9e8b0?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Estruturação da agenda ESG em holding familiar",
     tag: "Marco ESG",
     text: "Aplicação da metodologia Marco ESG para avaliar maturidade e definir prioridades de evolução, integrando a dimensão social aos processos de decisão.",
-    img: "https://images.unsplash.com/photo-1502920917128-1aae923081a8?auto=format&fit=crop&w=1000&q=80",
+    img: "https://images.unsplash.com/photo-1585413145330-d093b633f303?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "Estruturação de projetos com a Ponte ODS 2030",
     tag: "Ponte ODS 2030",
     text: "Diagnóstico territorial e estruturação de projetos em um município, conectando oportunidades de financiamento a resultados concretos para a população.",
-    img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80",
+    img: "https://images.unsplash.com/photo-1587944333503-ef66108afa79?fm=jpg&q=80&w=1200&auto=format&fit=crop",
   },
 ];
 

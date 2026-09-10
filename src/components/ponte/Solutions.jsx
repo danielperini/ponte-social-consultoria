@@ -71,8 +71,8 @@ export default function Solutions() {
                     <Image
                       src={
                         i === 0
-                          ? "https://images.unsplash.com/photo-1518837695005-72bfad529aa7?auto=format&fit=crop&w=1000&q=80"
-                          : "https://images.unsplash.com/photo-1502602898657-3e9fa606d5da?auto=format&fit=crop&w=1000&q=80"
+                          ? "https://images.unsplash.com/photo-1663837804068-7d7b4c04044d?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+                          : "https://images.unsplash.com/photo-1658877559465-ef305a167829?fm=jpg&q=80&w=1200&auto=format&fit=crop"
                       }
                       alt={s.name}
                       fittingType="fill"
