@@ -1,6 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Network, Layers, BadgeCheck } from "lucide-react";
+import { Network, Layers, BadgeCheck, Linkedin } from "lucide-react";
+
+const TEAM = [
+  {
+    name: "Patrícia Abreu",
+    role: "Comunicação, Relacionamento e Integração",
+    bio:
+      "Sócia da Claro Abreu Projetos e ex-Diretora de Comunicação, Relacionamento e Integração da Fundação Renova. Atua na gestão de campanhas nacionais, comunicação pública e relacionamento institucional.",
+    linkedin: "https://www.linkedin.com/in/patriciaoabreu/",
+  },
+  {
+    name: "Ana Carolina de Moura Maciel",
+    role: "Executiva de ESG & Sustentabilidade",
+    bio:
+      "Consultora master em ESG, Mestre em Administração. Atua em estratégia, relações institucionais, comunicação, gestão de crises e engajamento de stakeholders.",
+    linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
+  },
+  {
+    name: "Daniel Perini",
+    role: "Gestão de Projetos Socioeconômicos",
+    bio:
+      "Mais de 20 anos de experiência na gestão, planejamento e implementação de projetos sociais, culturais, educacionais e de direitos humanos.",
+    linkedin: "https://www.linkedin.com/in/daniel-perini-esg/",
+  },
+  {
+    name: "Daniela Reis",
+    role: "Liderança, ESG e Neurociência aplicada a equipes",
+    bio:
+      "Executiva de ESG com MBA pelo IBMEC, especialização em Neurociência e Comportamento. Palestrante TEDx, com experiência em estruturação de investimento socioambiental.",
+    linkedin: "https://www.linkedin.com/in/reisdaniela/",
+  },
+];
 
 export default function Team() {
   return (
@@ -115,6 +146,62 @@ export default function Team() {
             >
               Uma rede formada para cada desafio.
             </motion.p>
+          </div>
+        </div>
+
+        <div className="mt-20 lg:mt-28">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-2xl lg:text-3xl font-light text-[#3C2F2F] mb-3 text-balance"
+          >
+            Quem somos
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-[#3C2F2F]/70 max-w-2xl text-[15px] leading-relaxed mb-10"
+          >
+            Conheça as pessoas que conduzem os trabalhos da Ponte Social.
+          </motion.p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+            {TEAM.map((person, i) => (
+              <motion.article
+                key={person.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: (i % 4) * 0.1 }}
+                className="group flex flex-col bg-[#EFE8E0] border border-[#D6CDBF]/60 rounded-xl p-6 hover:border-[#C87A53] transition-colors duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#3C2F2F] flex items-center justify-center text-[#F4EFEA] font-display text-xl font-medium mb-5">
+                  {person.name.charAt(0)}
+                </div>
+                <h4 className="font-display text-lg font-medium text-[#3C2F2F] leading-snug">
+                  {person.name}
+                </h4>
+                <p className="text-[#C87A53] text-[13px] font-medium mt-1 mb-3 leading-snug">
+                  {person.role}
+                </p>
+                <p className="text-[#3C2F2F]/70 text-[14px] leading-relaxed flex-grow">
+                  {person.bio}
+                </p>
+                <a
+                  href={person.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 text-[#3C2F2F] text-sm font-medium border border-[#D6CDBF] rounded-full px-4 py-2 hover:bg-[#3C2F2F] hover:text-[#F4EFEA] hover:border-[#3C2F2F] transition-colors duration-300"
+                >
+                  <Linkedin size={16} />
+                  Ver no LinkedIn
+                </a>
+              </motion.article>
+            ))}
           </div>
         </div>
       </div>
