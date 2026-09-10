@@ -255,8 +255,8 @@ export const translations = {
         },
         {
           name: "Bernardo Pinheiro Moreira Lage",
-          role: "",
-          bio: "",
+          role: "Inteligência Territorial e Gestão de Stakeholders",
+          bio: "Atua na leitura social do território e no mapeamento de stakeholders, apoiando decisões empresariais com análise de contexto e relações.",
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],
@@ -536,8 +536,8 @@ export const translations = {
         },
         {
           name: "Bernardo Pinheiro Moreira Lage",
-          role: "",
-          bio: "",
+          role: "Territorial Intelligence and Stakeholder Management",
+          bio: "Works on the social reading of the territory and stakeholder mapping, supporting business decisions through context and relationship analysis.",
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],
@@ -817,8 +817,8 @@ export const translations = {
         },
         {
           name: "Bernardo Pinheiro Moreira Lage",
-          role: "",
-          bio: "",
+          role: "Inteligencia Territorial y Gestión de Stakeholders",
+          bio: "Actúa en la lectura social del territorio y el mapeo de stakeholders, apoyando decisiones empresariales con análisis de contexto y relaciones.",
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],

@@ -154,7 +154,7 @@ export default function Team() {
                 <div className="w-12 h-12 rounded-full bg-[#3C2F2F] flex items-center justify-center text-[#F4EFEA] font-display text-xl font-medium mb-5">
                   {person.name.charAt(0)}
                 </div>
-                <h4 className="font-display text-lg font-medium text-[#3C2F2F] leading-snug">
+                <h4 className="font-display text-[13px] font-medium text-[#3C2F2F] leading-snug truncate">
                   {person.name}
                 </h4>
                 <p className="text-[#C87A53] text-[13px] font-medium mt-1 mb-3 leading-snug">
