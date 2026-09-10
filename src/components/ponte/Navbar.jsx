@@ -55,7 +55,7 @@ export default function Navbar() {
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
-              className="text-xs font-medium tracking-[0.14em] text-[#3C2F2F]/70 hover:text-[#C87A53] transition-colors cursor-pointer"
+              className="text-sm font-medium tracking-[0.12em] text-[#3C2F2F] hover:text-[#C87A53] transition-colors cursor-pointer"
             >
               {item.label}
             </button>
