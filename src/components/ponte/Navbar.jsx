@@ -45,7 +45,11 @@ export default function Navbar() {
             <circle cx="17" cy="9.5" r="2.8" fill="#3C2F2F" />
             <line x1="6" y1="24" x2="28" y2="24" stroke="#3C2F2F" strokeWidth="2" strokeLinecap="round" />
           </svg>
-          <span className="font-display text-xl font-medium tracking-tight text-[#3C2F2F]">
+          <span
+            className={`font-display text-xl font-medium tracking-tight transition-colors duration-500 ${
+              scrolled ? "text-[#3C2F2F]" : "text-[#F4EFEA]"
+            }`}
+          >
             Ponte Social
           </span>
         </button>
@@ -55,7 +59,11 @@ export default function Navbar() {
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
-              className="text-sm font-medium tracking-[0.12em] text-[#3C2F2F] hover:text-[#C87A53] transition-colors cursor-pointer"
+              className={`text-sm font-medium tracking-[0.12em] transition-colors cursor-pointer ${
+                scrolled
+                  ? "text-[#3C2F2F] hover:text-[#C87A53]"
+                  : "text-[#F4EFEA] hover:text-[#C87A53]"
+              }`}
             >
               {item.label}
             </button>
