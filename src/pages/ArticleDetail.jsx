@@ -80,17 +80,39 @@ export default function ArticleDetail() {
 
           <div className="max-w-3xl mx-auto px-6 py-16 lg:py-24">
             <div className="space-y-7 text-[#3C2F2F]/85 text-[18px] leading-[1.8]">
-              {article.body.map((p, i) => (
-                <motion.p
-                  key={i}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.5, delay: i * 0.05 }}
-                >
-                  {p}
-                </motion.p>
-              ))}
+              {article.body.map((p, i) => {
+                const anim = {
+                  initial: { opacity: 0, y: 15 },
+                  whileInView: { opacity: 1, y: 0 },
+                  viewport: { once: true, margin: "-40px" },
+                  transition: { duration: 0.5, delay: i * 0.05 },
+                };
+                if (p && typeof p === "object" && p.type === "heading") {
+                  return (
+                    <motion.h2
+                      key={i}
+                      {...anim}
+                      className="font-display text-2xl lg:text-[28px] font-medium text-[#3C2F2F] leading-tight pt-8"
+                    >
+                      {p.text}
+                    </motion.h2>
+                  );
+                }
+                if (p && typeof p === "object" && p.type === "footnote") {
+                  return (
+                    <motion.p
+                      key={i}
+                      {...anim}
+                      className="text-sm italic text-[#3C2F2F]/55 border-t border-[#D6CDBF]/60 pt-6 mt-2"
+                    >
+                      {p.text}
+                    </motion.p>
+                  );
+                }
+                return (
+                  <motion.p key={i} {...anim}>{p}</motion.p>
+                );
+              })}
             </div>
 
             <div className="mt-16 pt-10 border-t border-[#D6CDBF]/60">
