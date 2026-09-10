@@ -80,7 +80,11 @@ export default function Team() {
                 Especialistas com pós-graduação e formação em sustentabilidade, trajetória
                 construída em cargos de direção, coordenação e gerência em organizações. Reúnem
                 prática extensiva em relacionamento comunitário, projetos sociais, avaliação de
-                projetos e desenvolvimento de estratégias.
+                projetos e desenvolvimento de estratégias, com experiências em certificações
+                internacionais e complementação de projetos em nível territorial e nacional.
+                Atuaram em diferentes ramos — telecomunicações, siderurgia, mineração e
+                bioflorestas — e também em situações de gravidade maior, como estação de grandes
+                desastres.
               </p>
             </motion.div>
 
