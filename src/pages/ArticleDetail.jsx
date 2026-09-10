@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
@@ -11,6 +11,28 @@ export default function ArticleDetail() {
   const { slug } = useParams();
   const article = ARTICLES.find((a) => a.slug === slug);
   const others = ARTICLES.filter((a) => a.slug !== slug);
+
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = article ? `${article.title} | Ponte Social` : "Ponte Social";
+    const setMeta = (name, content) => {
+      if (!content) return;
+      let el = document.querySelector(`meta[name="${name}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute("name", name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+    if (article) {
+      setMeta("description", article.description || article.excerpt);
+      setMeta("keywords", article.keywords);
+    }
+    return () => {
+      document.title = prevTitle;
+    };
+  }, [article]);
 
   if (!article) {
     return (
@@ -96,6 +118,19 @@ export default function ArticleDetail() {
                     >
                       {p.text}
                     </motion.h2>
+                  );
+                }
+                if (p && typeof p === "object" && p.type === "list") {
+                  return (
+                    <motion.ul
+                      key={i}
+                      {...anim}
+                      className="list-disc pl-6 space-y-2 text-[#3C2F2F]/85 marker:text-[#C87A53]"
+                    >
+                      {p.items.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </motion.ul>
                   );
                 }
                 if (p && typeof p === "object" && p.type === "footnote") {
