@@ -109,13 +109,15 @@ export default function Team() {
               </h3>
               <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">
                 Especialistas com pós-graduação e formação em sustentabilidade, trajetória
-                construída em cargos de direção, coordenação e gerência em organizações. Reúnem
-                prática extensiva em relacionamento comunitário, projetos sociais, avaliação de
-                projetos e desenvolvimento de estratégias, com experiências em certificações
-                internacionais e complementação de projetos em nível territorial e nacional.
-                Atuaram em diferentes ramos — telecomunicações, siderurgia, mineração e
-                bioflorestas — e também em situações de gravidade maior, como estação de grandes
-                desastres.
+                construída em cargos de direção, coordenação e gerência em organizações. Possuem
+                <span className="text-[#3C2F2F] font-medium"> certificações internacionais</span> e
+                vasta experiência de campo em relacionamento comunitário, projetos sociais,
+                avaliação de projetos e desenvolvimento de estratégias, com atuação em nível
+                territorial e nacional. Trabalharam em diferentes ramos — telecomunicações,
+                <span className="text-[#3C2F2F] font-medium"> siderurgia</span>, mineração e
+                bioflorestas — incluindo a <span className="text-[#3C2F2F] font-medium">gestão de
+                grandes desastres</span> e situações de gravidade elevada, onde a leitura social do
+                território e a capacidade de resposta foram decisivas.
               </p>
             </motion.div>
 
