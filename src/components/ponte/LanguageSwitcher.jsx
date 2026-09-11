@@ -22,7 +22,7 @@ export default function LanguageSwitcher({ scrolled = true, className = "" }) {
         return [
           i > 0 && (
             <span key={`sep-${o.code}`} className={`${dividerColor} text-xs select-none`}>
-              |
+              ·
             </span>
           ),
           <button

@@ -5,12 +5,12 @@ export const translations = {
   "pt-BR": {
     nav: {
       brand: "Ponte Social",
-      about: "A PONTE",
-      solutions: "O QUE CONSTRUÍMOS",
-      howWeWork: "COMO ATRAVESSAMOS",
-      team: "QUEM CONSTRÓI",
-      cases: "CONSTRUÇÕES",
-      insights: "ARTIGOS",
+      about: "QUEM SOMOS",
+      solutions: "SOLUÇÕES",
+      howWeWork: "COMO ATUAMOS",
+      team: "NOSSA EQUIPE",
+      cases: "EXPERIÊNCIAS",
+      insights: "CONHECIMENTO",
     },
     langSelector: { ariaLabel: "Selecionar idioma" },
     hero: {
