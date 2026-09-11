@@ -8,9 +8,10 @@ import a7 from "./articles/a7";
 import a8 from "./articles/a8";
 import a9 from "./articles/a9";
 import a10 from "./articles/a10";
+import a11 from "./articles/a11";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-export const ARTICLES_RAW = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
+export const ARTICLES_RAW = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11];
 
 export function localizeArticle(article, lang) {
   const tr = article.translations[lang] || article.translations["pt-BR"];
