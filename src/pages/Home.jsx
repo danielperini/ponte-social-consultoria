@@ -10,6 +10,7 @@ import HowWeWork from "@/components/ponte/HowWeWork";
 import HowWeCross from "@/components/ponte/HowWeCross";
 import Solutions from "@/components/ponte/Solutions";
 import Team from "@/components/ponte/Team";
+import Trajectories from "@/components/ponte/Trajectories";
 import Governance from "@/components/ponte/Governance";
 import Constructions from "@/components/ponte/Constructions";
 import Articles from "@/components/ponte/Articles";
@@ -34,6 +35,7 @@ export default function Home() {
         <Solutions />
         <Articles />
         <Team />
+        <Trajectories />
         <Governance />
         <Stats />
         <Constructions />
