@@ -284,6 +284,8 @@ export const translations = {
       secretariaDireitosHumanos: "Direitos humanos, participação social e cidadania.",
       beijaFlor: "Tecnologias sociais e desenvolvimento territorial.",
       etco: "Instituto Brasileiro de Ética da Concorrência.",
+      hp: "Consultoria e estratégia empresarial.",
+      tgrafting: "Empresa e empreendimento.",
     },
     governance: {
       kicker: "Governança e compromissos",
@@ -605,6 +607,8 @@ export const translations = {
       secretariaDireitosHumanos: "Human rights, social participation, and citizenship.",
       beijaFlor: "Social technologies and territorial development.",
       etco: "Brazilian Institute of Competition Ethics.",
+      hp: "Business consulting and strategy.",
+      tgrafting: "Company and venture.",
     },
     governance: {
       kicker: "Governance and commitments",
@@ -925,6 +929,8 @@ export const translations = {
       secretariaDireitosHumanos: "Derechos humanos, participación social y ciudadanía.",
       beijaFlor: "Tecnologías sociales y desarrollo territorial.",
       etco: "Instituto Brasileño de Ética de la Competencia.",
+      hp: "Consultoría y estrategia empresarial.",
+      tgrafting: "Empresa y emprendimiento.",
     },
     governance: {
       kicker: "Gobernanza y compromisos",

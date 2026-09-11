@@ -22,6 +22,8 @@ const INSTITUTIONS = [
   { name: "Votorantim", descKey: "trajectory.votorantim", logo: "votorantim.com.br" },
   { name: "Grupo EBX", descKey: "trajectory.ebx", logo: null },
   { name: "ETCO", descKey: "trajectory.etco", logo: "etco.org.br" },
+  { name: "T-Grafting", descKey: "trajectory.tgrafting", logo: null },
+  { name: "H&P", descKey: "trajectory.hp", logo: null },
 ];
 
 function TrajectoryCard({ inst, index }) {
