@@ -1,6 +1,7 @@
 import React from "react";
 import { Mail, Phone, Linkedin, ShieldCheck, Lock, FileText } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import Logo from "./Logo";
 
 const NAV_LINKS = [
   { label: "nav.about", target: "a-ponte" },
@@ -24,17 +25,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-3 mb-5">
-              <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <path d="M6 24 Q17 4 28 24" stroke="#C87A53" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-                <circle cx="17" cy="9.5" r="2.8" fill="#F4EFEA" />
-                <line x1="6" y1="24" x2="28" y2="24" stroke="#F4EFEA" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-              <div>
-                <p className="font-display text-lg font-medium text-[#F4EFEA]">{t("nav.brand")}</p>
-                <p className="text-xs text-[#F4EFEA]/50">{t("footer.tagline")}</p>
-              </div>
+            <div className="mb-4">
+              <Logo theme="light" />
             </div>
+            <p className="text-xs text-[#F4EFEA]/50 mb-5">{t("footer.tagline")}</p>
             <p className="font-display italic text-[#C87A53] text-lg font-light leading-snug">
               {t("footer.slogan")}
             </p>

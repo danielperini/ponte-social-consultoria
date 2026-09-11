@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Logo from "./Logo";
 
 const MENU = [
   { label: "nav.about", target: "a-ponte" },
@@ -44,19 +45,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2.5 group">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" className="shrink-0">
-            <path d="M6 24 Q17 4 28 24" stroke="#C87A53" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <circle cx="17" cy="9.5" r="2.8" fill="#3C2F2F" />
-            <line x1="6" y1="24" x2="28" y2="24" stroke="#3C2F2F" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-          <span
-            className={`font-display text-xl font-medium tracking-tight transition-colors duration-500 ${
-              scrolled ? "text-[#3C2F2F]" : "text-[#F4EFEA]"
-            }`}
-          >
-            {t("nav.brand")}
-          </span>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center group" aria-label={t("nav.brand")}>
+          <Logo theme={scrolled ? "brand" : "light"} />
         </button>
 
         <nav className="hidden lg:flex items-center gap-8">
