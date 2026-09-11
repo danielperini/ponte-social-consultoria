@@ -8,6 +8,19 @@ import Footer from "@/components/ponte/Footer";
 import Seo from "@/components/ponte/Seo";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { useArticle, useOtherArticles } from "@/components/ponte/articles-data";
+import ReactMarkdown from "react-markdown";
+
+const ARTICLE_MD_COMPONENTS = {
+  p: "span",
+  a: ({ node, ...props }) => (
+    <a
+      {...props}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#C87A53] underline underline-offset-2 hover:text-[#3C2F2F] transition-colors"
+    />
+  ),
+};
 
 export default function ArticleDetail() {
   const { slug } = useParams();
@@ -132,7 +145,11 @@ export default function ArticleDetail() {
                     </motion.p>
                   );
                 }
-                return <motion.p key={i} {...anim}>{p}</motion.p>;
+                return (
+                  <motion.p key={i} {...anim}>
+                    <ReactMarkdown components={ARTICLE_MD_COMPONENTS}>{p}</ReactMarkdown>
+                  </motion.p>
+                );
               })}
             </div>
 
