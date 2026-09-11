@@ -256,7 +256,7 @@ export const translations = {
         {
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Inteligência Territorial e Gestão de Stakeholders",
-          bio: "Atua na leitura social do território e no mapeamento de stakeholders, apoiando decisões empresariais com análise de contexto e relações.",
+          bio: "Executivo com mais de 20 anos de experiência em ESG, desenvolvimento territorial, relações institucionais, comunicação estratégica e gestão social. Atuou em projetos de grande porte em mineração, infraestrutura e energia, com passagem por estados brasileiros e por Argentina, Estados Unidos, Moçambique e Guatemala.",
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],
@@ -537,7 +537,7 @@ export const translations = {
         {
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Territorial Intelligence and Stakeholder Management",
-          bio: "Works on the social reading of the territory and stakeholder mapping, supporting business decisions through context and relationship analysis.",
+          bio: "Executive with over 20 years of experience in ESG, territorial development, institutional relations, strategic communication, and social management. Worked on large-scale projects in mining, infrastructure, and energy, across Brazilian states and abroad in Argentina, the United States, Mozambique, and Guatemala.",
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],
@@ -818,7 +818,7 @@ export const translations = {
         {
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Inteligencia Territorial y Gestión de Stakeholders",
-          bio: "Actúa en la lectura social del territorio y el mapeo de stakeholders, apoyando decisiones empresariales con análisis de contexto y relaciones.",
+          bio: "Ejecutivo con más de 20 años de experiencia en ESG, desarrollo territorial, relaciones institucionales, comunicación estratégica y gestión social. Trabajó en proyectos de gran escala en minería, infraestructura y energía, en estados brasileños y en Argentina, Estados Unidos, Mozambique y Guatemala.",
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321",
         },
       ],
