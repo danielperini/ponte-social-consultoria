@@ -27,6 +27,9 @@ const INSTITUTIONS = [
   { name: "UFMG", descKey: "trajectory.ufmg", logo: "ufmg.br" },
   { name: "C Caps", descKey: "trajectory.ccaps", logo: null },
   { name: "CeCaps", descKey: "trajectory.cecaps", logo: null },
+  { name: "Anglo American", descKey: "trajectory.anglo", logo: "angloamerican.com" },
+  { name: "PNUD", descKey: "trajectory.pnud", logo: "undp.org" },
+  { name: "Prefeitura de BH", descKey: "trajectory.prefeituraBH", logo: "pbh.gov.br" },
 ];
 
 function TrajectoryCard({ inst, index }) {

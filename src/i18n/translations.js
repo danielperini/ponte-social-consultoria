@@ -289,6 +289,9 @@ export const translations = {
       ufmg: "Universidade Federal de Minas Gerais.",
       ccaps: "Capacitação e desenvolvimento profissional.",
       cecaps: "Capacitação e formação.",
+      anglo: "Mineração e recursos naturais.",
+      pnud: "Programa das Nações Unidas para o Desenvolvimento.",
+      prefeituraBH: "Governo municipal de Belo Horizonte.",
     },
     governance: {
       kicker: "Governança e compromissos",
@@ -615,6 +618,9 @@ export const translations = {
       ufmg: "Federal University of Minas Gerais.",
       ccaps: "Professional training and development.",
       cecaps: "Training and education.",
+      anglo: "Mining and natural resources.",
+      pnud: "United Nations Development Programme.",
+      prefeituraBH: "Municipal government of Belo Horizonte.",
     },
     governance: {
       kicker: "Governance and commitments",
@@ -940,6 +946,9 @@ export const translations = {
       ufmg: "Universidad Federal de Minas Gerais.",
       ccaps: "Capacitación y desarrollo profesional.",
       cecaps: "Capacitación y formación.",
+      anglo: "Minería y recursos naturales.",
+      pnud: "Programa de las Naciones Unidas para el Desarrollo.",
+      prefeituraBH: "Gobierno municipal de Belo Horizonte.",
     },
     governance: {
       kicker: "Gobernanza y compromisos",
