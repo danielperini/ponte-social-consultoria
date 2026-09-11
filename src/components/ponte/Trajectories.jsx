@@ -29,6 +29,7 @@ const INSTITUTIONS = [
   { name: "Anglo American", descKey: "trajectory.anglo", logo: "angloamerican.com" },
   { name: "PNUD", descKey: "trajectory.pnud", logo: "undp.org" },
   { name: "Prefeitura de BH", descKey: "trajectory.prefeituraBH", logo: "pbh.gov.br" },
+  { name: "IPOG", descKey: "trajectory.ipog", logo: "ipog.edu.br" },
 ];
 
 function TrajectoryCard({ inst, index }) {

@@ -292,6 +292,7 @@ export const translations = {
       anglo: "Mineração e recursos naturais.",
       pnud: "Programa das Nações Unidas para o Desenvolvimento.",
       prefeituraBH: "Governo municipal de Belo Horizonte.",
+      ipog: "Instituto de Pós-Graduação e Graduação.",
     },
     governance: {
       kicker: "Governança e compromissos",
@@ -620,6 +621,7 @@ export const translations = {
       anglo: "Mining and natural resources.",
       pnud: "United Nations Development Programme.",
       prefeituraBH: "Municipal government of Belo Horizonte.",
+      ipog: "Postgraduate and graduate institute.",
     },
     governance: {
       kicker: "Governance and commitments",
@@ -948,6 +950,7 @@ export const translations = {
       anglo: "Minería y recursos naturales.",
       pnud: "Programa de las Naciones Unidas para el Desarrollo.",
       prefeituraBH: "Gobierno municipal de Belo Horizonte.",
+      ipog: "Instituto de posgrado y graduación.",
     },
     governance: {
       kicker: "Gobernanza y compromisos",
