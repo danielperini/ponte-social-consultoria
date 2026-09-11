@@ -12,11 +12,11 @@ const LIGHT = {
   social: "#F4EFEA",
   consultoria: "rgba(244,239,234,0.55)",
   dashes: [
-    "rgba(200,122,83,0.35)",
-    "rgba(200,122,83,0.5)",
-    "rgba(200,122,83,0.65)",
-    "rgba(200,122,83,0.8)",
-    "rgba(200,122,83,1)",
+    "rgba(188,90,58,0.35)",
+    "rgba(188,90,58,0.5)",
+    "rgba(188,90,58,0.65)",
+    "rgba(188,90,58,0.8)",
+    "rgba(188,90,58,1)",
   ],
 };
 
@@ -26,13 +26,13 @@ export default function Logo({ theme = "brand", className = "" }) {
   return (
     <div className={`inline-flex flex-col leading-none select-none ${className}`} aria-label="Ponte Social Consultoria">
       <span
-        className="font-display text-[18px] leading-[0.95] tracking-tight"
+        className="font-display text-[22px] leading-[0.92] tracking-tight"
         style={{ color: c.ponte }}
       >
         ponte
       </span>
       <span
-        className="font-display text-[18px] leading-[0.95] tracking-tight"
+        className="font-display text-[22px] leading-[0.92] tracking-tight"
         style={{ color: c.social }}
       >
         social
@@ -41,12 +41,12 @@ export default function Logo({ theme = "brand", className = "" }) {
         {c.dashes.map((color, i) => (
           <span
             key={i}
-            className="h-px w-[8px] rounded-full"
+            className="h-px w-[10px] rounded-full"
             style={{ backgroundColor: color }}
           />
         ))}
         <span
-          className="font-body text-[8px] font-medium uppercase ml-1.5"
+          className="font-body text-[9px] font-medium uppercase ml-1.5"
           style={{ color: c.consultoria, letterSpacing: "0.3em" }}
         >
           Consultoria

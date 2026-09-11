@@ -10,7 +10,6 @@ const MENU = [
   { label: "nav.howWeWork", target: "como-atravessamos" },
   { label: "nav.team", target: "quem-constroi" },
   { label: "nav.cases", target: "construcoes" },
-  { label: "nav.insights", target: "artigos" },
 ];
 
 function scrollTo(target) {
@@ -49,19 +48,17 @@ export default function Navbar() {
           <Logo theme={scrolled ? "brand" : "light"} />
         </button>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {MENU.map((item) => (
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
               className={`group relative text-sm font-medium tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
-                scrolled
-                  ? "text-[#3C2F2F] hover:text-[#C87A53]"
-                  : "text-[#F4EFEA] hover:text-[#C87A53]"
+                scrolled ? "text-[#3C2F2F] hover:text-[#BC5A3A]" : "text-[#F4EFEA] hover:text-[#BC5A3A]"
               }`}
             >
               {t(item.label)}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#C87A53] transition-all duration-300 ease-out group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#BC5A3A] transition-all duration-300 ease-out group-hover:w-full" />
             </button>
           ))}
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
@@ -87,10 +84,10 @@ export default function Navbar() {
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#3C2F2F]/80 hover:text-[#C87A53] transition-all duration-300 ease-out py-1"
+                className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#3C2F2F]/80 hover:text-[#BC5A3A] transition-all duration-300 ease-out py-1"
               >
                 {t(item.label)}
-                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#C87A53] transition-all duration-300 ease-out group-hover:w-full" />
+                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#BC5A3A] transition-all duration-300 ease-out group-hover:w-full" />
               </button>
             ))}
           </nav>

@@ -16,11 +16,11 @@ function ScreenFrame({ title, icon: Icon, children }) {
     <div className="rounded-xl overflow-hidden border border-[#D6CDBF]/70 bg-[#F4EFEA] shadow-lg shadow-[#3C2F2F]/10 flex flex-col h-full">
       <div className="flex items-center gap-2.5 px-4 py-2.5 border-b border-[#D6CDBF]/60 bg-[#EFE8E0]">
         <div className="flex gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-[#C87A53]/40" />
-          <span className="w-2 h-2 rounded-full bg-[#C87A53]/40" />
-          <span className="w-2 h-2 rounded-full bg-[#C87A53]/40" />
+          <span className="w-2 h-2 rounded-full bg-[#BC5A3A]/40" />
+          <span className="w-2 h-2 rounded-full bg-[#BC5A3A]/40" />
+          <span className="w-2 h-2 rounded-full bg-[#BC5A3A]/40" />
         </div>
-        <Icon size={13} className="text-[#C87A53] ml-1.5" />
+        <Icon size={13} className="text-[#BC5A3A] ml-1.5" />
         <span className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#3C2F2F]/70">
           {title}
         </span>
@@ -51,10 +51,10 @@ function StakeholderMapScreen() {
             style={{ left: `${ACTOR_POS[i].x}%`, top: `${ACTOR_POS[i].y}%` }}
           >
             <div
-              className="rounded-full bg-[#3C2F2F]/90 border-2 border-[#C87A53] flex items-center justify-center"
+              className="rounded-full bg-[#3C2F2F]/90 border-2 border-[#BC5A3A] flex items-center justify-center"
               style={{ width: ACTOR_POS[i].s, height: ACTOR_POS[i].s }}
             >
-              <span className="w-1 h-1 rounded-full bg-[#C87A53]" />
+              <span className="w-1 h-1 rounded-full bg-[#BC5A3A]" />
             </div>
             <span className="absolute left-1/2 -translate-x-1/2 top-full mt-0.5 text-[8px] whitespace-nowrap text-[#3C2F2F]/65 font-medium">
               {label}
@@ -75,7 +75,7 @@ function StakeholderMapScreen() {
 function RiskPanelScreen() {
   const { t } = useTranslation();
   const alerts = t("societarScreens.alertItems");
-  const levelColors = ["bg-[#C87A53]", "bg-[#3C2F2F]/60", "bg-[#3C2F2F]/30"];
+  const levelColors = ["bg-[#BC5A3A]", "bg-[#3C2F2F]/60", "bg-[#3C2F2F]/30"];
   const metrics = [
     { l: t("societarScreens.riskTotal"), v: t("societarScreens.riskLevel"), accent: true },
     { l: t("societarScreens.alerts"), v: "07" },
@@ -87,7 +87,7 @@ function RiskPanelScreen() {
         {metrics.map((m) => (
           <div key={m.l} className="rounded-lg bg-[#3C2F2F]/5 border border-[#D6CDBF]/60 p-2">
             <span className="text-[8px] uppercase tracking-wider text-[#3C2F2F]/45 block">{m.l}</span>
-            <p className={`font-display text-base font-medium ${m.accent ? "text-[#C87A53]" : "text-[#3C2F2F]"}`}>
+            <p className={`font-display text-base font-medium ${m.accent ? "text-[#BC5A3A]" : "text-[#3C2F2F]"}`}>
               {m.v}
             </p>
           </div>
@@ -95,7 +95,7 @@ function RiskPanelScreen() {
       </div>
       <div className="flex items-end gap-1 h-8 mb-3">
         {[40, 52, 46, 60, 50, 72, 58, 66].map((h, i) => (
-          <div key={i} className="flex-1 rounded-t bg-[#C87A53]/70" style={{ height: `${h}%` }} />
+          <div key={i} className="flex-1 rounded-t bg-[#BC5A3A]/70" style={{ height: `${h}%` }} />
         ))}
       </div>
       <div className="space-y-1.5">
@@ -128,9 +128,9 @@ function TerritoryScreen() {
         <svg viewBox="0 0 100 75" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
           <path
             d="M5 25 Q20 10 40 18 Q60 25 75 12 Q90 6 96 22 L96 60 Q80 70 60 62 Q40 55 25 68 Q10 72 5 55 Z"
-            fill="#C87A53"
+            fill="#BC5A3A"
             fillOpacity="0.12"
-            stroke="#C87A53"
+            stroke="#BC5A3A"
             strokeOpacity="0.3"
             strokeWidth="0.5"
           />
@@ -157,7 +157,7 @@ function TerritoryScreen() {
             className="absolute -translate-x-1/2 -translate-y-full"
             style={{ left: `${p.x}%`, top: `${p.y}%` }}
           >
-            <MapPin size={16} className="text-[#C87A53] fill-[#F4EFEA]" strokeWidth={2} />
+            <MapPin size={16} className="text-[#BC5A3A] fill-[#F4EFEA]" strokeWidth={2} />
           </div>
         ))}
       </div>
@@ -167,7 +167,7 @@ function TerritoryScreen() {
             key={l}
             className={`text-[9px] px-2 py-0.5 rounded-full border ${
               i < 2
-                ? "bg-[#C87A53]/15 border-[#C87A53]/40 text-[#3C2F2F]"
+                ? "bg-[#BC5A3A]/15 border-[#BC5A3A]/40 text-[#3C2F2F]"
                 : "bg-transparent border-[#D6CDBF] text-[#3C2F2F]/50"
             }`}
           >

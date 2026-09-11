@@ -1,44 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Building2, Landmark, UsersRound } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-const ICONS = [Building2, Landmark, UsersRound];
+const fade = (delay) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, delay },
+});
 
 export default function Segments() {
   const { t } = useTranslation();
   const items = t("segments.items");
+  const [empresas, ...rest] = items;
 
   return (
-    <section className="py-20 lg:py-24 bg-[#F4EFEA]">
+    <section id="quem-atendemos" className="py-24 lg:py-28 bg-[#EFE8E0]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-2xl mb-12">
-          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+        <div className="max-w-3xl mb-12">
+          <motion.span {...fade(0)} className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("segments.kicker")}
-          </span>
-          <h2 className="font-display text-3xl lg:text-4xl font-light text-[#3C2F2F] leading-[1.15] tracking-tight text-balance">
+          </motion.span>
+          <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
             {t("segments.title")}
-          </h2>
+          </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {items.map(({ title, text }, i) => {
-            const Icon = ICONS[i];
-            return (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.55, delay: i * 0.12 }}
-                className="bg-[#EFE8E0] border border-[#D6CDBF]/60 rounded-xl p-7 lg:p-8"
-              >
-                <Icon size={26} className="text-[#C87A53] mb-5" />
-                <h3 className="font-display text-xl font-medium text-[#3C2F2F] mb-3">{title}</h3>
-                <p className="text-[#3C2F2F]/70 text-[15px] leading-relaxed">{text}</p>
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8">
+          <motion.div {...fade(0.1)} className="lg:col-span-7 bg-[#3C2F2F] text-[#F4EFEA] rounded-2xl p-8 lg:p-10">
+            <h3 className="font-display text-2xl lg:text-3xl text-[#F4EFEA] leading-tight">{empresas.title}</h3>
+            <p className="mt-3 text-[#F4EFEA]/75 text-[15px] leading-relaxed max-w-xl">{empresas.text}</p>
+          </motion.div>
+          <div className="lg:col-span-5 grid gap-6 content-start">
+            {rest.map((it, i) => (
+              <motion.div key={it.title} {...fade(0.15 + i * 0.05)} className="bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-6 lg:p-7">
+                <h3 className="font-display text-xl text-[#3C2F2F] leading-tight">{it.title}</h3>
+                <p className="mt-2 text-[#3C2F2F]/70 text-sm leading-relaxed">{it.text}</p>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>

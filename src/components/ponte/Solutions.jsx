@@ -1,111 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Image } from "@/components/ui/image";
-import { Compass, Globe2, Layers } from "lucide-react";
-import SocietarScreens from "./SocietarScreens";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import SocietarScreens from "./SocietarScreens";
 
-const ITEM_ICONS = [Compass, Globe2];
-const SOLUTION_IMAGES = [
-  "https://images.unsplash.com/photo-1663837804068-7d7b4c04044d?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1658877559465-ef305a167829?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-];
+const fade = (delay) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, delay },
+});
 
 export default function Solutions() {
   const { t } = useTranslation();
   const items = t("solutions.items");
-  const societar = t("solutions.societar");
+  const soc = t("solutions.societar");
 
   return (
-    <section className="relative py-24 lg:py-40 bg-[#EFE8E0] overflow-hidden">
+    <section id="solucoes" className="py-24 lg:py-32 bg-[#F4EFEA]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-16 lg:mb-20">
-          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+        <div className="max-w-3xl mb-14">
+          <motion.span {...fade(0)} className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("solutions.kicker")}
-          </span>
-          <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">
+          </motion.span>
+          <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
             {t("solutions.title")}
-          </h2>
+          </motion.h2>
+          <motion.p {...fade(0.1)} className="mt-5 text-[#3C2F2F]/70 text-base lg:text-[17px] leading-relaxed">
+            {t("solutions.intro")}
+          </motion.p>
         </div>
 
-        <div className="space-y-10 lg:space-y-12">
-          {items.map((s, i) => {
-            const Icon = ITEM_ICONS[i];
-            const reversed = i % 2 === 1;
-            return (
-              <motion.div
-                key={s.name}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7 }}
-                className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
-                  reversed ? "lg:[direction:rtl]" : ""
-                }`}
-              >
-                <div className={`lg:col-span-7 lg:[direction:ltr] ${reversed ? "lg:order-2" : ""}`}>
-                  <div className="flex items-center gap-4 mb-5">
-                    <div className="w-12 h-12 rounded-full bg-[#3C2F2F] flex items-center justify-center">
-                      <Icon size={22} className="text-[#C87A53]" />
-                    </div>
-                    <h3 className="font-display text-2xl lg:text-3xl font-medium text-[#3C2F2F] tracking-tight">
-                      {s.name}
-                    </h3>
-                  </div>
-                  <p className="text-[#C87A53] font-medium mb-5 text-[15px]">{s.subtitle}</p>
-                  <p className="text-[#3C2F2F]/80 leading-relaxed mb-6">{s.text}</p>
-                  <div className="border-l-2 border-[#C87A53] pl-4">
-                    <span className="text-xs font-medium tracking-[0.12em] uppercase text-[#3C2F2F]/50 block mb-1">
-                      {t("solutions.forWhom")}
-                    </span>
-                    <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{s.audience}</p>
-                  </div>
-                </div>
-                <div className={`lg:col-span-5 lg:[direction:ltr] ${reversed ? "lg:order-1" : ""}`}>
-                  <div className="relative aspect-[4/5] lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-[#3C2F2F]/15">
-                    <Image
-                      src={SOLUTION_IMAGES[i]}
-                      alt={s.name}
-                      fittingType="fill"
-                      className="w-full h-full"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#3C2F2F]/40 to-transparent" />
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-10 lg:pt-14 mt-6 lg:mt-10 border-t border-[#D6CDBF]/60"
-          >
-            <div className="lg:col-span-5">
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-full bg-[#3C2F2F] flex items-center justify-center">
-                  <Layers size={22} className="text-[#C87A53]" />
-                </div>
-                <h3 className="font-display text-2xl lg:text-3xl font-medium text-[#3C2F2F] tracking-tight">
-                  {societar.name}
-                </h3>
+        <div className="space-y-8">
+          {items.map((it, i) => (
+            <motion.div key={it.name} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-10 border-t border-[#3C2F2F]/12 pt-8">
+              <div className="lg:col-span-4">
+                <h3 className="font-display text-2xl lg:text-3xl text-[#3C2F2F] leading-tight">{it.name}</h3>
+                <p className="text-[#BC5A3A] text-sm font-medium tracking-wide mt-2">{it.subtitle}</p>
               </div>
-              <p className="text-[#C87A53] font-medium mb-5 text-[15px]">{societar.subtitle}</p>
-              <p className="text-[#3C2F2F]/80 leading-relaxed mb-6">{societar.text}</p>
-              <div className="border-l-2 border-[#C87A53] pl-4">
-                <span className="text-xs font-medium tracking-[0.12em] uppercase text-[#3C2F2F]/50 block mb-1">
-                  {t("solutions.forWhom")}
-                </span>
-                <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{societar.audience}</p>
+              <div className="lg:col-span-8">
+                <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{it.text}</p>
+                <p className="mt-4 text-[#3C2F2F]/55 text-xs tracking-[0.18em] uppercase">{t("solutions.forWhom")}</p>
+                <p className="text-[#3C2F2F]/70 text-sm mt-1 leading-relaxed">{it.audience}</p>
               </div>
-            </div>
-            <div className="lg:col-span-7">
-              <SocietarScreens />
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
+
+        <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#3C2F2F]/12 pt-10">
+          <div className="lg:col-span-4">
+            <h3 className="font-display text-2xl lg:text-3xl text-[#3C2F2F] leading-tight">{soc.name}</h3>
+            <p className="text-[#BC5A3A] text-sm font-medium tracking-wide mt-2">{soc.subtitle}</p>
+          </div>
+          <div className="lg:col-span-8">
+            <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{soc.text}</p>
+            <p className="mt-4 text-[#3C2F2F]/55 text-xs tracking-[0.18em] uppercase">{t("solutions.forWhom")}</p>
+            <p className="text-[#3C2F2F]/70 text-sm mt-1 leading-relaxed">{soc.audience}</p>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-14">
+        <SocietarScreens />
       </div>
     </section>
   );

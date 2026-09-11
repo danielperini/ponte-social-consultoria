@@ -1,168 +1,147 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Image } from "@/components/ui/image";
-import { Mail, Phone, Send } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { base44 } from "@/api/base44Client";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-const CASE_IMAGES = [
-  "https://images.unsplash.com/photo-1695169152303-fdbd96a95cc2?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1632798121054-c6b73cc9e8b0?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1585413145330-d093b633f303?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1587944333503-ef66108afa79?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1658877556576-41341f9bfaf5?fm=jpg&q=80&w=1200&auto=format&fit=crop",
-];
+const fade = (delay) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, delay },
+});
+
+function Field({ label, children }) {
+  return (
+    <label className="block">
+      <span className="block text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/55 mb-1.5">
+        {label}
+      </span>
+      {children}
+    </label>
+  );
+}
+
+const inputCls =
+  "w-full bg-transparent border-b border-[#3C2F2F]/25 py-2 text-[#3C2F2F] placeholder:text-[#3C2F2F]/35 focus:border-[#BC5A3A] outline-none";
 
 export default function Constructions() {
   const { t } = useTranslation();
   const { toast } = useToast();
   const cases = t("constructions.cases");
-  const [form, setForm] = useState({ nome: "", email: "", empresa: "", mensagem: "" });
+  const labels = t("constructions.labels");
+  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    if (!form.nome || !form.email || !form.mensagem) {
+    if (!form.name || !form.email || !form.message) {
       toast({ title: t("constructions.toastRequired") });
       return;
     }
     setSending(true);
     try {
       await base44.integrations.Core.SendEmail({
-        to: "contato@pontesocial.com.br",
-        subject: `Novo contato pelo site — ${form.nome}`,
-        text: `Nome: ${form.nome}\nEmail: ${form.email}\nEmpresa: ${form.empresa || "—"}\n\n${form.mensagem}`,
+        to: "comercial@pontesocialconsultoria.com.br",
+        subject: "Contato — Ponte Social",
+        body: `Nome: ${form.name}\nE-mail: ${form.email}\nEmpresa: ${form.company}\n\n${form.message}`,
       });
       toast({ title: t("constructions.toastSuccess") });
-      setForm({ nome: "", email: "", empresa: "", mensagem: "" });
-    } catch (err) {
-      toast({ title: t("constructions.toastError"), variant: "destructive" });
+      setForm({ name: "", email: "", company: "", message: "" });
+    } catch {
+      toast({ title: t("constructions.toastError") });
     } finally {
       setSending(false);
     }
   };
 
   return (
-    <section id="construcoes" className="relative py-24 lg:py-40 bg-[#EFE8E0] overflow-hidden">
+    <section id="construcoes" className="py-24 lg:py-32 bg-[#EFE8E0]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-16">
-          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+        <div className="max-w-3xl mb-14">
+          <motion.span {...fade(0)} className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("constructions.kicker")}
-          </span>
-          <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">
+          </motion.span>
+          <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
             {t("constructions.title")}
-          </h2>
+          </motion.h2>
+          <motion.p {...fade(0.1)} className="mt-5 text-[#3C2F2F]/70 text-base lg:text-[17px] leading-relaxed">
+            {t("constructions.intro")}
+          </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-20 lg:mb-28">
+        <div className="space-y-10">
           {cases.map((c, i) => (
-            <motion.article
-              key={c.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: (i % 2) * 0.12 }}
-              className="group bg-[#F4EFEA] rounded-xl overflow-hidden border border-[#D6CDBF]/60"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
-                  src={CASE_IMAGES[i]}
-                  alt={c.title}
-                  fittingType="fill"
-                  className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                />
-                <span className="absolute top-4 left-4 bg-[#3C2F2F]/85 text-[#F4EFEA] text-[11px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full backdrop-blur-sm">
-                  {c.tag}
-                </span>
+            <motion.article key={c.num} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#3C2F2F]/15 pt-8">
+              <div className="lg:col-span-4">
+                <span className="font-display text-4xl text-[#BC5A3A] leading-none">{c.num}</span>
+                <p className="mt-3 text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50">{c.tag}</p>
+                <h3 className="font-display text-xl lg:text-2xl text-[#3C2F2F] mt-2 leading-tight">{c.title}</h3>
               </div>
-              <div className="p-7">
-                <span className="inline-block text-[#C87A53] text-[11px] font-medium tracking-[0.14em] uppercase mb-3">
-                  {c.category}
-                </span>
-                <h3 className="font-display text-xl font-medium text-[#3C2F2F] leading-snug mb-3">
-                  {c.title}
-                </h3>
-                <p className="text-[#3C2F2F]/70 text-[15px] leading-relaxed">{c.text}</p>
+              <div className="lg:col-span-8 grid sm:grid-cols-2 gap-x-8 gap-y-5">
+                <div>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.contexto}</p>
+                  <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.contexto}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.desafio}</p>
+                  <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.desafio}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.atuacao}</p>
+                  <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.atuacao}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.diferencial}</p>
+                  <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.diferencial}</p>
+                </div>
+                <div className="sm:col-span-2 border-t border-[#3C2F2F]/12 pt-4">
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50 mb-1">{labels.resultado}</p>
+                  <p className="text-[#3C2F2F] text-[15px] leading-relaxed font-medium">{c.resultado}</p>
+                </div>
               </div>
             </motion.article>
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="mt-20 grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <div className="lg:col-span-5">
-            <h3 className="font-display text-3xl lg:text-4xl font-light text-[#3C2F2F] leading-tight mb-6">
-              {t("constructions.formTitle")}
-            </h3>
-            <p className="text-[#3C2F2F]/75 leading-relaxed mb-8">
-              {t("constructions.formIntro")}
-            </p>
-            <div className="space-y-4">
-              <a href="mailto:contato@pontesocial.com.br" className="flex items-center gap-3 text-[#3C2F2F]/80 hover:text-[#C87A53] transition-colors">
-                <Mail size={18} className="text-[#C87A53]" />
-                contato@pontesocial.com.br
-              </a>
-              <a href="tel:+551130000000" className="flex items-center gap-3 text-[#3C2F2F]/80 hover:text-[#C87A53] transition-colors">
-                <Phone size={18} className="text-[#C87A53]" />
-                +55 11 3000-0000
-              </a>
-            </div>
+            <h3 className="font-display text-2xl lg:text-3xl text-[#3C2F2F] leading-tight">{t("constructions.formTitle")}</h3>
+            <p className="mt-3 text-[#3C2F2F]/70 text-[15px] leading-relaxed">{t("constructions.formIntro")}</p>
           </div>
-
-          <motion.form
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7 bg-[#F4EFEA] rounded-xl p-7 lg:p-10 border border-[#D6CDBF]"
-          >
-            <div className="grid sm:grid-cols-2 gap-5">
-              <Field label={t("constructions.fieldName")} value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} />
-              <Field label={t("constructions.fieldEmail")} type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} />
+          <form onSubmit={submit} className="lg:col-span-7 grid gap-4 bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-6 lg:p-8">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Field label={t("constructions.fieldName")}>
+                <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputCls} />
+              </Field>
+              <Field label={t("constructions.fieldEmail")}>
+                <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputCls} />
+              </Field>
             </div>
-            <div className="mt-5">
-              <Field label={t("constructions.fieldCompany")} value={form.empresa} onChange={(v) => setForm({ ...form, empresa: v })} />
-            </div>
-            <div className="mt-5">
-              <label className="block text-xs font-medium tracking-[0.1em] uppercase text-[#3C2F2F]/60 mb-2">
-                {t("constructions.fieldMessage")}
-              </label>
+            <Field label={t("constructions.fieldCompany")}>
+              <input value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} className={inputCls} />
+            </Field>
+            <Field label={t("constructions.fieldMessage")}>
               <textarea
-                value={form.mensagem}
-                onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
                 rows={4}
-                className="w-full bg-transparent border-b border-[#D6CDBF] focus:border-[#C87A53] outline-none py-2 text-[#3C2F2F] resize-none transition-colors"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
                 placeholder={t("constructions.placeholder")}
+                className={`${inputCls} resize-none`}
               />
-            </div>
+            </Field>
             <button
               type="submit"
               disabled={sending}
-              className="mt-8 inline-flex items-center gap-2 bg-[#3C2F2F] text-[#F4EFEA] px-7 py-3.5 rounded-full text-sm font-medium tracking-wide hover:bg-[#C87A53] transition-colors disabled:opacity-50"
+              className="mt-2 inline-flex items-center gap-2 self-start rounded-full bg-[#BC5A3A] px-6 py-2.5 text-sm font-medium tracking-[0.12em] uppercase text-[#F4EFEA] hover:bg-[#A84C2E] transition-colors disabled:opacity-60"
             >
               {sending ? t("constructions.sending") : t("constructions.submit")}
-              <Send size={15} />
+              <ArrowRight size={16} />
             </button>
-          </motion.form>
+          </form>
         </div>
       </div>
     </section>
-  );
-}
-
-function Field({ label, value, onChange, type = "text" }) {
-  return (
-    <div>
-      <label className="block text-xs font-medium tracking-[0.1em] uppercase text-[#3C2F2F]/60 mb-2">
-        {label}
-      </label>
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-transparent border-b border-[#D6CDBF] focus:border-[#C87A53] outline-none py-2 text-[#3C2F2F] transition-colors"
-      />
-    </div>
   );
 }

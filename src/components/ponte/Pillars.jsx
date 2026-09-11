@@ -1,93 +1,86 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, X, MapPin, Users, ShieldAlert, Sprout } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-const ICONS = [MapPin, Users, ShieldAlert, Sprout];
+const fade = (delay) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, delay },
+});
 
 export default function Pillars() {
   const { t } = useTranslation();
-  const [active, setActive] = useState(null);
   const items = t("pillars.items");
+  const [open, setOpen] = useState(null);
 
   return (
-    <section id="pilares" className="relative py-24 lg:py-40 bg-[#EFE8E0] overflow-hidden">
+    <section id="pilares" className="py-24 lg:py-32 bg-[#EFE8E0]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-16 lg:mb-24">
-          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+        <div className="max-w-3xl mb-14">
+          <motion.span {...fade(0)} className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("pillars.kicker")}
-          </span>
-          <h2 className="font-display text-3xl lg:text-5xl xl:text-6xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">
+          </motion.span>
+          <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
             {t("pillars.title")}
-          </h2>
+          </motion.h2>
+          <motion.p {...fade(0.1)} className="mt-5 text-[#3C2F2F]/70 text-base lg:text-[17px] leading-relaxed">
+            {t("pillars.intro")}
+          </motion.p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-          {items.map((p, i) => {
-            const Icon = ICONS[i];
-            return (
-              <motion.button
-                key={p.title}
-                onClick={() => setActive(p)}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group text-left bg-[#F4EFEA] border border-[#D6CDBF]/60 rounded-lg p-7 flex flex-col h-full transition-shadow hover:shadow-xl hover:shadow-[#C87A53]/10"
-              >
-                <span className="font-display text-2xl text-[#C87A53]/70 font-light">0{i + 1}</span>
-                <div className="my-5 w-12 h-12 rounded-full bg-[#EFE8E0] flex items-center justify-center border border-[#D6CDBF]/60 group-hover:bg-[#C87A53] transition-colors duration-300">
-                  <Icon size={22} className="text-[#3C2F2F] group-hover:text-[#F4EFEA] transition-colors duration-300" />
-                </div>
-                <h3 className="font-display text-lg lg:text-xl font-medium text-[#3C2F2F] leading-snug mb-3">
-                  {p.title}
-                </h3>
-                <p className="text-[#3C2F2F]/65 text-[14px] leading-relaxed mb-5">{p.tagline}</p>
-                <span className="mt-auto flex items-center gap-1.5 text-[#C87A53] text-xs font-medium tracking-wide">
-                  <Plus size={14} /> {t("pillars.viewDeliverables")}
-                </span>
-              </motion.button>
-            );
-          })}
+        <div className="border-y border-[#3C2F2F]/12">
+          {items.map((item, i) => (
+            <motion.div key={i} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-8 py-8 lg:py-10 border-b border-[#3C2F2F]/12 group">
+              <div className="lg:col-span-2 font-display text-2xl text-[#BC5A3A] leading-none">{item.num}</div>
+              <div className="lg:col-span-7">
+                <h3 className="font-display text-xl lg:text-2xl text-[#3C2F2F] leading-tight">{item.title}</h3>
+                <p className="text-[#BC5A3A] text-sm font-medium tracking-wide mt-1.5">{item.tagline}</p>
+                <p className="mt-3 text-[#3C2F2F]/70 text-[15px] leading-relaxed max-w-2xl">{item.text}</p>
+              </div>
+              <div className="lg:col-span-3 flex lg:justify-end items-start">
+                <button
+                  onClick={() => setOpen(item)}
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-[#3C2F2F] hover:text-[#BC5A3A] transition-colors group-hover:text-[#BC5A3A]"
+                >
+                  <Plus size={15} />
+                  {t("pillars.viewDeliverables")}
+                </button>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
       <AnimatePresence>
-        {active && (
+        {open && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setActive(null)}
-            className="fixed inset-0 z-[60] bg-[#3C2F2F]/40 backdrop-blur-sm flex items-center justify-center p-6"
+            className="fixed inset-0 z-[60] bg-[#3C2F2F]/60 backdrop-blur-sm flex items-center justify-center p-6"
+            onClick={() => setOpen(null)}
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.94, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 10 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ scale: 0.96, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.96, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-[#F4EFEA] rounded-2xl max-w-lg w-full p-8 relative"
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#F4EFEA] rounded-xl max-w-2xl w-full p-8 lg:p-12 relative border border-[#D6CDBF]"
             >
-              <button
-                onClick={() => setActive(null)}
-                className="absolute top-5 right-5 text-[#3C2F2F]/50 hover:text-[#C87A53] transition-colors"
-                aria-label={t("pillars.closeLabel")}
-              >
-                <X size={22} />
+              <button onClick={() => setOpen(null)} className="absolute top-4 right-4 text-[#3C2F2F]/50 hover:text-[#BC5A3A]">
+                <X size={20} />
               </button>
-              <span className="font-display text-3xl text-[#C87A53] font-light">0{items.indexOf(active) + 1}</span>
-              <h3 className="font-display text-2xl lg:text-3xl font-medium text-[#3C2F2F] mt-3 mb-2">
-                {active.title}
-              </h3>
-              <p className="text-[#C87A53] text-sm font-medium mb-6">{active.tagline}</p>
-              <p className="text-[#3C2F2F]/80 leading-relaxed mb-6">{active.text}</p>
-              <div className="border-t border-[#D6CDBF] pt-5">
-                <span className="text-xs font-medium tracking-[0.14em] uppercase text-[#3C2F2F]/50 block mb-2">
+              <span className="font-display text-2xl text-[#BC5A3A]">{open.num}</span>
+              <h3 className="font-display text-2xl text-[#3C2F2F] mt-2 leading-tight">{open.title}</h3>
+              <p className="text-[#BC5A3A] text-sm font-medium tracking-wide mt-1">{open.tagline}</p>
+              <div className="mt-5 border-t border-[#3C2F2F]/12 pt-4">
+                <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50 mb-2">
                   {t("pillars.deliveriesLabel")}
-                </span>
-                <p className="text-[#3C2F2F]/80 leading-relaxed">{active.deliveries}</p>
+                </p>
+                <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">{open.deliveries}</p>
               </div>
             </motion.div>
           </motion.div>

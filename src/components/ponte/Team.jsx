@@ -1,181 +1,143 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Network, Layers, BadgeCheck, Linkedin } from "lucide-react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Linkedin, ChevronDown, GraduationCap, Award, BookOpen, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-function renderRich(text) {
-  const parts = text.split(/\*\*(.+?)\*\*/g);
-  return parts.map((p, i) =>
-    i % 2 === 1 ? (
-      <span key={i} className="text-[#3C2F2F] font-medium">
-        {p}
-      </span>
-    ) : (
-      p
-    )
-  );
-}
+const fade = (delay) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, delay },
+});
 
 export default function Team() {
   const { t } = useTranslation();
-  const members = t("team.members");
+  const p = t("team.profile");
+  const [showFull, setShowFull] = useState(false);
 
   return (
-    <section id="quem-constroi" className="relative py-24 lg:py-40 bg-[#F4EFEA] overflow-hidden">
+    <section id="quem-constroi" className="py-24 lg:py-32 bg-[#F4EFEA]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-16">
-          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
-            {t("team.kicker")}
-          </span>
-          <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">
-            {t("team.title")}
-          </h2>
-        </div>
-
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
-          <div className="lg:col-span-6 space-y-5 text-[#3C2F2F]/80">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-7">
+            <motion.span {...fade(0)} className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+              {t("team.kicker")}
+            </motion.span>
+            <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
+              {t("team.title")}
+            </motion.h2>
+            <motion.p {...fade(0.1)} className="mt-6 text-[#3C2F2F]/75 text-base lg:text-[17px] leading-relaxed">
               {t("team.p1")}
             </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              {t("team.p2")}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              {t("team.p3")}
-            </motion.p>
-          </div>
 
-          <div className="lg:col-span-5 lg:col-start-8 space-y-6">
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6 }}
-              className="bg-[#3C2F2F] rounded-xl p-7 lg:p-8"
-            >
-              <Network size={28} className="text-[#C87A53] mb-4" />
-              <h3 className="font-display text-xl font-medium text-[#F4EFEA] mb-3">
-                {t("team.nucleusTitle")}
-              </h3>
-              <p className="text-[#F4EFEA]/70 text-[15px] leading-relaxed">
-                {t("team.nucleusText")}
-              </p>
+            <motion.div {...fade(0.15)} className="mt-8 border-l-2 border-[#BC5A3A]/40 pl-5">
+              <h3 className="font-display text-xl text-[#3C2F2F] mb-2">{t("team.experienceTitle")}</h3>
+              <p className="text-[#3C2F2F]/70 text-[15px] leading-relaxed">{t("team.experienceText")}</p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-[#EFE8E0] border border-[#D6CDBF] rounded-xl p-7 lg:p-8"
-            >
-              <BadgeCheck size={28} className="text-[#C87A53] mb-4" />
-              <h3 className="font-display text-xl font-medium text-[#3C2F2F] mb-3">
-                {t("team.certifiedTitle")}
-              </h3>
-              <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">
-                {renderRich(t("team.certifiedText"))}
-              </p>
-            </motion.div>
+            <div className="mt-8 grid sm:grid-cols-2 gap-6">
+              <motion.div {...fade(0.2)} className="border-t border-[#3C2F2F]/12 pt-4">
+                <h4 className="font-display text-lg text-[#3C2F2F]">{t("team.nucleusTitle")}</h4>
+                <p className="mt-1.5 text-[#3C2F2F]/65 text-sm leading-relaxed">{t("team.nucleusText")}</p>
+              </motion.div>
+              <motion.div {...fade(0.25)} className="border-t border-[#3C2F2F]/12 pt-4">
+                <h4 className="font-display text-lg text-[#3C2F2F]">{t("team.networkTitle")}</h4>
+                <p className="mt-1.5 text-[#3C2F2F]/65 text-sm leading-relaxed">{t("team.networkText")}</p>
+              </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="bg-[#EFE8E0] border border-[#D6CDBF] rounded-xl p-7 lg:p-8"
-            >
-              <Layers size={28} className="text-[#C87A53] mb-4" />
-              <h3 className="font-display text-xl font-medium text-[#3C2F2F] mb-3">
-                {t("team.networkTitle")}
-              </h3>
-              <p className="text-[#3C2F2F]/75 text-[15px] leading-relaxed">
-                {t("team.networkText")}
-              </p>
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="font-display text-lg italic text-[#C87A53] font-light"
-            >
+            <motion.p {...fade(0.3)} className="mt-8 font-display italic text-[#BC5A3A] text-xl font-light">
               {t("team.closing")}
             </motion.p>
           </div>
-        </div>
 
-        <div className="mt-20 lg:mt-28">
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6 }}
-            className="font-display text-2xl lg:text-3xl font-light text-[#3C2F2F] mb-3 text-balance"
-          >
-            {t("team.teamTitle")}
-          </motion.h3>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[#3C2F2F]/70 max-w-2xl text-[15px] leading-relaxed mb-10"
-          >
-            {t("team.teamIntro")}
-          </motion.p>
+          <motion.div {...fade(0.15)} className="lg:col-span-5 bg-[#EFE8E0] border border-[#D6CDBF]/70 rounded-2xl p-7 lg:p-8">
+            <span className="text-[#BC5A3A] text-[11px] font-medium tracking-[0.2em] uppercase">{p.kicker}</span>
+            <h3 className="font-display text-2xl text-[#3C2F2F] mt-2 leading-tight">{p.name}</h3>
+            <p className="text-[#BC5A3A] text-sm font-medium mt-1">{p.role}</p>
+            <p className="mt-4 text-[#3C2F2F]/75 text-sm leading-relaxed">{p.summary}</p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {members.map((person, i) => (
-              <motion.article
-                key={person.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: (i % 3) * 0.12 }}
-                className="group flex flex-col bg-[#EFE8E0] border border-[#D6CDBF]/60 rounded-2xl p-7 lg:p-8 hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
+            <div className="mt-6 border-t border-[#3C2F2F]/12 pt-4">
+              <p className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50 mb-2">
+                <GraduationCap size={14} className="text-[#BC5A3A]" />
+                {p.educationTitle}
+              </p>
+              <ul className="space-y-1">
+                {p.education.map((e, i) => (
+                  <li key={i} className="text-[#3C2F2F]/75 text-sm leading-relaxed flex gap-2">
+                    <span className="text-[#BC5A3A]">·</span>
+                    {e}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-5 border-t border-[#3C2F2F]/12 pt-4">
+              <p className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50 mb-2">
+                <Award size={14} className="text-[#BC5A3A]" />
+                {p.certsTitle}
+              </p>
+              <p className="text-[#3C2F2F] text-sm font-medium leading-relaxed">{p.certsShort}</p>
+
+              <button
+                onClick={() => setShowFull(!showFull)}
+                className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#BC5A3A] hover:underline"
               >
-                <div className="w-14 h-14 rounded-full bg-[#3C2F2F] ring-2 ring-[#C87A53]/30 flex items-center justify-center text-[#F4EFEA] font-display text-2xl font-medium mb-6 group-hover:ring-[#C87A53] transition-colors">
-                  {person.name.charAt(0)}
-                </div>
-                <h4 className="font-display text-base font-medium text-[#3C2F2F] leading-snug whitespace-nowrap truncate">
-                  {person.name}
-                </h4>
-                <div className="w-8 h-px bg-[#C87A53]/40 my-3" />
-                <p className="text-[#C87A53] text-[13px] font-medium leading-snug mb-4">
-                  {person.role}
-                </p>
-                <p className="text-[#3C2F2F]/70 text-sm leading-relaxed flex-grow">
-                  {person.bio}
-                </p>
-                <a
-                  href={person.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-[#3C2F2F] text-sm font-medium hover:text-[#C87A53] transition-colors"
-                >
-                  <Linkedin size={16} className="text-[#C87A53]" />
-                  {t("team.linkedinCta")}
-                </a>
-              </motion.article>
-            ))}
-          </div>
+                {showFull ? t("team.hideFull") : t("team.seeFull")}
+                <ChevronDown size={14} className={`transition-transform ${showFull ? "rotate-180" : ""}`} />
+              </button>
+
+              <AnimatePresence>
+                {showFull && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <ul className="mt-3 space-y-2">
+                      {p.certs.map((c, i) => (
+                        <li key={i} className="text-[#3C2F2F]/75 text-[13px] leading-relaxed flex gap-2">
+                          {c.ongoing ? (
+                            <span className="text-[#BC5A3A] text-[10px] font-medium uppercase tracking-wide mt-0.5 shrink-0">Em curso</span>
+                          ) : (
+                            <CheckCircle2 size={14} className="text-[#BC5A3A] shrink-0 mt-0.5" />
+                          )}
+                          <span>
+                            <span className="text-[#3C2F2F]">{c.name}</span> — {c.inst}
+                            {c.year ? ` · ${c.year}` : ""}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-4 flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50 mb-2">
+                      <BookOpen size={14} className="text-[#BC5A3A]" />
+                      {p.complementaryTitle}
+                    </p>
+                    <ul className="space-y-1">
+                      {p.complementary.map((c, i) => (
+                        <li key={i} className="text-[#3C2F2F]/70 text-[13px] leading-relaxed flex gap-2">
+                          <span className="text-[#BC5A3A]">·</span>
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <a
+              href={p.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-sm text-[#3C2F2F] hover:text-[#BC5A3A] transition-colors border-t border-[#3C2F2F]/12 pt-4"
+            >
+              <Linkedin size={16} className="text-[#BC5A3A]" />
+              {t("team.linkedinCta")}
+            </a>
+            <p className="mt-4 text-[11px] text-[#3C2F2F]/45 leading-relaxed">{t("team.profileNote")}</p>
+          </motion.div>
         </div>
       </div>
     </section>
