@@ -287,6 +287,10 @@ export const translations = {
       cookieNote: "Este site não utiliza cookies de terceiros para rastreamento.",
       lgpdSeal: "Conformidade LGPD",
       lgpdSealDesc: "Dados pessoais tratados conforme a Lei Geral de Proteção de Dados.",
+      griSeal: "Padrões GRI",
+      griSealDesc: "Relatórios de sustentabilidade alinhados à Global Reporting Initiative.",
+      pactoSeal: "Pacto Global ONU",
+      pactoSealDesc: "Adesão aos dez princípios do Pacto Global da ONU.",
     },
     seo: {
       title: "Ponte Social | Inteligência territorial, gestão de stakeholders e riscos sociais",
@@ -579,6 +583,10 @@ export const translations = {
       cookieNote: "This site does not use third-party cookies for tracking.",
       lgpdSeal: "LGPD Compliance",
       lgpdSealDesc: "Personal data handled in accordance with Brazil's General Data Protection Law.",
+      griSeal: "GRI Standards",
+      griSealDesc: "Sustainability reporting aligned with the Global Reporting Initiative.",
+      pactoSeal: "UN Global Compact",
+      pactoSealDesc: "Commitment to the ten principles of the UN Global Compact.",
     },
     seo: {
       title: "Ponte Social | Territorial intelligence, stakeholder management, and social risks",
@@ -871,6 +879,10 @@ export const translations = {
       cookieNote: "Este sitio no utiliza cookies de terceros para rastreo.",
       lgpdSeal: "Conformidad LGPD",
       lgpdSealDesc: "Datos personales tratados conforme a la Ley General de Protección de Datos de Brasil.",
+      griSeal: "Estándares GRI",
+      griSealDesc: "Reportes de sostenibilidad alineados con la Global Reporting Initiative.",
+      pactoSeal: "Pacto Global ONU",
+      pactoSealDesc: "Adhesión a los diez principios del Pacto Global de la ONU.",
     },
     seo: {
       title: "Ponte Social | Inteligencia territorial, gestión de stakeholders y riesgos sociales",

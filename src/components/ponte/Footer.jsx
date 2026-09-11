@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, Linkedin, ShieldCheck, Lock, FileText } from "lucide-react";
+import { Mail, Phone, Linkedin, ShieldCheck, BarChart3, Globe, Lock, FileText } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import Logo from "./Logo";
 
@@ -10,6 +10,12 @@ const NAV_LINKS = [
   { label: "nav.team", target: "quem-constroi" },
   { label: "nav.cases", target: "construcoes" },
   { label: "nav.insights", target: "artigos" },
+];
+
+const SEALS = [
+  { Icon: ShieldCheck, labelKey: "footer.lgpdSeal", descKey: "footer.lgpdSealDesc" },
+  { Icon: BarChart3, labelKey: "footer.griSeal", descKey: "footer.griSealDesc" },
+  { Icon: Globe, labelKey: "footer.pactoSeal", descKey: "footer.pactoSealDesc" },
 ];
 
 function scrollTo(target) {
@@ -32,18 +38,25 @@ export default function Footer() {
             <p className="font-display italic text-[#C87A53] text-lg font-light leading-snug">
               {t("footer.slogan")}
             </p>
-            <div className="inline-flex items-center gap-3 mt-7 border border-[#C87A53]/30 rounded-full pl-3 pr-4 py-2.5 bg-[#F4EFEA]/5">
-              <span className="w-9 h-9 rounded-full bg-[#C87A53]/15 flex items-center justify-center shrink-0">
-                <ShieldCheck size={18} className="text-[#C87A53]" />
-              </span>
-              <span className="leading-tight">
-                <span className="block text-[11px] font-medium tracking-[0.16em] uppercase text-[#F4EFEA]">
-                  {t("footer.lgpdSeal")}
-                </span>
-                <span className="block text-[11px] text-[#F4EFEA]/55">
-                  {t("footer.lgpdSealDesc")}
-                </span>
-              </span>
+            <div className="mt-7 space-y-3">
+              {SEALS.map((s) => {
+                const Icon = s.Icon;
+                return (
+                  <div key={s.labelKey} className="flex items-center gap-3 border border-[#C87A53]/30 rounded-full pl-3 pr-4 py-2.5 bg-[#F4EFEA]/5">
+                    <span className="w-9 h-9 rounded-full bg-[#C87A53]/15 flex items-center justify-center shrink-0">
+                      <Icon size={18} className="text-[#C87A53]" />
+                    </span>
+                    <span className="leading-tight">
+                      <span className="block text-[11px] font-medium tracking-[0.16em] uppercase text-[#F4EFEA]">
+                        {t(s.labelKey)}
+                      </span>
+                      <span className="block text-[11px] text-[#F4EFEA]/55">
+                        {t(s.descKey)}
+                      </span>
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
