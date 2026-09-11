@@ -286,6 +286,9 @@ export const translations = {
       etco: "Instituto Brasileiro de Ética da Concorrência.",
       hp: "Consultoria e estratégia empresarial.",
       tgrafting: "Empresa e empreendimento.",
+      ufmg: "Universidade Federal de Minas Gerais.",
+      ccaps: "Capacitação e desenvolvimento profissional.",
+      cecaps: "Capacitação e formação.",
     },
     governance: {
       kicker: "Governança e compromissos",
@@ -609,6 +612,9 @@ export const translations = {
       etco: "Brazilian Institute of Competition Ethics.",
       hp: "Business consulting and strategy.",
       tgrafting: "Company and venture.",
+      ufmg: "Federal University of Minas Gerais.",
+      ccaps: "Professional training and development.",
+      cecaps: "Training and education.",
     },
     governance: {
       kicker: "Governance and commitments",
@@ -931,6 +937,9 @@ export const translations = {
       etco: "Instituto Brasileño de Ética de la Competencia.",
       hp: "Consultoría y estrategia empresarial.",
       tgrafting: "Empresa y emprendimiento.",
+      ufmg: "Universidad Federal de Minas Gerais.",
+      ccaps: "Capacitación y desarrollo profesional.",
+      cecaps: "Capacitación y formación.",
     },
     governance: {
       kicker: "Gobernanza y compromisos",

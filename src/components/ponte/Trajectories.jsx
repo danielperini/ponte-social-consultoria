@@ -24,6 +24,9 @@ const INSTITUTIONS = [
   { name: "ETCO", descKey: "trajectory.etco", logo: "etco.org.br" },
   { name: "T-Grafting", descKey: "trajectory.tgrafting", logo: null },
   { name: "H&P", descKey: "trajectory.hp", logo: null },
+  { name: "UFMG", descKey: "trajectory.ufmg", logo: "ufmg.br" },
+  { name: "C Caps", descKey: "trajectory.ccaps", logo: null },
+  { name: "CeCaps", descKey: "trajectory.cecaps", logo: null },
 ];
 
 function TrajectoryCard({ inst, index }) {
