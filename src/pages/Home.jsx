@@ -26,17 +26,17 @@ export default function Home() {
       <main>
         <Hero />
         <APonte />
-        <Stats />
         <Sectors />
         <Segments />
         <Pillars />
         <HowWeWork />
         <HowWeCross />
         <Solutions />
-        <Constructions />
         <Articles />
         <Team />
         <Governance />
+        <Stats />
+        <Constructions />
       </main>
       <Footer />
     </div>
