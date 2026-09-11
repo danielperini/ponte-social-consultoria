@@ -42,11 +42,11 @@ function TrajectoryCard({ inst, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
-      className="group flex flex-col justify-between bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-6 min-h-[190px] hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
+      className="group flex flex-col justify-between bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-7 min-h-[210px] hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
     >
-      <div className="h-14 flex items-center justify-center mb-3">
+      <div className="h-16 flex items-center justify-center mb-5">
         {logoUrl && logoOk ? (
-          <div className="h-14 w-14 rounded-xl bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_3px_10px_-4px_rgba(60,47,47,0.25)] p-3">
+          <div className="h-16 w-16 rounded-2xl bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_3px_12px_-4px_rgba(60,47,47,0.22)] p-2.5">
             <img
               src={logoUrl}
               alt={inst.name}
@@ -56,14 +56,14 @@ function TrajectoryCard({ inst, index }) {
             />
           </div>
         ) : (
-          <div className="h-14 flex items-center justify-center px-2 max-w-[140px]">
+          <div className="h-16 flex items-center justify-center px-3 max-w-[150px]">
             <h3 className="font-display text-sm font-medium text-[#3C2F2F] leading-tight text-center">
               {inst.name}
             </h3>
           </div>
         )}
       </div>
-      <div className="w-8 h-px bg-[#C87A53]/40 mx-auto mb-3" />
+      <div className="w-8 h-px bg-[#C87A53]/40 mx-auto mb-4" />
       <p className="text-[#3C2F2F]/65 text-[13px] leading-relaxed text-center">
         {t(inst.descKey)}
       </p>
