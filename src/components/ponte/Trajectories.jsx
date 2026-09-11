@@ -3,18 +3,25 @@ import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 const INSTITUTIONS = [
-  { name: "Perini Projetos", who: "Daniel Perini", descKey: "trajectory.periniProjetos", logo: null },
-  { name: "Fiat Ultra Artes", who: "Daniel Perini", descKey: "trajectory.fiatUltraArtes", logo: null },
-  { name: "Fábrica do Futuro", who: "Daniel Perini", descKey: "trajectory.fabricaFuturo", logo: null },
-  { name: "Fundação ArcelorMittal", who: "Daniel Perini", descKey: "trajectory.fundacaoArcelor", logo: "arcelormittal.com" },
-  { name: "Fundação Renova", who: "Daniel Perini · Patrícia Abreu", descKey: "trajectory.fundacaoRenova", logo: "fundacaorenova.org" },
-  { name: "LafargeHolcim", who: "Daniel Perini", descKey: "trajectory.lafargeHolcim", logo: "holcim.com" },
-  { name: "Vivo", who: "Daniel Perini", descKey: "trajectory.vivo", logo: "vivo.com.br" },
-  { name: "Claro Abreu Projetos", who: "Patrícia Abreu", descKey: "trajectory.claroAbreu", logo: null },
-  { name: "Vale", who: "Daniela Reis", descKey: "trajectory.vale", logo: "vale.com" },
-  { name: "Votorantim", who: "Daniela Reis", descKey: "trajectory.votorantim", logo: "votorantim.com.br" },
-  { name: "Grupo EBX", who: "Daniela Reis", descKey: "trajectory.ebx", logo: null },
-  { name: "ETCO", who: "Daniela Reis", descKey: "trajectory.etco", logo: "etco.org.br" },
+  { name: "Perini Projetos", descKey: "trajectory.periniProjetos", logo: null },
+  { name: "Fiat Ultra Artes", descKey: "trajectory.fiatUltraArtes", logo: null },
+  { name: "Fábrica do Futuro", descKey: "trajectory.fabricaFuturo", logo: null },
+  { name: "Meio Adulto das Artes", descKey: "trajectory.meioAdultoArtes", logo: null },
+  { name: "Centro de Referência da Juventude", descKey: "trajectory.crj", logo: null },
+  { name: "Fundação Municipal de Cultura", descKey: "trajectory.fundacaoMunicipalCultura", logo: "fmc.pbh.gov.br" },
+  { name: "Secretaria de Educação de MG", descKey: "trajectory.secretariaEducacaoMG", logo: "educacao.mg.gov.br" },
+  { name: "Secretaria de Direitos Humanos de MG", descKey: "trajectory.secretariaDireitosHumanos", logo: null },
+  { name: "Fundação ArcelorMittal", descKey: "trajectory.fundacaoArcelor", logo: "arcelormittal.com" },
+  { name: "Fundação Renova", descKey: "trajectory.fundacaoRenova", logo: "fundacaorenova.org" },
+  { name: "LafargeHolcim", descKey: "trajectory.lafargeHolcim", logo: "holcim.com" },
+  { name: "Vivo", descKey: "trajectory.vivo", logo: "vivo.com.br" },
+  { name: "Claro Abreu Projetos", descKey: "trajectory.claroAbreu", logo: null },
+  { name: "Angra Partners", descKey: "trajectory.angra", logo: "angrapartners.com" },
+  { name: "Beija-Flor Tecnologias Sociais", descKey: "trajectory.beijaFlor", logo: "beijaflor.org.br" },
+  { name: "Vale", descKey: "trajectory.vale", logo: "vale.com" },
+  { name: "Votorantim", descKey: "trajectory.votorantim", logo: "votorantim.com.br" },
+  { name: "Grupo EBX", descKey: "trajectory.ebx", logo: null },
+  { name: "ETCO", descKey: "trajectory.etco", logo: "etco.org.br" },
 ];
 
 function TrajectoryCard({ inst, index }) {
@@ -28,31 +35,28 @@ function TrajectoryCard({ inst, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
-      className="group flex flex-col justify-between bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-7 min-h-[180px] hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
+      className="group flex flex-col justify-between bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-6 min-h-[170px] hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
     >
-      <div className="h-12 flex items-center justify-center mb-4">
+      <div className="h-11 flex items-center justify-center mb-3">
         {logoUrl && logoOk ? (
-          <div className="h-12 w-12 rounded-xl bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_3px_10px_-4px_rgba(60,47,47,0.25)]">
+          <div className="h-11 w-11 rounded-lg bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_3px_10px_-4px_rgba(60,47,47,0.25)]">
             <img
               src={logoUrl}
               alt={inst.name}
               loading="lazy"
-              className="max-h-8 max-w-8 object-contain"
+              className="max-h-7 max-w-7 object-contain"
               onError={() => setLogoOk(false)}
             />
           </div>
         ) : (
-          <h3 className="font-display text-xl font-medium text-[#3C2F2F] leading-tight text-center">
+          <h3 className="font-display text-lg font-medium text-[#3C2F2F] leading-tight text-center">
             {inst.name}
           </h3>
         )}
       </div>
       <div className="w-8 h-px bg-[#C87A53]/40 mx-auto mb-3" />
-      <p className="text-[#3C2F2F]/65 text-sm leading-relaxed text-center">
+      <p className="text-[#3C2F2F]/65 text-[13px] leading-relaxed text-center">
         {t(inst.descKey)}
-      </p>
-      <p className="text-[#C87A53] text-[12px] font-medium tracking-wide mt-4 text-center">
-        {inst.who}
       </p>
     </motion.article>
   );
