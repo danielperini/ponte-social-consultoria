@@ -6,7 +6,7 @@ const INSTITUTIONS = [
   { name: "Perini Projetos", descKey: "trajectory.periniProjetos", logo: null },
   { name: "Fiat Ultra Artes", descKey: "trajectory.fiatUltraArtes", logo: null },
   { name: "Fábrica do Futuro", descKey: "trajectory.fabricaFuturo", logo: null },
-  { name: "Meio Adulto das Artes", descKey: "trajectory.meioAdultoArtes", logo: null },
+  { name: "Viaduto das Artes", descKey: "trajectory.meioAdultoArtes", logo: null },
   { name: "Centro de Referência da Juventude", descKey: "trajectory.crj", logo: null },
   { name: "Fundação Municipal de Cultura", descKey: "trajectory.fundacaoMunicipalCultura", logo: "fmc.pbh.gov.br" },
   { name: "Secretaria de Educação de MG", descKey: "trajectory.secretariaEducacaoMG", logo: "educacao.mg.gov.br" },
