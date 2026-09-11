@@ -32,6 +32,19 @@ export default function Footer() {
             <p className="font-display italic text-[#C87A53] text-lg font-light leading-snug">
               {t("footer.slogan")}
             </p>
+            <div className="inline-flex items-center gap-3 mt-7 border border-[#C87A53]/30 rounded-full pl-3 pr-4 py-2.5 bg-[#F4EFEA]/5">
+              <span className="w-9 h-9 rounded-full bg-[#C87A53]/15 flex items-center justify-center shrink-0">
+                <ShieldCheck size={18} className="text-[#C87A53]" />
+              </span>
+              <span className="leading-tight">
+                <span className="block text-[11px] font-medium tracking-[0.16em] uppercase text-[#F4EFEA]">
+                  {t("footer.lgpdSeal")}
+                </span>
+                <span className="block text-[11px] text-[#F4EFEA]/55">
+                  {t("footer.lgpdSealDesc")}
+                </span>
+              </span>
+            </div>
           </div>
 
           <div className="lg:col-span-2">

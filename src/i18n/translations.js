@@ -285,6 +285,8 @@ export const translations = {
       ethics: "Atuamos com independência, confidencialidade e transparência em todas as relações.",
       lgpd: "Política de Privacidade",
       cookieNote: "Este site não utiliza cookies de terceiros para rastreamento.",
+      lgpdSeal: "Conformidade LGPD",
+      lgpdSealDesc: "Dados pessoais tratados conforme a Lei Geral de Proteção de Dados.",
     },
     seo: {
       title: "Ponte Social | Inteligência territorial, gestão de stakeholders e riscos sociais",
@@ -575,6 +577,8 @@ export const translations = {
       ethics: "We work with independence, confidentiality, and transparency in every relationship.",
       lgpd: "Privacy Policy",
       cookieNote: "This site does not use third-party cookies for tracking.",
+      lgpdSeal: "LGPD Compliance",
+      lgpdSealDesc: "Personal data handled in accordance with Brazil's General Data Protection Law.",
     },
     seo: {
       title: "Ponte Social | Territorial intelligence, stakeholder management, and social risks",
@@ -865,6 +869,8 @@ export const translations = {
       ethics: "Trabajamos con independencia, confidencialidad y transparencia en todas las relaciones.",
       lgpd: "Política de Privacidad",
       cookieNote: "Este sitio no utiliza cookies de terceros para rastreo.",
+      lgpdSeal: "Conformidad LGPD",
+      lgpdSealDesc: "Datos personales tratados conforme a la Ley General de Protección de Datos de Brasil.",
     },
     seo: {
       title: "Ponte Social | Inteligencia territorial, gestión de stakeholders y riesgos sociales",
