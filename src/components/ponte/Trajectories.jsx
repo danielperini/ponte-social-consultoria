@@ -57,7 +57,7 @@ export default function Trajectories() {
     });
 
     const updateR = () => {
-      Rref.current = Math.min(270, Math.max(140, container.clientWidth * 0.34));
+      Rref.current = Math.min(260, Math.max(140, container.clientWidth * 0.38));
     };
     updateR();
     window.addEventListener("resize", updateR);
@@ -85,8 +85,8 @@ export default function Trajectories() {
         const py = y2 * R;
         const pz = z2; // unit depth -1..1
         const depth = (pz + 1) / 2; // 0 (far) .. 1 (near)
-        const scale = 0.45 + 0.75 * depth;
-        const opacity = 0.22 + 0.78 * depth;
+        const scale = 0.5 + 0.5 * depth;
+        const opacity = 0.14 + 0.86 * depth;
         node.style.transform = `translate(-50%, -50%) translate3d(${px.toFixed(1)}px, ${py.toFixed(1)}px, 0) scale(${scale.toFixed(3)})`;
         node.style.opacity = opacity.toFixed(3);
         node.style.zIndex = String(Math.round(depth * 1000));
@@ -128,12 +128,14 @@ export default function Trajectories() {
 
         <div
           ref={cloudRef}
-          className="relative w-full h-[440px] sm:h-[500px] lg:h-[560px]"
+          className="relative w-full h-[360px] sm:h-[440px] lg:h-[600px]"
           aria-label={t("trajectory.title")}
         >
           {INSTITUTIONS.map((inst) => {
             const url = inst.logo ? logoUrlFor(inst.logo) : null;
             const showLogo = url && !failed.has(inst.name);
+            const tile =
+              "h-11 w-11 sm:h-14 sm:w-14 lg:h-16 lg:w-16 rounded-xl sm:rounded-2xl bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_4px_18px_-6px_rgba(60,47,47,0.28)]";
             return (
               <div
                 key={inst.name}
@@ -141,8 +143,8 @@ export default function Trajectories() {
                 className="absolute left-1/2 top-1/2 will-change-transform"
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                {showLogo ? (
-                  <div className="h-14 w-14 rounded-2xl bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_4px_18px_-6px_rgba(60,47,47,0.28)] p-2.5">
+                <div className={showLogo ? `${tile} p-1.5 sm:p-2.5` : `${tile} px-1 sm:px-1.5`}>
+                  {showLogo ? (
                     <img
                       src={url}
                       alt={inst.name}
@@ -156,14 +158,12 @@ export default function Trajectories() {
                         })
                       }
                     />
-                  </div>
-                ) : (
-                  <div className="px-3.5 py-2 rounded-full bg-[#F4EFEA] border border-[#D6CDBF]/70 shadow-[0_4px_16px_-6px_rgba(60,47,47,0.2)]">
-                    <span className="font-display text-[11px] font-medium text-[#3C2F2F] whitespace-nowrap tracking-tight">
+                  ) : (
+                    <span className="font-display text-[8px] sm:text-[10px] lg:text-[11px] font-medium text-[#3C2F2F] leading-[1.05] text-center tracking-tight">
                       {inst.name}
                     </span>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             );
           })}
