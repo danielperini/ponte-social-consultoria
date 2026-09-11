@@ -1,17 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 const INSTITUTIONS = [
-  { name: "Fundação ArcelorMittal", who: "Daniel Perini", descKey: "trajectory.fundacaoArcelor" },
-  { name: "Fundação Renova", who: "Daniel Perini · Patrícia Abreu", descKey: "trajectory.fundacaoRenova" },
-  { name: "Malavi Produções", who: "Daniel Perini", descKey: "trajectory.malavi" },
-  { name: "Claro Abreu Projetos", who: "Patrícia Abreu", descKey: "trajectory.claroAbreu" },
-  { name: "Vale", who: "Daniela Reis", descKey: "trajectory.vale" },
-  { name: "Votorantim", who: "Daniela Reis", descKey: "trajectory.votorantim" },
-  { name: "Grupo EBX", who: "Daniela Reis", descKey: "trajectory.ebx" },
-  { name: "ETCO", who: "Daniela Reis", descKey: "trajectory.etco" },
+  { name: "Perini Projetos", who: "Daniel Perini", descKey: "trajectory.periniProjetos", logo: null },
+  { name: "Fiat Ultra Artes", who: "Daniel Perini", descKey: "trajectory.fiatUltraArtes", logo: null },
+  { name: "Fábrica do Futuro", who: "Daniel Perini", descKey: "trajectory.fabricaFuturo", logo: null },
+  { name: "Fundação ArcelorMittal", who: "Daniel Perini", descKey: "trajectory.fundacaoArcelor", logo: "arcelormittal.com" },
+  { name: "Fundação Renova", who: "Daniel Perini · Patrícia Abreu", descKey: "trajectory.fundacaoRenova", logo: "fundacaorenova.org" },
+  { name: "LafargeHolcim", who: "Daniel Perini", descKey: "trajectory.lafargeHolcim", logo: "holcim.com" },
+  { name: "Vivo", who: "Daniel Perini", descKey: "trajectory.vivo", logo: "vivo.com.br" },
+  { name: "Claro Abreu Projetos", who: "Patrícia Abreu", descKey: "trajectory.claroAbreu", logo: null },
+  { name: "Vale", who: "Daniela Reis", descKey: "trajectory.vale", logo: "vale.com" },
+  { name: "Votorantim", who: "Daniela Reis", descKey: "trajectory.votorantim", logo: "votorantim.com.br" },
+  { name: "Grupo EBX", who: "Daniela Reis", descKey: "trajectory.ebx", logo: null },
+  { name: "ETCO", who: "Daniela Reis", descKey: "trajectory.etco", logo: "etco.org.br" },
 ];
+
+function TrajectoryCard({ inst, index }) {
+  const { t } = useTranslation();
+  const [logoOk, setLogoOk] = useState(Boolean(inst.logo));
+  const logoUrl = inst.logo ? `https://www.google.com/s2/favicons?sz=128&domain=${inst.logo}` : null;
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
+      className="group flex flex-col justify-between bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-7 min-h-[180px] hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
+    >
+      <div className="h-12 flex items-center justify-center mb-4">
+        {logoUrl && logoOk ? (
+          <div className="h-12 w-12 rounded-xl bg-white border border-[#D6CDBF]/60 flex items-center justify-center shadow-[0_3px_10px_-4px_rgba(60,47,47,0.25)]">
+            <img
+              src={logoUrl}
+              alt={inst.name}
+              loading="lazy"
+              className="max-h-8 max-w-8 object-contain"
+              onError={() => setLogoOk(false)}
+            />
+          </div>
+        ) : (
+          <h3 className="font-display text-xl font-medium text-[#3C2F2F] leading-tight text-center">
+            {inst.name}
+          </h3>
+        )}
+      </div>
+      <div className="w-8 h-px bg-[#C87A53]/40 mx-auto mb-3" />
+      <p className="text-[#3C2F2F]/65 text-sm leading-relaxed text-center">
+        {t(inst.descKey)}
+      </p>
+      <p className="text-[#C87A53] text-[12px] font-medium tracking-wide mt-4 text-center">
+        {inst.who}
+      </p>
+    </motion.article>
+  );
+}
 
 export default function Trajectories() {
   const { t } = useTranslation();
@@ -33,27 +78,7 @@ export default function Trajectories() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {INSTITUTIONS.map((inst, i) => (
-            <motion.article
-              key={inst.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-              className="group flex flex-col justify-between bg-[#F4EFEA] border border-[#D6CDBF]/70 rounded-2xl p-7 min-h-[170px] hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
-            >
-              <div>
-                <h3 className="font-display text-xl font-medium text-[#3C2F2F] leading-tight">
-                  {inst.name}
-                </h3>
-                <div className="w-8 h-px bg-[#C87A53]/40 my-3" />
-                <p className="text-[#3C2F2F]/65 text-sm leading-relaxed">
-                  {t(inst.descKey)}
-                </p>
-              </div>
-              <p className="text-[#C87A53] text-[12px] font-medium tracking-wide mt-5">
-                {inst.who}
-              </p>
-            </motion.article>
+            <TrajectoryCard key={inst.name} inst={inst} index={i} />
           ))}
         </div>
       </div>
