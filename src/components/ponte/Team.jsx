@@ -141,35 +141,36 @@ export default function Team() {
             {t("team.teamIntro")}
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {members.map((person, i) => (
               <motion.article
                 key={person.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: (i % 4) * 0.1 }}
-                className="group flex flex-col bg-[#EFE8E0] border border-[#D6CDBF]/60 rounded-xl p-6 hover:border-[#C87A53] transition-colors duration-300"
+                transition={{ duration: 0.6, delay: (i % 3) * 0.12 }}
+                className="group flex flex-col bg-[#EFE8E0] border border-[#D6CDBF]/60 rounded-2xl p-7 lg:p-8 hover:border-[#C87A53] hover:-translate-y-1 hover:shadow-[0_14px_34px_-14px_rgba(60,47,47,0.28)] transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-[#3C2F2F] flex items-center justify-center text-[#F4EFEA] font-display text-xl font-medium mb-5">
+                <div className="w-14 h-14 rounded-full bg-[#3C2F2F] ring-2 ring-[#C87A53]/30 flex items-center justify-center text-[#F4EFEA] font-display text-2xl font-medium mb-6 group-hover:ring-[#C87A53] transition-colors">
                   {person.name.charAt(0)}
                 </div>
-                <h4 className="font-display text-[13px] font-medium text-[#3C2F2F] leading-snug truncate">
+                <h4 className="font-display text-base font-medium text-[#3C2F2F] leading-snug whitespace-nowrap truncate">
                   {person.name}
                 </h4>
-                <p className="text-[#C87A53] text-[13px] font-medium mt-1 mb-3 leading-snug">
+                <div className="w-8 h-px bg-[#C87A53]/40 my-3" />
+                <p className="text-[#C87A53] text-[13px] font-medium leading-snug mb-4">
                   {person.role}
                 </p>
-                <p className="text-[#3C2F2F]/70 text-[14px] leading-relaxed flex-grow">
+                <p className="text-[#3C2F2F]/70 text-sm leading-relaxed flex-grow">
                   {person.bio}
                 </p>
                 <a
                   href={person.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-[#3C2F2F] text-sm font-medium border border-[#D6CDBF] rounded-full px-4 py-2 hover:bg-[#3C2F2F] hover:text-[#F4EFEA] hover:border-[#3C2F2F] transition-colors duration-300"
+                  className="mt-6 inline-flex items-center gap-2 text-[#3C2F2F] text-sm font-medium hover:text-[#C87A53] transition-colors"
                 >
-                  <Linkedin size={16} />
+                  <Linkedin size={16} className="text-[#C87A53]" />
                   {t("team.linkedinCta")}
                 </a>
               </motion.article>
