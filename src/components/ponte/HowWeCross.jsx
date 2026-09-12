@@ -15,17 +15,17 @@ export default function HowWeCross() {
             <span className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("howWeCross.kicker")}
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance mb-8">
+            <h2 className="font-display text-3xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.1] tracking-tight text-balance mb-8">
               {t("howWeCross.title")}
             </h2>
-            <p className="text-[#3C2F2F]/75 leading-relaxed mb-6">{t("howWeCross.intro")}</p>
+            <p className="text-[#1F4A2E]/75 leading-relaxed mb-6">{t("howWeCross.intro")}</p>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-10 bg-[#3C2F2F] rounded-xl p-7 lg:p-8"
+              className="mt-10 bg-[#1F4A2E] rounded-xl p-7 lg:p-8"
             >
               <p className="font-display text-lg lg:text-xl text-[#F4EFEA] leading-relaxed">
                 {t("howWeCross.formula1")}
@@ -46,16 +46,16 @@ export default function HowWeCross() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.6, delay: i * 0.15 }}
-                  className="flex gap-5 items-start bg-[#EFE8E0]/50 border border-[#D6CDBF]/50 rounded-lg p-6"
+                  className="flex gap-5 items-start bg-[#EAF0E5]/50 border border-[#C2D2C0]/50 rounded-lg p-6"
                 >
                   <span className="font-display text-2xl text-[#A67C00] font-light shrink-0">
                     0{i + 1}
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-medium text-[#3C2F2F] mb-1">
+                    <h3 className="font-display text-xl font-medium text-[#1F4A2E] mb-1">
                       {item.q}
                     </h3>
-                    <p className="text-[#3C2F2F]/70 text-[15px]">{item.a}</p>
+                    <p className="text-[#1F4A2E]/70 text-[15px]">{item.a}</p>
                   </div>
                 </motion.div>
               ))}

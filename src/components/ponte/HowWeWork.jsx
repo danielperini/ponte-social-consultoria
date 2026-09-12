@@ -10,7 +10,7 @@ export default function HowWeWork() {
   const steps = t("howWeWork.steps");
 
   return (
-    <section className="relative py-24 lg:py-36 bg-[#3C2F2F] overflow-hidden">
+    <section className="relative py-24 lg:py-36 bg-[#1F4A2E] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{

@@ -30,7 +30,7 @@ export default function ConnectingArc({ className = "", height = 220, flip = fal
           cx="720"
           cy="36"
           r="5"
-          fill="#3C2F2F"
+          fill="#1F4A2E"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}

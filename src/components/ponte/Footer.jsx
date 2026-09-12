@@ -26,7 +26,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-[#3C2F2F] text-[#F4EFEA]/70 pt-16 pb-10">
+    <footer className="bg-[#1F4A2E] text-[#F4EFEA]/70 pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-4">

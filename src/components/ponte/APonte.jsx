@@ -23,24 +23,24 @@ export default function APonte() {
             <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("aponte.kicker")}
             </motion.span>
-            <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
+            <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.08] tracking-tight text-balance">
               {t("aponte.title")}
             </motion.h2>
-            <motion.p {...fade(0.1)} className="mt-6 text-[#3C2F2F]/75 text-base lg:text-[17px] leading-relaxed">
+            <motion.p {...fade(0.1)} className="mt-6 text-[#1F4A2E]/75 text-base lg:text-[17px] leading-relaxed">
               {t("aponte.p1")}
             </motion.p>
-            <motion.p {...fade(0.15)} className="mt-4 text-[#3C2F2F]/75 text-base lg:text-[17px] leading-relaxed">
+            <motion.p {...fade(0.15)} className="mt-4 text-[#1F4A2E]/75 text-base lg:text-[17px] leading-relaxed">
               {t("aponte.p2")}
             </motion.p>
-            <motion.p {...fade(0.2)} className="mt-4 text-[#3C2F2F]/75 text-base lg:text-[17px] leading-relaxed">
+            <motion.p {...fade(0.2)} className="mt-4 text-[#1F4A2E]/75 text-base lg:text-[17px] leading-relaxed">
               {t("aponte.p3")}
             </motion.p>
 
             <motion.div {...fade(0.25)} className="mt-8 border-l-2 border-[#A67C00]/40 pl-5">
-              <h3 className="font-display text-xl text-[#3C2F2F] mb-3">{t("aponte.whyTitle")}</h3>
+              <h3 className="font-display text-xl text-[#1F4A2E] mb-3">{t("aponte.whyTitle")}</h3>
               <ul className="space-y-2.5">
                 {why.map((w, i) => (
-                  <li key={i} className="text-[#3C2F2F]/75 text-[15px] leading-relaxed flex gap-3">
+                  <li key={i} className="text-[#1F4A2E]/75 text-[15px] leading-relaxed flex gap-3">
                     <span className="text-[#A67C00] mt-1 shrink-0">·</span>
                     <span>{w}</span>
                   </li>
@@ -48,7 +48,7 @@ export default function APonte() {
               </ul>
             </motion.div>
 
-            <motion.p {...fade(0.3)} className="mt-7 font-display italic text-[#3C2F2F]/85 text-lg font-light leading-snug max-w-2xl">
+            <motion.p {...fade(0.3)} className="mt-7 font-display italic text-[#1F4A2E]/85 text-lg font-light leading-snug max-w-2xl">
               {t("aponte.closing")}
             </motion.p>
           </div>
@@ -59,11 +59,11 @@ export default function APonte() {
             </motion.div>
             <div className="space-y-6">
               {axes.map((a, i) => (
-                <motion.div key={i} {...fade(0.2 + i * 0.08)} className="flex items-start gap-5 border-t border-[#3C2F2F]/12 pt-5">
+                <motion.div key={i} {...fade(0.2 + i * 0.08)} className="flex items-start gap-5 border-t border-[#1F4A2E]/12 pt-5">
                   <span className="font-display text-3xl text-[#A67C00] leading-none">{a.num}</span>
                   <div>
-                    <h3 className="font-display text-lg text-[#3C2F2F] leading-tight">{a.title}</h3>
-                    <p className="text-[#3C2F2F]/65 text-sm mt-1 leading-relaxed">{a.text}</p>
+                    <h3 className="font-display text-lg text-[#1F4A2E] leading-tight">{a.title}</h3>
+                    <p className="text-[#1F4A2E]/65 text-sm mt-1 leading-relaxed">{a.text}</p>
                   </div>
                 </motion.div>
               ))}

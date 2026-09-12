@@ -17,7 +17,7 @@ export default function Hero() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#3C2F2F]">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#1F4A2E]">
       <motion.div
         initial={{ scale: 1.12, opacity: 0 }}
         animate={mounted ? { scale: 1, opacity: 1 } : {}}
@@ -25,7 +25,7 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <img src={HERO_IMG} alt={t("hero.imgAlt")} className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3C2F2F]/75 via-[#3C2F2F]/55 to-[#3C2F2F]/88" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1F4A2E]/75 via-[#1F4A2E]/55 to-[#1F4A2E]/88" />
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-28">

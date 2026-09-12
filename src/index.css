@@ -4,28 +4,28 @@
 
 @layer base {
   :root {
-    --background: 30 33% 94%;
-    --foreground: 0 16% 21%;
-    --card: 30 33% 96%;
-    --card-foreground: 0 16% 21%;
-    --popover: 30 33% 96%;
-    --popover-foreground: 0 16% 21%;
-    --primary: 0 16% 21%;
-    --primary-foreground: 30 33% 94%;
-    --secondary: 33 20% 80%;
-    --secondary-foreground: 0 16% 21%;
-    --muted: 33 20% 86%;
-    --muted-foreground: 0 10% 40%;
+    --background: 30 31% 94%;
+    --foreground: 141 41% 21%;
+    --card: 30 31% 96%;
+    --card-foreground: 141 41% 21%;
+    --popover: 30 31% 96%;
+    --popover-foreground: 141 41% 21%;
+    --primary: 141 41% 21%;
+    --primary-foreground: 30 31% 94%;
+    --secondary: 113 17% 79%;
+    --secondary-foreground: 141 41% 21%;
+    --muted: 93 27% 92%;
+    --muted-foreground: 141 20% 38%;
     --accent: 45 100% 33%;
-    --accent-foreground: 30 33% 98%;
+    --accent-foreground: 30 31% 98%;
     --red: 8 50% 46%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 33 20% 80%;
-    --input: 33 20% 80%;
+    --border: 113 17% 79%;
+    --input: 113 17% 79%;
     --ring: 45 100% 33%;
     --chart-1: 45 100% 33%;
-    --chart-2: 90 20% 45%;
+    --chart-2: 141 41% 21%;
     --chart-3: 210 30% 40%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
@@ -34,36 +34,36 @@
     --font-body: 'Inter', system-ui, sans-serif;
     --font-display: 'Fraunces', Georgia, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --sidebar-background: 30 33% 94%;
-    --sidebar-foreground: 0 16% 21%;
-    --sidebar-primary: 0 16% 21%;
-    --sidebar-primary-foreground: 30 33% 94%;
-    --sidebar-accent: 33 20% 86%;
-    --sidebar-accent-foreground: 0 16% 21%;
-    --sidebar-border: 33 20% 80%;
-    --sidebar-ring: 45 80% 45%;
+    --sidebar-background: 30 31% 94%;
+    --sidebar-foreground: 141 41% 21%;
+    --sidebar-primary: 141 41% 21%;
+    --sidebar-primary-foreground: 30 31% 94%;
+    --sidebar-accent: 93 27% 92%;
+    --sidebar-accent-foreground: 141 41% 21%;
+    --sidebar-border: 113 17% 79%;
+    --sidebar-ring: 45 100% 33%;
   }
 
   .dark {
-    --background: 0 16% 10%;
-    --foreground: 30 33% 94%;
-    --card: 0 16% 12%;
-    --card-foreground: 30 33% 94%;
-    --popover: 0 16% 12%;
-    --popover-foreground: 30 33% 94%;
-    --primary: 30 33% 94%;
-    --primary-foreground: 0 16% 10%;
-    --secondary: 0 16% 18%;
-    --secondary-foreground: 30 33% 94%;
-    --muted: 0 16% 18%;
+    --background: 141 35% 9%;
+    --foreground: 30 31% 94%;
+    --card: 141 30% 12%;
+    --card-foreground: 30 31% 94%;
+    --popover: 141 30% 12%;
+    --popover-foreground: 30 31% 94%;
+    --primary: 30 31% 94%;
+    --primary-foreground: 141 35% 9%;
+    --secondary: 141 25% 18%;
+    --secondary-foreground: 30 31% 94%;
+    --muted: 141 25% 18%;
     --muted-foreground: 30 20% 65%;
     --accent: 45 100% 33%;
-    --accent-foreground: 30 33% 98%;
+    --accent-foreground: 30 31% 98%;
     --red: 8 50% 46%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 16% 20%;
-    --input: 0 16% 20%;
+    --border: 141 25% 20%;
+    --input: 141 25% 20%;
     --ring: 45 100% 33%;
   }
 }

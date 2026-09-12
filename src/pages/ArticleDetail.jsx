@@ -17,7 +17,7 @@ const ARTICLE_MD_COMPONENTS = {
       {...props}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[#B8941F] underline underline-offset-2 hover:text-[#3C2F2F] transition-colors"
+      className="text-[#A67C00] underline underline-offset-2 hover:text-[#1F4A2E] transition-colors"
     />
   ),
 };
@@ -34,8 +34,8 @@ export default function ArticleDetail() {
         <Seo title={`${t("articles.notFoundTitle")} | Ponte Social`} description={t("seo.description")} />
         <Navbar />
         <main className="max-w-3xl mx-auto px-6 py-40 text-center">
-          <h1 className="font-display text-3xl text-[#3C2F2F] mb-4">{t("articles.notFoundTitle")}</h1>
-          <Link to="/#artigos" className="text-[#B8941F] hover:underline">
+          <h1 className="font-display text-3xl text-[#1F4A2E] mb-4">{t("articles.notFoundTitle")}</h1>
+          <Link to="/#artigos" className="text-[#A67C00] hover:underline">
             {t("articles.backToArticles")}
           </Link>
         </main>
@@ -59,7 +59,7 @@ export default function ArticleDetail() {
             <div className="max-w-3xl mx-auto px-6">
               <Link
                 to="/#artigos"
-                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#B8941F] transition-colors mb-8"
+                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#1F4A2E]/60 hover:text-[#A67C00] transition-colors mb-8"
               >
                 <ArrowLeft size={15} /> {t("nav.insights")}
               </Link>
@@ -68,22 +68,22 @@ export default function ArticleDetail() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="flex items-center gap-3 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/50 mb-5">
-                  <span className="text-[#B8941F]">{article.category}</span>
-                  <span className="w-4 h-px bg-[#D6CDBF]" />
+                <div className="flex items-center gap-3 text-xs tracking-[0.14em] uppercase text-[#1F4A2E]/50 mb-5">
+                  <span className="text-[#A67C00]">{article.category}</span>
+                  <span className="w-4 h-px bg-[#C2D2C0]" />
                   <span>{article.date}</span>
                 </div>
-                <h1 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance mb-6">
+                <h1 className="font-display text-3xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.1] tracking-tight text-balance mb-6">
                   {article.title}
                 </h1>
-                <p className="text-[#3C2F2F]/70 text-lg leading-relaxed">{article.excerpt}</p>
+                <p className="text-[#1F4A2E]/70 text-lg leading-relaxed">{article.excerpt}</p>
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#3C2F2F] flex items-center justify-center text-[#B8941F] font-display text-sm">
+                  <div className="w-9 h-9 rounded-full bg-[#1F4A2E] flex items-center justify-center text-[#A67C00] font-display text-sm">
                     DP
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-[#3C2F2F]">{article.author}</p>
-                    <p className="text-xs text-[#3C2F2F]/50">{t("articles.authorRole")}</p>
+                    <p className="text-sm font-medium text-[#1F4A2E]">{article.author}</p>
+                    <p className="text-xs text-[#1F4A2E]/50">{t("articles.authorRole")}</p>
                   </div>
                 </div>
               </motion.div>
@@ -95,14 +95,14 @@ export default function ArticleDetail() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#D6CDBF]/60"
+              className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#C2D2C0]/60"
             >
               <Image src={article.image} alt={article.imageAlt} fittingType="fill" className="w-full h-full" />
             </motion.div>
           </div>
 
           <div className="max-w-3xl mx-auto px-6 py-16 lg:py-24">
-            <div className="space-y-7 text-[#3C2F2F]/85 text-[18px] leading-[1.8]">
+            <div className="space-y-7 text-[#1F4A2E]/85 text-[18px] leading-[1.8]">
               {article.body.map((p, i) => {
                 const anim = {
                   initial: { opacity: 0, y: 15 },
@@ -115,7 +115,7 @@ export default function ArticleDetail() {
                     <motion.h2
                       key={i}
                       {...anim}
-                      className="font-display text-2xl lg:text-[28px] font-medium text-[#3C2F2F] leading-tight pt-8"
+                      className="font-display text-2xl lg:text-[28px] font-medium text-[#1F4A2E] leading-tight pt-8"
                     >
                       {p.text}
                     </motion.h2>
@@ -126,7 +126,7 @@ export default function ArticleDetail() {
                     <motion.ul
                       key={i}
                       {...anim}
-                      className="list-disc pl-6 space-y-2 text-[#3C2F2F]/85 marker:text-[#B8941F]"
+                      className="list-disc pl-6 space-y-2 text-[#1F4A2E]/85 marker:text-[#A67C00]"
                     >
                       {p.items.map((item, j) => (
                         <li key={j}>{item}</li>
@@ -139,7 +139,7 @@ export default function ArticleDetail() {
                     <motion.p
                       key={i}
                       {...anim}
-                      className="text-sm italic text-[#3C2F2F]/55 border-t border-[#D6CDBF]/60 pt-6 mt-2"
+                      className="text-sm italic text-[#1F4A2E]/55 border-t border-[#C2D2C0]/60 pt-6 mt-2"
                     >
                       {p.text}
                     </motion.p>
@@ -153,10 +153,10 @@ export default function ArticleDetail() {
               })}
             </div>
 
-            <div className="mt-16 pt-10 border-t border-[#D6CDBF]/60">
+            <div className="mt-16 pt-10 border-t border-[#C2D2C0]/60">
               <Link
                 to="/#artigos"
-                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#B8941F] transition-colors"
+                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#1F4A2E]/60 hover:text-[#A67C00] transition-colors"
               >
                 <ArrowLeft size={15} /> {t("articles.backToArticles")}
               </Link>
@@ -165,16 +165,16 @@ export default function ArticleDetail() {
         </article>
 
         {others.length > 0 && (
-          <section className="py-20 lg:py-28 bg-[#EFE8E0] border-t border-[#D6CDBF]/60">
+          <section className="py-20 lg:py-28 bg-[#EAF0E5] border-t border-[#C2D2C0]/60">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              <h2 className="font-display text-2xl lg:text-3xl font-light text-[#3C2F2F] mb-10">
+              <h2 className="font-display text-2xl lg:text-3xl font-light text-[#1F4A2E] mb-10">
                 {t("articles.continueReading")}
               </h2>
               <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                 {others.map((a) => (
                   <Link key={a.slug} to={`/artigos/${a.slug}`} className="group block">
                     <div className="flex gap-5">
-                      <div className="relative w-28 h-28 shrink-0 overflow-hidden rounded-lg border border-[#D6CDBF]/60">
+                      <div className="relative w-28 h-28 shrink-0 overflow-hidden rounded-lg border border-[#C2D2C0]/60">
                         <Image
                           src={a.image}
                           alt={a.imageAlt}
@@ -183,10 +183,10 @@ export default function ArticleDetail() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <span className="text-[11px] tracking-[0.14em] uppercase text-[#B8941F] mb-2">
+                        <span className="text-[11px] tracking-[0.14em] uppercase text-[#A67C00] mb-2">
                           {a.category}
                         </span>
-                        <h3 className="font-display text-lg font-medium text-[#3C2F2F] leading-snug group-hover:text-[#B8941F] transition-colors flex items-start gap-1.5">
+                        <h3 className="font-display text-lg font-medium text-[#1F4A2E] leading-snug group-hover:text-[#A67C00] transition-colors flex items-start gap-1.5">
                           {a.title}
                           <ArrowUpRight
                             size={16}

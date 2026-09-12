@@ -9,8 +9,8 @@ const OPTIONS = [
 
 export default function LanguageSwitcher({ scrolled = true, className = "" }) {
   const { lang, setLang, t } = useTranslation();
-  const inactiveColor = scrolled ? "text-[#3C2F2F]" : "text-[#F4EFEA]";
-  const dividerColor = scrolled ? "text-[#D6CDBF]" : "text-[#F4EFEA]/40";
+  const inactiveColor = scrolled ? "text-[#1F4A2E]" : "text-[#F4EFEA]";
+  const dividerColor = scrolled ? "text-[#C2D2C0]" : "text-[#F4EFEA]/40";
 
   return (
     <nav
