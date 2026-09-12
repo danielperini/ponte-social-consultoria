@@ -10,6 +10,7 @@ export const translations = {
       howWeWork: "COMO ATRAVESSAMOS",
       team: "QUEM CONSTRÓI",
       cases: "PONTES CONSTRUÍDAS",
+      insights: "Artigos",
     },
     langSelector: { ariaLabel: "Selecionar idioma" },
     hero: {
@@ -452,6 +453,7 @@ export const translations = {
       howWeWork: "HOW WE CROSS",
       team: "WHO BUILDS",
       cases: "BRIDGES BUILT",
+      insights: "Insights",
     },
     langSelector: { ariaLabel: "Select language" },
     hero: {
@@ -843,6 +845,7 @@ export const translations = {
       howWeWork: "CÓMO ATRAVESAMOS",
       team: "QUIÉN CONSTRUYE",
       cases: "PUENTES CONSTRUIDOS",
+      insights: "Artículos",
     },
     langSelector: { ariaLabel: "Seleccionar idioma" },
     hero: {
