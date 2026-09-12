@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
-// Nova marca Ponte Social sobre fundo preto (#000000). O canvas remove o
-// fundo preto tornando-o transparente, mantendo apenas a tipografia e os
-// traços do logo. O tamanho é controlado pela altura via className.
+// Nova marca Ponte Social sobre fundo preto (#000000). O canvas converte o
+// fundo preto em branco, mantendo a tipografia e os traços do logo. O tamanho
+// é controlado pela altura via className.
 const LOGO_URL =
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/f8aa2092e_WhatsAppImage2026-09-11at09381721.png";
 
@@ -31,10 +31,14 @@ export default function Logo({ theme = "brand", className = "" }) {
           // do logo (verde-floresta, azul-ardósia, verde-sálvia) que têm canais
           // significativamente maiores que 0.
           if (mx < 18) {
-            d[i + 3] = 0; // totalmente transparente
+            // fundo preto vira branco
+            d[i] = 255; d[i + 1] = 255; d[i + 2] = 255; d[i + 3] = 255;
           } else if (mx < 40) {
-            // transição suave para preservar bordas anti-alias do texto
-            d[i + 3] = Math.round(d[i + 3] * ((mx - 18) / 22));
+            // transição suave: clareia os tons escuros próximos ao preto
+            const f = (mx - 18) / 22;
+            d[i] = Math.round(d[i] * f + 255 * (1 - f));
+            d[i + 1] = Math.round(d[i + 1] * f + 255 * (1 - f));
+            d[i + 2] = Math.round(d[i + 2] * f + 255 * (1 - f));
           }
         }
         ctx.putImageData(data, 0, 0);
