@@ -9,6 +9,7 @@ import HowWeCross from "@/components/ponte/HowWeCross";
 import Solutions from "@/components/ponte/Solutions";
 import Team from "@/components/ponte/Team";
 import Governance from "@/components/ponte/Governance";
+import Partners from "@/components/ponte/Partners";
 import Constructions from "@/components/ponte/Constructions";
 import Footer from "@/components/ponte/Footer";
 import Seo from "@/components/ponte/Seo";
@@ -30,6 +31,7 @@ export default function Home() {
         <Solutions />
         <Team />
         <Governance />
+        <Partners />
         <Constructions />
       </main>
       <Footer />

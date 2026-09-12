@@ -324,6 +324,11 @@ export const translations = {
         { title: "Conformidade (LGPD)", text: "Tratamento de dados pessoais em conformidade com a LGPD e as boas práticas de proteção de dados." },
       ],
     },
+    partners: {
+      kicker: "Rede Parceira",
+      title: "Parceiros que constroem conosco.",
+      intro: "A Ponte Social se conecta a instituições que somam competências, territórios e propósitos à nossa forma de atuar.",
+    },
     footer: {
       tagline: "A dimensão social dos negócios",
       slogan: "Risco social também é risco de negócio.",
@@ -626,6 +631,11 @@ export const translations = {
         { title: "Compliance with Brazil's General Data Protection Law (LGPD)", text: "Processing of personal data in compliance with Brazil's General Data Protection Law (LGPD) and good data protection practices." },
       ],
     },
+    partners: {
+      kicker: "Partner Network",
+      title: "Partners who build with us.",
+      intro: "Ponte Social connects with institutions that add competencies, territories, and purposes to our way of working.",
+    },
     footer: {
       tagline: "The social dimension of business",
       slogan: "Social risk is also business risk.",
@@ -927,6 +937,11 @@ export const translations = {
         { title: "Ética y transparencia", text: "Compromiso con la verdad de los datos y con relaciones guiadas por el respeto y la responsabilidad." },
         { title: "Cumplimiento de la Ley General de Protección de Datos de Brasil (LGPD)", text: "Tratamiento de datos personales en cumplimiento de la Ley General de Protección de Datos de Brasil (LGPD) y las buenas prácticas de protección de datos." },
       ],
+    },
+    partners: {
+      kicker: "Red de Aliados",
+      title: "Aliados que construyen con nosotros.",
+      intro: "Ponte Social se conecta con instituciones que suman competencias, territorios y propósitos a nuestra forma de actuar.",
     },
     footer: {
       tagline: "La dimensión social de los negocios",
