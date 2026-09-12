@@ -1,23 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Image } from "@/components/ui/image";
+import PartnerLogo from "./PartnerLogo";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 const PARTNERS = [
   {
     name: "Instituto Frazoli",
-    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/cb2d4f9ed_WhatsAppImage2026-09-11at130739.jpeg",
-    blend: "mix-blend-multiply",
+    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/4f8c4d777_WhatsAppImage2026-09-11at130739FlatLay.png",
+    removeWhite: false,
   },
   {
     name: "ima",
-    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/0c98c8796_WhatsAppImage2026-09-11at130726FlatLay.jpg",
-    blend: "mix-blend-multiply",
+    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/bb5f51af4_FlatLay-10fa5f03-5e32-44c4-b936-2ce393e6afec.jpg",
+    removeWhite: true,
   },
   {
     name: "Perini",
-    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/198664dd6_perini_transparente2.png",
-    blend: "",
+    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5a2405ae1_perini_transparente2.png",
+    removeWhite: false,
   },
 ];
 
@@ -48,8 +48,8 @@ export default function Partners() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-center justify-items-center">
           {PARTNERS.map((p, i) => (
-            <motion.div key={p.name} {...fade(i * 0.08)} className={`flex items-center justify-center h-20 lg:h-24 w-36 lg:w-44 ${p.blend}`}>
-              <Image src={p.url} alt={p.name} fittingType="fit" className="h-full w-full" />
+            <motion.div key={p.name} {...fade(i * 0.08)} className="flex items-center justify-center h-20 lg:h-24 w-36 lg:w-44">
+              <PartnerLogo src={p.url} alt={p.name} removeWhite={p.removeWhite} className="h-full w-full" />
             </motion.div>
           ))}
         </div>
