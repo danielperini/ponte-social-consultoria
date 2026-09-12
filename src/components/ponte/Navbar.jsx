@@ -53,7 +53,7 @@ export default function Navbar() {
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
-              className={`group relative text-sm font-medium tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
+              className={`group relative text-sm font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
                 scrolled ? "text-[#073050] hover:text-[#1B562A]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
               }`}
             >
@@ -84,7 +84,7 @@ export default function Navbar() {
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#073050]/80 hover:text-[#1B562A] transition-all duration-300 ease-out py-1"
+                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#073050]/80 hover:text-[#1B562A] transition-all duration-300 ease-out py-1"
               >
                 {t(item.label)}
                 <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#A67C00] transition-all duration-300 ease-out group-hover:w-full" />

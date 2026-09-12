@@ -32,9 +32,9 @@
     --chart-4: 45 100% 33%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --font-heading: 'Fraunces', Georgia, serif;
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-display: 'Fraunces', Georgia, serif;
+    --font-heading: 'Source Serif 4', Georgia, serif;
+    --font-body: 'Manrope', system-ui, sans-serif;
+    --font-display: 'Source Serif 4', Georgia, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --sidebar-background: 0 0% 96%;
     --sidebar-foreground: 206 84% 17%;
@@ -93,7 +93,7 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: 'Source Serif 4', Georgia, serif;
   }
 
   .text-balance {
