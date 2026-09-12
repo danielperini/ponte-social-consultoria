@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import ConsultantCard from "./ConsultantCard";
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 const fade = (delay) => ({
   initial: { opacity: 0, y: 24 },
@@ -13,7 +22,16 @@ const fade = (delay) => ({
 
 export default function Team() {
   const { t } = useTranslation();
-  const consultants = t("team.consultants");
+  // Randomize the order on every load so the carousel starts on a different consultant.
+  const consultants = useMemo(() => shuffle(t("team.consultants")), [t]);
+  const [api, setApi] = useState(null);
+
+  // Auto-rotate every 10 seconds.
+  useEffect(() => {
+    if (!api) return;
+    const id = setInterval(() => api.scrollNext(), 10000);
+    return () => clearInterval(id);
+  }, [api]);
   const labels = {
     educationTitle: t("team.educationTitle"),
     certsTitle: t("team.certsTitle"),
@@ -62,7 +80,7 @@ export default function Team() {
           </div>
 
           <motion.div {...fade(0.15)} className="lg:col-span-5">
-            <Carousel opts={{ loop: true, align: "start" }}>
+            <Carousel opts={{ loop: true, align: "start" }} setApi={setApi}>
               <CarouselContent>
                 {consultants.map((c, i) => (
                   <CarouselItem key={i}>
