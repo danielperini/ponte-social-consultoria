@@ -4,7 +4,7 @@ export default function PeriniLogo({ className = "" }) {
   return (
     <svg
       viewBox="0 0 240 110"
-      className={className}
+      className={`scale-[0.75] origin-center ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Perini Projetos Culturais e Sociais"
