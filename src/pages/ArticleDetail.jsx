@@ -70,7 +70,7 @@ export default function ArticleDetail() {
               >
                 <div className="flex items-center gap-3 text-xs tracking-[0.14em] uppercase text-[#073050]/50 mb-5">
                   <span className="text-[#A67C00]">{article.category}</span>
-                  <span className="w-4 h-px bg-[#A4B29B]" />
+                  <span className="w-4 h-px bg-[#A67C00]" />
                   <span>{article.date}</span>
                 </div>
                 <h1 className="font-display text-3xl lg:text-5xl font-light text-[#073050] leading-[1.1] tracking-tight text-balance mb-6">

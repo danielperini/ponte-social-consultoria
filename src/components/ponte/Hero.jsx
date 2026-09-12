@@ -81,7 +81,7 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollTo("construcoes")}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#073050] px-7 py-3 text-sm font-medium tracking-[0.12em] uppercase text-[#FFFFFF] transition-all hover:bg-[#1B562A]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#A67C00] px-7 py-3 text-sm font-medium tracking-[0.12em] uppercase text-[#073050] transition-all hover:bg-[#1B562A] hover:text-[#FFFFFF]"
             >
               {t("hero.cta")}
               <span className="transition-transform group-hover:translate-x-1">→</span>

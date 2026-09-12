@@ -18,11 +18,11 @@ export default function ConnectingArc({ className = "", height = 220, flip = fal
       >
         <motion.path
           d="M0 180 C 360 20, 1080 20, 1440 180"
-          stroke="#073050"
+          stroke="#A67C00"
           strokeWidth="2.5"
           strokeLinecap="round"
           initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 0.85 }}
+          whileInView={{ pathLength: 1, opacity: 0.9 }}
           viewport={{ once: true, margin: "-120px" }}
           transition={{ duration: 2.8, ease: [0.4, 0, 0.2, 1] }}
         />

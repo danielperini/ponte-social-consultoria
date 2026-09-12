@@ -75,7 +75,7 @@ export default function Articles() {
                 transition={{ duration: 0.6, delay: (i % 3) * 0.12 }}
               >
                 <Link to={`/artigos/${a.slug}`} className="group block h-full">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#A4B29B]/40">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#A67C00]/30">
                     <Image
                       src={a.image}
                       alt={a.imageAlt}
@@ -86,7 +86,7 @@ export default function Articles() {
                   <div className="mt-5">
                     <div className="flex items-center gap-3 text-[11px] tracking-[0.14em] uppercase text-[#073050]/50 mb-3">
                       <span className="text-[#A67C00]">{a.category}</span>
-                      <span className="w-4 h-px bg-[#A4B29B]" />
+                      <span className="w-4 h-px bg-[#A67C00]" />
                       <span>{a.date}</span>
                     </div>
                     <h3 className="font-display text-xl lg:text-2xl font-medium text-[#073050] leading-snug mb-3 group-hover:text-[#1B562A] transition-colors flex items-start gap-2">

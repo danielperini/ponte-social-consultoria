@@ -58,7 +58,7 @@ export default function Team() {
               {t("team.p1")}
             </motion.p>
 
-            <motion.div {...fade(0.15)} className="mt-8 border-l-2 border-[#A67C00]/40 pl-5">
+            <motion.div {...fade(0.15)} className="mt-8 border-l-2 border-[#A67C00] pl-5">
               <h3 className="font-display text-xl text-[#073050] mb-2">{t("team.experienceTitle")}</h3>
               <p className="text-[#073050]/70 text-[15px] leading-relaxed">{t("team.experienceText")}</p>
             </motion.div>

@@ -32,7 +32,7 @@ export default function Solutions() {
 
         <div className="space-y-8">
           {items.map((it, i) => (
-            <motion.div key={it.name} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-10 border-t border-[#073050]/12 pt-8">
+            <motion.div key={it.name} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-10 border-t border-[#A67C00]/30 pt-8">
               <div className="lg:col-span-4">
                 <h3 className="font-display text-2xl lg:text-3xl text-[#073050] leading-tight">{it.name}</h3>
                 <p className="text-[#A67C00] text-sm font-medium tracking-wide mt-2">{it.subtitle}</p>
@@ -46,7 +46,7 @@ export default function Solutions() {
           ))}
         </div>
 
-        <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#073050]/12 pt-10">
+        <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#A67C00]/30 pt-10">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4">
               <SocietaLogo
