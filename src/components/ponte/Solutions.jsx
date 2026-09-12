@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/LanguageProvider";
-import SocietarScreens from "./SocietarScreens";
 
 const fade = (delay) => ({
   initial: { opacity: 0, y: 24 },
@@ -59,9 +58,6 @@ export default function Solutions() {
         </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-14">
-        <SocietarScreens />
-      </div>
     </section>
   );
 }
