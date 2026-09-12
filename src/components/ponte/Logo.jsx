@@ -1,57 +1,30 @@
 import React from "react";
 
-const BRAND = {
-  ponte: "#2F5938",
-  social: "#1D3557",
-  consultoria: "#8F9E8F",
-  dashes: ["#A8B6A8", "#88A288", "#688E68", "#487450", "#2F5938"],
-};
-
-const LIGHT = {
-  ponte: "#F4EFEA",
-  social: "#F4EFEA",
-  consultoria: "rgba(244,239,234,0.55)",
-  dashes: [
-    "rgba(166,124,0,0.35)",
-    "rgba(166,124,0,0.5)",
-    "rgba(166,124,0,0.65)",
-    "rgba(166,124,0,0.8)",
-    "rgba(166,124,0,1)",
-  ],
-};
+const LOGO_URL =
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/82c7a2f66_WhatsAppImage2026-09-11at0938171.jpeg";
 
 export default function Logo({ theme = "brand", className = "" }) {
-  const c = theme === "brand" ? BRAND : LIGHT;
+  const onDark = theme === "light";
+
+  if (onDark) {
+    return (
+      <div className={`inline-flex items-center rounded-lg bg-[#F9F9F7] px-2 py-1 ${className}`}>
+        <img
+          src={LOGO_URL}
+          alt="Ponte Social Consultoria"
+          className="h-9 lg:h-10 w-auto object-contain"
+          draggable={false}
+        />
+      </div>
+    );
+  }
 
   return (
-    <div className={`inline-flex flex-col leading-none select-none ${className}`} aria-label="Ponte Social Consultoria">
-      <span
-        className="font-display text-[22px] leading-[0.92] tracking-tight"
-        style={{ color: c.ponte }}
-      >
-        ponte
-      </span>
-      <span
-        className="font-display text-[22px] leading-[0.92] tracking-tight"
-        style={{ color: c.social }}
-      >
-        social
-      </span>
-      <div className="flex items-center justify-end gap-[3px] mt-[5px]">
-        {c.dashes.map((color, i) => (
-          <span
-            key={i}
-            className="h-px w-[10px] rounded-full"
-            style={{ backgroundColor: color }}
-          />
-        ))}
-        <span
-          className="font-body text-[9px] font-medium uppercase ml-1.5"
-          style={{ color: c.consultoria, letterSpacing: "0.3em" }}
-        >
-          Consultoria
-        </span>
-      </div>
-    </div>
+    <img
+      src={LOGO_URL}
+      alt="Ponte Social Consultoria"
+      className={`h-9 lg:h-10 w-auto rounded-md object-contain ${className}`}
+      draggable={false}
+    />
   );
 }
