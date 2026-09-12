@@ -22,17 +22,22 @@ export default function Home() {
       <Seo title={t("seo.title")} description={t("seo.description")} />
       <Navbar />
       <main>
+        {/* Topo — Atrair */}
         <Hero />
+        {/* Meio — Interessar */}
         <APonte />
         <Segments />
+        {/* Consideração — Avaliar */}
         <Pillars />
         <HowWeWork />
         <HowWeCross />
         <Solutions />
+        {/* Fundo — Comprar */}
+        <Constructions />
+        {/* Pós-venda — Fidelizar */}
         <Team />
         <Governance />
         <Partners />
-        <Constructions />
       </main>
       <Footer />
     </div>
