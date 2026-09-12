@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import PeriniLogo from "./PeriniLogo";
 
 const INSTITUTIONS = [
-  { name: "Perini Projetos", descKey: "trajectory.periniProjetos", logo: null },
+  { name: "Perini Projetos", descKey: "trajectory.periniProjetos", logo: null, custom: "perini" },
   { name: "Fiat Ultra Artes", descKey: "trajectory.fiatUltraArtes", logo: null },
   { name: "Fábrica do Futuro", descKey: "trajectory.fabricaFuturo", logo: "fabricadofuturo.org.br" },
   { name: "Viaduto das Artes", descKey: "trajectory.meioAdultoArtes", logo: "viadutodasartes.org.br" },
@@ -83,7 +84,9 @@ export default function Trajectories() {
                 key={inst.name}
                 className="aspect-square rounded-xl sm:rounded-2xl bg-white border border-[#C2D2C0]/60 flex items-center justify-center shadow-[0_4px_18px_-8px_rgba(60,47,47,0.22)] p-3 sm:p-4"
               >
-                {showLogo ? (
+                {inst.custom === "perini" ? (
+                  <PeriniLogo className="w-[70%] h-[70%]" />
+                ) : showLogo ? (
                   <img
                     src={url}
                     alt={inst.name}
