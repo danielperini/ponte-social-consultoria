@@ -7,14 +7,17 @@ const PARTNERS = [
   {
     name: "Instituto Frazoli",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/cb2d4f9ed_WhatsAppImage2026-09-11at130739.jpeg",
+    blend: "mix-blend-multiply",
   },
   {
     name: "ima",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/46c736304_WhatsAppImage2026-09-11at130726.jpeg",
+    blend: "",
   },
   {
     name: "Perini",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/198664dd6_perini_transparente2.png",
+    blend: "",
   },
 ];
 
@@ -43,10 +46,10 @@ export default function Partners() {
           </motion.p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 items-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-center justify-items-center">
           {PARTNERS.map((p, i) => (
-            <motion.div key={p.name} {...fade(i * 0.08)} className="aspect-[3/2] flex items-center justify-center">
-              <Image src={p.url} alt={p.name} fittingType="fit" className="w-full h-full" />
+            <motion.div key={p.name} {...fade(i * 0.08)} className={`flex items-center justify-center h-20 lg:h-24 w-36 lg:w-44 ${p.blend}`}>
+              <Image src={p.url} alt={p.name} fittingType="fit" className="h-full w-full" />
             </motion.div>
           ))}
         </div>
