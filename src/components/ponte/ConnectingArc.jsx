@@ -21,20 +21,20 @@ export default function ConnectingArc({ className = "", height = 220, flip = fal
           stroke="#A67C00"
           strokeWidth="2.5"
           strokeLinecap="round"
-          initial={{ pathLength: 0, opacity: 0.3 }}
-          whileInView={{ pathLength: 1, opacity: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 2.2, ease: "easeInOut" }}
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 0.85 }}
+          viewport={{ once: true, margin: "-120px" }}
+          transition={{ duration: 2.8, ease: [0.4, 0, 0.2, 1] }}
         />
         <motion.circle
           cx="720"
           cy="36"
           r="5"
           fill="#1F4A2E"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1.2, duration: 0.5 }}
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, margin: "-120px" }}
+          transition={{ delay: 2.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         />
       </svg>
     </div>
