@@ -26,7 +26,7 @@ export default function Articles() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
           <div className="max-w-2xl">
-            <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+            <span className="text-[#B8941F] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("articles.kicker")}
             </span>
             <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">
@@ -46,13 +46,13 @@ export default function Articles() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t("articles.searchPlaceholder")}
             aria-label={t("articles.searchPlaceholder")}
-            className="w-full bg-[#EFE8E0] border border-[#D6CDBF] rounded-full pl-12 pr-11 py-3.5 text-[15px] text-[#3C2F2F] placeholder:text-[#3C2F2F]/40 outline-none focus:border-[#C87A53] transition-colors"
+            className="w-full bg-[#EFE8E0] border border-[#D6CDBF] rounded-full pl-12 pr-11 py-3.5 text-[15px] text-[#3C2F2F] placeholder:text-[#3C2F2F]/40 outline-none focus:border-[#B8941F] transition-colors"
           />
           {query && (
             <button
               onClick={() => setQuery("")}
               aria-label="Clear"
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#3C2F2F]/40 hover:text-[#C87A53] transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#3C2F2F]/40 hover:text-[#B8941F] transition-colors"
             >
               <X size={18} />
             </button>
@@ -85,11 +85,11 @@ export default function Articles() {
                   </div>
                   <div className="mt-5">
                     <div className="flex items-center gap-3 text-[11px] tracking-[0.14em] uppercase text-[#3C2F2F]/50 mb-3">
-                      <span className="text-[#C87A53]">{a.category}</span>
+                      <span className="text-[#B8941F]">{a.category}</span>
                       <span className="w-4 h-px bg-[#D6CDBF]" />
                       <span>{a.date}</span>
                     </div>
-                    <h3 className="font-display text-xl lg:text-2xl font-medium text-[#3C2F2F] leading-snug mb-3 group-hover:text-[#C87A53] transition-colors flex items-start gap-2">
+                    <h3 className="font-display text-xl lg:text-2xl font-medium text-[#3C2F2F] leading-snug mb-3 group-hover:text-[#B8941F] transition-colors flex items-start gap-2">
                       {a.title}
                       <ArrowUpRight
                         size={18}

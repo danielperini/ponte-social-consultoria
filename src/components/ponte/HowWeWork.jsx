@@ -15,12 +15,12 @@ export default function HowWeWork() {
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 30%, #BC5A3A 0, transparent 40%), radial-gradient(circle at 80% 70%, #BC5A3A 0, transparent 40%)",
+            "radial-gradient(circle at 20% 30%, #A67C00 0, transparent 40%), radial-gradient(circle at 80% 70%, #A67C00 0, transparent 40%)",
         }}
       />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-16 lg:mb-24">
-          <span className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+          <span className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("howWeWork.kicker")}
           </span>
           <h2 className="font-display text-3xl lg:text-5xl font-light text-[#F4EFEA] leading-[1.1] tracking-tight text-balance">
@@ -37,7 +37,7 @@ export default function HowWeWork() {
           >
             <motion.path
               d="M60 40 C 380 180, 820 180, 1140 40"
-              stroke="#BC5A3A"
+              stroke="#A67C00"
               strokeWidth="2"
               strokeDasharray="2 8"
               initial={{ pathLength: 0 }}
@@ -60,8 +60,8 @@ export default function HowWeWork() {
                   className="text-center md:text-left"
                 >
                   <div className="flex md:block items-center gap-4">
-                    <div className="w-14 h-14 rounded-full border border-[#BC5A3A]/50 flex items-center justify-center mb-5 shrink-0 mx-auto md:mx-0">
-                      <Icon size={22} className="text-[#BC5A3A]" />
+                    <div className="w-14 h-14 rounded-full border border-[#A67C00]/50 flex items-center justify-center mb-5 shrink-0 mx-auto md:mx-0">
+                      <Icon size={22} className="text-[#A67C00]" />
                     </div>
                     <span className="font-display text-5xl text-[#F4EFEA]/15 font-light hidden md:block">
                       0{i + 1}

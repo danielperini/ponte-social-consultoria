@@ -17,7 +17,7 @@ const ARTICLE_MD_COMPONENTS = {
       {...props}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[#C87A53] underline underline-offset-2 hover:text-[#3C2F2F] transition-colors"
+      className="text-[#B8941F] underline underline-offset-2 hover:text-[#3C2F2F] transition-colors"
     />
   ),
 };
@@ -35,7 +35,7 @@ export default function ArticleDetail() {
         <Navbar />
         <main className="max-w-3xl mx-auto px-6 py-40 text-center">
           <h1 className="font-display text-3xl text-[#3C2F2F] mb-4">{t("articles.notFoundTitle")}</h1>
-          <Link to="/#artigos" className="text-[#C87A53] hover:underline">
+          <Link to="/#artigos" className="text-[#B8941F] hover:underline">
             {t("articles.backToArticles")}
           </Link>
         </main>
@@ -59,7 +59,7 @@ export default function ArticleDetail() {
             <div className="max-w-3xl mx-auto px-6">
               <Link
                 to="/#artigos"
-                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#C87A53] transition-colors mb-8"
+                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#B8941F] transition-colors mb-8"
               >
                 <ArrowLeft size={15} /> {t("nav.insights")}
               </Link>
@@ -69,7 +69,7 @@ export default function ArticleDetail() {
                 transition={{ duration: 0.6 }}
               >
                 <div className="flex items-center gap-3 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/50 mb-5">
-                  <span className="text-[#C87A53]">{article.category}</span>
+                  <span className="text-[#B8941F]">{article.category}</span>
                   <span className="w-4 h-px bg-[#D6CDBF]" />
                   <span>{article.date}</span>
                 </div>
@@ -78,7 +78,7 @@ export default function ArticleDetail() {
                 </h1>
                 <p className="text-[#3C2F2F]/70 text-lg leading-relaxed">{article.excerpt}</p>
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#3C2F2F] flex items-center justify-center text-[#C87A53] font-display text-sm">
+                  <div className="w-9 h-9 rounded-full bg-[#3C2F2F] flex items-center justify-center text-[#B8941F] font-display text-sm">
                     DP
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export default function ArticleDetail() {
                     <motion.ul
                       key={i}
                       {...anim}
-                      className="list-disc pl-6 space-y-2 text-[#3C2F2F]/85 marker:text-[#C87A53]"
+                      className="list-disc pl-6 space-y-2 text-[#3C2F2F]/85 marker:text-[#B8941F]"
                     >
                       {p.items.map((item, j) => (
                         <li key={j}>{item}</li>
@@ -156,7 +156,7 @@ export default function ArticleDetail() {
             <div className="mt-16 pt-10 border-t border-[#D6CDBF]/60">
               <Link
                 to="/#artigos"
-                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#C87A53] transition-colors"
+                className="inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-[#3C2F2F]/60 hover:text-[#B8941F] transition-colors"
               >
                 <ArrowLeft size={15} /> {t("articles.backToArticles")}
               </Link>
@@ -183,10 +183,10 @@ export default function ArticleDetail() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <span className="text-[11px] tracking-[0.14em] uppercase text-[#C87A53] mb-2">
+                        <span className="text-[11px] tracking-[0.14em] uppercase text-[#B8941F] mb-2">
                           {a.category}
                         </span>
-                        <h3 className="font-display text-lg font-medium text-[#3C2F2F] leading-snug group-hover:text-[#C87A53] transition-colors flex items-start gap-1.5">
+                        <h3 className="font-display text-lg font-medium text-[#3C2F2F] leading-snug group-hover:text-[#B8941F] transition-colors flex items-start gap-1.5">
                           {a.title}
                           <ArrowUpRight
                             size={16}

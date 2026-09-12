@@ -24,7 +24,7 @@ function Field({ label, children }) {
 }
 
 const inputCls =
-  "w-full bg-transparent border-b border-[#3C2F2F]/25 py-2 text-[#3C2F2F] placeholder:text-[#3C2F2F]/35 focus:border-[#BC5A3A] outline-none";
+  "w-full bg-transparent border-b border-[#3C2F2F]/25 py-2 text-[#3C2F2F] placeholder:text-[#3C2F2F]/35 focus:border-[#A67C00] outline-none";
 
 export default function Constructions() {
   const { t } = useTranslation();
@@ -60,7 +60,7 @@ export default function Constructions() {
     <section id="construcoes" className="py-24 lg:py-32 bg-[#EFE8E0]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-14">
-          <motion.span {...fade(0)} className="text-[#BC5A3A] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+          <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("constructions.kicker")}
           </motion.span>
           <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.08] tracking-tight text-balance">
@@ -75,25 +75,25 @@ export default function Constructions() {
           {cases.map((c, i) => (
             <motion.article key={c.num} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#3C2F2F]/15 pt-8">
               <div className="lg:col-span-4">
-                <span className="font-display text-4xl text-[#BC5A3A] leading-none">{c.num}</span>
+                <span className="font-display text-4xl text-[#A67C00] leading-none">{c.num}</span>
                 <p className="mt-3 text-[11px] font-medium tracking-[0.18em] uppercase text-[#3C2F2F]/50">{c.tag}</p>
                 <h3 className="font-display text-xl lg:text-2xl text-[#3C2F2F] mt-2 leading-tight">{c.title}</h3>
               </div>
               <div className="lg:col-span-8 grid sm:grid-cols-2 gap-x-8 gap-y-5">
                 <div>
-                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.contexto}</p>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#A67C00] mb-1">{labels.contexto}</p>
                   <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.contexto}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.desafio}</p>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#A67C00] mb-1">{labels.desafio}</p>
                   <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.desafio}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.atuacao}</p>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#A67C00] mb-1">{labels.atuacao}</p>
                   <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.atuacao}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#BC5A3A] mb-1">{labels.diferencial}</p>
+                  <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#A67C00] mb-1">{labels.diferencial}</p>
                   <p className="text-[#3C2F2F]/75 text-sm leading-relaxed">{c.diferencial}</p>
                 </div>
                 <div className="sm:col-span-2 border-t border-[#3C2F2F]/12 pt-4">
@@ -134,7 +134,7 @@ export default function Constructions() {
             <button
               type="submit"
               disabled={sending}
-              className="mt-2 inline-flex items-center gap-2 self-start rounded-full bg-[#BC5A3A] px-6 py-2.5 text-sm font-medium tracking-[0.12em] uppercase text-[#F4EFEA] hover:bg-[#A84C2E] transition-colors disabled:opacity-60"
+              className="mt-2 inline-flex items-center gap-2 self-start rounded-full bg-[#A67C00] px-6 py-2.5 text-sm font-medium tracking-[0.12em] uppercase text-[#F4EFEA] hover:bg-[#8A6300] transition-colors disabled:opacity-60"
             >
               {sending ? t("constructions.sending") : t("constructions.submit")}
               <ArrowRight size={16} />

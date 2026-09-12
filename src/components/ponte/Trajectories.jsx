@@ -63,7 +63,7 @@ export default function Trajectories() {
     <section id="trajetorias" className="relative py-24 lg:py-32 bg-[#EFE8E0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-10">
-          <span className="text-[#C87A53] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+          <span className="text-[#B8941F] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("trajectory.kicker")}
           </span>
           <h2 className="font-display text-3xl lg:text-5xl font-light text-[#3C2F2F] leading-[1.1] tracking-tight text-balance">

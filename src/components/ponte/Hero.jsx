@@ -34,9 +34,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="inline-flex items-center gap-3 text-[#BC5A3A] text-xs font-medium tracking-[0.2em] uppercase mb-6"
+            className="inline-flex items-center gap-3 text-[#A67C00] text-xs font-medium tracking-[0.2em] uppercase mb-6"
           >
-            <span className="h-px w-8 bg-[#BC5A3A]" />
+            <span className="h-px w-8 bg-[#A67C00]" />
             {t("hero.tag1")} · {t("hero.tag2")} · {t("hero.tag3")}
           </motion.span>
 
@@ -62,7 +62,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={mounted ? { opacity: 1 } : {}}
             transition={{ delay: 0.75, duration: 0.9 }}
-            className="mt-4 font-display italic text-[#BC5A3A]/90 text-lg font-light leading-snug max-w-2xl"
+            className="mt-4 font-display italic text-[#A67C00]/90 text-lg font-light leading-snug max-w-2xl"
           >
             {t("hero.tagline")}
           </motion.p>
@@ -75,7 +75,7 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollTo("construcoes")}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#BC5A3A] px-7 py-3 text-sm font-medium tracking-[0.12em] uppercase text-[#F4EFEA] transition-all hover:bg-[#A84C2E]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#A67C00] px-7 py-3 text-sm font-medium tracking-[0.12em] uppercase text-[#F4EFEA] transition-all hover:bg-[#8A6300]"
             >
               {t("hero.cta")}
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -89,7 +89,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={mounted ? { opacity: 1 } : {}}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#F4EFEA]/60 hover:text-[#BC5A3A] transition-colors"
+        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#F4EFEA]/60 hover:text-[#A67C00] transition-colors"
       >
         <span className="text-[10px] font-medium tracking-[0.22em] uppercase">{t("hero.scroll")}</span>
         <ArrowDown size={16} className="animate-bounce" />
