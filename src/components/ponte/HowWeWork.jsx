@@ -37,7 +37,7 @@ export default function HowWeWork() {
           >
             <motion.path
               d="M60 40 C 380 180, 820 180, 1140 40"
-              stroke="#A4B29B"
+              stroke="#A67C00"
               strokeWidth="2"
               strokeDasharray="2 8"
               initial={{ pathLength: 0 }}
@@ -60,8 +60,8 @@ export default function HowWeWork() {
                   className="text-center md:text-left"
                 >
                   <div className="flex md:block items-center gap-4">
-                    <div className="w-14 h-14 rounded-full border border-[#A4B29B]/60 flex items-center justify-center mb-5 shrink-0 mx-auto md:mx-0">
-                      <Icon size={22} className="text-[#A4B29B]" />
+                    <div className="w-14 h-14 rounded-full border border-[#A67C00]/60 flex items-center justify-center mb-5 shrink-0 mx-auto md:mx-0">
+                      <Icon size={22} className="text-[#A67C00]" />
                     </div>
                     <span className="font-display text-5xl text-[#FFFFFF]/15 font-light hidden md:block">
                       0{i + 1}

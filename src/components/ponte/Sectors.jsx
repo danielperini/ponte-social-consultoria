@@ -27,7 +27,7 @@ export default function Sectors() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="flex items-center gap-3 text-[#073050]"
               >
-                <Icon size={22} className="text-[#073050]" />
+                <Icon size={22} className="text-[#A67C00]" />
                 <span className="font-display text-lg lg:text-xl font-medium tracking-tight">
                   {label}
                 </span>

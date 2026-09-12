@@ -44,7 +44,7 @@ export default function Pillars() {
                   onClick={() => setOpen(item)}
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-[#073050] hover:text-[#1B562A] transition-colors group-hover:text-[#1B562A]"
                 >
-                  <Plus size={15} />
+                  <Plus size={15} className="text-[#A67C00]" />
                   {t("pillars.viewDeliverables")}
                 </button>
               </div>

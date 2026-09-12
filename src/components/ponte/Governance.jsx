@@ -33,7 +33,7 @@ export default function Governance() {
                 transition={{ duration: 0.55, delay: (i % 4) * 0.1 }}
                 className="bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-xl p-6 lg:p-7"
               >
-                <Icon size={24} className="text-[#A4B29B] mb-4" />
+                <Icon size={24} className="text-[#A67C00] mb-4" />
                 <h3 className="font-display text-lg font-medium text-[#FFFFFF] mb-2">{title}</h3>
                 <p className="text-[#FFFFFF]/65 text-[14px] leading-relaxed">{text}</p>
               </motion.div>
