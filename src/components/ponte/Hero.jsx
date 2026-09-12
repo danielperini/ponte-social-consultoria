@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80";
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5410ea027_WhatsAppImage2026-09-11at092845.jpeg";
 
 function scrollTo(target) {
   const el = document.getElementById(target);
