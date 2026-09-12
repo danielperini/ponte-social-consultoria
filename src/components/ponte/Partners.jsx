@@ -6,21 +6,15 @@ import { useTranslation } from "@/i18n/LanguageProvider";
 const PARTNERS = [
   {
     name: "Instituto Frazoli",
-    sub: "para um mundo mais justo",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/cb2d4f9ed_WhatsAppImage2026-09-11at130739.jpeg",
-    bg: "#FFFFFF",
   },
   {
     name: "ima",
-    sub: "Instituto e Câmara de Mediação Aplicada",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/46c736304_WhatsAppImage2026-09-11at130726.jpeg",
-    bg: "#0B0B0B",
   },
   {
     name: "Perini",
-    sub: "Projetos Culturais e Sociais",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/198664dd6_perini_transparente2.png",
-    bg: "#0B0B0B",
   },
 ];
 
@@ -49,21 +43,10 @@ export default function Partners() {
           </motion.p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 items-center">
           {PARTNERS.map((p, i) => (
-            <motion.div key={p.name} {...fade(i * 0.08)} className="flex flex-col">
-              <div
-                className="rounded-2xl border border-[#C2D2C0]/70 overflow-hidden shadow-[0_10px_30px_-18px_rgba(31,74,46,0.35)]"
-                style={{ background: p.bg }}
-              >
-                <div className="aspect-[3/2] flex items-center justify-center p-7 lg:p-8">
-                  <Image src={p.url} alt={p.name} fittingType="fit" className="w-full h-full" />
-                </div>
-              </div>
-              <div className="mt-5 px-1">
-                <h3 className="font-display text-lg text-[#1F4A2E] leading-tight">{p.name}</h3>
-                <p className="text-[#1F4A2E]/60 text-sm mt-1 leading-relaxed">{p.sub}</p>
-              </div>
+            <motion.div key={p.name} {...fade(i * 0.08)} className="aspect-[3/2] flex items-center justify-center">
+              <Image src={p.url} alt={p.name} fittingType="fit" className="w-full h-full" />
             </motion.div>
           ))}
         </div>
