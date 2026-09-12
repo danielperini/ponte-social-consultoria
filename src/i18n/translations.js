@@ -249,6 +249,8 @@ export const translations = {
       educationTitle: "Formação",
       certsTitle: "Certificações e formação especializada",
       complementaryTitle: "Formação complementar",
+      competenciesTitle: "Competências de destaque",
+      ponteTitle: "Para a Ponte Social",
       ongoingLabel: "Em curso",
       consultants: [
         {
@@ -283,13 +285,20 @@ export const translations = {
           kicker: "Perfil · consultor sênior",
           name: "Daniel Perini",
           role: "Diálogo social, relacionamento comunitário e estratégia ESG",
-          summary: "Sênior com mais de 20 anos de experiência em diálogo social, relacionamento comunitário e projetos sociais, atuando na Fundação Renova, Fundação ArcelorMittal e no Governo de Minas Gerais. Combina articulação institucional, mediação de conflitos e implementação de práticas ESG em territórios de alta complexidade.",
+          summary: "Sênior com mais de 20 anos de experiência em diálogo social, relacionamento comunitário, projetos sociais e estratégia ESG, com atuação na Fundação Renova, Fundação ArcelorMittal e no Governo de Minas Gerais. Construiu sua trajetória na interface entre empresas, comunidades, poder público e instituições, combinando articulação institucional, relação com o território, mediação de conflitos e implementação de estratégias sociais e ESG. Seu repertório une visão estratégica e experiência de campo para compreender o território, estabelecer diálogo, antecipar tensões e construir relações consistentes para a decisão.",
           education: [
             "Master ESG na Prática: Princípio, Estratégia e Cultura — ESPM",
             "Especialização em Elaboração, Gestão e Avaliação de Projetos Sociais em Áreas Urbanas — UFMG",
             "Bacharelado em Ciências Sociais — Ciência Política — UFMG",
           ],
-          certsShort: "ESG na Prática · Diálogo Social · Mediação de Conflitos",
+          certsShort: "ESG na prática · Diálogo social · Relacionamento comunitário · Mediação de conflitos · Projetos sociais · Desenvolvimento territorial",
+          competencies: [
+            { title: "Diálogo social", text: "Condução de processos de diálogo entre organizações, comunidades e diferentes atores, considerando interesses, percepções e contextos." },
+            { title: "Relacionamento comunitário e território", text: "Construção e gestão de relações com comunidades e territórios diretamente relacionados a projetos e operações." },
+            { title: "Prevenção e mediação de conflitos", text: "Compreensão de diferentes perspectivas e interesses e construção de caminhos de diálogo e negociação." },
+            { title: "ESG e estratégia social", text: "Integração da dimensão social às estratégias organizacionais e a iniciativas de sustentabilidade." },
+          ],
+          pontePitch: "Transformar diálogo e conhecimento do território em estratégia de relacionamento — para que demandas sociais sejam compreendidas antes de se transformarem em conflitos.",
           certs: [
             { name: "ESG na Prática: Como Implementar a Sustentabilidade nas Organizações", inst: "ESPM", year: "", ongoing: false },
             { name: "Coordenador de Diálogo Social — Fundação Renova (20 municípios de MG e ES)", inst: "Fundação Renova", year: "2019–2023", ongoing: false },
@@ -331,7 +340,7 @@ export const translations = {
         {
           kicker: "Perfil · consultora sênior",
           name: "Patricia Abreu",
-          role: "Comunicação pública, campanhas nacionais e relacionamento institucional",
+          role: "Comunicação estratégica, campanhas nacionais e mobilização social",
           summary: "Profissional de comunicação com atuação na Claro Abreu Projetos (Belo Horizonte), especializada em campanhas nacionais com forte presença local, comunicação pública e relacionamento institucional. Combina gestão de projetos e visão data-driven, com ênfase em KPIs de comunicação e decisões baseadas em dados para mídia, relações públicas e ações em território.",
           education: [
             "Formação em Saint Paul Escola de Negócios",
@@ -621,6 +630,8 @@ export const translations = {
       educationTitle: "Education",
       certsTitle: "Certifications and specialized training",
       complementaryTitle: "Complementary education",
+      competenciesTitle: "Key competencies",
+      ponteTitle: "For Ponte Social",
       ongoingLabel: "In progress",
       consultants: [
         {
@@ -655,13 +666,20 @@ export const translations = {
           kicker: "Profile · senior consultant",
           name: "Daniel Perini",
           role: "Social dialogue, community relations, and ESG strategy",
-          summary: "Senior with more than 20 years of experience in social dialogue, community relations, and social projects, having worked at Fundação Renova, Fundação ArcelorMittal, and the Government of Minas Gerais. He combines institutional articulation, conflict mediation, and ESG implementation in highly complex territories.",
+          summary: "Senior with more than 20 years of experience in social dialogue, community relations, social projects, and ESG strategy, having worked at Fundação Renova, Fundação ArcelorMittal, and the Government of Minas Gerais. He built his career at the interface between companies, communities, government, and institutions, combining institutional articulation, territorial engagement, conflict mediation, and the implementation of social and ESG strategies. His repertoire unites strategic vision and field experience to understand the territory, establish dialogue, anticipate tensions, and build consistent relationships for decision-making.",
           education: [
             "Master ESG na Prática: Princípio, Estratégia e Cultura — ESPM",
             "Specialization in Design, Management and Evaluation of Social Projects in Urban Areas — UFMG",
             "Bachelor's in Social Sciences — Political Science — UFMG",
           ],
-          certsShort: "ESG na Prática · Social Dialogue · Conflict Mediation",
+          certsShort: "ESG in practice · Social dialogue · Community relations · Conflict mediation · Social projects · Territorial development",
+          competencies: [
+            { title: "Social dialogue", text: "Facilitating dialogue processes between organizations, communities, and different actors, considering interests, perceptions, and contexts." },
+            { title: "Community relations and territory", text: "Building and managing relationships with communities and territories directly related to projects and operations." },
+            { title: "Conflict prevention and mediation", text: "Understanding different perspectives and interests and building paths for dialogue and negotiation." },
+            { title: "ESG and social strategy", text: "Integrating the social dimension into organizational strategies and sustainability initiatives." },
+          ],
+          pontePitch: "Turning dialogue and knowledge of the territory into relationship strategy — so that social demands are understood before they become conflicts.",
           certs: [
             { name: "ESG na Prática: Como Implementar a Sustentabilidade nas Organizações", inst: "ESPM", year: "", ongoing: false },
             { name: "Social Dialogue Coordinator — Fundação Renova (20 municipalities in MG and ES)", inst: "Fundação Renova", year: "2019–2023", ongoing: false },
@@ -703,7 +721,7 @@ export const translations = {
         {
           kicker: "Profile · senior consultant",
           name: "Patricia Abreu",
-          role: "Public communication, national campaigns, and institutional relations",
+          role: "Strategic communication, national campaigns, and social mobilization",
           summary: "Communications professional at Claro Abreu Projetos (Belo Horizonte), specialized in national campaigns with strong local presence, public communication, and institutional relations. She combines project management with a data-driven approach, with an emphasis on communication KPIs and data-based decisions for media, public relations, and in-territory actions.",
           education: [
             "Education at Saint Paul Escola de Negócios",
@@ -993,6 +1011,8 @@ export const translations = {
       educationTitle: "Formación",
       certsTitle: "Certificaciones y formación especializada",
       complementaryTitle: "Formación complementaria",
+      competenciesTitle: "Competencias destacadas",
+      ponteTitle: "Para Ponte Social",
       ongoingLabel: "En curso",
       consultants: [
         {
@@ -1027,13 +1047,20 @@ export const translations = {
           kicker: "Perfil · consultor sénior",
           name: "Daniel Perini",
           role: "Diálogo social, relación comunitaria y estrategia ESG",
-          summary: "Sénior con más de 20 años de experiencia en diálogo social, relación comunitaria y proyectos sociales, habiendo trabajado en Fundação Renova, Fundação ArcelorMittal y el Gobierno de Minas Gerais. Combina articulación institucional, mediación de conflictos e implementación de prácticas ESG en territorios de alta complejidad.",
+          summary: "Sénior con más de 20 años de experiencia en diálogo social, relación comunitaria, proyectos sociales y estrategia ESG, con actuación en Fundação Renova, Fundação ArcelorMittal y el Gobierno de Minas Gerais. Construyó su trayectoria en la interfaz entre empresas, comunidades, poder público e instituciones, combinando articulación institucional, relación con el territorio, mediación de conflictos e implementación de estrategias sociales y ESG. Su repertorio une visión estratégica y experiencia de campo para comprender el territorio, establecer diálogo, anticipar tensiones y construir relaciones consistentes para la decisión.",
           education: [
             "Master ESG na Prática: Princípio, Estratégia e Cultura — ESPM",
             "Especialización en Elaboración, Gestión y Evaluación de Proyectos Sociales en Áreas Urbanas — UFMG",
             "Grado en Ciencias Sociales — Ciencia Política — UFMG",
           ],
-          certsShort: "ESG na Prática · Diálogo Social · Mediación de Conflictos",
+          certsShort: "ESG en la práctica · Diálogo social · Relación comunitaria · Mediación de conflictos · Proyectos sociales · Desarrollo territorial",
+          competencies: [
+            { title: "Diálogo social", text: "Conducción de procesos de diálogo entre organizaciones, comunidades y diferentes actores, considerando intereses, percepciones y contextos." },
+            { title: "Relación comunitaria y territorio", text: "Construcción y gestión de relaciones con comunidades y territorios directamente relacionados a proyectos y operaciones." },
+            { title: "Prevención y mediación de conflictos", text: "Comprensión de diferentes perspectivas e intereses y construcción de caminos de diálogo y negociación." },
+            { title: "ESG y estrategia social", text: "Integración de la dimensión social a las estrategias organizacionales y a iniciativas de sostenibilidad." },
+          ],
+          pontePitch: "Transformar el diálogo y el conocimiento del territorio en estrategia de relación — para que las demandas sociales sean comprendidas antes de convertirse en conflictos.",
           certs: [
             { name: "ESG na Prática: Como Implementar a Sustentabilidade nas Organizações", inst: "ESPM", year: "", ongoing: false },
             { name: "Coordinador de Diálogo Social — Fundação Renova (20 municipios de MG y ES)", inst: "Fundação Renova", year: "2019–2023", ongoing: false },
@@ -1075,7 +1102,7 @@ export const translations = {
         {
           kicker: "Perfil · consultora sénior",
           name: "Patricia Abreu",
-          role: "Comunicación pública, campañas nacionales y relaciones institucionales",
+          role: "Comunicación estratégica, campañas nacionales y movilización social",
           summary: "Profesional de comunicación en Claro Abreu Projetos (Belo Horizonte), especializada en campañas nacionales con fuerte presencia local, comunicación pública y relaciones institucionales. Combina la gestión de proyectos con un enfoque data-driven, con énfasis en KPIs de comunicación y decisiones basadas en datos para medios, relaciones públicas y acciones en el territorio.",
           education: [
             "Formación en Saint Paul Escola de Negócios",

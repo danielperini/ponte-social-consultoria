@@ -36,6 +36,7 @@ export default function Team() {
     educationTitle: t("team.educationTitle"),
     certsTitle: t("team.certsTitle"),
     complementaryTitle: t("team.complementaryTitle"),
+    competenciesTitle: t("team.competenciesTitle"),
     seeFull: t("team.seeFull"),
     hideFull: t("team.hideFull"),
     ongoing: t("team.ongoingLabel"),

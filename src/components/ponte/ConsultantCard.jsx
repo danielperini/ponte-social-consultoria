@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Linkedin, ChevronDown, GraduationCap, Award, BookOpen, CheckCircle2 } from "lucide-react";
+import { Linkedin, ChevronDown, GraduationCap, Award, BookOpen, CheckCircle2, Sparkles } from "lucide-react";
 
 export default function ConsultantCard({ p, labels }) {
   const [showFull, setShowFull] = useState(false);
-  const hasExpand = (p.certs?.length > 0 || p.complementary?.length > 0);
+  const hasExpand = (p.certs?.length > 0 || p.complementary?.length > 0 || p.competencies?.length > 0);
 
   return (
     <div className="h-full min-h-[580px] lg:min-h-[640px] flex flex-col bg-[#A4B29B]/15 border border-[#A4B29B]/40 rounded-2xl p-6 lg:p-7">
@@ -11,6 +11,12 @@ export default function ConsultantCard({ p, labels }) {
       <h3 className="font-display text-xl lg:text-2xl text-[#073050] mt-1.5 leading-tight">{p.name}</h3>
       <p className="text-[#A67C00] text-[13px] font-medium mt-1 leading-snug">{p.role}</p>
       <p className="mt-3 text-[#073050]/75 text-sm leading-relaxed">{p.summary}</p>
+
+      {p.pontePitch && (
+        <p className="mt-3 text-[#073050] text-[13px] italic leading-relaxed border-l-2 border-[#A67C00] pl-3">
+          {p.pontePitch}
+        </p>
+      )}
 
       {p.education?.length > 0 && (
         <div className="mt-4 border-t border-[#073050]/12 pt-3">
@@ -78,6 +84,22 @@ export default function ConsultantCard({ p, labels }) {
                     {p.complementary.map((c, i) => (
                       <li key={i} className="text-[#073050]/70 text-[13px] leading-relaxed flex gap-2">
                         <span className="text-[#A67C00]">·</span>{c}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {p.competencies?.length > 0 && (
+                <>
+                  <p className="mt-4 flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#073050]/50 mb-1.5">
+                    <Sparkles size={14} className="text-[#A67C00]" />
+                    {labels.competenciesTitle}
+                  </p>
+                  <ul className="space-y-2">
+                    {p.competencies.map((c, i) => (
+                      <li key={i}>
+                        <span className="text-[#073050] text-[13px] font-medium">{c.title}</span>
+                        <p className="text-[#073050]/70 text-[12px] leading-relaxed">{c.text}</p>
                       </li>
                     ))}
                   </ul>
