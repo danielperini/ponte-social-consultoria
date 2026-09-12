@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, ChevronDown, GraduationCap, Award, BookOpen, CheckCircle2 } from "lucide-react";
+import React from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import ConsultantCard from "./ConsultantCard";
 
 const fade = (delay) => ({
   initial: { opacity: 0, y: 24 },
@@ -12,13 +13,22 @@ const fade = (delay) => ({
 
 export default function Team() {
   const { t } = useTranslation();
-  const p = t("team.profile");
-  const [showFull, setShowFull] = useState(false);
+  const consultants = t("team.consultants");
+  const labels = {
+    educationTitle: t("team.educationTitle"),
+    certsTitle: t("team.certsTitle"),
+    complementaryTitle: t("team.complementaryTitle"),
+    seeFull: t("team.seeFull"),
+    hideFull: t("team.hideFull"),
+    ongoing: t("team.ongoingLabel"),
+    linkedinCta: t("team.linkedinCta"),
+    profileNote: t("team.profileNote"),
+  };
 
   return (
     <section id="quem-constroi" className="py-24 lg:py-32 bg-[#F4EFEA]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-7">
             <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("team.kicker")}
@@ -51,92 +61,20 @@ export default function Team() {
             </motion.p>
           </div>
 
-          <motion.div {...fade(0.15)} className="lg:col-span-5 bg-[#EAF0E5] border border-[#C2D2C0]/70 rounded-2xl p-7 lg:p-8">
-            <span className="text-[#A67C00] text-[11px] font-medium tracking-[0.2em] uppercase">{p.kicker}</span>
-            <h3 className="font-display text-2xl text-[#1F4A2E] mt-2 leading-tight">{p.name}</h3>
-            <p className="text-[#A67C00] text-sm font-medium mt-1">{p.role}</p>
-            <p className="mt-4 text-[#1F4A2E]/75 text-sm leading-relaxed">{p.summary}</p>
-
-            <div className="mt-6 border-t border-[#1F4A2E]/12 pt-4">
-              <p className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#1F4A2E]/50 mb-2">
-                <GraduationCap size={14} className="text-[#A67C00]" />
-                {p.educationTitle}
-              </p>
-              <ul className="space-y-1">
-                {p.education.map((e, i) => (
-                  <li key={i} className="text-[#1F4A2E]/75 text-sm leading-relaxed flex gap-2">
-                    <span className="text-[#A67C00]">·</span>
-                    {e}
-                  </li>
+          <motion.div {...fade(0.15)} className="lg:col-span-5">
+            <Carousel opts={{ loop: true, align: "start" }}>
+              <CarouselContent>
+                {consultants.map((c, i) => (
+                  <CarouselItem key={i}>
+                    <ConsultantCard p={c} labels={labels} />
+                  </CarouselItem>
                 ))}
-              </ul>
-            </div>
-
-            <div className="mt-5 border-t border-[#1F4A2E]/12 pt-4">
-              <p className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#1F4A2E]/50 mb-2">
-                <Award size={14} className="text-[#A67C00]" />
-                {p.certsTitle}
-              </p>
-              <p className="text-[#1F4A2E] text-sm font-medium leading-relaxed">{p.certsShort}</p>
-
-              <button
-                onClick={() => setShowFull(!showFull)}
-                className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#A67C00] hover:underline"
-              >
-                {showFull ? t("team.hideFull") : t("team.seeFull")}
-                <ChevronDown size={14} className={`transition-transform ${showFull ? "rotate-180" : ""}`} />
-              </button>
-
-              <AnimatePresence>
-                {showFull && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
-                  >
-                    <ul className="mt-3 space-y-2">
-                      {p.certs.map((c, i) => (
-                        <li key={i} className="text-[#1F4A2E]/75 text-[13px] leading-relaxed flex gap-2">
-                          {c.ongoing ? (
-                            <span className="text-[#A67C00] text-[10px] font-medium uppercase tracking-wide mt-0.5 shrink-0">Em curso</span>
-                          ) : (
-                            <CheckCircle2 size={14} className="text-[#A67C00] shrink-0 mt-0.5" />
-                          )}
-                          <span>
-                            <span className="text-[#1F4A2E]">{c.name}</span> — {c.inst}
-                            {c.year ? ` · ${c.year}` : ""}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="mt-4 flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#1F4A2E]/50 mb-2">
-                      <BookOpen size={14} className="text-[#A67C00]" />
-                      {p.complementaryTitle}
-                    </p>
-                    <ul className="space-y-1">
-                      {p.complementary.map((c, i) => (
-                        <li key={i} className="text-[#1F4A2E]/70 text-[13px] leading-relaxed flex gap-2">
-                          <span className="text-[#A67C00]">·</span>
-                          {c}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <a
-              href={p.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm text-[#1F4A2E] hover:text-[#A67C00] transition-colors border-t border-[#1F4A2E]/12 pt-4"
-            >
-              <Linkedin size={16} className="text-[#A67C00]" />
-              {t("team.linkedinCta")}
-            </a>
-            <p className="mt-4 text-[11px] text-[#1F4A2E]/45 leading-relaxed">{t("team.profileNote")}</p>
+              </CarouselContent>
+              <div className="flex items-center justify-center gap-3 mt-5">
+                <CarouselPrevious className="static left-auto top-auto translate-y-0 h-9 w-9" />
+                <CarouselNext className="static left-auto top-auto translate-y-0 h-9 w-9" />
+              </div>
+            </Carousel>
           </motion.div>
         </div>
       </div>
