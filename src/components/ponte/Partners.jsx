@@ -18,7 +18,7 @@ const PARTNERS = [
     name: "Perini",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5a2405ae1_perini_transparente2.png",
     removeWhite: false,
-    heightClass: "h-[83px] lg:h-[111px]",
+    heightClass: "h-[76px] lg:h-[102px]",
   },
 ];
 
