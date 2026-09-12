@@ -18,6 +18,7 @@ const PARTNERS = [
     name: "Perini",
     url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5a2405ae1_perini_transparente2.png",
     removeWhite: false,
+    heightClass: "h-[83px] lg:h-[111px]",
   },
 ];
 
@@ -48,7 +49,7 @@ export default function Partners() {
 
         <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
           {PARTNERS.map((p, i) => (
-            <motion.div key={p.name} {...fade(i * 0.08)} className="flex items-center justify-center h-24 lg:h-32">
+            <motion.div key={p.name} {...fade(i * 0.08)} className={`flex items-center justify-center ${p.heightClass || "h-24 lg:h-32"}`}>
               <PartnerLogo src={p.url} alt={p.name} removeWhite={p.removeWhite} className="h-full w-auto max-w-[260px]" />
             </motion.div>
           ))}
