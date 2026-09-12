@@ -1,63 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
-// Nova marca Ponte Social sobre fundo preto (#000000). O canvas converte o
-// fundo preto em branco, mantendo a tipografia e os traços do logo. O tamanho
-// é controlado pela altura via className.
+// Nova marca Ponte Social sobre fundo branco (#FFFFFF), pronta para uso direto.
+// O tamanho é controlado pela altura via className.
 const LOGO_URL =
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/f8aa2092e_WhatsAppImage2026-09-11at09381721.png";
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/6a68fc317_fundotranspartne1.png";
 
 export default function Logo({ theme = "brand", className = "" }) {
-  const canvasRef = useRef(null);
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.src = LOGO_URL;
-    img.onload = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      const ctx = canvas.getContext("2d", { willReadFrequently: true });
-      ctx.drawImage(img, 0, 0);
-      try {
-        const data = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const d = data.data;
-        for (let i = 0; i < d.length; i += 4) {
-          const r = d[i], g = d[i + 1], b = d[i + 2];
-          const mx = Math.max(r, g, b);
-          // Remove preto puro e tons muito escuros (fundo). Mantém as cores
-          // do logo (verde-floresta, azul-ardósia, verde-sálvia) que têm canais
-          // significativamente maiores que 0.
-          if (mx < 18) {
-            // fundo preto vira branco
-            d[i] = 255; d[i + 1] = 255; d[i + 2] = 255; d[i + 3] = 255;
-          } else if (mx < 40) {
-            // transição suave: clareia os tons escuros próximos ao preto
-            const f = (mx - 18) / 22;
-            d[i] = Math.round(d[i] * f + 255 * (1 - f));
-            d[i + 1] = Math.round(d[i + 1] * f + 255 * (1 - f));
-            d[i + 2] = Math.round(d[i + 2] * f + 255 * (1 - f));
-          }
-        }
-        ctx.putImageData(data, 0, 0);
-      } catch (e) {
-        // se o canvas for tainted, usa a imagem original
-      }
-      setReady(true);
-    };
-    img.onerror = () => setReady(true);
-  }, []);
-
   return (
-    <canvas
-      ref={canvasRef}
-      role="img"
-      aria-label="Ponte Social Consultoria — relacionamento e mediação"
-      className={`h-16 lg:h-20 w-auto object-contain transition-opacity duration-700 ${
-        ready ? "opacity-100" : "opacity-0"
-      } ${className}`}
+    <img
+      src={LOGO_URL}
+      alt="Ponte Social Consultoria — relacionamento e mediação"
+      className={`h-16 lg:h-20 w-auto object-contain ${className}`}
       draggable={false}
     />
   );
