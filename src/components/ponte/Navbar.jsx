@@ -33,13 +33,13 @@ export default function Navbar() {
     scrollTo(target);
   };
 
-  const dividerClass = scrolled ? "bg-[#C2D2C0]" : "bg-[#F4EFEA]/40";
+  const dividerClass = scrolled ? "bg-[#A4B29B]" : "bg-[#FFFFFF]/40";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#F4EFEA]/90 backdrop-blur-md border-b border-[#C2D2C0]/60 py-3"
+          ? "bg-[#F6F6F6]/90 backdrop-blur-md border-b border-[#A4B29B]/40 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -54,7 +54,7 @@ export default function Navbar() {
               key={item.target}
               onClick={() => handleClick(item.target)}
               className={`group relative text-sm font-medium tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
-                scrolled ? "text-[#1F4A2E] hover:text-[#A67C00]" : "text-[#F4EFEA] hover:text-[#A67C00]"
+                scrolled ? "text-[#073050] hover:text-[#1B562A]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
               }`}
             >
               {t(item.label)}
@@ -69,7 +69,7 @@ export default function Navbar() {
           <LanguageSwitcher scrolled={scrolled} />
           <button
             onClick={() => setOpen(!open)}
-            className={`p-1 ${scrolled ? "text-[#1F4A2E]" : "text-[#F4EFEA]"}`}
+            className={`p-1 ${scrolled ? "text-[#073050]" : "text-[#FFFFFF]"}`}
             aria-label="Menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -78,13 +78,13 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-[#F4EFEA] border-t border-[#C2D2C0]/60 mt-3">
+        <div className="lg:hidden bg-[#F6F6F6] border-t border-[#A4B29B]/40 mt-3">
           <nav className="flex flex-col px-6 py-4 gap-4">
             {MENU.map((item) => (
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#1F4A2E]/80 hover:text-[#A67C00] transition-all duration-300 ease-out py-1"
+                className="group relative text-left text-sm font-medium tracking-[0.12em] text-[#073050]/80 hover:text-[#1B562A] transition-all duration-300 ease-out py-1"
               >
                 {t(item.label)}
                 <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#A67C00] transition-all duration-300 ease-out group-hover:w-full" />

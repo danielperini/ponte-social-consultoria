@@ -8,26 +8,26 @@ export default function HowWeCross() {
   const questions = t("howWeCross.questions");
 
   return (
-    <section id="como-atravessamos" className="relative py-24 lg:py-40 bg-[#F4EFEA] overflow-hidden">
+    <section id="como-atravessamos" className="relative py-24 lg:py-40 bg-[#F6F6F6] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
             <span className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("howWeCross.kicker")}
             </span>
-            <h2 className="font-display text-3xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.1] tracking-tight text-balance mb-8">
+            <h2 className="font-display text-3xl lg:text-5xl font-light text-[#073050] leading-[1.1] tracking-tight text-balance mb-8">
               {t("howWeCross.title")}
             </h2>
-            <p className="text-[#1F4A2E]/75 leading-relaxed mb-6">{t("howWeCross.intro")}</p>
+            <p className="text-[#073050]/75 leading-relaxed mb-6">{t("howWeCross.intro")}</p>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-10 bg-[#1F4A2E] rounded-xl p-7 lg:p-8"
+              className="mt-10 bg-[#073050] rounded-xl p-7 lg:p-8"
             >
-              <p className="font-display text-lg lg:text-xl text-[#F4EFEA] leading-relaxed">
+              <p className="font-display text-lg lg:text-xl text-[#FFFFFF] leading-relaxed">
                 {t("howWeCross.formula1")}
               </p>
               <p className="font-display text-2xl lg:text-3xl text-[#A67C00] mt-3 font-light tracking-tight">
@@ -46,16 +46,16 @@ export default function HowWeCross() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.6, delay: i * 0.15 }}
-                  className="flex gap-5 items-start bg-[#EAF0E5]/50 border border-[#C2D2C0]/50 rounded-lg p-6"
+                  className="flex gap-5 items-start bg-[#A4B29B]/15 border border-[#A4B29B]/40 rounded-lg p-6"
                 >
                   <span className="font-display text-2xl text-[#A67C00] font-light shrink-0">
                     0{i + 1}
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-medium text-[#1F4A2E] mb-1">
+                    <h3 className="font-display text-xl font-medium text-[#073050] mb-1">
                       {item.q}
                     </h3>
-                    <p className="text-[#1F4A2E]/70 text-[15px]">{item.a}</p>
+                    <p className="text-[#073050]/70 text-[15px]">{item.a}</p>
                   </div>
                 </motion.div>
               ))}

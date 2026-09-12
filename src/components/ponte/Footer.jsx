@@ -26,14 +26,14 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-[#1F4A2E] text-[#F4EFEA]/70 pt-16 pb-10">
+    <footer className="bg-[#073050] text-[#FFFFFF]/70 pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-4">
             <div className="mb-4">
               <Logo theme="light" />
             </div>
-            <p className="text-xs text-[#F4EFEA]/50 mb-5">{t("footer.tagline")}</p>
+            <p className="text-xs text-[#FFFFFF]/50 mb-5">{t("footer.tagline")}</p>
             <p className="font-display italic text-[#A67C00] text-lg font-light leading-snug">
               {t("footer.slogan")}
             </p>
@@ -41,15 +41,15 @@ export default function Footer() {
               {SEALS.map((s) => {
                 const Icon = s.Icon;
                 return (
-                  <div key={s.labelKey} className="flex items-center gap-3 border border-[#A67C00]/30 rounded-full pl-3 pr-4 py-2.5 bg-[#F4EFEA]/5">
+                  <div key={s.labelKey} className="flex items-center gap-3 border border-[#A67C00]/30 rounded-full pl-3 pr-4 py-2.5 bg-[#FFFFFF]/5">
                     <span className="w-9 h-9 rounded-full bg-[#A67C00]/15 flex items-center justify-center shrink-0">
                       <Icon size={18} className="text-[#A67C00]" />
                     </span>
                     <span className="leading-tight">
-                      <span className="block text-[11px] font-medium tracking-[0.16em] uppercase text-[#F4EFEA]">
+                      <span className="block text-[11px] font-medium tracking-[0.16em] uppercase text-[#FFFFFF]">
                         {t(s.labelKey)}
                       </span>
-                      <span className="block text-[11px] text-[#F4EFEA]/55">
+                      <span className="block text-[11px] text-[#FFFFFF]/55">
                         {t(s.descKey)}
                       </span>
                     </span>
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#F4EFEA]/50 mb-4">
+            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
               {t("footer.navTitle")}
             </h4>
             <ul className="space-y-2.5">
@@ -68,7 +68,7 @@ export default function Footer() {
                 <li key={item.target}>
                   <button
                     onClick={() => scrollTo(item.target)}
-                    className="text-sm text-[#F4EFEA]/70 hover:text-[#A67C00] transition-colors text-left"
+                    className="text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors text-left"
                   >
                     {t(item.label)}
                   </button>
@@ -78,31 +78,31 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#F4EFEA]/50 mb-4">
+            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
               {t("footer.contactTitle")}
             </h4>
             <div className="space-y-3">
-              <p className="flex items-start gap-3 text-sm text-[#F4EFEA]/70">
+              <p className="flex items-start gap-3 text-sm text-[#FFFFFF]/70">
                 <MapPin size={16} className="text-[#A67C00] shrink-0 mt-0.5" />
                 {t("footer.address")}
               </p>
-              <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-3 text-sm text-[#F4EFEA]/70 hover:text-[#A67C00] transition-colors">
+              <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors">
                 <Mail size={16} className="text-[#A67C00] shrink-0" />
                 {t("footer.email")}
               </a>
-              <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-[#F4EFEA]/70 hover:text-[#A67C00] transition-colors">
+              <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors">
                 <MessageCircle size={16} className="text-[#A67C00] shrink-0" />
                 {t("footer.whatsapp")}
               </a>
             </div>
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#F4EFEA]/50 mb-3 mt-7">
+            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-3 mt-7">
               {t("footer.followTitle")}
             </h4>
             <a
               href="https://www.linkedin.com/company/ponte-social"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-[#F4EFEA]/70 hover:text-[#A67C00] transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors"
             >
               <Linkedin size={16} className="text-[#A67C00]" />
               {t("footer.linkedinLabel")}
@@ -110,10 +110,10 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#F4EFEA]/50 mb-4">
+            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
               {t("footer.legalTitle")}
             </h4>
-            <ul className="space-y-3.5 text-sm text-[#F4EFEA]/60 leading-relaxed">
+            <ul className="space-y-3.5 text-sm text-[#FFFFFF]/60 leading-relaxed">
               <li className="flex items-start gap-2.5">
                 <Lock size={15} className="text-[#A67C00] shrink-0 mt-0.5" />
                 <span>{t("footer.privacy")}</span>
@@ -130,7 +130,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#F4EFEA]/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-[#F4EFEA]/40">
+        <div className="border-t border-[#FFFFFF]/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-[#FFFFFF]/40">
           <p>© {new Date().getFullYear()} {t("nav.brand")}. {t("footer.rights")}</p>
           <p className="font-display italic text-[#A67C00]/80">{t("footer.closer")}</p>
         </div>

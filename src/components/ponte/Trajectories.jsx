@@ -61,16 +61,16 @@ export default function Trajectories() {
   const [failed, setFailed] = useState(() => new Set());
 
   return (
-    <section id="trajetorias" className="relative py-24 lg:py-32 bg-[#EAF0E5] overflow-hidden">
+    <section id="trajetorias" className="relative py-24 lg:py-32 bg-[#A4B29B]/15 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-10">
           <span className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("trajectory.kicker")}
           </span>
-          <h2 className="font-display text-3xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.1] tracking-tight text-balance">
+          <h2 className="font-display text-3xl lg:text-5xl font-light text-[#073050] leading-[1.1] tracking-tight text-balance">
             {t("trajectory.title")}
           </h2>
-          <p className="mt-5 text-[#1F4A2E]/70 text-[15px] leading-relaxed">
+          <p className="mt-5 text-[#073050]/70 text-[15px] leading-relaxed">
             {t("trajectory.intro")}
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function Trajectories() {
             return (
               <div
                 key={inst.name}
-                className="aspect-square rounded-xl sm:rounded-2xl bg-white border border-[#C2D2C0]/60 flex items-center justify-center shadow-[0_4px_18px_-8px_rgba(60,47,47,0.22)] p-3 sm:p-4"
+                className="aspect-square rounded-xl sm:rounded-2xl bg-white border border-[#A4B29B]/40 flex items-center justify-center shadow-[0_4px_18px_-8px_rgba(7,48,80,0.22)] p-3 sm:p-4"
               >
                 {inst.custom === "perini" ? (
                   <PeriniLogo className="w-[70%] h-[70%]" />
@@ -95,7 +95,7 @@ export default function Trajectories() {
                     onError={() => setFailed((prev) => new Set(prev).add(inst.name))}
                   />
                 ) : (
-                  <span className="font-display text-[10px] sm:text-xs lg:text-[13px] font-medium text-[#1F4A2E] leading-tight text-center tracking-tight px-1">
+                  <span className="font-display text-[10px] sm:text-xs lg:text-[13px] font-medium text-[#073050] leading-tight text-center tracking-tight px-1">
                     {inst.name}
                   </span>
                 )}

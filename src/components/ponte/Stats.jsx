@@ -37,7 +37,7 @@ export default function Stats() {
   const items = t("stats.items");
 
   return (
-    <section className="relative py-16 lg:py-20 bg-[#EAF0E5] border-y border-[#C2D2C0]/60">
+    <section className="relative py-16 lg:py-20 bg-[#A4B29B]/15 border-y border-[#A4B29B]/35">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
           {STATS.map((s, i) => (
@@ -49,7 +49,7 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center lg:text-left"
             >
-              <div className="font-display text-4xl lg:text-5xl font-light text-[#1F4A2E] tracking-tight">
+              <div className="font-display text-4xl lg:text-5xl font-light text-[#073050] tracking-tight">
                 {s.text ? (
                   <span>{items[i].text}</span>
                 ) : (
@@ -59,7 +59,7 @@ export default function Stats() {
                   </span>
                 )}
               </div>
-              <p className="mt-2 text-[12px] lg:text-[13px] tracking-[0.14em] uppercase text-[#1F4A2E]/55">
+              <p className="mt-2 text-[12px] lg:text-[13px] tracking-[0.14em] uppercase text-[#073050]/55">
                 {items[i].label}
               </p>
             </motion.div>

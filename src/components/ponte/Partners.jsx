@@ -33,16 +33,16 @@ export default function Partners() {
   const { t } = useTranslation();
 
   return (
-    <section id="rede-parceira" className="py-24 lg:py-32 bg-[#F4EFEA]">
+    <section id="rede-parceira" className="py-24 lg:py-32 bg-[#F6F6F6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-14">
           <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("partners.kicker")}
           </motion.span>
-          <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.08] tracking-tight text-balance">
+          <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#073050] leading-[1.08] tracking-tight text-balance">
             {t("partners.title")}
           </motion.h2>
-          <motion.p {...fade(0.1)} className="mt-5 text-[#1F4A2E]/70 text-base lg:text-[17px] leading-relaxed">
+          <motion.p {...fade(0.1)} className="mt-5 text-[#073050]/70 text-base lg:text-[17px] leading-relaxed">
             {t("partners.intro")}
           </motion.p>
         </div>

@@ -9,8 +9,8 @@ const OPTIONS = [
 
 export default function LanguageSwitcher({ scrolled = true, className = "" }) {
   const { lang, setLang, t } = useTranslation();
-  const inactiveColor = scrolled ? "text-[#1F4A2E]" : "text-[#F4EFEA]";
-  const dividerColor = scrolled ? "text-[#C2D2C0]" : "text-[#F4EFEA]/40";
+  const inactiveColor = scrolled ? "text-[#073050]" : "text-[#FFFFFF]";
+  const dividerColor = scrolled ? "text-[#A4B29B]" : "text-[#FFFFFF]/40";
 
   return (
     <nav
@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ scrolled = true, className = "" }) {
             aria-label={o.name}
             onClick={() => setLang(o.code)}
             className={`text-xs font-medium tracking-[0.08em] px-0.5 transition-colors ${
-              active ? "text-[#A67C00] font-semibold" : `${inactiveColor} hover:text-[#A67C00]`
+              active ? "text-[#A67C00] font-semibold" : `${inactiveColor} hover:text-[#1B562A]`
             }`}
           >
             {o.label}

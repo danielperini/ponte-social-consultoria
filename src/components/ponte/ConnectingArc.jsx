@@ -18,7 +18,7 @@ export default function ConnectingArc({ className = "", height = 220, flip = fal
       >
         <motion.path
           d="M0 180 C 360 20, 1080 20, 1440 180"
-          stroke="#A67C00"
+          stroke="#073050"
           strokeWidth="2.5"
           strokeLinecap="round"
           initial={{ pathLength: 0, opacity: 0 }}
@@ -30,7 +30,7 @@ export default function ConnectingArc({ className = "", height = 220, flip = fal
           cx="720"
           cy="36"
           r="5"
-          fill="#1F4A2E"
+          fill="#A67C00"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true, margin: "-120px" }}

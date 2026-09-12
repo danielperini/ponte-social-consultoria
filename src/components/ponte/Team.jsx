@@ -44,33 +44,33 @@ export default function Team() {
   };
 
   return (
-    <section id="quem-constroi" className="py-24 lg:py-32 bg-[#F4EFEA]">
+    <section id="quem-constroi" className="py-24 lg:py-32 bg-[#F6F6F6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-7">
             <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("team.kicker")}
             </motion.span>
-            <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#1F4A2E] leading-[1.08] tracking-tight text-balance">
+            <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#073050] leading-[1.08] tracking-tight text-balance">
               {t("team.title")}
             </motion.h2>
-            <motion.p {...fade(0.1)} className="mt-6 text-[#1F4A2E]/75 text-base lg:text-[17px] leading-relaxed">
+            <motion.p {...fade(0.1)} className="mt-6 text-[#073050]/75 text-base lg:text-[17px] leading-relaxed">
               {t("team.p1")}
             </motion.p>
 
             <motion.div {...fade(0.15)} className="mt-8 border-l-2 border-[#A67C00]/40 pl-5">
-              <h3 className="font-display text-xl text-[#1F4A2E] mb-2">{t("team.experienceTitle")}</h3>
-              <p className="text-[#1F4A2E]/70 text-[15px] leading-relaxed">{t("team.experienceText")}</p>
+              <h3 className="font-display text-xl text-[#073050] mb-2">{t("team.experienceTitle")}</h3>
+              <p className="text-[#073050]/70 text-[15px] leading-relaxed">{t("team.experienceText")}</p>
             </motion.div>
 
             <div className="mt-8 grid sm:grid-cols-2 gap-6">
-              <motion.div {...fade(0.2)} className="border-t border-[#1F4A2E]/12 pt-4">
-                <h4 className="font-display text-lg text-[#1F4A2E]">{t("team.nucleusTitle")}</h4>
-                <p className="mt-1.5 text-[#1F4A2E]/65 text-sm leading-relaxed">{t("team.nucleusText")}</p>
+              <motion.div {...fade(0.2)} className="border-t border-[#073050]/12 pt-4">
+                <h4 className="font-display text-lg text-[#073050]">{t("team.nucleusTitle")}</h4>
+                <p className="mt-1.5 text-[#073050]/65 text-sm leading-relaxed">{t("team.nucleusText")}</p>
               </motion.div>
-              <motion.div {...fade(0.25)} className="border-t border-[#1F4A2E]/12 pt-4">
-                <h4 className="font-display text-lg text-[#1F4A2E]">{t("team.networkTitle")}</h4>
-                <p className="mt-1.5 text-[#1F4A2E]/65 text-sm leading-relaxed">{t("team.networkText")}</p>
+              <motion.div {...fade(0.25)} className="border-t border-[#073050]/12 pt-4">
+                <h4 className="font-display text-lg text-[#073050]">{t("team.networkTitle")}</h4>
+                <p className="mt-1.5 text-[#073050]/65 text-sm leading-relaxed">{t("team.networkText")}</p>
               </motion.div>
             </div>
 

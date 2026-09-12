@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#1F4A2E]">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#073050]">
       <motion.div
         initial={{ scale: 1.08, opacity: 0 }}
         animate={mounted && imgLoaded ? { scale: 1, opacity: 1 } : {}}
@@ -31,7 +31,7 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <img src={HERO_IMG} alt={t("hero.imgAlt")} onLoad={() => setImgLoaded(true)} className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1F4A2E]/78 via-[#1F4A2E]/55 to-[#1F4A2E]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#073050]/80 via-[#073050]/60 to-[#073050]/92" />
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-28">
@@ -50,7 +50,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-light text-[#F4EFEA] leading-[1.05] tracking-tight text-balance drop-shadow-[0_2px_24px_rgba(31,74,46,0.55)]"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-light text-[#FFFFFF] leading-[1.05] tracking-tight text-balance drop-shadow-[0_2px_24px_rgba(7,48,80,0.55)]"
           >
             {t("hero.title")}
           </motion.h1>
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-6 text-[#F4EFEA]/80 text-base sm:text-lg leading-relaxed max-w-2xl"
+            className="mt-6 text-[#FFFFFF]/80 text-base sm:text-lg leading-relaxed max-w-2xl"
           >
             {t("hero.description")}
           </motion.p>
@@ -81,7 +81,7 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollTo("construcoes")}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#A67C00] px-7 py-3 text-sm font-medium tracking-[0.12em] uppercase text-[#F4EFEA] transition-all hover:bg-[#8A6300]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#073050] px-7 py-3 text-sm font-medium tracking-[0.12em] uppercase text-[#FFFFFF] transition-all hover:bg-[#1B562A]"
             >
               {t("hero.cta")}
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -95,7 +95,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={mounted ? { opacity: 1 } : {}}
         transition={{ delay: 1.0, duration: 0.8 }}
-        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#F4EFEA]/60 hover:text-[#A67C00] transition-colors"
+        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#FFFFFF]/60 hover:text-[#A4B29B] transition-colors"
       >
         <span className="text-[10px] font-medium tracking-[0.22em] uppercase">{t("hero.scroll")}</span>
         <ArrowDown size={16} className="animate-bounce" />
