@@ -46,10 +46,10 @@ export default function Partners() {
           </motion.p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-center justify-items-center">
+        <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
           {PARTNERS.map((p, i) => (
-            <motion.div key={p.name} {...fade(i * 0.08)} className="flex items-center justify-center h-20 lg:h-24 w-36 lg:w-44">
-              <PartnerLogo src={p.url} alt={p.name} removeWhite={p.removeWhite} className="h-full w-full" />
+            <motion.div key={p.name} {...fade(i * 0.08)} className="flex items-center justify-center h-24 lg:h-32">
+              <PartnerLogo src={p.url} alt={p.name} removeWhite={p.removeWhite} className="h-full w-auto max-w-[260px]" />
             </motion.div>
           ))}
         </div>

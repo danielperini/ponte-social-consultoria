@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Image } from "@/components/ui/image";
 
-// Removes a near-white background from a JPEG/PNG logo by setting near-white
-// pixels to fully transparent on a canvas. Used for logos supplied on a white
-// background; transparent PNGs render directly.
+// Renders partner logos. For logos supplied on a white/near-white background,
+// the white is removed on a canvas (alpha 0) so the mark sits cleanly on the
+// cream section. Transparent PNGs render directly. Sizing is controlled by the
+// parent via the passed className (height-driven, object-contain).
 export default function PartnerLogo({ src, alt, removeWhite = false, className = "" }) {
   const canvasRef = useRef(null);
   const [ready, setReady] = useState(false);
@@ -36,9 +36,9 @@ export default function PartnerLogo({ src, alt, removeWhite = false, className =
         ref={canvasRef}
         aria-label={alt}
         role="img"
-        className={`h-full w-full object-contain transition-opacity duration-300 ${ready ? "opacity-100" : "opacity-0"}`}
+        className={`object-contain transition-opacity duration-300 ${ready ? "opacity-100" : "opacity-0"} ${className}`}
       />
     );
   }
-  return <Image src={src} alt={alt} fittingType="fit" className={className} />;
+  return <img src={src} alt={alt} loading="lazy" className={`object-contain ${className}`} />;
 }
