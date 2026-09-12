@@ -11,8 +11,8 @@ const PARTNERS = [
   },
   {
     name: "ima",
-    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/46c736304_WhatsAppImage2026-09-11at130726.jpeg",
-    blend: "",
+    url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/0c98c8796_WhatsAppImage2026-09-11at130726FlatLay.jpg",
+    blend: "mix-blend-multiply",
   },
   {
     name: "Perini",
