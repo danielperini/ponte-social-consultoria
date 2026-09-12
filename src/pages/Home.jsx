@@ -7,6 +7,7 @@ import Pillars from "@/components/ponte/Pillars";
 import HowWeWork from "@/components/ponte/HowWeWork";
 import HowWeCross from "@/components/ponte/HowWeCross";
 import Solutions from "@/components/ponte/Solutions";
+import Certifications from "@/components/ponte/Certifications";
 import Team from "@/components/ponte/Team";
 import Governance from "@/components/ponte/Governance";
 import Partners from "@/components/ponte/Partners";
@@ -32,6 +33,7 @@ export default function Home() {
         <HowWeWork />
         <HowWeCross />
         <Solutions />
+        <Certifications />
         {/* Fundo — Comprar */}
         <Constructions />
         {/* Pós-venda — Fidelizar */}

@@ -156,6 +156,16 @@ export const translations = {
         audience: "Empresas, institutos e órgãos públicos que atuam em territórios de influência e precisam gerenciar o relacionamento com comunidades de forma profissional, transparente e auditável.",
       },
     },
+    certifications: {
+      title: "Padrões e frameworks que orientam nosso trabalho",
+      intro: "A Ponte Social referencia frameworks reconhecidos para conferir autoridade, solidez e rastreabilidade às análises, relatórios e estratégias sociais e de sustentabilidade.",
+      items: {
+        esg: { label: "ESG", desc: "Integração da dimensão ambiental, social e de governança à estratégia." },
+        ods: { label: "ODS 2030", desc: "Alinhamento aos Objetivos de Desenvolvimento Sustentável da ONU." },
+        gri: { label: "GRI Standards", desc: "Relatórios de sustentabilidade alinhados à Global Reporting Initiative." },
+        pacto: { label: "Pacto Global ONU", desc: "Adesão aos dez princípios do Pacto Global das Nações Unidas." },
+      },
+    },
     societarScreens: {
       titles: { map: "Mapa de Stakeholders", risk: "Painel de Riscos", territory: "Inteligência Territorial" },
       influence: "Influência",
@@ -564,6 +574,16 @@ export const translations = {
         audience: "Companies, institutes, and public agencies that operate in areas of influence and need to manage community relations professionally, transparently, and in an auditable way.",
       },
     },
+    certifications: {
+      title: "Standards and frameworks that guide our work",
+      intro: "Ponte Social references recognized frameworks to bring authority, solidity, and traceability to social and sustainability analyses, reports, and strategies.",
+      items: {
+        esg: { label: "ESG", desc: "Integration of environmental, social, and governance dimensions into strategy." },
+        ods: { label: "SDG 2030", desc: "Alignment with the UN Sustainable Development Goals." },
+        gri: { label: "GRI Standards", desc: "Sustainability reporting aligned with the Global Reporting Initiative." },
+        pacto: { label: "UN Global Compact", desc: "Commitment to the ten principles of the UN Global Compact." },
+      },
+    },
     societarScreens: {
       titles: { map: "Stakeholder Map", risk: "Risk Dashboard", territory: "Territorial Intelligence" },
       influence: "Influence",
@@ -943,6 +963,16 @@ export const translations = {
         subtitle: "La plataforma de inteligencia social que transforma la escucha en gestión territorial.",
         text: "Societa.ai registra cada interacción en el territorio — del campo al consejo, del WhatsApp al acta de la reunión — y transforma la escucha del día a día en información estratégica. En un solo entorno, con entrada única de datos, reúne escucha y registro con transcripción y clasificación inteligente; mapeo de comunidades y territorio; gestión de stakeholders, agendas y compromisos conectada al ciclo de devolución y respuesta; e informes narrados, rastreables y alineados con GRI, los ODS y el Pacto Global. Toda demanda registrada tiene un camino de respuesta, comprobado y auditable, y un motor de decisiones con análisis mediante IA detecta tendencias, riesgos y oportunidades a partir de los propios registros del territorio. Al automatizar la lectura, la clasificación y los informes, Societa.ai ahorra el tiempo del analista en la oficina y devuelve al territorio lo que en él se produce: demanda que se vuelve respuesta, relación que se vuelve confianza. Es una plataforma de gestión territorial que reduce significativamente los costos de relación con el territorio.",
         audience: "Empresas, institutos y organismos públicos que actúan en territorios de influencia y necesitan gestionar la relación con las comunidades de forma profesional, transparente y auditable.",
+      },
+    },
+    certifications: {
+      title: "Estándares y frameworks que orientan nuestro trabajo",
+      intro: "Ponte Social referencia frameworks reconocidos para conferir autoridad, solidez y trazabilidad a los análisis, informes y estrategias sociales y de sostenibilidad.",
+      items: {
+        esg: { label: "ESG", desc: "Integración de la dimensión ambiental, social y de gobernanza a la estrategia." },
+        ods: { label: "ODS 2030", desc: "Alineación con los Objetivos de Desarrollo Sostenible de la ONU." },
+        gri: { label: "Estándares GRI", desc: "Reportes de sostenibilidad alineados con la Global Reporting Initiative." },
+        pacto: { label: "Pacto Global ONU", desc: "Adhesión a los diez principios del Pacto Global de las Naciones Unidas." },
       },
     },
     societarScreens: {
