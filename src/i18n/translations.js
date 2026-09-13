@@ -319,7 +319,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
         },
         {
-          kicker: "Perfil · consultor sênior",
+          kicker: "Perfil · Consultor Master",
           name: "Daniel Perini",
           role: "Diálogo social, relacionamento comunitário e estratégia ESG",
           summary: "Sênior com mais de 20 anos de experiência em diálogo social, relacionamento comunitário, projetos sociais e estratégia ESG, com atuação na Fundação Renova, Fundação ArcelorMittal e no Governo de Minas Gerais. Construiu sua trajetória na interface entre empresas, comunidades, poder público e instituições, combinando articulação institucional, relação com o território, mediação de conflitos e implementação de estratégias sociais e ESG. Seu repertório une visão estratégica e experiência de campo para compreender o território, estabelecer diálogo, antecipar tensões e construir relações consistentes para a decisão.",
@@ -704,7 +704,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
         },
         {
-          kicker: "Profile · senior consultant",
+          kicker: "Profile · Master Consultant",
           name: "Daniel Perini",
           role: "Social dialogue, community relations, and ESG strategy",
           summary: "Senior with more than 20 years of experience in social dialogue, community relations, social projects, and ESG strategy, having worked at Fundação Renova, Fundação ArcelorMittal, and the Government of Minas Gerais. He built his career at the interface between companies, communities, government, and institutions, combining institutional articulation, territorial engagement, conflict mediation, and the implementation of social and ESG strategies. His repertoire unites strategic vision and field experience to understand the territory, establish dialogue, anticipate tensions, and build consistent relationships for decision-making.",
@@ -1089,7 +1089,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
         },
         {
-          kicker: "Perfil · consultor sénior",
+          kicker: "Perfil · Consultor Master",
           name: "Daniel Perini",
           role: "Diálogo social, relación comunitaria y estrategia ESG",
           summary: "Sénior con más de 20 años de experiencia en diálogo social, relación comunitaria, proyectos sociales y estrategia ESG, con actuación en Fundação Renova, Fundação ArcelorMittal y el Gobierno de Minas Gerais. Construyó su trayectoria en la interfaz entre empresas, comunidades, poder público e instituciones, combinando articulación institucional, relación con el territorio, mediación de conflictos e implementación de estrategias sociales y ESG. Su repertorio une visión estratégica y experiencia de campo para comprender el territorio, establecer diálogo, anticipar tensiones y construir relaciones consistentes para la decisión.",
