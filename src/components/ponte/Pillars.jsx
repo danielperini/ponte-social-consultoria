@@ -19,7 +19,7 @@ export default function Pillars() {
     <section id="pilares" className="py-24 lg:py-32 bg-[#A4B29B]/15">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-14">
-          <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+          <motion.span {...fade(0)} className="text-[#477A63] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("pillars.kicker")}
           </motion.span>
           <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#073050] leading-[1.08] tracking-tight text-balance">
@@ -33,10 +33,10 @@ export default function Pillars() {
         <div className="border-y border-[#073050]/12">
           {items.map((item, i) => (
             <motion.div key={i} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-8 py-8 lg:py-10 border-b border-[#073050]/12 group">
-              <div className="lg:col-span-2 font-display text-2xl text-[#A67C00] leading-none">{item.num}</div>
+              <div className="lg:col-span-2 font-display text-2xl text-[#477A63] leading-none">{item.num}</div>
               <div className="lg:col-span-7">
                 <h3 className="font-display text-xl lg:text-2xl text-[#073050] leading-tight">{item.title}</h3>
-                <p className="text-[#A67C00] text-sm font-medium tracking-wide mt-1.5">{item.tagline}</p>
+                <p className="text-[#477A63] text-sm font-medium tracking-wide mt-1.5">{item.tagline}</p>
                 <p className="mt-3 text-[#073050]/70 text-[15px] leading-relaxed max-w-2xl">{item.text}</p>
               </div>
               <div className="lg:col-span-3 flex lg:justify-end items-start">
@@ -44,7 +44,7 @@ export default function Pillars() {
                   onClick={() => setOpen(item)}
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-[#073050] hover:text-[#1B562A] transition-colors group-hover:text-[#1B562A]"
                 >
-                  <Plus size={15} className="text-[#A67C00]" />
+                  <Plus size={15} className="text-[#477A63]" />
                   {t("pillars.viewDeliverables")}
                 </button>
               </div>
@@ -73,9 +73,9 @@ export default function Pillars() {
               <button onClick={() => setOpen(null)} className="absolute top-4 right-4 text-[#073050]/50 hover:text-[#1B562A]">
                 <X size={20} />
               </button>
-              <span className="font-display text-2xl text-[#A67C00]">{open.num}</span>
+              <span className="font-display text-2xl text-[#477A63]">{open.num}</span>
               <h3 className="font-display text-2xl text-[#073050] mt-2 leading-tight">{open.title}</h3>
-              <p className="text-[#A67C00] text-sm font-medium tracking-wide mt-1">{open.tagline}</p>
+              <p className="text-[#477A63] text-sm font-medium tracking-wide mt-1">{open.tagline}</p>
               <div className="mt-5 border-t border-[#073050]/12 pt-4">
                 <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#073050]/50 mb-2">
                   {t("pillars.deliveriesLabel")}

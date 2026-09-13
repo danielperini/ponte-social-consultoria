@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Paleta oficial Ponte Social — fiel ao PPT: azul-marinho #073050, verde-sálvia #A4B29B, verde institucional #1B562A, off-white #F6F6F6. Dourado #A67C00 preservado apenas como acento pequeno. */
+    /* Paleta oficial Ponte Social — azul-marinho #073050 (estrutura), Verde Ponte #477A63 (identidade), verde-sálvia #A8B7A0 (CTA), off-white #F6F6F6. Dourado reduzido a microdetalhe. */
     --background: 0 0% 96%;
     --foreground: 206 84% 17%;
     --card: 0 0% 96%;
@@ -17,7 +17,7 @@
     --secondary-foreground: 206 84% 17%;
     --muted: 97 13% 92%;
     --muted-foreground: 206 40% 30%;
-    --accent: 45 100% 33%;
+    --accent: 152 23% 37%;
     --accent-foreground: 30 31% 98%;
     --institutional: 135 52% 22%;
     --red: 8 50% 46%;

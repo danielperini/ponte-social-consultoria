@@ -7,13 +7,13 @@ export default function ConsultantCard({ p, labels }) {
 
   return (
     <div className="h-full min-h-[580px] lg:min-h-[640px] flex flex-col bg-[#A4B29B]/15 border border-[#A4B29B]/40 rounded-2xl p-6 lg:p-7">
-      <span className="text-[#A67C00] text-[11px] font-medium tracking-[0.2em] uppercase">{p.kicker}</span>
+      <span className="text-[#477A63] text-[11px] font-medium tracking-[0.2em] uppercase">{p.kicker}</span>
       <h3 className="font-display text-xl lg:text-2xl text-[#073050] mt-1.5 leading-tight">{p.name}</h3>
-      <p className="text-[#A67C00] text-[13px] font-medium mt-1 leading-snug">{p.role}</p>
+      <p className="text-[#477A63] text-[13px] font-medium mt-1 leading-snug">{p.role}</p>
       <p className="mt-3 text-[#073050]/75 text-sm leading-relaxed">{p.summary}</p>
 
       {p.pontePitch && (
-        <p className="mt-3 text-[#073050] text-[13px] italic leading-relaxed border-l-2 border-[#A67C00] pl-3">
+        <p className="mt-3 text-[#073050] text-[13px] italic leading-relaxed border-l-2 border-[#477A63] pl-3">
           {p.pontePitch}
         </p>
       )}
@@ -21,13 +21,13 @@ export default function ConsultantCard({ p, labels }) {
       {p.education?.length > 0 && (
         <div className="mt-4 border-t border-[#073050]/12 pt-3">
           <p className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#073050]/50 mb-1.5">
-            <GraduationCap size={14} className="text-[#A67C00]" />
+            <GraduationCap size={14} className="text-[#477A63]" />
             {labels.educationTitle}
           </p>
           <ul className="space-y-1">
             {p.education.map((e, i) => (
               <li key={i} className="text-[#073050]/75 text-[13px] leading-relaxed flex gap-2">
-                <span className="text-[#A67C00]">·</span>{e}
+                <span className="text-[#477A63]">·</span>{e}
               </li>
             ))}
           </ul>
@@ -38,7 +38,7 @@ export default function ConsultantCard({ p, labels }) {
         {p.certsShort && (
           <>
             <p className="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#073050]/50 mb-1.5">
-              <Award size={14} className="text-[#A67C00]" />
+              <Award size={14} className="text-[#477A63]" />
               {labels.certsTitle}
             </p>
             <p className="text-[#073050] text-[13px] font-medium leading-relaxed">{p.certsShort}</p>
@@ -47,7 +47,7 @@ export default function ConsultantCard({ p, labels }) {
         {hasExpand && (
           <button
             onClick={() => setShowFull(!showFull)}
-            className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-[#A67C00] hover:underline self-start"
+            className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-[#477A63] hover:underline self-start"
           >
             {showFull ? labels.hideFull : labels.seeFull}
             <ChevronDown size={14} className={`transition-transform ${showFull ? "rotate-180" : ""}`} />
@@ -62,9 +62,9 @@ export default function ConsultantCard({ p, labels }) {
                   {p.certs.map((c, i) => (
                     <li key={i} className="text-[#073050]/75 text-[13px] leading-relaxed flex gap-2">
                       {c.ongoing ? (
-                        <span className="text-[#A67C00] text-[10px] font-medium uppercase tracking-wide mt-0.5 shrink-0">{labels.ongoing}</span>
+                        <span className="text-[#477A63] text-[10px] font-medium uppercase tracking-wide mt-0.5 shrink-0">{labels.ongoing}</span>
                       ) : (
-                        <CheckCircle2 size={14} className="text-[#A67C00] shrink-0 mt-0.5" />
+                        <CheckCircle2 size={14} className="text-[#477A63] shrink-0 mt-0.5" />
                       )}
                       <span>
                         <span className="text-[#073050]">{c.name}</span> — {c.inst}
@@ -77,13 +77,13 @@ export default function ConsultantCard({ p, labels }) {
               {p.complementary?.length > 0 && (
                 <>
                   <p className="mt-4 flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#073050]/50 mb-1.5">
-                    <BookOpen size={14} className="text-[#A67C00]" />
+                    <BookOpen size={14} className="text-[#477A63]" />
                     {labels.complementaryTitle}
                   </p>
                   <ul className="space-y-1">
                     {p.complementary.map((c, i) => (
                       <li key={i} className="text-[#073050]/70 text-[13px] leading-relaxed flex gap-2">
-                        <span className="text-[#A67C00]">·</span>{c}
+                        <span className="text-[#477A63]">·</span>{c}
                       </li>
                     ))}
                   </ul>
@@ -92,7 +92,7 @@ export default function ConsultantCard({ p, labels }) {
               {p.competencies?.length > 0 && (
                 <>
                   <p className="mt-4 flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-[#073050]/50 mb-1.5">
-                    <Sparkles size={14} className="text-[#A67C00]" />
+                    <Sparkles size={14} className="text-[#477A63]" />
                     {labels.competenciesTitle}
                   </p>
                   <ul className="space-y-2">
@@ -116,7 +116,7 @@ export default function ConsultantCard({ p, labels }) {
         rel="noopener noreferrer"
         className="mt-3 inline-flex items-center gap-2 text-sm text-[#073050] hover:text-[#1B562A] transition-colors border-t border-[#073050]/12 pt-3"
       >
-        <Linkedin size={16} className="text-[#A67C00]" />
+        <Linkedin size={16} className="text-[#477A63]" />
         {labels.linkedinCta}
       </a>
       <p className="mt-2 text-[10px] text-[#073050]/45 leading-relaxed">{labels.profileNote}</p>

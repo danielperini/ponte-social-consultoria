@@ -49,7 +49,7 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-7">
-            <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+            <motion.span {...fade(0)} className="text-[#477A63] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("team.kicker")}
             </motion.span>
             <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#073050] leading-[1.08] tracking-tight text-balance">
@@ -59,7 +59,7 @@ export default function Team() {
               {t("team.p1")}
             </motion.p>
 
-            <motion.div {...fade(0.15)} className="mt-8 border-l-2 border-[#A67C00] pl-5">
+            <motion.div {...fade(0.15)} className="mt-8 border-l-2 border-[#477A63] pl-5">
               <h3 className="font-display text-xl text-[#073050] mb-2">{t("team.experienceTitle")}</h3>
               <p className="text-[#073050]/70 text-[15px] leading-relaxed">{t("team.experienceText")}</p>
             </motion.div>
@@ -75,7 +75,7 @@ export default function Team() {
               </motion.div>
             </div>
 
-            <motion.p {...fade(0.3)} className="mt-8 font-display italic text-[#A67C00] text-xl font-light">
+            <motion.p {...fade(0.3)} className="mt-8 font-display italic text-[#477A63] text-xl font-light">
               {t("team.closing")}
             </motion.p>
           </div>

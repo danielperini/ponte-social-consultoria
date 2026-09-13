@@ -32,6 +32,7 @@ export default function Hero() {
       >
         <img src={HERO_IMG} alt={t("hero.imgAlt")} onLoad={() => setImgLoaded(true)} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#073050]/80 via-[#073050]/60 to-[#073050]/92" />
+        <div className="absolute top-0 left-0 w-[42%] h-[40%] bg-gradient-to-br from-[#073050]/85 via-[#073050]/40 to-transparent pointer-events-none" />
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-28">
@@ -40,9 +41,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.05, duration: 0.7 }}
-            className="inline-flex items-center gap-3 text-[#A67C00] text-xs font-medium tracking-[0.2em] uppercase mb-6"
+            className="inline-flex items-center gap-3 text-[#A8B7A0] text-xs font-medium tracking-[0.2em] uppercase mb-6"
           >
-            <span className="h-px w-8 bg-[#A67C00]" />
+            <span className="h-px w-8 bg-[#A8B7A0]" />
             {t("hero.tag1")} · {t("hero.tag2")} · {t("hero.tag3")}
           </motion.span>
 
@@ -68,7 +69,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={mounted ? { opacity: 1 } : {}}
             transition={{ delay: 0.55, duration: 0.8 }}
-            className="mt-6 font-display italic text-[#A67C00]/90 text-base sm:text-lg font-normal leading-snug max-w-2xl"
+            className="mt-6 font-display italic text-[#A8B7A0]/90 text-base sm:text-lg font-normal leading-snug max-w-2xl"
           >
             {t("hero.tagline")}
           </motion.p>
@@ -81,7 +82,7 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollTo("construcoes")}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#A67C00] px-7 py-3 text-sm font-semibold tracking-[0.12em] uppercase text-[#073050] transition-all hover:bg-[#1B562A] hover:text-[#FFFFFF]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#A8B7A0] px-7 py-3 text-sm font-semibold tracking-[0.12em] uppercase text-[#073050] transition-all hover:bg-[#1B562A] hover:text-[#FFFFFF]"
             >
               {t("hero.cta")}
               <span className="transition-transform group-hover:translate-x-1">→</span>

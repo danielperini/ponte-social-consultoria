@@ -19,7 +19,7 @@ export default function Solutions() {
     <section id="solucoes" className="py-24 lg:py-32 bg-[#F6F6F6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-14">
-          <motion.span {...fade(0)} className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+          <motion.span {...fade(0)} className="text-[#477A63] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
             {t("solutions.kicker")}
           </motion.span>
           <motion.h2 {...fade(0.05)} className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-[#073050] leading-[1.08] tracking-tight text-balance">
@@ -32,10 +32,10 @@ export default function Solutions() {
 
         <div className="space-y-8">
           {items.map((it, i) => (
-            <motion.div key={it.name} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-10 border-t border-[#A67C00]/30 pt-8">
+            <motion.div key={it.name} {...fade(i * 0.05)} className="grid lg:grid-cols-12 gap-4 lg:gap-10 border-t border-[#477A63]/30 pt-8">
               <div className="lg:col-span-4">
                 <h3 className="font-display text-2xl lg:text-3xl text-[#073050] leading-tight">{it.name}</h3>
-                <p className="text-[#A67C00] text-sm font-medium tracking-wide mt-2">{it.subtitle}</p>
+                <p className="text-[#477A63] text-sm font-medium tracking-wide mt-2">{it.subtitle}</p>
               </div>
               <div className="lg:col-span-8">
                 <p className="text-[#073050]/75 text-[15px] leading-relaxed">{it.text}</p>
@@ -46,7 +46,7 @@ export default function Solutions() {
           ))}
         </div>
 
-        <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#A67C00]/30 pt-10">
+        <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#477A63]/30 pt-10">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4">
               <SocietaLogo
@@ -56,7 +56,7 @@ export default function Solutions() {
               />
               <div>
                 <h3 className="font-display text-2xl lg:text-3xl text-[#073050] leading-tight">{soc.name}</h3>
-                <p className="text-[#A67C00] text-sm font-medium tracking-wide mt-1">{soc.subtitle}</p>
+                <p className="text-[#477A63] text-sm font-medium tracking-wide mt-1">{soc.subtitle}</p>
               </div>
             </div>
           </div>

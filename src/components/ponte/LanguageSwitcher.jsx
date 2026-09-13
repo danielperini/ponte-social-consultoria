@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ scrolled = true, className = "" }) {
             aria-label={o.name}
             onClick={() => setLang(o.code)}
             className={`text-xs font-medium tracking-[0.08em] px-0.5 transition-colors ${
-              active ? "text-[#A67C00] font-semibold" : `${inactiveColor} hover:text-[#1B562A]`
+              active ? "text-[#477A63] font-semibold" : `${inactiveColor} hover:text-[#1B562A]`
             }`}
           >
             {o.label}

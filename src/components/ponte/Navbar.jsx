@@ -58,7 +58,7 @@ export default function Navbar() {
               }`}
             >
               {t(item.label)}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#A67C00] transition-all duration-300 ease-out group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />
             </button>
           ))}
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
@@ -87,7 +87,7 @@ export default function Navbar() {
                 className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#073050]/80 hover:text-[#1B562A] transition-all duration-300 ease-out py-1"
               >
                 {t(item.label)}
-                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#A67C00] transition-all duration-300 ease-out group-hover:w-full" />
+                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />
               </button>
             ))}
           </nav>

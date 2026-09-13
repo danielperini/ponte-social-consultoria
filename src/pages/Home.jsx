@@ -2,12 +2,11 @@ import React from "react";
 import Navbar from "@/components/ponte/Navbar";
 import Hero from "@/components/ponte/Hero";
 import APonte from "@/components/ponte/APonte";
-import Segments from "@/components/ponte/Segments";
 import Pillars from "@/components/ponte/Pillars";
 import HowWeWork from "@/components/ponte/HowWeWork";
 import HowWeCross from "@/components/ponte/HowWeCross";
 import Solutions from "@/components/ponte/Solutions";
-import Certifications from "@/components/ponte/Certifications";
+import ReputationBlock from "@/components/ponte/ReputationBlock";
 import Team from "@/components/ponte/Team";
 import Governance from "@/components/ponte/Governance";
 import Partners from "@/components/ponte/Partners";
@@ -27,13 +26,12 @@ export default function Home() {
         <Hero />
         {/* Meio — Interessar */}
         <APonte />
-        <Segments />
         {/* Consideração — Avaliar */}
         <Pillars />
         <HowWeWork />
         <HowWeCross />
         <Solutions />
-        <Certifications />
+        <ReputationBlock />
         {/* Fundo — Comprar */}
         <Constructions />
         {/* Pós-venda — Fidelizar */}

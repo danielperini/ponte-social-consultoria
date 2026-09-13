@@ -12,7 +12,7 @@ export default function HowWeCross() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
-            <span className="text-[#A67C00] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
+            <span className="text-[#477A63] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
               {t("howWeCross.kicker")}
             </span>
             <h2 className="font-display text-3xl lg:text-5xl font-light text-[#073050] leading-[1.1] tracking-tight text-balance mb-8">
@@ -30,7 +30,7 @@ export default function HowWeCross() {
               <p className="font-display text-lg lg:text-xl text-[#FFFFFF] leading-relaxed">
                 {t("howWeCross.formula1")}
               </p>
-              <p className="font-display text-2xl lg:text-3xl text-[#A67C00] mt-3 font-light tracking-tight">
+              <p className="font-display text-2xl lg:text-3xl text-[#A8B7A0] mt-3 font-light tracking-tight">
                 {t("howWeCross.formula2")}
               </p>
             </motion.div>
@@ -48,7 +48,7 @@ export default function HowWeCross() {
                   transition={{ duration: 0.6, delay: i * 0.15 }}
                   className="flex gap-5 items-start bg-[#A4B29B]/15 border border-[#A4B29B]/40 rounded-lg p-6"
                 >
-                  <span className="font-display text-2xl text-[#A67C00] font-light shrink-0">
+                  <span className="font-display text-2xl text-[#477A63] font-light shrink-0">
                     0{i + 1}
                   </span>
                   <div>

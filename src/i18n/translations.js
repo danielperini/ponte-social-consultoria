@@ -16,11 +16,11 @@ export const translations = {
     hero: {
       title: "Quais riscos sociais podem afetar sua próxima decisão?",
       description:
-        "A Ponte Social atua na dimensão social dos negócios para identificar riscos, compreender contextos e relações e apoiar decisões em diferentes momentos de projetos e operações. Combinamos experiência, análise estratégica e gestão de relacionamentos para antecipar e gerenciar situações que podem afetar empresas e investimentos, aproximar interesses e construir caminhos de ação.",
+        "A Ponte Social atua na dimensão social dos negócios, com especialidade em contexto territorial, para identificar riscos, compreender relações e apoiar decisões em diferentes momentos de projetos e operações. Combinamos experiência, análise estratégica e gestão de relacionamentos para transformar informações do território e dos públicos em inteligência para o negócio.",
       tagline: "Porque relações também influenciam decisões, resultados e reputação.",
       tag1: "Experiência",
-      tag2: "Análise estratégica",
-      tag3: "Gestão de relacionamentos",
+      tag2: "Inteligência Territorial",
+      tag3: "Relacionamentos",
       cta: "Fale com a Ponte",
       scroll: "Role para descobrir",
       imgAlt: "Observação de um contexto territorial — estrada, rio e infraestrutura ao fundo",
@@ -28,16 +28,16 @@ export const translations = {
     aponte: {
       kicker: "A Ponte",
       title: "Entre o contexto e a decisão, existem pessoas, relações e interesses que precisam ser compreendidos.",
-      p1: "Projetos e operações empresariais envolvem pessoas, relações, interesses e diferentes percepções sobre o negócio. Quando esses fatores não são compreendidos, podem gerar incertezas, conflitos, resistência e impactos sobre prazos, custos, reputação e continuidade.",
+      p1: "Projetos e operações empresariais acontecem em territórios concretos, envolvendo pessoas, relações, interesses e diferentes percepções sobre o negócio. Quando esses fatores não são compreendidos, podem gerar incertezas, conflitos, resistência e impactos sobre prazos, custos, reputação e continuidade.",
       p2: "O desafio não é eliminar essas diferenças. É compreendê-las antes que se transformem em risco.",
-      p3: "É nesse espaço que a Ponte Social atua. Transformamos conhecimento sobre pessoas, relações e contextos em informação estratégica para apoiar decisões mais seguras.",
+      p3: "É nesse espaço que a Ponte Social atua: entre o que acontece no contexto em que o negócio está inserido e o que precisa ser decidido. Transformamos conhecimento sobre território, pessoas, relações e contextos em informação estratégica para apoiar decisões.",
       whyTitle: "E por que Ponte Social?",
       why: [
         "Porque entre o que acontece no território e uma decisão empresarial existe uma realidade que precisa ser compreendida.",
         "Porque informação, sozinha, não basta. É preciso transformá-la em estratégia.",
         "Porque conflitos não se resolvem apenas quando surgem. É preciso compreender suas origens, interesses e relações para antecipar riscos e construir caminhos.",
       ],
-      closing: "A Ponte Social existe para fazer essas passagens: entre contexto e decisão, informação e estratégia, divergência e construção de caminhos. É essa capacidade de interpretar o que está por trás das relações e traduzir a dimensão social em elementos relevantes para o negócio que diferencia a Ponte.",
+      closing: "Reputação também é consequência da forma como uma organização decide e se relaciona. O que acontece no território, a experiência dos públicos e a qualidade das relações ajudam a formar a percepção sobre o negócio.",
       axes: [
         { num: "01", title: "Contexto → Decisão", text: "Entender o que acontece antes de decidir." },
         { num: "02", title: "Informação → Estratégia", text: "Transformar informação em inteligência para agir." },
@@ -68,7 +68,7 @@ export const translations = {
     pillars: {
       kicker: "O que construímos",
       title: "Soluções que transformam informações do contexto em ações para o negócio.",
-      intro: "A Ponte Social atua nos desafios sociais e relacionais que podem influenciar decisões, projetos e operações. Nossas soluções combinam diagnóstico, análise estratégica, gestão de relacionamentos e prevenção de conflitos para transformar informações do contexto em decisões e ações para o negócio.",
+      intro: "A Ponte Social atua nos desafios sociais, territoriais e relacionais que podem influenciar decisões, projetos, operações e reputação. Nossas soluções combinam diagnóstico, inteligência territorial, análise estratégica, gestão de relacionamentos e prevenção de conflitos para transformar informações do contexto em decisões e ações para o negócio.",
       viewDeliverables: "Ver entregas",
       deliveriesLabel: "Entregas",
       closeLabel: "Fechar",
@@ -77,8 +77,8 @@ export const translations = {
           num: "01",
           title: "Diagnóstico Territorial e Social",
           tagline: "Conhecer o contexto antes de decidir.",
-          text: "Análise do território, contexto social, stakeholders, interesses, percepções, riscos e oportunidades que podem influenciar projetos, operações e decisões empresariais.",
-          deliveries: "Diagnósticos; análises de contexto; mapeamento de riscos e oportunidades; leitura estratégica do território.",
+          text: "Leitura estruturada do território e do contexto social, considerando stakeholders, interesses, percepções, dinâmicas locais, riscos e oportunidades que podem influenciar projetos, operações, relações e reputação.",
+          deliveries: "Diagnósticos; análises de contexto; mapeamento de riscos e oportunidades; leitura estratégica do território; subsídios para decisão.",
         },
         {
           num: "02",
@@ -96,8 +96,8 @@ export const translations = {
         },
         {
           num: "04",
-          title: "Sustentabilidade e Estratégia Social",
-          tagline: "Integrar a dimensão social à estratégia do negócio.",
+          title: "Estratégia Social para o Negócio",
+          tagline: "Integrar a dimensão social às decisões e à estratégia da organização.",
           text: "Apoio às organizações na identificação de desafios sociais, ambientais e relacionais e na construção de estratégias capazes de reduzir riscos, fortalecer relações e gerar valor para o negócio.",
           deliveries: "Diagnósticos de maturidade; estratégias ESG e sociais; investimentos sociais; planos de ação; priorização de iniciativas; integração da dimensão social aos processos de decisão.",
         },
@@ -124,6 +124,12 @@ export const translations = {
         { q: "Quem está envolvido?", a: "Compreender relações, interesses, percepções e influências." },
         { q: "O que precisa ser construído?", a: "Transformar essa leitura em estratégia, decisão e ação." },
       ],
+    },
+    reputation: {
+      title: "Reputação também se constrói no território.",
+      p1: "Reputação não é resultado apenas do que uma organização comunica. Ela também se forma na experiência concreta de suas relações: com comunidades, lideranças, poder público, parceiros e outros públicos que influenciam ou vivem o contexto do negócio.",
+      p2: "Por isso, compreender o território não é apenas conhecer o entorno. É compreender fatores que podem afetar relações, legitimidade, decisões e percepção sobre a organização.",
+      p3: "A Ponte Social atua nessa camada: produzindo inteligência territorial e social para que decisões e estratégias de relacionamento estejam alinhadas ao contexto em que o negócio acontece.",
     },
     solutions: {
       kicker: "Soluções proprietárias",
@@ -219,9 +225,29 @@ export const translations = {
           diferencial: "Comunicação e mobilização utilizadas como instrumentos de inteligência territorial e gestão estratégica.",
           resultado: "Mobilização de 955 municípios e mais de 5 milhões de famílias.",
         },
+        {
+          num: "04",
+          tag: "Mineração · Espírito Santo · 2019",
+          title: "Quando o território já tem respostas",
+          contexto: "Operação de mineração no Espírito Santo, em território com histórico de iniciativas sociais e relacionamentos prévios.",
+          desafio: "Diferenciar necessidades reais de infraestrutura de necessidades relacionadas à organização, gestão e governança comunitária.",
+          atuacao: "Leitura do histórico de iniciativas, escuta de lideranças e leitura territorial para orientar investimentos e fortalecimento de capacidades locais.",
+          diferencial: "A leitura territorial permitiu distinguir o que o território já tinha para responder de necessidades a serem construídas.",
+          resultado: "Investimentos sociais e fortalecimento de capacidades locais orientados por compreensão precisa do contexto.",
+        },
+        {
+          num: "05",
+          tag: "Siderurgia · 2024",
+          title: "Quando o relacionamento com stakeholders se torna evidência de governança",
+          contexto: "Operação de siderurgia avaliada para certificação ResponsibleSteel™, em 2024.",
+          desafio: "Transformar o conhecimento territorial e a gestão de stakeholders em evidências para governança, direitos humanos, auditoria e investidores.",
+          atuacao: "Sistematização do conhecimento territorial e da gestão de stakeholders em evidências estruturadas para auditoria e certificação.",
+          diferencial: "O relacionamento com stakeholders deixou de ser apenas gestão e tornou-se evidência de governança.",
+          resultado: "Contribuição para a certificação ResponsibleSteel™ das operações avaliadas.",
+        },
       ],
       formTitle: "Qual decisão você precisa compreender melhor?",
-      formIntro: "Conte-nos sobre o desafio. A Ponte Social pode ajudar a transformar informações sobre pessoas, relações e contexto em caminhos de ação.",
+      formIntro: "Conte-nos sobre o contexto. A Ponte Social transforma informações sobre território, pessoas e relações em inteligência para decisões, estratégias de relacionamento e gestão de riscos.",
       fieldName: "Nome*",
       fieldEmail: "E-mail*",
       fieldCompany: "Empresa / Organização",
@@ -265,7 +291,7 @@ export const translations = {
       ongoingLabel: "Em curso",
       consultants: [
         {
-          kicker: "Perfil · consultora sênior",
+          kicker: "Perfil · Consultora Master",
           name: "Ana Carolina de Moura Maciel",
           role: "Estratégia social, ESG e gestão de crises e stakeholders",
           summary: "Profissional sênior e estratégica, atua na interseção entre ESG, sustentabilidade, gestão de crises, relacionamento com stakeholders, diálogo social, mediação, gestão de riscos sociais, estratégia social, projetos e operações.",
@@ -334,22 +360,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321/",
         },
         {
-          kicker: "Perfil · consultora sênior",
-          name: "Daniela Reis",
-          role: "Liderança, ESG e neurociência aplicada a equipes",
-          summary: "Graduada em Matemática, com especialização em Neurociência e Comportamento e MBA em ESG pelo IBMEC. Palestrante, TEDx Speaker e autora, atua na interseção entre liderança, ESG e neurociência aplicada a equipes.",
-          education: [
-            "Graduação em Matemática",
-            "Especialização em Neurociência e Comportamento",
-            "MBA em ESG — IBMEC",
-          ],
-          certsShort: "ESG · Liderança · Neurociência aplicada",
-          certs: [],
-          complementary: [],
-          linkedin: "https://www.linkedin.com/in/reisdaniela/",
-        },
-        {
-          kicker: "Perfil · consultora sênior",
+          kicker: "Perfil · Consultora Master",
           name: "Patricia Abreu",
           role: "Comunicação estratégica, campanhas nacionais e mobilização social",
           summary: "Profissional de comunicação com atuação na Claro Abreu Projetos (Belo Horizonte), especializada em campanhas nacionais com forte presença local, comunicação pública e relacionamento institucional. Combina gestão de projetos e visão data-driven, com ênfase em KPIs de comunicação e decisões baseadas em dados para mídia, relações públicas e ações em território.",
@@ -401,7 +412,7 @@ export const translations = {
     },
     governance: {
       kicker: "Governança e compromissos",
-      title: "Princípios que sustentam a confiança no nosso trabalho.",
+      title: "Princípios que orientam nossa atuação.",
       items: [
         { title: "Confidencialidade", text: "Tratamos informações sensíveis de clientes, territórios e comunidades com discrição e proteção." },
         { title: "Independência", text: "Análises e diagnósticos conduzidos com isenção, baseados em evidências e no contexto territorial." },
@@ -411,7 +422,7 @@ export const translations = {
     },
     partners: {
       kicker: "Rede Parceira",
-      title: "Parceiros que constroem conosco.",
+      title: "Uma rede que amplia nossa capacidade de atuação.",
       intro: "A Ponte Social se conecta a instituições que somam competências, territórios e propósitos à nossa forma de atuar.",
     },
     footer: {
@@ -459,11 +470,11 @@ export const translations = {
     hero: {
       title: "Which social risks could affect your next decision?",
       description:
-        "Ponte Social works with the social dimension of business to identify risks, understand contexts and relationships, and support decisions throughout different stages of projects and operations. We combine experience, strategic analysis, and relationship management to anticipate and manage situations that can affect companies and investments, bridge interests, and build paths of action.",
+        "Ponte Social works with the social dimension of business, with expertise in territorial context, to identify risks, understand relationships, and support decisions throughout different stages of projects and operations. We combine experience, strategic analysis, and relationship management to transform information from the territory and stakeholders into intelligence for the business.",
       tagline: "Because relationships also shape decisions, results, and reputation.",
       tag1: "Experience",
-      tag2: "Strategic analysis",
-      tag3: "Relationship management",
+      tag2: "Territorial Intelligence",
+      tag3: "Relationships",
       cta: "Talk to Ponte",
       scroll: "Scroll to discover",
       imgAlt: "Observation of a territorial context — road, river, and infrastructure in the background",
@@ -471,16 +482,16 @@ export const translations = {
     aponte: {
       kicker: "About",
       title: "Between context and decision, there are people, relationships, and interests that need to be understood.",
-      p1: "Business projects and operations involve people, relationships, interests, and different perceptions of the business. When these factors are not understood, they can create uncertainty, conflict, resistance, and impacts on schedules, costs, reputation, and continuity.",
+      p1: "Business projects and operations take place in concrete territories, involving people, relationships, interests, and different perceptions of the business. When these factors are not understood, they can create uncertainty, conflict, resistance, and impacts on schedules, costs, reputation, and continuity.",
       p2: "The challenge is not to eliminate these differences. It is to understand them before they become risk.",
-      p3: "This is where Ponte Social works. We transform knowledge about people, relationships, and contexts into strategic information that supports safer decisions.",
+      p3: "This is where Ponte Social works: between what happens in the context in which the business is embedded and what needs to be decided. We transform knowledge about territory, people, relationships, and contexts into strategic information to support decisions.",
       whyTitle: "And why Ponte Social?",
       why: [
         "Because between what happens in the territory and a business decision there is a reality that needs to be understood.",
         "Because information alone is not enough. It must be transformed into strategy.",
         "Because conflicts are not resolved only when they arise. Their origins, interests, and relationships must be understood to anticipate risks and build paths.",
       ],
-      closing: "Ponte Social exists to make these passages: between context and decision, information and strategy, divergence and the construction of paths. It is this ability to interpret what lies behind relationships and translate the social dimension into elements relevant to the business that distinguishes Ponte.",
+      closing: "Reputation is also a consequence of how an organization decides and relates. What happens in the territory, the experience of stakeholders, and the quality of relationships help shape the perception of the business.",
       axes: [
         { num: "01", title: "Context → Decision", text: "Understand what happens before deciding." },
         { num: "02", title: "Information → Strategy", text: "Turn information into intelligence to act." },
@@ -511,15 +522,15 @@ export const translations = {
     pillars: {
       kicker: "What we build",
       title: "Solutions that transform contextual information into action for the business.",
-      intro: "Ponte Social works on the social and relational challenges that can influence decisions, projects, and operations. Our solutions combine assessment, strategic analysis, relationship management, and conflict prevention to turn contextual information into decisions and actions for the business.",
+      intro: "Ponte Social works on the social, territorial, and relational challenges that can influence decisions, projects, operations, and reputation. Our solutions combine assessment, territorial intelligence, strategic analysis, relationship management, and conflict prevention to turn contextual information into decisions and actions for the business.",
       viewDeliverables: "View deliverables",
       deliveriesLabel: "Deliverables",
       closeLabel: "Close",
       items: [
-        { num: "01", title: "Territorial and Social Assessment", tagline: "Understand the context before making decisions.", text: "Analysis of the territory, social context, stakeholders, interests, perceptions, risks, and opportunities that can influence projects, operations, and business decisions.", deliveries: "Assessments; context analyses; risk and opportunity mapping; strategic reading of the territory." },
+        { num: "01", title: "Territorial and Social Assessment", tagline: "Understand the context before making decisions.", text: "Structured reading of the territory and social context, considering stakeholders, interests, perceptions, local dynamics, risks, and opportunities that can influence projects, operations, relationships, and reputation.", deliveries: "Assessments; context analyses; risk and opportunity mapping; strategic reading of the territory; inputs for decision-making." },
         { num: "02", title: "Strategic Stakeholder Management", tagline: "Transform relationships into information for decision-making.", text: "Mapping and analysis of the groups that influence or are impacted by the business, identifying their relationships, interests, expectations, levels of influence, and critical relationship points.", deliveries: "Stakeholder mapping and segmentation; relationship strategies; engagement plans; intelligence for decision-making." },
         { num: "03", title: "Conflict Management and Mediation", tagline: "Anticipate tensions before they become crises.", text: "Identification of signs of tension, analysis of ongoing crises, understanding of the different perspectives and interests involved, and construction of dialogue, negotiation, and mediation strategies.", deliveries: "Conflict analysis; prevention strategies; dialogue facilitation; mediation; action plans." },
-        { num: "04", title: "Sustainability and Social Strategy", tagline: "Integrate the social dimension into business strategy.", text: "Support for organizations in identifying social, environmental, and relational challenges and in building strategies capable of reducing risks, strengthening relationships, and generating value for the business.", deliveries: "Maturity assessments; ESG and social strategies; social investments; action plans; initiative prioritization; integration of the social dimension into decision-making processes." },
+        { num: "04", title: "Social Strategy for the Business", tagline: "Integrate the social dimension into the organization's decisions and strategy.", text: "Support for organizations in identifying social, environmental, and relational challenges and in building strategies capable of reducing risks, strengthening relationships, and generating value for the business.", deliveries: "Maturity assessments; ESG and social strategies; social investments; action plans; initiative prioritization; integration of the social dimension into decision-making processes." },
       ],
     },
     howWeWork: {
@@ -543,6 +554,12 @@ export const translations = {
         { q: "Who is involved?", a: "Understand relationships, interests, perceptions, and influences." },
         { q: "What needs to be built?", a: "Turn this reading into strategy, decision, and action." },
       ],
+    },
+    reputation: {
+      title: "Reputation is also built in the territory.",
+      p1: "Reputation is not only the result of what an organization communicates. It is also shaped by the concrete experience of its relationships: with communities, leaders, government, partners, and other stakeholders who influence or live the business context.",
+      p2: "Understanding the territory, therefore, is not merely knowing the surroundings. It is understanding factors that can affect relationships, legitimacy, decisions, and the perception of the organization.",
+      p3: "Ponte Social works at this layer: producing territorial and social intelligence so that decisions and relationship strategies are aligned with the context in which the business takes place.",
     },
     solutions: {
       kicker: "Proprietary solutions",
@@ -611,9 +628,11 @@ export const translations = {
         { num: "01", tag: "Mining · Goiás · 2014–2015", title: "Social risk begins before implementation", contexto: "Expansion of a mining operation in Goiás, in the early viability stages of the project (FEL).", desafio: "Incorporate the social dimension into the project's decision flow — not treat it as an afterthought.", atuacao: "Context and stakeholder assessment integrated with the technical and environmental studies from the earliest viability stages.", diferencial: "The social entered the project's own decision flow, before implementation.", resultado: "Better-informed project decisions, with anticipation of social risks and greater predictability." },
         { num: "02", tag: "Energy · Small hydro · Central-West · 2009–2010", title: "Divergence cannot be eliminated. Dialogue must be built.", contexto: "Public hearing for a small hydropower plant (PCH) in the Central-West, with groups opposed to the project.", desafio: "Understand different interests, perceptions, and positions before the public debate.", atuacao: "Individual and collective meetings with opposing groups expanded access to information and prepared the company for a more qualified debate.", diferencial: "Different interests were addressed through dialogue, negotiation, and mediation — not confrontation.", resultado: "Reduced tension in the process and a more qualified public debate." },
         { num: "03", tag: "Telecommunications · 2022–2025", title: "Territorial intelligence: communication and mobilization together", contexto: "Digital satellite migration to lower-income families across the country.", desafio: "Reach lower-income families in diverse territories by mobilizing local trust networks.", atuacao: "Mapping of local trust networks and hyperlocal channels — community radio stations, leaders, churches — combining communication and mobilization.", diferencial: "Communication and mobilization used as instruments of territorial intelligence and strategic management.", resultado: "Mobilization of 955 municipalities and more than 5 million families." },
+        { num: "04", tag: "Mining · Espírito Santo · 2019", title: "When the territory already has answers", contexto: "Mining operation in Espírito Santo, in a territory with a history of social initiatives and prior relationships.", desafio: "Differentiate real infrastructure needs from needs related to organization, management, and community governance.", atuacao: "Review of the history of initiatives, listening to leaders, and territorial reading to guide investments and strengthen local capacities.", diferencial: "The territorial reading made it possible to distinguish what the territory already had to offer from needs yet to be built.", resultado: "Social investments and strengthening of local capacities guided by a precise understanding of the context." },
+        { num: "05", tag: "Steel · 2024", title: "When stakeholder relations become evidence of governance", contexto: "Steel operation assessed for ResponsibleSteel™ certification, in 2024.", desafio: "Transform territorial knowledge and stakeholder management into evidence for governance, human rights, auditing, and investors.", atuacao: "Systematization of territorial knowledge and stakeholder management into structured evidence for auditing and certification.", diferencial: "Stakeholder relations ceased to be mere management and became evidence of governance.", resultado: "Contribution to the ResponsibleSteel™ certification of the assessed operations." },
       ],
       formTitle: "Which decision do you need to understand better?",
-      formIntro: "Tell us about the challenge. Ponte Social can help turn information about people, relationships, and context into paths of action.",
+      formIntro: "Tell us about the context. Ponte Social transforms information about territory, people, and relationships into intelligence for decisions, relationship strategies, and risk management.",
       fieldName: "Name*",
       fieldEmail: "Email*",
       fieldCompany: "Company / Organization",
@@ -657,7 +676,7 @@ export const translations = {
       ongoingLabel: "In progress",
       consultants: [
         {
-          kicker: "Profile · senior consultant",
+          kicker: "Profile · Master Consultant",
           name: "Ana Carolina de Moura Maciel",
           role: "Social strategy, ESG, and crisis and stakeholder management",
           summary: "A senior, strategic professional, she works at the intersection of ESG, sustainability, crisis management, stakeholder relations, social dialogue, mediation, social risk management, social strategy, projects, and operations.",
@@ -726,22 +745,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321/",
         },
         {
-          kicker: "Profile · senior consultant",
-          name: "Daniela Reis",
-          role: "Leadership, ESG, and neuroscience applied to teams",
-          summary: "Holds a degree in Mathematics, a specialization in Neuroscience and Behavior, and an MBA in ESG from IBMEC. A speaker, TEDx Speaker, and author, she works at the intersection of leadership, ESG, and neuroscience applied to teams.",
-          education: [
-            "Bachelor's in Mathematics",
-            "Specialization in Neuroscience and Behavior",
-            "MBA in ESG — IBMEC",
-          ],
-          certsShort: "ESG · Leadership · Applied neuroscience",
-          certs: [],
-          complementary: [],
-          linkedin: "https://www.linkedin.com/in/reisdaniela/",
-        },
-        {
-          kicker: "Profile · senior consultant",
+          kicker: "Profile · Master Consultant",
           name: "Patricia Abreu",
           role: "Strategic communication, national campaigns, and social mobilization",
           summary: "Communications professional at Claro Abreu Projetos (Belo Horizonte), specialized in national campaigns with strong local presence, public communication, and institutional relations. She combines project management with a data-driven approach, with an emphasis on communication KPIs and data-based decisions for media, public relations, and in-territory actions.",
@@ -793,7 +797,7 @@ export const translations = {
     },
     governance: {
       kicker: "Governance and commitments",
-      title: "Principles that sustain trust in our work.",
+      title: "Principles that guide our work.",
       items: [
         { title: "Confidentiality", text: "We treat sensitive information from clients, territories, and communities with discretion and protection." },
         { title: "Independence", text: "Analyses and assessments conducted with impartiality, based on evidence and the territorial context." },
@@ -803,7 +807,7 @@ export const translations = {
     },
     partners: {
       kicker: "Partner Network",
-      title: "Partners who build with us.",
+      title: "A network that expands our capacity to act.",
       intro: "Ponte Social connects with institutions that add competencies, territories, and purposes to our way of working.",
     },
     footer: {
@@ -851,11 +855,11 @@ export const translations = {
     hero: {
       title: "¿Qué riesgos sociales pueden afectar su próxima decisión?",
       description:
-        "Ponte Social trabaja en la dimensión social de los negocios para identificar riesgos, comprender contextos y relaciones, y respaldar decisiones en diferentes etapas de proyectos y operaciones. Combinamos experiencia, análisis estratégico y gestión de relaciones para anticipar y gestionar situaciones que pueden afectar a empresas e inversiones, acercar intereses y construir caminos de acción.",
+        "Ponte Social trabaja en la dimensión social de los negocios, con especialidad en contexto territorial, para identificar riesgos, comprender relaciones y respaldar decisiones en diferentes etapas de proyectos y operaciones. Combinamos experiencia, análisis estratégico y gestión de relaciones para transformar información del territorio y de los públicos en inteligencia para el negocio.",
       tagline: "Porque las relaciones también influyen en las decisiones, los resultados y la reputación.",
       tag1: "Experiencia",
-      tag2: "Análisis estratégico",
-      tag3: "Gestión de relaciones",
+      tag2: "Inteligencia Territorial",
+      tag3: "Relaciones",
       cta: "Hable con Ponte",
       scroll: "Desliza para descubrir",
       imgAlt: "Observación de un contexto territorial — carretera, río e infraestructura al fondo",
@@ -863,16 +867,16 @@ export const translations = {
     aponte: {
       kicker: "El puente",
       title: "Entre el contexto y la decisión, hay personas, relaciones e intereses que necesitan ser comprendidos.",
-      p1: "Los proyectos y las operaciones empresariales involucran personas, relaciones, intereses y diferentes percepciones del negocio. Cuando estos factores no se comprenden, pueden generar incertidumbre, conflictos, resistencia e impactos en plazos, costos, reputación y continuidad.",
+      p1: "Los proyectos y las operaciones empresariales ocurren en territorios concretos, involucrando personas, relaciones, intereses y diferentes percepciones del negocio. Cuando estos factores no se comprenden, pueden generar incertidumbre, conflictos, resistencia e impactos en plazos, costos, reputación y continuidad.",
       p2: "El desafío no es eliminar estas diferencias. Es comprenderlas antes de que se conviertan en riesgo.",
-      p3: "En este espacio trabaja Ponte Social. Transformamos el conocimiento sobre personas, relaciones y contextos en información estratégica para respaldar decisiones más seguras.",
+      p3: "En este espacio trabaja Ponte Social: entre lo que ocurre en el contexto en el que el negocio está inserto y lo que necesita decidirse. Transformamos el conocimiento sobre territorio, personas, relaciones y contextos en información estratégica para respaldar decisiones.",
       whyTitle: "¿Y por qué Ponte Social?",
       why: [
         "Porque entre lo que ocurre en el territorio y una decisión empresarial existe una realidad que necesita ser comprendida.",
         "Porque la información por sí sola no basta. Es necesario transformarla en estrategia.",
         "Porque los conflictos no se resuelven solo cuando surgen. Es preciso comprender sus orígenes, intereses y relaciones para anticipar riesgos y construir caminos.",
       ],
-      closing: "Ponte Social existe para hacer esos pasajes: entre contexto y decisión, información y estrategia, divergencia y construcción de caminos. Es esa capacidad de interpretar lo que está detrás de las relaciones y traducir la dimensión social en elementos relevantes para el negocio lo que distingue a Ponte.",
+      closing: "La reputación también es consecuencia de cómo una organización decide y se relaciona. Lo que ocurre en el territorio, la experiencia de los públicos y la calidad de las relaciones ayudan a formar la percepción sobre el negocio.",
       axes: [
         { num: "01", title: "Contexto → Decisión", text: "Entender lo que ocurre antes de decidir." },
         { num: "02", title: "Información → Estrategia", text: "Transformar información en inteligencia para actuar." },
@@ -903,15 +907,15 @@ export const translations = {
     pillars: {
       kicker: "Lo que construimos",
       title: "Soluciones que transforman la información del contexto en acciones para el negocio.",
-      intro: "Ponte Social actúa en los desafíos sociales y relacionales que pueden influir en decisiones, proyectos y operaciones. Nuestras soluciones combinan diagnóstico, análisis estratégico, gestión de relaciones y prevención de conflictos para transformar la información del contexto en decisiones y acciones para el negocio.",
+      intro: "Ponte Social actúa en los desafíos sociales, territoriales y relacionales que pueden influir en decisiones, proyectos, operaciones y reputación. Nuestras soluciones combinan diagnóstico, inteligencia territorial, análisis estratégico, gestión de relaciones y prevención de conflictos para transformar la información del contexto en decisiones y acciones para el negocio.",
       viewDeliverables: "Ver entregables",
       deliveriesLabel: "Entregables",
       closeLabel: "Cerrar",
       items: [
-        { num: "01", title: "Diagnóstico Territorial y Social", tagline: "Comprender el contexto antes de tomar decisiones.", text: "Análisis del territorio, el contexto social, los stakeholders, los intereses, las percepciones, los riesgos y las oportunidades que pueden influir en proyectos, operaciones y decisiones empresariales.", deliveries: "Diagnósticos; análisis de contexto; mapeo de riesgos y oportunidades; lectura estratégica del territorio." },
+        { num: "01", title: "Diagnóstico Territorial y Social", tagline: "Comprender el contexto antes de tomar decisiones.", text: "Lectura estructurada del territorio y del contexto social, considerando stakeholders, intereses, percepciones, dinámicas locales, riesgos y oportunidades que pueden influir en proyectos, operaciones, relaciones y reputación.", deliveries: "Diagnósticos; análisis de contexto; mapeo de riesgos y oportunidades; lectura estratégica del territorio; subsidios para la decisión." },
         { num: "02", title: "Gestión Estratégica de Stakeholders", tagline: "Transformar las relaciones en información para la toma de decisiones.", text: "Mapeo y análisis de los públicos que influyen o son impactados por el negocio, identificando sus relaciones, intereses, expectativas, niveles de influencia y puntos críticos de la relación.", deliveries: "Mapeo y segmentación de stakeholders; estrategias de relación; planes de participación; inteligencia para la toma de decisiones." },
         { num: "03", title: "Gestión y Mediación de Conflictos", tagline: "Anticipar las tensiones antes de que se conviertan en crisis.", text: "Identificación de señales de tensión, análisis de crisis ya instaladas, comprensión de las diferentes perspectivas e intereses involucrados, y construcción de estrategias de diálogo, negociación y mediación.", deliveries: "Análisis de conflictos; estrategias de prevención; facilitación de diálogos; mediación; planes de acción." },
-        { num: "04", title: "Sostenibilidad y Estrategia Social", tagline: "Integrar la dimensión social en la estrategia del negocio.", text: "Apoyo a las organizaciones en la identificación de desafíos sociales, ambientales y relacionales y en la construcción de estrategias capaces de reducir riesgos, fortalecer relaciones y generar valor para el negocio.", deliveries: "Diagnósticos de madurez; estrategias ESG y sociales; inversiones sociales; planes de acción; priorización de iniciativas; integración de la dimensión social en los procesos de decisión." },
+        { num: "04", title: "Estrategia Social para el Negocio", tagline: "Integrar la dimensión social en las decisiones y la estrategia de la organización.", text: "Apoyo a las organizaciones en la identificación de desafíos sociales, ambientales y relacionales y en la construcción de estrategias capaces de reducir riesgos, fortalecer relaciones y generar valor para el negocio.", deliveries: "Diagnósticos de madurez; estrategias ESG y sociales; inversiones sociales; planes de acción; priorización de iniciativas; integración de la dimensión social en los procesos de decisión." },
       ],
     },
     howWeWork: {
@@ -935,6 +939,12 @@ export const translations = {
         { q: "¿Quiénes están involucrados?", a: "Comprender relaciones, intereses, percepciones e influencias." },
         { q: "¿Qué es necesario construir?", a: "Transformar esa lectura en estrategia, decisión y acción." },
       ],
+    },
+    reputation: {
+      title: "La reputación también se construye en el territorio.",
+      p1: "La reputación no es solo el resultado de lo que una organización comunica. También se forma en la experiencia concreta de sus relaciones: con comunidades, liderazgos, poder público, aliados y otros públicos que influyen o viven el contexto del negocio.",
+      p2: "Por eso, comprender el territorio no es solo conocer el entorno. Es comprender factores que pueden afectar relaciones, legitimidad, decisiones y percepción sobre la organización.",
+      p3: "Ponte Social actúa en esta capa: produciendo inteligencia territorial y social para que las decisiones y las estrategias de relación estén alineadas con el contexto en el que el negocio ocurre.",
     },
     solutions: {
       kicker: "Soluciones propias",
@@ -1003,9 +1013,11 @@ export const translations = {
         { num: "01", tag: "Minería · Goiás · 2014–2015", title: "El riesgo social comienza antes de la implementación", contexto: "Expansión de una operación minera en Goiás, en las etapas iniciales de viabilidad del proyecto (FEL).", desafio: "Incorporar la dimensión social al flujo de decisión del proyecto — y no tratarla como una acción posterior.", atuacao: "Diagnóstico de contexto y stakeholders integrado a los estudios técnicos y ambientales desde las etapas iniciales de viabilidad.", diferencial: "Lo social entró en el propio flujo de decisión del proyecto, antes de la implementación.", resultado: "Decisiones de proyecto mejor fundamentadas, con anticipación de riesgos sociales y mayor previsibilidad." },
         { num: "02", tag: "Energía · PCH · Centro-Oeste · 2009–2010", title: "Las divergencias no se eliminan. El diálogo se construye.", contexto: "Audiencia pública de una pequeña central hidroeléctrica (PCH) en el Centro-Oeste, con grupos contrarios al proyecto.", desafio: "Comprender diferentes intereses, percepciones y posiciones antes del debate público.", atuacao: "Agendas individuales y colectivas con grupos contrarios ampliaron el acceso a la información y prepararon a la empresa para un debate más calificado.", diferencial: "Diferentes intereses se trabajaron mediante diálogo, negociación y mediación — no confrontados.", resultado: "Reducción de la tensión en el proceso y un debate público más calificado." },
         { num: "03", tag: "Telecomunicaciones · 2022–2025", title: "Inteligencia territorial: comunicación y movilización juntas", contexto: "Migración de la antena parabólica digital a familias de menores ingresos en todo el país.", desafio: "Llegar a familias de menores ingresos en territorios diversos, movilizando redes locales de confianza.", atuacao: "Mapeo de redes locales de confianza y canales hiperlocales — radios comunitarias, líderes, iglesias — combinando comunicación y movilización.", diferencial: "Comunicación y movilización utilizadas como instrumentos de inteligencia territorial y gestión estratégica.", resultado: "Movilización de 955 municipios y más de 5 millones de familias." },
+        { num: "04", tag: "Minería · Espírito Santo · 2019", title: "Cuando el territorio ya tiene respuestas", contexto: "Operación minera en Espírito Santo, en un territorio con historial de iniciativas sociales y relaciones previas.", desafio: "Diferenciar necesidades reales de infraestructura de necesidades relacionadas con la organización, gestión y gobernanza comunitaria.", atuacao: "Lectura del historial de iniciativas, escucha de liderazgos y lectura territorial para orientar inversiones y fortalecer capacidades locales.", diferencial: "La lectura territorial permitió distinguir lo que el territorio ya tenía para responder de necesidades por construir.", resultado: "Inversiones sociales y fortalecimiento de capacidades locales orientados por una comprensión precisa del contexto." },
+        { num: "05", tag: "Siderurgia · 2024", title: "Cuando la relación con los stakeholders se vuelve evidencia de gobernanza", contexto: "Operación siderúrgica evaluada para la certificación ResponsibleSteel™, en 2024.", desafio: "Transformar el conocimiento territorial y la gestión de stakeholders en evidencias para gobernanza, derechos humanos, auditoría e inversores.", atuacao: "Sistematización del conocimiento territorial y la gestión de stakeholders en evidencias estructuradas para auditoría y certificación.", diferencial: "La relación con los stakeholders dejó de ser solo gestión y se convirtió en evidencia de gobernanza.", resultado: "Contribución a la certificación ResponsibleSteel™ de las operaciones evaluadas." },
       ],
       formTitle: "¿Qué decisión necesita comprender mejor?",
-      formIntro: "Cuéntenos sobre el desafío. Ponte Social puede ayudar a transformar información sobre personas, relaciones y contexto en caminos de acción.",
+      formIntro: "Cuéntenos sobre el contexto. Ponte Social transforma información sobre territorio, personas y relaciones en inteligencia para decisiones, estrategias de relación y gestión de riesgos.",
       fieldName: "Nombre*",
       fieldEmail: "Correo electrónico*",
       fieldCompany: "Empresa / Organización",
@@ -1049,7 +1061,7 @@ export const translations = {
       ongoingLabel: "En curso",
       consultants: [
         {
-          kicker: "Perfil · consultora sénior",
+          kicker: "Perfil · Consultora Master",
           name: "Ana Carolina de Moura Maciel",
           role: "Estrategia social, ESG y gestión de crisis y stakeholders",
           summary: "Profesional sénior y estratégica, actúa en la intersección entre ESG, sostenibilidad, gestión de crisis, relación con stakeholders, diálogo social, mediación, gestión de riesgos sociales, estrategia social, proyectos y operaciones.",
@@ -1118,22 +1130,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321/",
         },
         {
-          kicker: "Perfil · consultora sénior",
-          name: "Daniela Reis",
-          role: "Liderazgo, ESG y neurociencia aplicada a equipos",
-          summary: "Licenciada en Matemáticas, con especialización en Neurociencia y Comportamiento y MBA en ESG por IBMEC. Conferencista, TEDx Speaker y autora, trabaja en la intersección entre liderazgo, ESG y neurociencia aplicada a equipos.",
-          education: [
-            "Grado en Matemáticas",
-            "Especialización en Neurociencia y Comportamiento",
-            "MBA en ESG — IBMEC",
-          ],
-          certsShort: "ESG · Liderazgo · Neurociencia aplicada",
-          certs: [],
-          complementary: [],
-          linkedin: "https://www.linkedin.com/in/reisdaniela/",
-        },
-        {
-          kicker: "Perfil · consultora sénior",
+          kicker: "Perfil · Consultora Master",
           name: "Patricia Abreu",
           role: "Comunicación estratégica, campañas nacionales y movilización social",
           summary: "Profesional de comunicación en Claro Abreu Projetos (Belo Horizonte), especializada en campañas nacionales con fuerte presencia local, comunicación pública y relaciones institucionales. Combina la gestión de proyectos con un enfoque data-driven, con énfasis en KPIs de comunicación y decisiones basadas en datos para medios, relaciones públicas y acciones en el territorio.",
@@ -1185,7 +1182,7 @@ export const translations = {
     },
     governance: {
       kicker: "Gobernanza y compromisos",
-      title: "Principios que sustentan la confianza en nuestro trabajo.",
+      title: "Principios que orientan nuestra actuación.",
       items: [
         { title: "Confidencialidad", text: "Tratamos la información sensible de clientes, territorios y comunidades con discreción y protección." },
         { title: "Independencia", text: "Análisis y diagnósticos conducidos con imparcialidad, basados en evidencias y en el contexto territorial." },
@@ -1195,7 +1192,7 @@ export const translations = {
     },
     partners: {
       kicker: "Red de Aliados",
-      title: "Aliados que construyen con nosotros.",
+      title: "Una red que amplía nuestra capacidad de actuación.",
       intro: "Ponte Social se conecta con instituciones que suman competencias, territorios y propósitos a nuestra forma de actuar.",
     },
     footer: {
