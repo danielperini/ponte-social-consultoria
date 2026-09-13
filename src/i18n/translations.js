@@ -349,7 +349,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/daniel-perini-esg",
         },
         {
-          kicker: "Perfil · consultor sênior",
+          kicker: "Perfil · Consultor Master",
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Estratégia ESG, desenvolvimento territorial e relações institucionais",
           summary: "Executivo com mais de 20 anos de experiência em ESG, desenvolvimento territorial, relações institucionais, comunicação estratégica, licenciamento social e investimento social. Liderou agendas de sustentabilidade e responsabilidade social em setores como mineração, indústria e infraestrutura, conduzindo estratégias de relacionamento com comunidades, governos e investidores e estruturando programas de investimento social com foco em resultados e reputação.",
@@ -734,7 +734,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/daniel-perini-esg",
         },
         {
-          kicker: "Profile · senior consultant",
+          kicker: "Profile · Master Consultant",
           name: "Bernardo Pinheiro Moreira Lage",
           role: "ESG strategy, territorial development, and institutional relations",
           summary: "Executive with more than 20 years of experience in ESG, territorial development, institutional relations, strategic communication, social licensing, and social investment. He has led sustainability and social responsibility agendas in sectors such as mining, industry, and infrastructure, driving engagement strategies with communities, governments, and investors and structuring social investment programs focused on results and reputation.",
@@ -1119,7 +1119,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/daniel-perini-esg",
         },
         {
-          kicker: "Perfil · consultor sénior",
+          kicker: "Perfil · Consultor Master",
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Estrategia ESG, desarrollo territorial y relaciones institucionales",
           summary: "Ejecutivo con más de 20 años de experiencia en ESG, desarrollo territorial, relaciones institucionales, comunicación estratégica, licencia social e inversión social. Ha liderado agendas de sostenibilidad y responsabilidad social en sectores como minería, industria e infraestructura, impulsando estrategias de relación con comunidades, gobiernos e inversores y estructurando programas de inversión social con foco en resultados y reputación.",
