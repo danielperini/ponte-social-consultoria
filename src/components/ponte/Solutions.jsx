@@ -55,7 +55,9 @@ export default function Solutions() {
             <p className="text-[#477A63] text-sm font-medium tracking-wide mt-3">{soc.subtitle}</p>
           </div>
           <div className="lg:col-span-8">
-            <p className="text-[#073050]/75 text-[15px] leading-relaxed">{soc.text}</p>
+            {soc.text.split("\n\n").map((para, i) => (
+              <p key={i} className="text-[#073050]/75 text-[15px] leading-relaxed mb-4 last:mb-0">{para}</p>
+            ))}
             <p className="mt-4 text-[#073050]/55 text-xs tracking-[0.18em] uppercase">{t("solutions.forWhom")}</p>
             <p className="text-[#073050]/70 text-sm mt-1 leading-relaxed">{soc.audience}</p>
           </div>
