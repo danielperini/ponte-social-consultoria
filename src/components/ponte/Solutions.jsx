@@ -48,9 +48,9 @@ export default function Solutions() {
         <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#477A63]/30 pt-10">
           <div className="lg:col-span-4">
             <img
-              src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/1799b9184_ChatGPTImage14desetde202617_27_14.png"
+              src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9aea63e71_ChatGPTImage14desetde202617_28_23.png"
               alt={soc.name}
-              className="h-12 lg:h-14 w-auto max-w-[260px] object-contain"
+              className="h-16 lg:h-20 w-auto max-w-[240px] object-contain"
             />
             <p className="text-[#477A63] text-sm font-medium tracking-wide mt-3">{soc.subtitle}</p>
           </div>
