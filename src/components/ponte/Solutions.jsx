@@ -50,7 +50,7 @@ export default function Solutions() {
             <img
               src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9aea63e71_ChatGPTImage14desetde202617_28_23.png"
               alt={soc.name}
-              className="h-[102px] lg:h-[128px] w-auto max-w-[384px] object-contain"
+              className="h-[163px] lg:h-[205px] w-auto max-w-[614px] object-contain"
             />
             <p className="text-[#477A63] text-sm font-medium tracking-wide mt-3">{soc.subtitle}</p>
           </div>
