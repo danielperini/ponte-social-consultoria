@@ -158,9 +158,9 @@ export const translations = {
       ],
       societar: {
         name: "SOCIETÀ.AI",
-        subtitle: "A plataforma de inteligência social que transforma escuta em gestão territorial.",
-        text: "O Societa.ai registra cada interação no território — do campo ao conselho, do WhatsApp à ata da reunião — e transforma a escuta do dia a dia em informação estratégica. Em um só ambiente, com entrada única de dados, reúne escuta e registro com transcrição e classificação inteligente; mapeamento de comunidades e território; gestão de stakeholders, agendas e compromissos conectada ao ciclo de devolutiva; e relatórios narrados, rastreáveis e alinhados a GRI, ODS e Pacto Global. Toda demanda registrada tem um caminho de resposta, comprovado e auditável, e um motor de decisões com análise via IA detecta tendências, riscos e oportunidades a partir dos próprios registros do território. Ao automatizar leitura, classificação e relatórios, o Societa.ai economiza o tempo do analista em escritório e devolve ao território o que nele é produzido: demanda que vira resposta, relação que vira confiança. É uma plataforma de gestão territorial que reduz significativamente os custos de relacionamento com o território.",
-        audience: "Empresas, institutos e órgãos públicos que atuam em territórios de influência e precisam gerenciar o relacionamento com comunidades de forma profissional, transparente e auditável.",
+        subtitle: "Inteligência social para transformar dados do território em decisões mais precisas e reduzir custos de gestão.",
+        text: "O Società.ai reúne em um único ambiente os registros do relacionamento com comunidades e stakeholders, organizando dados de campo, conversas, reuniões, demandas e compromissos. A plataforma transforma essas informações em análises que ajudam a identificar tendências, riscos e oportunidades, apoiando decisões baseadas na realidade do território. Ao automatizar a organização, classificação e análise dos registros e a produção de relatórios, o Società.ai reduz o trabalho manual, diminui custos operacionais, evita retrabalho e amplia a capacidade de análise das equipes.",
+        audience: "Empresas, institutos e órgãos públicos que precisam organizar o relacionamento com comunidades e transformar informações do território em decisões e ações concretas.",
       },
     },
     certifications: {
@@ -588,9 +588,9 @@ export const translations = {
       ],
       societar: {
         name: "SOCIETÀ.AI",
-        subtitle: "The social intelligence platform that turns listening into territorial management.",
-        text: "Societa.ai records every interaction in the territory — from the field to the boardroom, from WhatsApp to the meeting minutes — and turns day-to-day listening into strategic information. In a single environment, with single data entry, it brings together listening and recording with smart transcription and classification; community and territory mapping; stakeholder, agenda, and commitment management connected to the feedback and response cycle; and narrated, traceable reports aligned with GRI, the SDGs, and the UN Global Compact. Every registered demand has a response pathway that is proven and auditable, and a decision engine with AI-powered analysis detects trends, risks, and opportunities from the territory's own records. By automating reading, classification, and reports, Societa.ai saves the analyst's time in the office and gives back to the territory what is produced within it: demand that becomes response, relationships that become trust. It is a territorial management platform that significantly reduces the costs of relating with the territory.",
-        audience: "Companies, institutes, and public agencies that operate in areas of influence and need to manage community relations professionally, transparently, and in an auditable way.",
+        subtitle: "Social intelligence to transform territory data into more precise decisions and reduce management costs.",
+        text: "Società.ai brings together, in a single environment, the records of relationships with communities and stakeholders, organizing field data, conversations, meetings, demands, and commitments. The platform transforms this information into analyses that help identify trends, risks, and opportunities, supporting decisions based on the reality of the territory. By automating the organization, classification, and analysis of records and the production of reports, Società.ai reduces manual work, lowers operational costs, avoids rework, and expands the analytical capacity of teams.",
+        audience: "Companies, institutes, and public agencies that need to organize relationships with communities and transform territory information into concrete decisions and actions.",
       },
     },
     certifications: {
@@ -973,9 +973,9 @@ export const translations = {
       ],
       societar: {
         name: "SOCIETÀ.AI",
-        subtitle: "La plataforma de inteligencia social que transforma la escucha en gestión territorial.",
-        text: "Societa.ai registra cada interacción en el territorio — del campo al consejo, del WhatsApp al acta de la reunión — y transforma la escucha del día a día en información estratégica. En un solo entorno, con entrada única de datos, reúne escucha y registro con transcripción y clasificación inteligente; mapeo de comunidades y territorio; gestión de stakeholders, agendas y compromisos conectada al ciclo de devolución y respuesta; e informes narrados, rastreables y alineados con GRI, los ODS y el Pacto Global. Toda demanda registrada tiene un camino de respuesta, comprobado y auditable, y un motor de decisiones con análisis mediante IA detecta tendencias, riesgos y oportunidades a partir de los propios registros del territorio. Al automatizar la lectura, la clasificación y los informes, Societa.ai ahorra el tiempo del analista en la oficina y devuelve al territorio lo que en él se produce: demanda que se vuelve respuesta, relación que se vuelve confianza. Es una plataforma de gestión territorial que reduce significativamente los costos de relación con el territorio.",
-        audience: "Empresas, institutos y organismos públicos que actúan en territorios de influencia y necesitan gestionar la relación con las comunidades de forma profesional, transparente y auditable.",
+        subtitle: "Inteligencia social para transformar los datos del territorio en decisiones más precisas y reducir los costos de gestión.",
+        text: "Società.ai reúne en un solo entorno los registros de la relación con comunidades y stakeholders, organizando datos de campo, conversaciones, reuniones, demandas y compromisos. La plataforma transforma esta información en análisis que ayudan a identificar tendencias, riesgos y oportunidades, respaldando decisiones basadas en la realidad del territorio. Al automatizar la organización, clasificación y análisis de los registros y la producción de informes, Società.ai reduce el trabajo manual, disminuye los costos operativos, evita el retrabajo y amplía la capacidad de análisis de los equipos.",
+        audience: "Empresas, institutos y organismos públicos que necesitan organizar la relación con las comunidades y transformar la información del territorio en decisiones y acciones concretas.",
       },
     },
     certifications: {
