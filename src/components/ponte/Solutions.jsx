@@ -55,7 +55,7 @@ export default function Solutions() {
                 className="h-14 w-14 lg:h-16 lg:w-16 shrink-0"
               />
               <div>
-                <h3 className="font-display text-2xl lg:text-3xl text-[#073050] leading-tight">{soc.name}</h3>
+                <h3 className="font-display text-2xl lg:text-3xl text-[#073050] leading-tight italic">{soc.name}</h3>
                 <p className="text-[#477A63] text-sm font-medium tracking-wide mt-1">{soc.subtitle}</p>
               </div>
             </div>
