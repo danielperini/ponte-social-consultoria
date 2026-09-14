@@ -39,7 +39,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#E2EBF2]/90 backdrop-blur-md border-b border-[#5B8AA8]/30 py-2"
+          ? "bg-gradient-to-r from-[#2A5A7A] via-[#477A63] to-[#BC5A3A]/80 backdrop-blur-md border-b border-[#5B8AA8]/40 py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -54,7 +54,7 @@ export default function Navbar() {
               key={item.target}
               onClick={() => handleClick(item.target)}
               className={`group relative text-sm font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
-                scrolled ? "text-[#073050] hover:text-[#1B562A]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
+                scrolled ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
               }`}
             >
               {t(item.label)}
@@ -69,7 +69,7 @@ export default function Navbar() {
           <LanguageSwitcher scrolled={scrolled} />
           <button
             onClick={() => setOpen(!open)}
-            className={`p-1 ${scrolled ? "text-[#073050]" : "text-[#FFFFFF]"}`}
+            className={`p-1 text-[#FFFFFF]`}
             aria-label="Menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -78,7 +78,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-[#E2EBF2] border-t border-[#5B8AA8]/30 mt-3">
+        <div className="lg:hidden bg-gradient-to-r from-[#2A5A7A] via-[#477A63] to-[#BC5A3A]/80 border-t border-[#5B8AA8]/40 mt-3">
           <nav className="flex flex-col px-6 py-4 gap-4">
             {MENU.map((item) => (
               <button
