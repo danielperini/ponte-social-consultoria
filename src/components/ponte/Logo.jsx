@@ -3,12 +3,12 @@ import React from "react";
 export default function Logo({ theme = "brand", className = "" }) {
   const isLight = theme === "light";
   const ponteColor = isLight ? "#FFFFFF" : "#477A63";
-  const socialColor = isLight ? "#FFFFFF" : "#073050";
+  const socialColor = isLight ? "#FFFFFF" : "#477A63";
   const dashColor = isLight ? "#FFFFFF" : "#477A63";
 
   return (
     <svg
-      viewBox="0 0 220 100"
+      viewBox="0 0 200 90"
       className={`object-contain h-16 lg:h-20 w-auto ${className}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,33 +17,31 @@ export default function Logo({ theme = "brand", className = "" }) {
     >
       <text
         x="0"
-        y="42"
+        y="40"
         fontFamily="'Source Serif 4', Georgia, serif"
-        fontSize="38"
+        fontSize="40"
         fontWeight="400"
-        fontStyle="italic"
         fill={ponteColor}
-        letterSpacing="0.5"
       >
         ponte
       </text>
       <line
         x1="2"
-        y1="56"
-        x2="62"
-        y2="56"
+        y1="54"
+        x2="50"
+        y2="54"
         stroke={dashColor}
         strokeWidth="1.5"
-        strokeDasharray="3 3"
+        strokeDasharray="2.5 2.5"
         opacity="0.7"
       />
       <text
-        x="68"
-        y="60"
+        x="56"
+        y="58"
         fontFamily="'Manrope', system-ui, sans-serif"
-        fontSize="13"
-        fontWeight="600"
-        letterSpacing="3.5"
+        fontSize="12"
+        fontWeight="700"
+        letterSpacing="3"
         fill={socialColor}
       >
         SOCIAL
