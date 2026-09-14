@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/LanguageProvider";
-import SocietaLogo from "./SocietaLogo";
 
 const fade = (delay) => ({
   initial: { opacity: 0, y: 24 },
@@ -48,17 +47,12 @@ export default function Solutions() {
 
         <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-[#477A63]/30 pt-10">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-4">
-              <SocietaLogo
-                src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/1c41c3f15_societalogofundotrans-Photoroom.png"
-                alt="Societa.ai"
-                className="h-14 w-14 lg:h-16 lg:w-16 shrink-0"
-              />
-              <div>
-                <h3 className="font-display text-2xl lg:text-3xl text-[#073050] leading-tight italic">{soc.name}</h3>
-                <p className="text-[#477A63] text-sm font-medium tracking-wide mt-1">{soc.subtitle}</p>
-              </div>
-            </div>
+            <img
+              src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/1799b9184_ChatGPTImage14desetde202617_27_14.png"
+              alt={soc.name}
+              className="h-12 lg:h-14 w-auto max-w-[260px] object-contain"
+            />
+            <p className="text-[#477A63] text-sm font-medium tracking-wide mt-3">{soc.subtitle}</p>
           </div>
           <div className="lg:col-span-8">
             <p className="text-[#073050]/75 text-[15px] leading-relaxed">{soc.text}</p>

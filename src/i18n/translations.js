@@ -157,10 +157,10 @@ export const translations = {
         },
       ],
       societar: {
-        name: "SOCIETÀ.AI",
-        subtitle: "Inteligência social para transformar dados do território em decisões mais precisas e reduzir custos de gestão.",
-        text: "O Società.ai reúne em um único ambiente os registros do relacionamento com comunidades e stakeholders, organizando dados de campo, conversas, reuniões, demandas e compromissos. A plataforma transforma essas informações em análises que ajudam a identificar tendências, riscos e oportunidades, apoiando decisões baseadas na realidade do território. Ao automatizar a organização, classificação e análise dos registros e a produção de relatórios, o Società.ai reduz o trabalho manual, diminui custos operacionais, evita retrabalho e amplia a capacidade de análise das equipes.",
-        audience: "Empresas, institutos e órgãos públicos que precisam organizar o relacionamento com comunidades e transformar informações do território em decisões e ações concretas.",
+        name: "SCAMBIO.IA",
+        subtitle: "Plataforma de inteligência social que transforma informações do território em conhecimento para apoiar decisões mais precisas e reduzir custos de gestão.",
+        text: "A SCAMBIO.IA reúne, em um único ambiente, os registros do relacionamento com comunidades e stakeholders, organizando dados de campo, conversas, reuniões, demandas, compromissos e evidências. A partir dessas informações, a SCAMBIO identifica tendências, riscos e oportunidades, permitindo uma visão integrada do território e do relacionamento. Ao automatizar a organização, classificação e análise dos registros e apoiar a produção de relatórios, a SCAMBIO reduz o trabalho manual, diminui custos operacionais, evita retrabalho e amplia a capacidade de análise das equipes.",
+        audience: "Empresas, institutos e órgãos públicos que precisam organizar o relacionamento com comunidades e stakeholders e transformar informações do território em decisões e ações concretas.",
       },
     },
     certifications: {
@@ -587,10 +587,10 @@ export const translations = {
         },
       ],
       societar: {
-        name: "SOCIETÀ.AI",
-        subtitle: "Social intelligence to transform territory data into more precise decisions and reduce management costs.",
-        text: "Società.ai brings together, in a single environment, the records of relationships with communities and stakeholders, organizing field data, conversations, meetings, demands, and commitments. The platform transforms this information into analyses that help identify trends, risks, and opportunities, supporting decisions based on the reality of the territory. By automating the organization, classification, and analysis of records and the production of reports, Società.ai reduces manual work, lowers operational costs, avoids rework, and expands the analytical capacity of teams.",
-        audience: "Companies, institutes, and public agencies that need to organize relationships with communities and transform territory information into concrete decisions and actions.",
+        name: "SCAMBIO.IA",
+        subtitle: "A social intelligence platform that transforms territory information into knowledge to support more precise decisions and reduce management costs.",
+        text: "SCAMBIO.IA brings together, in a single environment, the records of relationships with communities and stakeholders, organizing field data, conversations, meetings, demands, commitments, and evidence. From this information, SCAMBIO identifies trends, risks, and opportunities, enabling an integrated view of the territory and of relationships. By automating the organization, classification, and analysis of records and supporting the production of reports, SCAMBIO reduces manual work, lowers operational costs, avoids rework, and expands the analytical capacity of teams.",
+        audience: "Companies, institutes, and public agencies that need to organize relationships with communities and stakeholders and transform territory information into concrete decisions and actions.",
       },
     },
     certifications: {
@@ -972,10 +972,10 @@ export const translations = {
         },
       ],
       societar: {
-        name: "SOCIETÀ.AI",
-        subtitle: "Inteligencia social para transformar los datos del territorio en decisiones más precisas y reducir los costos de gestión.",
-        text: "Società.ai reúne en un solo entorno los registros de la relación con comunidades y stakeholders, organizando datos de campo, conversaciones, reuniones, demandas y compromisos. La plataforma transforma esta información en análisis que ayudan a identificar tendencias, riesgos y oportunidades, respaldando decisiones basadas en la realidad del territorio. Al automatizar la organización, clasificación y análisis de los registros y la producción de informes, Società.ai reduce el trabajo manual, disminuye los costos operativos, evita el retrabajo y amplía la capacidad de análisis de los equipos.",
-        audience: "Empresas, institutos y organismos públicos que necesitan organizar la relación con las comunidades y transformar la información del territorio en decisiones y acciones concretas.",
+        name: "SCAMBIO.IA",
+        subtitle: "Plataforma de inteligencia social que transforma la información del territorio en conocimiento para respaldar decisiones más precisas y reducir los costos de gestión.",
+        text: "SCAMBIO.IA reúne en un solo entorno los registros de la relación con comunidades y stakeholders, organizando datos de campo, conversaciones, reuniones, demandas, compromisos y evidencias. A partir de esta información, SCAMBIO identifica tendencias, riesgos y oportunidades, permitiendo una visión integrada del territorio y de las relaciones. Al automatizar la organización, clasificación y análisis de los registros y apoyar la producción de informes, SCAMBIO reduce el trabajo manual, disminuye los costos operativos, evita el retrabajo y amplía la capacidad de análisis de los equipos.",
+        audience: "Empresas, institutos y organismos públicos que necesitan organizar la relación con comunidades y stakeholders y transformar la información del territorio en decisiones y acciones concretas.",
       },
     },
     certifications: {
