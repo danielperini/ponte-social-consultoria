@@ -39,7 +39,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#F6F6F6]/90 backdrop-blur-md border-b border-[#A4B29B]/40 py-2"
+          ? "bg-[#E2EBF2]/90 backdrop-blur-md border-b border-[#5B8AA8]/30 py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -78,7 +78,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-[#F6F6F6] border-t border-[#A4B29B]/40 mt-3">
+        <div className="lg:hidden bg-[#E2EBF2] border-t border-[#5B8AA8]/30 mt-3">
           <nav className="flex flex-col px-6 py-4 gap-4">
             {MENU.map((item) => (
               <button
