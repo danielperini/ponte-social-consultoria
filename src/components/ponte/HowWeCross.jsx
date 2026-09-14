@@ -36,8 +36,10 @@ export default function HowWeCross() {
             </motion.div>
           </div>
 
-          <div className="lg:col-span-6 lg:col-start-7 relative">
-            <ConnectingArc className="-top-12" height={120} />
+          <div className="lg:col-span-6 lg:col-start-7">
+            <div className="relative h-16 mb-2 overflow-hidden">
+              <ConnectingArc height={64} />
+            </div>
             <div className="space-y-5 relative">
               {questions.map((item, i) => (
                 <motion.div

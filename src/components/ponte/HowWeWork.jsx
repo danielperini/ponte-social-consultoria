@@ -30,13 +30,13 @@ export default function HowWeWork() {
 
         <div className="relative">
           <svg
-            className="absolute -top-6 left-0 w-full h-full pointer-events-none"
-            viewBox="0 0 1200 200"
+            className="absolute -top-14 left-0 w-full h-10 pointer-events-none"
+            viewBox="0 0 1200 50"
             preserveAspectRatio="none"
             fill="none"
           >
             <motion.path
-              d="M60 40 C 380 180, 820 180, 1140 40"
+              d="M60 45 C 380 8, 820 8, 1140 45"
               stroke="#A8B7A0"
               strokeWidth="2"
               strokeDasharray="2 8"
@@ -47,7 +47,7 @@ export default function HowWeWork() {
             />
           </svg>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
             {steps.map((s, i) => {
               const Icon = ICONS[i];
               return (

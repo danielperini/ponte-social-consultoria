@@ -54,8 +54,8 @@ export default function APonte() {
           </div>
 
           <div className="lg:col-span-5 lg:pl-6">
-            <motion.div {...fade(0.15)} className="mb-10 flex justify-center">
-              <ConnectingArc />
+            <motion.div {...fade(0.15)} className="relative mb-10 h-20 overflow-hidden">
+              <ConnectingArc height={80} />
             </motion.div>
             <div className="space-y-6">
               {axes.map((a, i) => (
