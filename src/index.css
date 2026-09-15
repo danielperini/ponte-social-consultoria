@@ -20,6 +20,9 @@
     --accent: 152 23% 37%;
     --accent-foreground: 30 31% 98%;
     --institutional: 135 52% 22%;
+    --navy: 206 84% 17%;
+    --navy-foreground: 0 0% 100%;
+    --gold: 45 100% 33%;
     --red: 8 50% 46%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -44,36 +47,76 @@
     --sidebar-accent-foreground: 206 84% 17%;
     --sidebar-border: 97 13% 75%;
     --sidebar-ring: 45 100% 33%;
+    --safe-top: env(safe-area-inset-top);
+    --safe-bottom: env(safe-area-inset-bottom);
   }
 
   .dark {
     --background: 206 60% 10%;
-    --foreground: 0 0% 96%;
+    --foreground: 0 0% 92%;
     --card: 206 55% 13%;
-    --card-foreground: 0 0% 96%;
+    --card-foreground: 0 0% 92%;
     --popover: 206 55% 13%;
-    --popover-foreground: 0 0% 96%;
-    --primary: 0 0% 96%;
-    --primary-foreground: 206 60% 10%;
-    --secondary: 97 13% 30%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 206 84% 17%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 97 16% 55%;
     --secondary-foreground: 0 0% 96%;
     --muted: 97 13% 22%;
     --muted-foreground: 97 10% 70%;
-    --accent: 45 100% 33%;
+    --accent: 152 30% 52%;
     --accent-foreground: 30 31% 98%;
     --institutional: 135 52% 30%;
+    --navy: 206 55% 16%;
+    --navy-foreground: 0 0% 96%;
+    --gold: 45 100% 45%;
     --red: 8 50% 46%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 206 30% 22%;
-    --input: 206 30% 22%;
-    --ring: 45 100% 33%;
+    --border: 206 30% 26%;
+    --input: 206 30% 26%;
+    --ring: 45 100% 45%;
+  }
+
+  /* Automatic dark mode when the OS/UI prefers dark, unless the user has
+     explicitly chosen light (the ThemeProvider adds the `.light` class). */
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+      --background: 206 60% 10%;
+      --foreground: 0 0% 92%;
+      --card: 206 55% 13%;
+      --card-foreground: 0 0% 92%;
+      --popover: 206 55% 13%;
+      --popover-foreground: 0 0% 92%;
+      --primary: 206 84% 17%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 97 16% 55%;
+      --secondary-foreground: 0 0% 96%;
+      --muted: 97 13% 22%;
+      --muted-foreground: 97 10% 70%;
+      --accent: 152 30% 52%;
+      --accent-foreground: 30 31% 98%;
+      --institutional: 135 52% 30%;
+      --navy: 206 55% 16%;
+      --navy-foreground: 0 0% 96%;
+      --gold: 45 100% 45%;
+      --red: 8 50% 46%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 206 30% 26%;
+      --input: 206 30% 26%;
+      --ring: 45 100% 45%;
+    }
   }
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+
+  html, body {
+    overscroll-behavior-y: contain;
   }
 
   body {
@@ -102,5 +145,12 @@
 
   .hero-curtain {
     transform: translateY(calc(var(--scroll-progress, 0) * -80px));
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }

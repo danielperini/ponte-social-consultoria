@@ -14,10 +14,10 @@ export default function Certifications() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-[#073050] border-y border-[#A67C00]/40">
+    <section className="bg-navy border-y border-gold/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 lg:py-14">
         <div className="flex flex-col items-center text-center mb-9">
-          <span className="h-px w-10 bg-[#A67C00] mb-5" />
+          <span className="h-px w-10 bg-gold mb-5" />
           <motion.h3
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,16 +49,16 @@ export default function Certifications() {
               className="flex flex-col items-center text-center"
             >
               <div className="relative mb-4">
-                <span className="absolute inset-0 rounded-full border border-[#A67C00]/40" />
-                <span className="absolute inset-0 rounded-full border border-[#A67C00]/20 scale-[1.18]" />
-                <span className="relative w-16 h-16 rounded-full bg-[#A67C00]/10 border border-[#A67C00] flex items-center justify-center">
-                  <Icon size={26} className="text-[#A67C00]" strokeWidth={1.5} />
+                <span className="absolute inset-0 rounded-full border border-gold/40" />
+                <span className="absolute inset-0 rounded-full border border-gold/20 scale-[1.18]" />
+                <span className="relative w-16 h-16 rounded-full bg-gold/10 border border-gold flex items-center justify-center">
+                  <Icon size={26} className="text-gold" strokeWidth={1.5} />
                 </span>
               </div>
               <span className="font-display text-base text-[#FFFFFF] tracking-wide">
                 {t(`certifications.items.${key}.label`)}
               </span>
-              <span className="mt-1 text-[11px] text-[#FFFFFF]/50 leading-relaxed max-w-[180px]">
+              <span className="mt-1 text-sm text-[#FFFFFF]/50 leading-relaxed max-w-[180px]">
                 {t(`certifications.items.${key}.desc`)}
               </span>
             </motion.div>

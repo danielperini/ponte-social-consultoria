@@ -1,7 +1,9 @@
 import React from "react";
-import { Mail, Linkedin, MapPin, ShieldCheck, BarChart3, Globe, Lock, FileText, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, Linkedin, MapPin, ShieldCheck, BarChart3, Globe, Lock, FileText, MessageCircle, UserX } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import Logo from "./Logo";
+import { navigateToSection } from "@/lib/navScroll";
 
 const NAV_LINKS = [
   { label: "nav.about", target: "a-ponte" },
@@ -17,23 +19,18 @@ const SEALS = [
   { Icon: Globe, labelKey: "footer.pactoSeal", descKey: "footer.pactoSealDesc" },
 ];
 
-function scrollTo(target) {
-  const el = document.getElementById(target);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
 export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-[#073050] text-[#FFFFFF]/70 pt-16 pb-10">
+    <footer className="bg-navy text-[#FFFFFF]/70 pt-16 pb-10 safe-bottom">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-4">
             <div className="mb-4">
               <Logo theme="light" />
             </div>
-            <p className="text-xs text-[#FFFFFF]/50 mb-5">{t("footer.tagline")}</p>
+            <p className="text-sm text-[#FFFFFF]/50 mb-5">{t("footer.tagline")}</p>
             <p className="font-display italic text-[#A8B7A0] text-lg font-light leading-snug">
               {t("footer.slogan")}
             </p>
@@ -46,10 +43,10 @@ export default function Footer() {
                       <Icon size={18} className="text-[#A8B7A0]" />
                     </span>
                     <span className="leading-tight">
-                      <span className="block text-[11px] font-medium tracking-[0.16em] uppercase text-[#FFFFFF]">
+                      <span className="block text-sm font-medium tracking-[0.16em] uppercase text-[#FFFFFF]">
                         {t(s.labelKey)}
                       </span>
-                      <span className="block text-[11px] text-[#FFFFFF]/55">
+                      <span className="block text-sm text-[#FFFFFF]/55">
                         {t(s.descKey)}
                       </span>
                     </span>
@@ -60,15 +57,15 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
+            <h4 className="text-sm font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
               {t("footer.navTitle")}
             </h4>
             <ul className="space-y-2.5">
               {NAV_LINKS.map((item) => (
                 <li key={item.target}>
                   <button
-                    onClick={() => scrollTo(item.target)}
-                    className="text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors text-left"
+                    onClick={() => navigateToSection(item.target)}
+                    className="text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors text-left min-h-[44px] flex items-center"
                   >
                     {t(item.label)}
                   </button>
@@ -78,7 +75,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
+            <h4 className="text-sm font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
               {t("footer.contactTitle")}
             </h4>
             <div className="space-y-3">
@@ -86,23 +83,23 @@ export default function Footer() {
                 <MapPin size={16} className="text-[#A8B7A0] shrink-0 mt-0.5" />
                 {t("footer.address")}
               </p>
-              <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors">
+              <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors min-h-[44px] py-1">
                 <Mail size={16} className="text-[#A8B7A0] shrink-0" />
                 {t("footer.email")}
               </a>
-              <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors">
+              <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors min-h-[44px] py-1">
                 <MessageCircle size={16} className="text-[#A8B7A0] shrink-0" />
                 {t("footer.whatsapp")}
               </a>
             </div>
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-3 mt-7">
+            <h4 className="text-sm font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-3 mt-7">
               {t("footer.followTitle")}
             </h4>
             <a
               href="https://www.linkedin.com/company/ponte-social"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors min-h-[44px] py-1"
             >
               <Linkedin size={16} className="text-[#A8B7A0]" />
               {t("footer.linkedinLabel")}
@@ -110,7 +107,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
+            <h4 className="text-sm font-medium tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-4">
               {t("footer.legalTitle")}
             </h4>
             <ul className="space-y-3.5 text-sm text-[#FFFFFF]/60 leading-relaxed">
@@ -126,11 +123,20 @@ export default function Footer() {
                 <FileText size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
                 <span>{t("footer.cookieNote")}</span>
               </li>
+              <li>
+                <Link
+                  to="/conta/excluir"
+                  className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors min-h-[44px] py-1"
+                >
+                  <UserX size={15} className="text-[#A8B7A0] shrink-0" />
+                  {t("accountDeletion.title")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-[#FFFFFF]/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-[#FFFFFF]/40">
+        <div className="border-t border-[#FFFFFF]/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-sm text-[#FFFFFF]/40">
           <p>© {new Date().getFullYear()} {t("nav.brand")}. {t("footer.rights")}</p>
           <p className="font-display italic text-[#A8B7A0]/80">{t("footer.closer")}</p>
         </div>

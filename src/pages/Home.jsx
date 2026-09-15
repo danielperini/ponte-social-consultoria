@@ -18,7 +18,7 @@ import { useTranslation } from "@/i18n/LanguageProvider";
 export default function Home() {
   const { t } = useTranslation();
   return (
-    <div className="bg-[#F4EFEA]">
+    <div className="bg-background">
       <Seo title={t("seo.title")} description={t("seo.description")} />
       <Navbar />
       <main>

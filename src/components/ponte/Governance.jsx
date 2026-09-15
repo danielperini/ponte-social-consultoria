@@ -10,7 +10,7 @@ export default function Governance() {
   const items = t("governance.items");
 
   return (
-    <section className="py-20 lg:py-24 bg-[#073050]">
+    <section className="py-20 lg:py-24 bg-navy">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-12">
           <span className="text-[#477A63] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
@@ -33,7 +33,7 @@ export default function Governance() {
                 transition={{ duration: 0.55, delay: (i % 4) * 0.1 }}
                 className="bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-xl p-6 lg:p-7"
               >
-                <Icon size={24} className="text-[#477A63] mb-4" />
+                <Icon size={24} className="text-accent mb-4" />
                 <h3 className="font-display text-lg font-medium text-[#FFFFFF] mb-2">{title}</h3>
                 <p className="text-[#FFFFFF]/65 text-[14px] leading-relaxed">{text}</p>
               </motion.div>

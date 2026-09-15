@@ -38,8 +38,15 @@ module.exports = {
   				foreground: 'hsl(var(--accent-foreground))'
   			},
   			red: {
-  				DEFAULT: 'hsl(var(--red))'
-  			},
+  					DEFAULT: 'hsl(var(--red))'
+  				},
+  				navy: {
+  					DEFAULT: 'hsl(var(--navy))',
+  					foreground: 'hsl(var(--navy-foreground))'
+  				},
+  				gold: {
+  					DEFAULT: 'hsl(var(--gold))'
+  				},
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'

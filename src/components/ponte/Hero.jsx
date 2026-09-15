@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#073050]">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy">
       <motion.div
         initial={{ scale: 1.08, opacity: 0 }}
         animate={mounted && imgLoaded ? { scale: 1, opacity: 1 } : {}}
@@ -41,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.05, duration: 0.7 }}
-            className="inline-flex items-center gap-3 text-[#A8B7A0] text-xs font-medium tracking-[0.2em] uppercase mb-6"
+            className="inline-flex items-center gap-3 text-[#A8B7A0] text-sm font-medium tracking-[0.2em] uppercase mb-6"
           >
             <span className="h-px w-8 bg-[#A8B7A0]" />
             {t("hero.tag1")} · {t("hero.tag2")} · {t("hero.tag3")}
@@ -82,7 +82,7 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollTo("construcoes")}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#A8B7A0] px-7 py-3 text-sm font-semibold tracking-[0.12em] uppercase text-[#073050] transition-all hover:bg-[#1B562A] hover:text-[#FFFFFF]"
+              className="group inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#A8B7A0] px-7 py-3 text-sm font-semibold tracking-[0.12em] uppercase text-[#073050] transition-all hover:bg-[#1B562A] hover:text-[#FFFFFF] select-none [-webkit-user-select:none]"
             >
               {t("hero.cta")}
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -96,9 +96,9 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={mounted ? { opacity: 1 } : {}}
         transition={{ delay: 1.0, duration: 0.8 }}
-        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#FFFFFF]/60 hover:text-[#A4B29B] transition-colors"
+        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 min-h-[44px] min-w-[44px] justify-center text-[#FFFFFF]/60 hover:text-[#A4B29B] transition-colors select-none [-webkit-user-select:none]"
       >
-        <span className="text-[10px] font-medium tracking-[0.22em] uppercase">{t("hero.scroll")}</span>
+        <span className="text-sm font-medium tracking-[0.22em] uppercase">{t("hero.scroll")}</span>
         <ArrowDown size={16} className="animate-bounce" />
       </motion.button>
     </section>

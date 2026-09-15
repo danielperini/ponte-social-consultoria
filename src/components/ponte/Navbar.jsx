@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
+import { navigateToSection } from "@/lib/navScroll";
 
 const MENU = [
   { label: "nav.about", target: "a-ponte" },
@@ -11,11 +13,6 @@ const MENU = [
   { label: "nav.team", target: "quem-constroi" },
   { label: "nav.cases", target: "construcoes" },
 ];
-
-function scrollTo(target) {
-  const el = document.getElementById(target);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -30,21 +27,25 @@ export default function Navbar() {
 
   const handleClick = (target) => {
     setOpen(false);
-    scrollTo(target);
+    navigateToSection(target);
   };
 
   const dividerClass = scrolled ? "bg-[#A4B29B]" : "bg-[#FFFFFF]/40";
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 select-none [-webkit-user-select:none] safe-top ${
         scrolled
-          ? "bg-[#073050]/95 backdrop-blur-md border-b border-[#5B8AA8]/30 py-2"
-          : "bg-transparent py-4"
+          ? "bg-[#073050]/95 backdrop-blur-md border-b border-[#5B8AA8]/30"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center group" aria-label={t("nav.brand")}>
+      <div className={`max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between ${scrolled ? "py-2" : "py-4"}`}>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center group min-h-[44px]"
+          aria-label={t("nav.brand")}
+        >
           <Logo theme={scrolled ? "brand" : "light"} />
         </button>
 
@@ -53,7 +54,7 @@ export default function Navbar() {
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
-              className={`group relative text-sm font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer ${
+              className={`group relative text-sm font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer min-h-[44px] flex items-center ${
                 scrolled ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
               }`}
             >
@@ -63,13 +64,16 @@ export default function Navbar() {
           ))}
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
           <LanguageSwitcher scrolled={scrolled} />
+          <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
+          <ThemeToggle scrolled={scrolled} />
         </nav>
 
-        <div className="lg:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-2">
           <LanguageSwitcher scrolled={scrolled} />
+          <ThemeToggle scrolled={scrolled} />
           <button
             onClick={() => setOpen(!open)}
-            className={`p-1 text-[#FFFFFF]`}
+            className={`p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[#FFFFFF]`}
             aria-label="Menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -79,12 +83,12 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden bg-[#073050]/95 border-t border-[#5B8AA8]/30 mt-3">
-          <nav className="flex flex-col px-6 py-4 gap-4">
+          <nav className="flex flex-col px-6 py-4 gap-2">
             {MENU.map((item) => (
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#073050]/80 hover:text-[#1B562A] transition-all duration-300 ease-out py-1"
+                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#FFFFFF]/90 hover:text-[#A4B29B] transition-all duration-300 ease-out py-2 min-h-[44px]"
               >
                 {t(item.label)}
                 <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />

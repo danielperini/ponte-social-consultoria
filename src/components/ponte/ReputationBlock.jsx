@@ -13,7 +13,7 @@ export default function ReputationBlock() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-20 lg:py-28 bg-[#073050] overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-navy overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 lg:px-10">
         <motion.div {...fade(0)} className="text-center">
           <span className="inline-block h-px w-10 bg-[#A8B7A0] mb-6" />
