@@ -54,7 +54,7 @@ export default function ConsultantCard({ p, labels }) {
           </button>
         )}
 
-        <div className="flex-1 overflow-y-auto mt-2 -mx-1 px-1">
+        <div className="flex-1 overflow-y-auto mt-2 -mx-1 px-1 [overscroll-behavior-y:contain]">
           {showFull && (
             <>
               {p.certs?.length > 0 && (

@@ -32,7 +32,7 @@ export default function LanguageSwitcher({ scrolled = true, className = "" }) {
             aria-current={active ? "true" : undefined}
             aria-label={o.name}
             onClick={() => setLang(o.code)}
-            className={`text-sm font-medium tracking-[0.08em] px-1.5 min-h-[44px] flex items-center transition-colors ${
+            className={`text-sm font-medium tracking-[0.08em] px-1.5 min-h-[44px] min-w-[44px] flex items-center transition-all active:scale-95 ${
               active ? "text-[#477A63] font-semibold" : `${inactiveColor} hover:text-[#1B562A]`
             }`}
           >

@@ -8,6 +8,16 @@ import Seo from "@/components/ponte/Seo";
 import { useToast } from "@/components/ui/use-toast";
 import { base44 } from "@/api/base44Client";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 export default function AccountDeletion() {
   const { t } = useTranslation();
@@ -16,15 +26,15 @@ export default function AccountDeletion() {
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   const consequences = t("accountDeletion.consequences");
 
-  const submit = async (e) => {
-    e.preventDefault();
-    if (!confirmed || !email) {
-      toast({ title: t("accountDeletion.toastRequired") });
-      return;
-    }
+  // Base44 exposes no SDK/backend endpoint for programmatic account deletion
+  // (deletion is performed manually by the team via the workspace dashboard),
+  // so the request is routed to the Ponte Social team by email.
+  const doDelete = async () => {
+    setConfirmOpen(false);
     setSending(true);
     try {
       await base44.integrations.Core.SendEmail({
@@ -39,6 +49,15 @@ export default function AccountDeletion() {
     } finally {
       setSending(false);
     }
+  };
+
+  const requestDelete = (e) => {
+    e.preventDefault();
+    if (!confirmed || !email) {
+      toast({ title: t("accountDeletion.toastRequired") });
+      return;
+    }
+    setConfirmOpen(true);
   };
 
   return (
@@ -91,7 +110,7 @@ export default function AccountDeletion() {
               </div>
             </motion.div>
           ) : (
-            <form onSubmit={submit} className="mt-8 space-y-5">
+            <form onSubmit={requestDelete} className="mt-8 space-y-5">
               <label className="block">
                 <span className="block text-sm font-medium tracking-[0.14em] uppercase text-foreground/60 mb-1.5">
                   {t("accountDeletion.emailLabel")}
@@ -129,6 +148,25 @@ export default function AccountDeletion() {
           <p className="mt-6 text-sm text-foreground/55 leading-relaxed">{t("accountDeletion.note")}</p>
         </section>
       </main>
+
+      <AlertDialog open={confirmOpen} onOpenChange={setConfirmOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("accountDeletion.confirmTitle")}</AlertDialogTitle>
+            <AlertDialogDescription>{t("accountDeletion.confirmBody")}</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="min-h-[44px]">{t("accountDeletion.cancel")}</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={doDelete}
+              className="min-h-[44px] bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {t("accountDeletion.submit")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
       <Footer />
     </div>
   );

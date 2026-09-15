@@ -116,7 +116,12 @@
   }
 
   html, body {
-    overscroll-behavior-y: contain;
+    overscroll-behavior: none;
+  }
+
+  button {
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   body {

@@ -12,6 +12,7 @@ const MENU = [
   { label: "nav.howWeWork", target: "como-atravessamos" },
   { label: "nav.team", target: "quem-constroi" },
   { label: "nav.cases", target: "construcoes" },
+  { label: "nav.insights", target: "artigos" },
 ];
 
 export default function Navbar() {
@@ -88,7 +89,7 @@ export default function Navbar() {
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#FFFFFF]/90 hover:text-[#A4B29B] transition-all duration-300 ease-out py-2 min-h-[44px]"
+                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#E2EBF2] hover:text-[#A4B29B] transition-all duration-300 ease-out py-2 min-h-[44px]"
               >
                 {t(item.label)}
                 <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />

@@ -24,6 +24,11 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy">
+      <div
+        className={`absolute inset-0 bg-navy overflow-hidden transition-opacity duration-700 ${imgLoaded ? "opacity-0" : "opacity-100"}`}
+      >
+        <img src={HERO_IMG} alt="" aria-hidden className="h-full w-full object-cover scale-110 blur-2xl brightness-50" />
+      </div>
       <motion.div
         initial={{ scale: 1.08, opacity: 0 }}
         animate={mounted && imgLoaded ? { scale: 1, opacity: 1 } : {}}
