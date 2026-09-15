@@ -89,12 +89,12 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden fixed inset-0 z-40 bg-[#073050] safe-top overflow-y-auto">
-          <nav className="flex flex-col px-6 pt-28 pb-12 gap-1">
+          <nav className="flex flex-col px-6 pt-36 pb-12 gap-1">
             {MENU.map((item) => (
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-base font-semibold tracking-[0.12em] text-[#E2EBF2] hover:text-[#A4B29B] transition-all duration-300 ease-out py-3.5 min-h-[44px] border-b border-[#5B8AA8]/15"
+                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#E2EBF2] hover:text-[#A4B29B] transition-all duration-300 ease-out py-3 min-h-[44px] border-b border-[#5B8AA8]/15"
               >
                 {t(item.label)}
                 <span className="absolute -bottom-px left-0 h-px w-0 bg-[#A8B7A0] transition-all duration-300 ease-out group-hover:w-full" />
