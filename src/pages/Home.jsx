@@ -13,7 +13,6 @@ import Partners from "@/components/ponte/Partners";
 import Constructions from "@/components/ponte/Constructions";
 import Footer from "@/components/ponte/Footer";
 import Seo from "@/components/ponte/Seo";
-import Articles from "@/components/ponte/Articles";
 import { usePullToRefresh } from "@/hooks/usePullToRefresh";
 import PullToRefreshIndicator from "@/components/ponte/PullToRefreshIndicator";
 import { useTranslation } from "@/i18n/LanguageProvider";
@@ -45,7 +44,6 @@ export default function Home() {
         <Team />
         <Governance />
         <Partners />
-        <Articles />
       </main>
       <Footer />
     </div>
