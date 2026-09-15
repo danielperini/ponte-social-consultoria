@@ -9,7 +9,6 @@ const HERO_IMAGES = [
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9b9a22d3e_ChatGPTImage14desetde202623_17_05.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/e4c248eec_384d67ed-b024-42a2-a211-b312d59d9886.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/a8a78f94c_ChatGPTImage14desetde202623_24_38.png",
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/594ecd76b_ChatGPTImage14desetde202623_38_26.png",
 ];
 
 function scrollTo(target) {
