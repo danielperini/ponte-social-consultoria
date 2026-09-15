@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
-const HERO_IMG =
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5410ea027_WhatsAppImage2026-09-11at092845.jpeg";
+const HERO_IMAGES = [
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5410ea027_WhatsAppImage2026-09-11at092845.jpeg",
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/2d8280104_ChatGPTImage14desetde202623_14_23.png",
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9b9a22d3e_ChatGPTImage14desetde202623_17_05.png",
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/e4c248eec_384d67ed-b024-42a2-a211-b312d59d9886.png",
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/72b07e30e_ChatGPTImage14desetde202623_18_56.png",
+];
 
 function scrollTo(target) {
   const el = document.getElementById(target);
@@ -15,19 +20,23 @@ export default function Hero() {
   const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
+  const heroImg = useMemo(
+    () => HERO_IMAGES[Math.floor(Math.random() * HERO_IMAGES.length)],
+    []
+  );
   useEffect(() => {
     const img = new Image();
-    img.src = HERO_IMG;
+    img.src = heroImg;
     img.onload = () => setImgLoaded(true);
     setMounted(true);
-  }, []);
+  }, [heroImg]);
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy">
       <div
         className={`absolute inset-0 bg-navy overflow-hidden transition-opacity duration-700 ${imgLoaded ? "opacity-0" : "opacity-100"}`}
       >
-        <img src={HERO_IMG} alt="" aria-hidden className="h-full w-full object-cover scale-110 blur-2xl brightness-50" />
+        <img src={heroImg} alt="" aria-hidden className="h-full w-full object-cover scale-110 blur-2xl brightness-50" />
       </div>
       <motion.div
         initial={{ scale: 1.08, opacity: 0 }}
@@ -35,7 +44,7 @@ export default function Hero() {
         transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-0"
       >
-        <img src={HERO_IMG} alt={t("hero.imgAlt")} onLoad={() => setImgLoaded(true)} className="h-full w-full object-cover" />
+        <img src={heroImg} alt={t("hero.imgAlt")} onLoad={() => setImgLoaded(true)} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#073050]/80 via-[#073050]/60 to-[#073050]/92" />
         <div className="absolute top-0 left-0 w-[42%] h-[40%] bg-gradient-to-br from-[#073050]/85 via-[#073050]/40 to-transparent pointer-events-none" />
       </motion.div>
