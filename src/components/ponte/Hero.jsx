@@ -55,12 +55,12 @@ export default function Hero() {
       </motion.div>
 
       <div className={`relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-28 flex ${textRight ? "justify-end" : "justify-start"}`}>
-        <div className={`max-w-3xl ${textRight ? "text-right" : ""}`}>
+        <div className="max-w-3xl">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.05, duration: 0.7 }}
-            className={`inline-flex items-center gap-3 text-[#A8B7A0] text-sm font-medium tracking-[0.2em] uppercase mb-6 ${textRight ? "flex-row-reverse" : ""}`}
+            className="inline-flex items-center gap-3 text-[#A8B7A0] text-sm font-medium tracking-[0.2em] uppercase mb-6"
           >
             <span className="h-px w-8 bg-[#A8B7A0]" />
             {t("hero.tag1")} · {t("hero.tag2")} · {t("hero.tag3")}
@@ -97,7 +97,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.7, duration: 0.7 }}
-            className={`mt-9 flex flex-wrap items-center gap-4 ${textRight ? "justify-end" : ""}`}
+            className="mt-9 flex flex-wrap items-center gap-4"
           >
             <button
               onClick={() => scrollTo("construcoes")}
