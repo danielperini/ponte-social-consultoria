@@ -26,6 +26,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
   const handleClick = (target) => {
     setOpen(false);
     navigateToSection(target);
@@ -83,16 +88,16 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-[#073050]/95 border-t border-[#5B8AA8]/30 mt-3">
-          <nav className="flex flex-col px-6 py-4 gap-2">
+        <div className="lg:hidden fixed inset-0 z-40 bg-[#073050] safe-top overflow-y-auto">
+          <nav className="flex flex-col px-6 pt-28 pb-12 gap-1">
             {MENU.map((item) => (
               <button
                 key={item.target}
                 onClick={() => handleClick(item.target)}
-                className="group relative text-left text-sm font-semibold tracking-[0.12em] text-[#E2EBF2] hover:text-[#A4B29B] transition-all duration-300 ease-out py-2 min-h-[44px]"
+                className="group relative text-left text-base font-semibold tracking-[0.12em] text-[#E2EBF2] hover:text-[#A4B29B] transition-all duration-300 ease-out py-3.5 min-h-[44px] border-b border-[#5B8AA8]/15"
               >
                 {t(item.label)}
-                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />
+                <span className="absolute -bottom-px left-0 h-px w-0 bg-[#A8B7A0] transition-all duration-300 ease-out group-hover:w-full" />
               </button>
             ))}
           </nav>
