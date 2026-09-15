@@ -79,7 +79,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-6 text-[#FFFFFF]/80 text-[15px] sm:text-base font-medium leading-relaxed max-w-2xl"
+            className="mt-6 text-[#FFFFFF]/80 text-[15px] sm:text-base font-medium leading-relaxed max-w-3xl"
           >
             {t("hero.description")}
           </motion.p>
@@ -88,7 +88,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={mounted ? { opacity: 1 } : {}}
             transition={{ delay: 0.55, duration: 0.8 }}
-            className="mt-6 font-display italic text-[#A8B7A0]/90 text-base sm:text-lg font-normal leading-snug max-w-2xl"
+            className="mt-6 font-display italic text-[#A8B7A0]/90 text-base sm:text-lg font-normal leading-snug max-w-3xl"
           >
             {t("hero.tagline")}
           </motion.p>
