@@ -9,6 +9,7 @@ const HERO_IMAGES = [
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9b9a22d3e_ChatGPTImage14desetde202623_17_05.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/e4c248eec_384d67ed-b024-42a2-a211-b312d59d9886.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/72b07e30e_ChatGPTImage14desetde202623_18_56.png",
+  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/a8a78f94c_ChatGPTImage14desetde202623_24_38.png",
 ];
 
 function scrollTo(target) {
@@ -20,10 +21,15 @@ export default function Hero() {
   const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
-  const heroImg = useMemo(
-    () => HERO_IMAGES[Math.floor(Math.random() * HERO_IMAGES.length)],
-    []
-  );
+  const heroImg = useMemo(() => {
+    const last = Number(sessionStorage.getItem("ponte_hero_last") ?? -1);
+    let idx;
+    do {
+      idx = Math.floor(Math.random() * HERO_IMAGES.length);
+    } while (idx === last && HERO_IMAGES.length > 1);
+    sessionStorage.setItem("ponte_hero_last", String(idx));
+    return HERO_IMAGES[idx];
+  }, []);
   useEffect(() => {
     const img = new Image();
     img.src = heroImg;
