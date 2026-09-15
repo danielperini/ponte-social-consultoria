@@ -4,10 +4,10 @@ import { ArrowDown } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 const HERO_IMAGES = [
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5410ea027_WhatsAppImage2026-09-11at092845.jpeg",
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/2d8280104_ChatGPTImage14desetde202623_14_23.png",
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9b9a22d3e_ChatGPTImage14desetde202623_17_05.png",
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/a8a78f94c_ChatGPTImage14desetde202623_24_38.png",
+  { url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/5410ea027_WhatsAppImage2026-09-11at092845.jpeg", subject: "left" },
+  { url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/2d8280104_ChatGPTImage14desetde202623_14_23.png", subject: "right" },
+  { url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9b9a22d3e_ChatGPTImage14desetde202623_17_05.png", subject: "right" },
+  { url: "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/a8a78f94c_ChatGPTImage14desetde202623_24_38.png", subject: "right" },
 ];
 
 function scrollTo(target) {
@@ -28,9 +28,10 @@ export default function Hero() {
     sessionStorage.setItem("ponte_hero_last", String(idx));
     return HERO_IMAGES[idx];
   }, []);
+  const textRight = heroImg.subject === "left";
   useEffect(() => {
     const img = new Image();
-    img.src = heroImg;
+    img.src = heroImg.url;
     img.onload = () => setImgLoaded(true);
     setMounted(true);
   }, [heroImg]);
@@ -40,7 +41,7 @@ export default function Hero() {
       <div
         className={`absolute inset-0 bg-navy overflow-hidden transition-opacity duration-700 ${imgLoaded ? "opacity-0" : "opacity-100"}`}
       >
-        <img src={heroImg} alt="" aria-hidden className="h-full w-full object-cover scale-110 blur-2xl brightness-50" />
+        <img src={heroImg.url} alt="" aria-hidden className="h-full w-full object-cover scale-110 blur-2xl brightness-50" />
       </div>
       <motion.div
         initial={{ scale: 1.08, opacity: 0 }}
@@ -48,18 +49,18 @@ export default function Hero() {
         transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-0"
       >
-        <img src={heroImg} alt={t("hero.imgAlt")} onLoad={() => setImgLoaded(true)} className="h-full w-full object-cover" />
+        <img src={heroImg.url} alt={t("hero.imgAlt")} onLoad={() => setImgLoaded(true)} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#073050]/80 via-[#073050]/60 to-[#073050]/92" />
         <div className="absolute top-0 left-0 w-[42%] h-[40%] bg-gradient-to-br from-[#073050]/85 via-[#073050]/40 to-transparent pointer-events-none" />
       </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-28">
-        <div className="max-w-3xl">
+      <div className={`relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-28 flex ${textRight ? "justify-end" : "justify-start"}`}>
+        <div className={`max-w-3xl ${textRight ? "text-right" : ""}`}>
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.05, duration: 0.7 }}
-            className="inline-flex items-center gap-3 text-[#A8B7A0] text-sm font-medium tracking-[0.2em] uppercase mb-6"
+            className={`inline-flex items-center gap-3 text-[#A8B7A0] text-sm font-medium tracking-[0.2em] uppercase mb-6 ${textRight ? "flex-row-reverse" : ""}`}
           >
             <span className="h-px w-8 bg-[#A8B7A0]" />
             {t("hero.tag1")} · {t("hero.tag2")} · {t("hero.tag3")}
@@ -96,7 +97,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.7, duration: 0.7 }}
-            className="mt-9 flex flex-wrap items-center gap-4"
+            className={`mt-9 flex flex-wrap items-center gap-4 ${textRight ? "justify-end" : ""}`}
           >
             <button
               onClick={() => scrollTo("construcoes")}
