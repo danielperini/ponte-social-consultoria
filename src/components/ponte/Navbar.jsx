@@ -54,12 +54,12 @@ export default function Navbar() {
           <Logo theme={scrolled ? "brand" : "light"} />
         </button>
 
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-5">
           {MENU.map((item) => (
             <button
               key={item.target}
               onClick={() => handleClick(item.target)}
-              className={`group relative text-sm font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer min-h-[44px] flex items-center ${
+              className={`group relative text-xs font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer min-h-[44px] flex items-center ${
                 scrolled ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
               }`}
             >
