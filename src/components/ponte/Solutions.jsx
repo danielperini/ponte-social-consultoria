@@ -58,7 +58,17 @@ export default function Solutions() {
           </div>
           <div className="lg:col-span-8">
             {soc.text.split("\n\n").map((para, i) => (
-              <p key={i} className="text-foreground/75 text-[15px] leading-relaxed mb-4 last:mb-0">{para}</p>
+              <p key={i} className="text-foreground/75 text-[15px] leading-relaxed mb-4 last:mb-0">
+                {para.split(/(SCAMBIO\.IA)/g).map((part, j) =>
+                  part === "SCAMBIO.IA" ? (
+                    <a key={j} href="https://scambioia.base44.app" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
+                      {part}
+                    </a>
+                  ) : (
+                    part
+                  )
+                )}
+              </p>
             ))}
             <p className="mt-4 text-foreground/55 text-sm tracking-[0.18em] uppercase">{t("solutions.forWhom")}</p>
             <p className="text-foreground/70 text-sm mt-1 leading-relaxed">{soc.audience}</p>
