@@ -5,13 +5,24 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import ConsultantCard from "./ConsultantCard";
 import { useSectionVisibility } from "@/hooks/useSectionVisibility";
 
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+const PROFILE_ORDER = [
+  "Patricia Abreu",
+  "Ana Carolina de Moura Maciel",
+  "Daniel Perini",
+  "Bernardo Pinheiro Moreira Lage",
+];
+
+function orderByProfile(arr) {
+  const sorted = [...arr];
+  sorted.sort((a, b) => {
+    const ia = PROFILE_ORDER.indexOf(a.name);
+    const ib = PROFILE_ORDER.indexOf(b.name);
+    if (ia === -1 && ib === -1) return 0;
+    if (ia === -1) return 1;
+    if (ib === -1) return -1;
+    return ia - ib;
+  });
+  return sorted;
 }
 
 const fade = (delay) => ({
@@ -24,7 +35,7 @@ const fade = (delay) => ({
 export default function Team() {
   const { t } = useTranslation();
   // Randomize the order on every load so the carousel starts on a different consultant.
-  const consultants = useMemo(() => shuffle(t("team.consultants")), [t]);
+  const consultants = useMemo(() => orderByProfile(t("team.consultants")), [t]);
   const [api, setApi] = useState(null);
   const { ref, active } = useSectionVisibility();
 
