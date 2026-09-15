@@ -47,11 +47,13 @@ export default function Solutions() {
 
         <motion.div {...fade(0.1)} className="mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-accent/30 pt-10">
           <div className="lg:col-span-4">
-            <img
-              src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9aea63e71_ChatGPTImage14desetde202617_28_23.png"
-              alt={soc.name}
-              className="h-auto max-w-full lg:h-[205px] w-auto object-contain"
-            />
+            <a href="https://scambioia.base44.app" target="_blank" rel="noopener noreferrer" className="block">
+              <img
+                src="https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9aea63e71_ChatGPTImage14desetde202617_28_23.png"
+                alt={soc.name}
+                className="h-auto max-w-full lg:h-[205px] w-auto object-contain transition-opacity hover:opacity-80"
+              />
+            </a>
             <p className="text-accent text-sm font-medium tracking-wide mt-3">{soc.subtitle}</p>
           </div>
           <div className="lg:col-span-8">
