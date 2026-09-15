@@ -46,32 +46,37 @@ export default function Navbar() {
       }`}
     >
       <div className={`max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between ${scrolled ? "py-2" : "py-4"}`}>
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center group min-h-[44px]"
-          aria-label={t("nav.brand")}
-        >
-          <Logo theme={scrolled ? "brand" : "light"} />
-        </button>
+        <div className="flex items-center gap-5">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center group min-h-[44px]"
+            aria-label={t("nav.brand")}
+          >
+            <Logo theme={scrolled ? "brand" : "light"} />
+          </button>
 
-        <nav className="hidden lg:flex items-center gap-5">
-          {MENU.map((item) => (
-            <button
-              key={item.target}
-              onClick={() => handleClick(item.target)}
-              className={`group relative text-xs font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer min-h-[44px] flex items-center ${
-                scrolled ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
-              }`}
-            >
-              {t(item.label)}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />
-            </button>
-          ))}
+          <nav className="hidden lg:flex items-center gap-5">
+            {MENU.map((item) => (
+              <button
+                key={item.target}
+                onClick={() => handleClick(item.target)}
+                className={`group relative text-xs font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer min-h-[44px] flex items-center ${
+                  scrolled ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
+                }`}
+              >
+                {t(item.label)}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#477A63] transition-all duration-300 ease-out group-hover:w-full" />
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        <div className="hidden lg:flex items-center gap-4">
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
           <LanguageSwitcher scrolled={scrolled} />
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
           <ThemeToggle scrolled={scrolled} />
-        </nav>
+        </div>
 
         <div className="lg:hidden flex items-center gap-2">
           <LanguageSwitcher scrolled={scrolled} />
