@@ -8,7 +8,6 @@ const HERO_IMAGES = [
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/2d8280104_ChatGPTImage14desetde202623_14_23.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/9b9a22d3e_ChatGPTImage14desetde202623_17_05.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/e4c248eec_384d67ed-b024-42a2-a211-b312d59d9886.png",
-  "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/72b07e30e_ChatGPTImage14desetde202623_18_56.png",
   "https://media.base44.com/images/public/6aa331bf5cf4993602fef0a7/a8a78f94c_ChatGPTImage14desetde202623_24_38.png",
 ];
 
