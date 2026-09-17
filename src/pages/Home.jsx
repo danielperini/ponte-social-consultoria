@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "@/components/ponte/Navbar";
 import Hero from "@/components/ponte/Hero";
 import APonte from "@/components/ponte/APonte";
@@ -22,6 +22,26 @@ export default function Home() {
   const { pull, refreshing } = usePullToRefresh(async () => {
     await new Promise((r) => setTimeout(r, 700));
   });
+
+  useEffect(() => {
+    const sections = Array.from(document.querySelectorAll("main > section")).slice(1);
+    if (!("IntersectionObserver" in window)) return;
+    sections.forEach((s) => s.classList.add("section-reveal"));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { rootMargin: "-60px", threshold: 0.05 }
+    );
+    sections.forEach((s) => io.observe(s));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div className="bg-background">
       <Seo title={t("seo.title")} description={t("seo.description")} />
