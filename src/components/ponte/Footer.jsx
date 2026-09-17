@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { label: "nav.howWeWork", target: "como-atravessamos" },
   { label: "nav.team", target: "quem-constroi" },
   { label: "nav.cases", target: "construcoes" },
-  { label: "nav.insights", target: "artigos" },
 ];
 
 const SEALS = [
