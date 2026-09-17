@@ -1,16 +1,6 @@
 import React from "react";
 import { Mail, Linkedin, MapPin, Lock, FileText, MessageCircle } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
-import { navigateToSection } from "@/lib/navScroll";
-
-const NAV_LINKS = [
-  { label: "nav.about", target: "a-ponte" },
-  { label: "nav.solutions", target: "pilares" },
-  { label: "nav.howWeWork", target: "como-atravessamos" },
-  { label: "nav.team", target: "quem-constroi" },
-  { label: "nav.cases", target: "construcoes" },
-];
-
 export default function Footer() {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
@@ -18,28 +8,9 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-[#FFFFFF]/70 safe-bottom">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-16">
-          {/* Navegação */}
-          <div>
-            <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
-              {t("footer.navTitle")}
-            </h4>
-            <ul className="space-y-0.5">
-              {NAV_LINKS.map((item) => (
-                <li key={item.target}>
-                  <button
-                    onClick={() => navigateToSection(item.target)}
-                    className="text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors text-left min-h-[38px] flex items-center"
-                  >
-                    {t(item.label)}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+        <div className="grid grid-cols-1 gap-10 lg:gap-16">
           {/* Contato */}
-          <div>
+          <div className="max-w-sm">
             <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
               {t("footer.contactTitle")}
             </h4>
