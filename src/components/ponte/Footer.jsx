@@ -93,7 +93,7 @@ export default function Footer() {
 
         <div className="border-t border-[#FFFFFF]/10 mt-12 pt-6 flex items-center justify-center">
           <p className="text-xs text-[#FFFFFF]/40 tracking-wide">
-            © {year} {t("nav.brand")}. {t("footer.rights")}
+            © {year} Ponte Social Consultoria. {t("footer.rights")}
           </p>
         </div>
       </div>
