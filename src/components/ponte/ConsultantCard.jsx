@@ -10,7 +10,11 @@ export default function ConsultantCard({ p, labels }) {
       <span className="text-accent text-sm font-medium tracking-[0.2em] uppercase">{p.kicker}</span>
       <h3 className="font-display text-xl lg:text-2xl text-foreground mt-1.5 leading-tight">{p.name}</h3>
       <p className="text-accent text-sm font-medium mt-1 leading-snug">{p.role}</p>
-      <p className="mt-3 text-foreground/75 text-sm leading-relaxed">{p.summary}</p>
+      <div className="mt-3 text-foreground/75 text-sm leading-relaxed space-y-2">
+        {p.summary?.split("\n\n").map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
 
       {p.pontePitch && (
         <p className="mt-3 text-foreground text-sm italic leading-relaxed border-l-2 border-accent pl-3">
