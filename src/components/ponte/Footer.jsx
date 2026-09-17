@@ -18,9 +18,9 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-[#FFFFFF]/70 safe-bottom">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Navegação */}
-          <div className="lg:col-span-4">
+          <div>
             <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
               {t("footer.navTitle")}
             </h4>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           {/* Contato */}
-          <div className="lg:col-span-4">
+          <div>
             <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
               {t("footer.contactTitle")}
             </h4>
@@ -57,23 +57,6 @@ export default function Footer() {
                 {t("footer.whatsapp")}
               </a>
             </div>
-          </div>
-
-          {/* Privacidade e Redes */}
-          <div className="lg:col-span-4">
-            <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
-              {t("footer.legalTitle")}
-            </h4>
-            <ul className="space-y-2.5 text-sm text-[#FFFFFF]/60 leading-relaxed">
-              <li className="flex items-start gap-2.5">
-                <Lock size={14} className="text-[#A8B7A0] shrink-0 mt-0.5" />
-                <span>{t("footer.privacy")}</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <FileText size={14} className="text-[#A8B7A0] shrink-0 mt-0.5" />
-                <span>{t("footer.cookieNote")}</span>
-              </li>
-            </ul>
             <div className="mt-6 pt-5 border-t border-[#FFFFFF]/10">
               <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-3">
                 {t("footer.followTitle")}
@@ -91,8 +74,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#FFFFFF]/10 mt-12 pt-6 flex items-center justify-center">
-          <p className="text-xs text-[#FFFFFF]/40 tracking-wide">
+        {/* Privacidade e ética + copyright centralizados */}
+        <div className="border-t border-[#FFFFFF]/10 mt-12 pt-7 flex flex-col items-center text-center">
+          <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-3">
+            {t("footer.legalTitle")}
+          </h4>
+          <div className="space-y-1.5 text-xs text-[#FFFFFF]/55 leading-relaxed max-w-xl">
+            <p className="flex items-start justify-center gap-2">
+              <Lock size={13} className="text-[#A8B7A0] shrink-0 mt-0.5" />
+              <span>{t("footer.privacy")}</span>
+            </p>
+            <p className="flex items-start justify-center gap-2">
+              <FileText size={13} className="text-[#A8B7A0] shrink-0 mt-0.5" />
+              <span>{t("footer.cookieNote")}</span>
+            </p>
+          </div>
+          <p className="mt-5 text-xs text-[#FFFFFF]/40 tracking-wide">
             © {year} Ponte Social Consultoria. {t("footer.rights")}
           </p>
         </div>
