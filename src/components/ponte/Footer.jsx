@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Mail, Linkedin, MapPin, Lock, FileText, MessageCircle, UserX } from "lucide-react";
+import { Mail, Linkedin, MapPin, Lock, FileText, MessageCircle } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { navigateToSection } from "@/lib/navScroll";
 
@@ -82,15 +81,7 @@ export default function Footer() {
                 <FileText size={13} className="text-[#A8B7A0] shrink-0 mt-0.5" />
                 <span>{t("footer.cookieNote")}</span>
               </li>
-              <li>
-                <Link
-                  to="/conta/excluir"
-                  className="inline-flex items-center gap-2 text-xs text-[#FFFFFF]/70 hover:text-[#A4B29B] transition-colors min-h-[36px] py-0.5"
-                >
-                  <UserX size={13} className="text-[#A8B7A0] shrink-0" />
-                  {t("accountDeletion.title")}
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>
