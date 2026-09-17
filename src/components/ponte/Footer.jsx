@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-3">
+            <h4 className="text-xs font-body font-semibold tracking-[0.12em] uppercase text-[#FFFFFF]/50 mb-3">
               {t("footer.navTitle")}
             </h4>
             <ul className="space-y-1">
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-3">
+            <h4 className="text-xs font-body font-semibold tracking-[0.12em] uppercase text-[#FFFFFF]/50 mb-3">
               {t("footer.contactTitle")}
             </h4>
             <div className="space-y-2">
@@ -55,7 +55,7 @@ export default function Footer() {
                 {t("footer.whatsapp")}
               </a>
             </div>
-            <h4 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-2 mt-5">
+            <h4 className="text-xs font-body font-semibold tracking-[0.12em] uppercase text-[#FFFFFF]/50 mb-2 mt-5">
               {t("footer.followTitle")}
             </h4>
             <a
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#FFFFFF]/50 mb-3">
+            <h4 className="text-xs font-body font-semibold tracking-[0.12em] uppercase text-[#FFFFFF]/50 mb-3">
               {t("footer.legalTitle")}
             </h4>
             <ul className="space-y-2.5 text-xs text-[#FFFFFF]/60 leading-relaxed">
