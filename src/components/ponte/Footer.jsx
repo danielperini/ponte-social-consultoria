@@ -13,10 +13,10 @@ export default function Footer() {
           {t("footer.contactTitle")}
         </h4>
         <div className="space-y-1.5">
-          <p className="flex items-start justify-center gap-3 text-sm text-[#FFFFFF]/75 leading-relaxed max-w-md">
-            <MapPin size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
-            {t("footer.address")}
-          </p>
+          <p className="flex items-start justify-center gap-3 text-sm text-[#FFFFFF]/75 leading-snug max-w-xl">
+              <MapPin size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
+              {t("footer.address")}
+            </p>
           <a href={`mailto:${t("footer.email")}`} className="flex items-center justify-center gap-3 text-sm text-[#FFFFFF]/75 hover:text-[#FFFFFF] transition-colors min-h-[36px]">
             <Mail size={15} className="text-[#A8B7A0] shrink-0" />
             {t("footer.email")}

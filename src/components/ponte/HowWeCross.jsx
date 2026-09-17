@@ -8,7 +8,7 @@ export default function HowWeCross() {
   const questions = t("howWeCross.questions");
 
   return (
-    <section id="como-atravessamos" className="relative py-24 lg:py-40 bg-background overflow-hidden">
+    <section id="como-atravessamos" className="relative py-24 lg:py-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">

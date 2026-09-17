@@ -10,7 +10,7 @@ export default function Governance() {
   const items = t("governance.items");
 
   return (
-    <section className="py-20 lg:py-24 bg-navy">
+    <section className="py-24 lg:py-28 bg-navy">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-12">
           <span className="text-[#477A63] text-xs font-medium tracking-[0.22em] uppercase mb-5 block">
