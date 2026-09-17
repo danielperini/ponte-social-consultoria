@@ -14,17 +14,20 @@ export default function Footer() {
         </h4>
         <div className="space-y-1.5">
           <p className="flex items-start justify-center gap-3 text-sm text-[#FFFFFF]/75 leading-snug max-w-xl">
-              <MapPin size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
-              {t("footer.address")}
-            </p>
-          <a href={`mailto:${t("footer.email")}`} className="flex items-center justify-center gap-3 text-sm text-[#FFFFFF]/75 hover:text-[#FFFFFF] transition-colors min-h-[36px]">
-            <Mail size={15} className="text-[#A8B7A0] shrink-0" />
-            {t("footer.email")}
-          </a>
-          <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-sm text-[#FFFFFF]/75 hover:text-[#FFFFFF] transition-colors min-h-[36px]">
-            <MessageCircle size={15} className="text-[#A8B7A0] shrink-0" />
-            {t("footer.whatsapp")}
-          </a>
+            <MapPin size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
+            {t("footer.address")}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm">
+            <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-2 text-[#FFFFFF]/75 hover:text-[#FFFFFF] transition-colors min-h-[36px]">
+              <Mail size={15} className="text-[#A8B7A0] shrink-0" />
+              {t("footer.email")}
+            </a>
+            <span className="text-[#FFFFFF]/25 select-none" aria-hidden>·</span>
+            <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#FFFFFF]/75 hover:text-[#FFFFFF] transition-colors min-h-[36px]">
+              <MessageCircle size={15} className="text-[#A8B7A0] shrink-0" />
+              {t("footer.whatsapp")}
+            </a>
+          </div>
         </div>
 
         {/* Redes */}
