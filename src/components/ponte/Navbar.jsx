@@ -80,7 +80,6 @@ export default function Navbar() {
 
         <div className="lg:hidden flex items-center gap-2">
           <LanguageSwitcher scrolled={scrolled} />
-          <ThemeToggle scrolled={scrolled} />
           <button
             onClick={() => setOpen(!open)}
             className={`p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[#FFFFFF]`}
@@ -93,7 +92,10 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden fixed inset-0 z-40 bg-[#073050] safe-top overflow-y-auto">
-          <nav className="flex flex-col px-6 pt-36 pb-12 gap-1">
+          <div className="flex items-center gap-2 px-6 pt-28 pb-4 border-b border-[#5B8AA8]/15">
+            <ThemeToggle scrolled={true} />
+          </div>
+          <nav className="flex flex-col px-6 pt-6 pb-12 gap-1">
             {MENU.map((item) => (
               <button
                 key={item.target}
