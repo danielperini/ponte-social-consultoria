@@ -8,40 +8,37 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-[#FFFFFF]/70 safe-bottom">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-8">
-        <div className="grid grid-cols-1 gap-10 lg:gap-16">
-          {/* Contato */}
-          <div className="max-w-sm">
-            <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
-              {t("footer.contactTitle")}
+        <div className="flex flex-col items-center text-center">
+          <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-4">
+            {t("footer.contactTitle")}
+          </h4>
+          <div className="space-y-2.5">
+            <p className="flex items-start justify-center gap-3 text-sm text-[#FFFFFF]/70 leading-relaxed max-w-md">
+              <MapPin size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
+              {t("footer.address")}
+            </p>
+            <a href={`mailto:${t("footer.email")}`} className="flex items-center justify-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors min-h-[38px]">
+              <Mail size={15} className="text-[#A8B7A0] shrink-0" />
+              {t("footer.email")}
+            </a>
+            <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors min-h-[38px]">
+              <MessageCircle size={15} className="text-[#A8B7A0] shrink-0" />
+              {t("footer.whatsapp")}
+            </a>
+          </div>
+          <div className="mt-6 pt-5 border-t border-[#FFFFFF]/10 w-full max-w-xs mx-auto">
+            <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-3">
+              {t("footer.followTitle")}
             </h4>
-            <div className="space-y-2.5">
-              <p className="flex items-start gap-3 text-sm text-[#FFFFFF]/70 leading-relaxed">
-                <MapPin size={15} className="text-[#A8B7A0] shrink-0 mt-0.5" />
-                {t("footer.address")}
-              </p>
-              <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors min-h-[38px]">
-                <Mail size={15} className="text-[#A8B7A0] shrink-0" />
-                {t("footer.email")}
-              </a>
-              <a href={t("footer.whatsappHref")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors min-h-[38px]">
-                <MessageCircle size={15} className="text-[#A8B7A0] shrink-0" />
-                {t("footer.whatsapp")}
-              </a>
-            </div>
-            <div className="mt-6 pt-5 border-t border-[#FFFFFF]/10">
-              <h4 className="text-xs font-body font-semibold tracking-[0.18em] uppercase text-[#A8B7A0] mb-3">
-                {t("footer.followTitle")}
-              </h4>
-              <a
-                href="https://www.linkedin.com/company/ponte-social"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors min-h-[38px]"
-              >
-                <Linkedin size={15} className="text-[#A8B7A0]" />
-                {t("footer.linkedinLabel")}
-              </a>
-            </div>
+            <a
+              href="https://www.linkedin.com/company/ponte-social"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/70 hover:text-[#FFFFFF] transition-colors min-h-[38px]"
+            >
+              <Linkedin size={15} className="text-[#A8B7A0]" />
+              {t("footer.linkedinLabel")}
+            </a>
           </div>
         </div>
 
