@@ -15,7 +15,7 @@ export default function ReputationBlock() {
   return (
     <section className="relative py-20 lg:py-28 bg-navy overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 lg:px-10">
-        <motion.div {...fade(0)} className="text-center">
+        <motion.div {...fade(0)} className="max-w-3xl">
           <span className="inline-block h-px w-10 bg-[#A8B7A0] mb-6" />
           <motion.h2
             {...fade(0.05)}
@@ -25,7 +25,7 @@ export default function ReputationBlock() {
           </motion.h2>
         </motion.div>
 
-        <div className="mt-10 max-w-3xl mx-auto space-y-5">
+        <div className="mt-10 max-w-3xl space-y-5">
           <motion.p {...fade(0.1)} className="text-[#FFFFFF]/75 text-[15px] lg:text-base leading-relaxed">
             {t("reputation.p1")}
           </motion.p>
