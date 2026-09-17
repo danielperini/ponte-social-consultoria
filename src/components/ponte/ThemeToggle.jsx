@@ -10,7 +10,7 @@ const OPTIONS = [
 
 export default function ThemeToggle({ scrolled = false, className = "" }) {
   const { theme, setTheme } = useTheme();
-  const baseColor = scrolled ? "text-[#FFFFFF]/70 hover:text-[#FFFFFF]" : "text-[#073050]/60 hover:text-[#073050]";
+  const baseColor = "text-[#FFFFFF]/70 hover:text-[#FFFFFF]";
   return (
     <div
       role="group"

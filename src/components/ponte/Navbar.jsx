@@ -5,6 +5,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
 import { navigateToSection } from "@/lib/navScroll";
+import { useLocation } from "react-router-dom";
 
 const MENU = [
   { label: "nav.about", target: "a-ponte" },
@@ -18,6 +19,9 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const solid = scrolled || !isHome;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -35,24 +39,24 @@ export default function Navbar() {
     navigateToSection(target);
   };
 
-  const dividerClass = scrolled ? "bg-[#A4B29B]" : "bg-[#FFFFFF]/40";
+  const dividerClass = solid ? "bg-[#A4B29B]" : "bg-[#FFFFFF]/40";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 select-none [-webkit-user-select:none] safe-top ${
-        scrolled
+        solid
           ? "bg-[#073050]/95 backdrop-blur-md border-b border-[#5B8AA8]/30"
           : "bg-transparent"
       }`}
     >
-      <div className={`max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between ${scrolled ? "py-2" : "py-4"}`}>
+      <div className={`max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between ${solid ? "py-2" : "py-4"}`}>
         <div className="flex items-center gap-5">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center group min-h-[44px]"
             aria-label={t("nav.brand")}
           >
-            <Logo theme={scrolled ? "brand" : "light"} />
+            <Logo theme={solid ? "brand" : "light"} />
           </button>
 
           <nav className="hidden lg:flex items-center gap-5">
@@ -61,7 +65,7 @@ export default function Navbar() {
                 key={item.target}
                 onClick={() => handleClick(item.target)}
                 className={`group relative text-xs font-semibold tracking-[0.12em] transition-all duration-300 ease-out cursor-pointer min-h-[44px] flex items-center ${
-                  scrolled ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
+                  solid ? "text-[#FFFFFF] hover:text-[#E2EBF2]" : "text-[#FFFFFF] hover:text-[#A4B29B]"
                 }`}
               >
                 {t(item.label)}
@@ -73,13 +77,13 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-4">
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
-          <LanguageSwitcher scrolled={scrolled} />
+          <LanguageSwitcher scrolled={solid} />
           <span className={`hidden lg:block w-px h-4 ${dividerClass}`} />
-          <ThemeToggle scrolled={scrolled} />
+          <ThemeToggle scrolled={solid} />
         </div>
 
         <div className="lg:hidden flex items-center gap-2">
-          <LanguageSwitcher scrolled={scrolled} />
+          <LanguageSwitcher scrolled={solid} />
           <button
             onClick={() => setOpen(!open)}
             className={`p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[#FFFFFF]`}
