@@ -7,7 +7,7 @@ export default function Logo({ theme = "brand", className = "" }) {
     <img
       src={LOGO_URL}
       alt="Ponte Social Consultoria"
-      className={`object-contain h-[112px] w-[112px] lg:h-[135px] lg:w-[135px] shrink-0 ${className}`}
+      className={`object-contain h-[100px] w-[100px] lg:h-[135px] lg:w-[135px] shrink-0 ${className}`}
     />
   );
 }
