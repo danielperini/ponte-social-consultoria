@@ -325,7 +325,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
         },
         {
-          kicker: "Perfil · Consultor Sênior",
+          kicker: "Perfil · Consultor Associado",
           name: "Daniel Perini",
           role: "Diálogo social, relacionamento comunitário e estratégia ESG",
           summary: "Sênior com mais de 20 anos de experiência em diálogo social, relacionamento comunitário, projetos sociais e estratégia ESG, com atuação na Fundação Renova, Fundação ArcelorMittal e no Governo de Minas Gerais. Construiu sua trajetória na interface entre empresas, comunidades, poder público e instituições, combinando articulação institucional, relação com o território, mediação de conflitos e implementação de estratégias sociais e ESG. Seu repertório une visão estratégica e experiência de campo para compreender o território, estabelecer diálogo, antecipar tensões e construir relações consistentes para a decisão.",
@@ -355,7 +355,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/daniel-perini-esg",
         },
         {
-          kicker: "Perfil · Consultor Sênior",
+          kicker: "Perfil · Consultor Associado",
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Estratégia ESG, desenvolvimento territorial e relações institucionais",
           summary: "Executivo com mais de 20 anos de experiência em ESG, desenvolvimento territorial, relações institucionais, comunicação estratégica, licenciamento social e investimento social. Liderou agendas de sustentabilidade e responsabilidade social em setores como mineração, indústria e infraestrutura, conduzindo estratégias de relacionamento com comunidades, governos e investidores e estruturando programas de investimento social com foco em resultados e reputação.",
@@ -366,7 +366,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321/",
         },
         {
-          kicker: "Perfil · Consultora Master",
+          kicker: "Perfil · Consultora Associada",
           name: "Patricia Abreu",
           role: "Comunicação estratégica, reputação, stakeholders e mobilização social",
           summary: "Executiva e consultora com mais de 25 anos de experiência em comunicação estratégica, reputação e relacionamento institucional, com atuação em empresas de grande porte e projetos de alta complexidade e impacto social.\n\nSua experiência combina gestão de reputação, comunicação pública, mobilização social e relacionamento com stakeholders, com forte capacidade de leitura de contextos e territórios. Atua a partir da escuta e da compreensão das percepções dos diferentes públicos para desenvolver estratégias de comunicação e relacionamento que fortaleçam vínculos, confiança e legitimidade.\n\nNa agenda de sustentabilidade, idealizou e liderou o Terra Preta Digital, iniciativa de cidadania e letramento digital na Amazônia, desenvolvida com comunicadores indígenas, educomunicadores e comunicadores populares, conectando inclusão digital, valorização cultural e desenvolvimento local.",
@@ -743,7 +743,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
         },
         {
-          kicker: "Profile · Senior Consultant",
+          kicker: "Profile · Associate Consultant",
           name: "Daniel Perini",
           role: "Social dialogue, community relations, and ESG strategy",
           summary: "Senior with more than 20 years of experience in social dialogue, community relations, social projects, and ESG strategy, having worked at Fundação Renova, Fundação ArcelorMittal, and the Government of Minas Gerais. He built his career at the interface between companies, communities, government, and institutions, combining institutional articulation, territorial engagement, conflict mediation, and the implementation of social and ESG strategies. His repertoire unites strategic vision and field experience to understand the territory, establish dialogue, anticipate tensions, and build consistent relationships for decision-making.",
@@ -773,7 +773,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/daniel-perini-esg",
         },
         {
-          kicker: "Profile · Senior Consultant",
+          kicker: "Profile · Associate Consultant",
           name: "Bernardo Pinheiro Moreira Lage",
           role: "ESG strategy, territorial development, and institutional relations",
           summary: "Executive with more than 20 years of experience in ESG, territorial development, institutional relations, strategic communication, social licensing, and social investment. He led sustainability and social responsibility agendas in sectors such as mining, industry, and infrastructure, driving relationship strategies with communities, governments, and investors and structuring social investment programs focused on results and reputation.",
@@ -784,7 +784,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321/",
         },
         {
-          kicker: "Profile · Master Consultant",
+          kicker: "Profile · Associate Consultant",
           name: "Patricia Abreu",
           role: "Strategic communication, reputation, stakeholders, and social mobilization",
           summary: "Executive and consultant with more than 25 years of experience in strategic communication, reputation, and institutional relations, working in large companies and projects of high complexity and social impact.\n\nHer experience combines reputation management, public communication, social mobilization, and stakeholder relations, with a strong capacity to read contexts and territories. She works from listening and understanding the perceptions of different audiences to develop communication and relationship strategies that strengthen bonds, trust, and legitimacy.\n\nIn the sustainability agenda, she conceived and led Terra Preta Digital, a citizenship and digital literacy initiative in the Amazon, developed with indigenous communicators, edu-communicators, and community communicators, connecting digital inclusion, cultural appreciation, and local development.",
@@ -1161,7 +1161,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/anacarolinamouramaciel/",
         },
         {
-          kicker: "Perfil · Consultor Sénior",
+          kicker: "Perfil · Consultor Asociado",
           name: "Daniel Perini",
           role: "Diálogo social, relación comunitaria y estrategia ESG",
           summary: "Sénior con más de 20 años de experiencia en diálogo social, relación comunitaria, proyectos sociales y estrategia ESG, con actuación en Fundação Renova, Fundação ArcelorMittal y el Gobierno de Minas Gerais. Construyó su trayectoria en la interfaz entre empresas, comunidades, poder público e instituciones, combinando articulación institucional, relación con el territorio, mediación de conflictos e implementación de estrategias sociales y ESG. Su repertorio une visión estratégica y experiencia de campo para comprender el territorio, establecer diálogo, anticipar tensiones y construir relaciones consistentes para la decisión.",
@@ -1191,7 +1191,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/daniel-perini-esg",
         },
         {
-          kicker: "Perfil · Consultor Sénior",
+          kicker: "Perfil · Consultor Asociado",
           name: "Bernardo Pinheiro Moreira Lage",
           role: "Estrategia ESG, desarrollo territorial y relaciones institucionales",
           summary: "Ejecutivo con más de 20 años de experiencia en ESG, desarrollo territorial, relaciones institucionales, comunicación estratégica, licenciamiento social e inversión social. Lideró agendas de sostenibilidad y responsabilidad social en sectores como minería, industria e infraestructura, conduciendo estrategias de relación con comunidades, gobiernos e inversores y estructurando programas de inversión social con foco en resultados y reputación.",
@@ -1202,7 +1202,7 @@ export const translations = {
           linkedin: "https://www.linkedin.com/in/bernardo-pinheiro-moreira-lage-36287321/",
         },
         {
-          kicker: "Perfil · Consultora Master",
+          kicker: "Perfil · Consultora Asociada",
           name: "Patricia Abreu",
           role: "Comunicación estratégica, reputación, stakeholders y movilización social",
           summary: "Ejecutiva y consultora con más de 25 años de experiencia en comunicación estratégica, reputación y relaciones institucionales, con actuación en empresas de gran porte y proyectos de alta complejidad e impacto social.\n\nSu experiencia combina gestión de reputación, comunicación pública, movilización social y relación con stakeholders, con fuerte capacidad de lectura de contextos y territorios. Actúa a partir de la escucha y la comprensión de las percepciones de los diferentes públicos para desarrollar estrategias de comunicación y relación que fortalezcan vínculos, confianza y legitimidad.\n\nEn la agenda de sostenibilidad, idealizó y lideró Terra Preta Digital, iniciativa de ciudadanía y alfabetización digital en la Amazonia, desarrollada con comunicadores indígenas, educomunicadores y comunicadores populares, conectando inclusión digital, valorización cultural y desarrollo local.",

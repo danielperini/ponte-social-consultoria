@@ -6,8 +6,8 @@ import ConsultantCard from "./ConsultantCard";
 import { useSectionVisibility } from "@/hooks/useSectionVisibility";
 
 const PROFILE_ORDER = [
-  "Patricia Abreu",
   "Ana Carolina de Moura Maciel",
+  "Patricia Abreu",
   "Daniel Perini",
   "Bernardo Pinheiro Moreira Lage",
 ];
