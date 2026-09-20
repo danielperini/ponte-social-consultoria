@@ -105,10 +105,8 @@ export default function Team() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex items-center justify-center gap-3 mt-5 select-none [-webkit-user-select:none]">
-                <CarouselPrevious className="static left-auto top-auto translate-y-0 min-h-[44px] min-w-[44px] h-11 w-11 transition-transform active:scale-90" />
-                <CarouselNext className="static left-auto top-auto translate-y-0 min-h-[44px] min-w-[44px] h-11 w-11 transition-transform active:scale-90" />
-              </div>
+              <CarouselPrevious className="left-2 lg:left-3 top-1/2 -translate-y-1/2 h-9 w-9 min-h-[44px] min-w-[44px] rounded-full bg-background/85 backdrop-blur border-secondary/40 shadow-sm hover:bg-background transition-transform active:scale-90 z-10" />
+              <CarouselNext className="right-2 lg:right-3 top-1/2 -translate-y-1/2 h-9 w-9 min-h-[44px] min-w-[44px] rounded-full bg-background/85 backdrop-blur border-secondary/40 shadow-sm hover:bg-background transition-transform active:scale-90 z-10" />
             </Carousel>
           </motion.div>
         </div>
