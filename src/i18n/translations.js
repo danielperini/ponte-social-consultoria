@@ -28,7 +28,7 @@ export const translations = {
       tag2: "Inteligência Territorial",
       tag3: "Relacionamentos",
       cta: "Fale com a Ponte",
-      scroll: "Role para descobrir",
+      scroll: "Saiba mais",
       imgAlt: "Observação de um contexto territorial — estrada, rio e infraestrutura ao fundo",
     },
     aponte: {
@@ -515,7 +515,7 @@ export const translations = {
       tag2: "Territorial Intelligence",
       tag3: "Relationships",
       cta: "Talk to Ponte",
-      scroll: "Scroll to discover",
+      scroll: "Learn more",
       imgAlt: "Observation of a territorial context — road, river, and infrastructure in the background",
     },
     aponte: {
@@ -933,7 +933,7 @@ export const translations = {
       tag2: "Inteligencia Territorial",
       tag3: "Relaciones",
       cta: "Hable con Ponte",
-      scroll: "Desliza para descubrir",
+      scroll: "Saber más",
       imgAlt: "Observación de un contexto territorial — carretera, río e infraestructura al fondo",
     },
     aponte: {
