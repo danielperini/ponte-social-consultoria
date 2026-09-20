@@ -30,44 +30,41 @@ export default function TextScaleToggle() {
   };
 
   const baseBtn =
-    "min-h-[44px] px-3 py-2 rounded-full text-xs font-semibold tracking-[0.08em] uppercase transition-colors flex items-center gap-1.5";
+    "h-8 w-8 rounded-full text-xs font-semibold leading-none transition-colors flex items-center justify-center";
 
   return (
     <div
-      className="flex items-center gap-2"
+      className="flex items-center gap-1.5"
       role="group"
       aria-label={t("a11y.textScaleAria")}
     >
-      <span className="flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.18em] uppercase text-[#A8B7A0]">
-        <Type size={13} />
-        {t("a11y.textScaleLabel")}
-      </span>
-      <div className="flex items-center gap-1.5">
-        <button
-          type="button"
-          onClick={() => choose("normal")}
-          aria-pressed={scale === "normal"}
-          className={`${baseBtn} ${
-            scale === "normal"
-              ? "bg-[#A8B7A0] text-[#073050]"
-              : "bg-[#0a3a5e] text-[#FFFFFF]/70 hover:text-[#FFFFFF]"
-          }`}
-        >
-          A · {t("a11y.textScaleNormal")}
-        </button>
-        <button
-          type="button"
-          onClick={() => choose("large")}
-          aria-pressed={scale === "large"}
-          className={`${baseBtn} ${
-            scale === "large"
-              ? "bg-[#A8B7A0] text-[#073050]"
-              : "bg-[#0a3a5e] text-[#FFFFFF]/70 hover:text-[#FFFFFF]"
-          }`}
-        >
-          A+ · {t("a11y.textScaleLarge")}
-        </button>
-      </div>
+      <Type size={14} className="text-[#A8B7A0] shrink-0" aria-hidden />
+      <button
+        type="button"
+        onClick={() => choose("normal")}
+        aria-label={t("a11y.textScaleNormal")}
+        aria-pressed={scale === "normal"}
+        className={`${baseBtn} ${
+          scale === "normal"
+            ? "bg-[#A8B7A0] text-[#073050]"
+            : "bg-[#0a3a5e] text-[#FFFFFF]/70 hover:text-[#FFFFFF]"
+        }`}
+      >
+        A
+      </button>
+      <button
+        type="button"
+        onClick={() => choose("large")}
+        aria-label={t("a11y.textScaleLarge")}
+        aria-pressed={scale === "large"}
+        className={`${baseBtn} ${
+          scale === "large"
+            ? "bg-[#A8B7A0] text-[#073050]"
+            : "bg-[#0a3a5e] text-[#FFFFFF]/70 hover:text-[#FFFFFF]"
+        }`}
+      >
+        A+
+      </button>
     </div>
   );
 }

@@ -8,9 +8,11 @@ const OPTIONS = [
   { value: "system", Icon: Monitor, label: "System" },
 ];
 
-export default function ThemeToggle({ scrolled = false, className = "" }) {
+export default function ThemeToggle({ scrolled = false, compact = false, className = "" }) {
   const { theme, setTheme } = useTheme();
   const baseColor = "text-[#FFFFFF]/70 hover:text-[#FFFFFF]";
+  const btnSize = compact ? "h-8 w-8" : "min-h-[44px] min-w-[44px]";
+  const iconSize = compact ? 14 : 15;
   return (
     <div
       role="group"
@@ -26,11 +28,11 @@ export default function ThemeToggle({ scrolled = false, className = "" }) {
             aria-label={label}
             aria-pressed={active}
             onClick={() => setTheme(value)}
-            className={`min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full transition-colors ${
+            className={`${btnSize} flex items-center justify-center rounded-full transition-colors ${
               active ? "text-[#477A63]" : baseColor
             }`}
           >
-            <Icon size={15} />
+            <Icon size={iconSize} />
           </button>
         );
       })}

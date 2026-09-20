@@ -97,8 +97,8 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden fixed inset-0 z-40 bg-[#073050] safe-top overflow-y-auto">
-          <div className="flex flex-col gap-3 px-6 pt-28 pb-4 border-b border-[#5B8AA8]/15">
-            <ThemeToggle scrolled={true} />
+          <div className="flex items-center justify-between px-6 pt-28 pb-4 border-b border-[#5B8AA8]/15">
+            <ThemeToggle scrolled={true} compact />
             <TextScaleToggle />
           </div>
           <nav className="flex flex-col px-6 pt-6 pb-12 gap-1">
