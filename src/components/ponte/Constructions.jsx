@@ -105,7 +105,7 @@ export default function Constructions() {
           ))}
         </div>
 
-        <div className="mt-20 grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="mt-20 grid lg:grid-cols-12 gap-10 lg:gap-12 items-start hidden">
           <div className="lg:col-span-5">
             <h3 className="font-display text-2xl lg:text-3xl text-foreground leading-tight">{t("constructions.formTitle")}</h3>
             <p className="mt-3 text-foreground/70 text-[15px] leading-relaxed">{t("constructions.formIntro")}</p>
