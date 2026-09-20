@@ -14,11 +14,6 @@ function detectLang() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved && LANGUAGES.includes(saved)) return saved;
   } catch (e) {}
-  try {
-    const nav = (navigator.language || "").toLowerCase();
-    if (nav.startsWith("en")) return "en";
-    if (nav.startsWith("es")) return "es";
-  } catch (e) {}
   return DEFAULT_LANG;
 }
 
