@@ -114,6 +114,22 @@ export default function ConsultantCard({ p, labels }) {
         </div>
       </div>
 
+      {p.specialties?.length > 0 && (
+        <div className="mt-4 border-t border-foreground/12 pt-3">
+          <p className="flex items-center gap-2 text-sm font-medium tracking-[0.18em] uppercase text-foreground/50 mb-1.5">
+            <Sparkles size={14} className="text-accent" />
+            {labels.specialtiesTitle}
+          </p>
+          <ul className="space-y-1">
+            {p.specialties.map((s, i) => (
+              <li key={i} className="text-foreground/75 text-sm leading-relaxed flex gap-2">
+                <span className="text-accent">·</span>{s}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <a
         href={p.linkedin}
         target="_blank"
