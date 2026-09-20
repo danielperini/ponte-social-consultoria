@@ -61,10 +61,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.05, duration: 0.7 }}
-            className="inline-flex items-center gap-2 sm:gap-3 text-[#A8B7A0] text-[11px] sm:text-sm font-medium tracking-[0.12em] sm:tracking-[0.2em] uppercase mb-6"
+            className="inline-flex items-center gap-2 sm:gap-3 text-[#A8B7A0] text-[10px] sm:text-sm font-medium tracking-[0.1em] sm:tracking-[0.2em] uppercase mb-6"
           >
             <span className="h-px w-6 sm:w-8 bg-[#A8B7A0]" />
-            {t("hero.tag1")} · {t("hero.tag2")} · {t("hero.tag3")}
+            {t("hero.tag1")} · <span className="whitespace-nowrap">{t("hero.tag2")} · {t("hero.tag3")}</span>
           </motion.span>
 
           <motion.h1
