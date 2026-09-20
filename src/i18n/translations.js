@@ -13,6 +13,12 @@ export const translations = {
       insights: "Artigos",
     },
     langSelector: { ariaLabel: "Selecionar idioma" },
+    a11y: {
+      textScaleLabel: "Tamanho do texto",
+      textScaleNormal: "Padrão",
+      textScaleLarge: "Grande",
+      textScaleAria: "Ajustar tamanho do texto",
+    },
     hero: {
       title: "Quais riscos sociais podem afetar sua próxima decisão?",
       description:
@@ -494,6 +500,12 @@ export const translations = {
       insights: "Insights",
     },
     langSelector: { ariaLabel: "Select language" },
+    a11y: {
+      textScaleLabel: "Text size",
+      textScaleNormal: "Default",
+      textScaleLarge: "Large",
+      textScaleAria: "Adjust text size",
+    },
     hero: {
       title: "Which social risks could affect your next decision?",
       description:
@@ -906,6 +918,12 @@ export const translations = {
       insights: "Artículos",
     },
     langSelector: { ariaLabel: "Seleccionar idioma" },
+    a11y: {
+      textScaleLabel: "Tamaño del texto",
+      textScaleNormal: "Predeterminado",
+      textScaleLarge: "Grande",
+      textScaleAria: "Ajustar tamaño del texto",
+    },
     hero: {
       title: "¿Qué riesgos sociales pueden afectar su próxima decisión?",
       description:

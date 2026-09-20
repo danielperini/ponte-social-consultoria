@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
+import TextScaleToggle from "./TextScaleToggle";
 import Logo from "./Logo";
 import { navigateToSection } from "@/lib/navScroll";
 import { useLocation } from "react-router-dom";
@@ -96,8 +97,9 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden fixed inset-0 z-40 bg-[#073050] safe-top overflow-y-auto">
-          <div className="flex items-center gap-2 px-6 pt-28 pb-4 border-b border-[#5B8AA8]/15">
+          <div className="flex flex-col gap-3 px-6 pt-28 pb-4 border-b border-[#5B8AA8]/15">
             <ThemeToggle scrolled={true} />
+            <TextScaleToggle />
           </div>
           <nav className="flex flex-col px-6 pt-6 pb-12 gap-1">
             {MENU.map((item) => (

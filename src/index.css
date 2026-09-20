@@ -168,6 +168,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Accessibility: optional larger text on mobile only. Default (no class)
+     keeps the original font sizes. */
+  @media (max-width: 1023px) {
+    html.text-scale-lg {
+      zoom: 1.12;
+    }
+  }
   @media (prefers-reduced-motion: reduce) {
     .section-reveal {
       opacity: 1;
