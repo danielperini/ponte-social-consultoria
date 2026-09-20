@@ -6,7 +6,7 @@ export default function ConsultantCard({ p, labels }) {
   const hasExpand = (p.certs?.length > 0 || p.complementary?.length > 0 || p.competencies?.length > 0);
 
   return (
-    <div className="h-full min-h-[520px] lg:min-h-[580px] flex flex-col bg-secondary/10 border border-secondary/30 rounded-xl p-5 lg:p-6 shadow-[0_1px_3px_rgba(7,48,80,0.04)]">
+    <div className="h-full min-h-[560px] lg:min-h-[640px] flex flex-col bg-secondary/10 border border-secondary/30 rounded-xl p-5 lg:p-6 shadow-[0_1px_3px_rgba(7,48,80,0.04)]">
       <span className="text-accent text-sm font-medium tracking-[0.2em] uppercase">{p.kicker}</span>
       <h3 className="font-display text-xl lg:text-2xl text-foreground mt-1.5 leading-tight">{p.name}</h3>
       <p className="text-accent text-sm font-medium mt-1 leading-snug">{p.role}</p>
