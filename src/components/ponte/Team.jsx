@@ -105,8 +105,12 @@ export default function Team() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-2 lg:left-3 top-1/2 -translate-y-1/2 h-9 w-9 min-h-[44px] min-w-[44px] rounded-full bg-background/85 backdrop-blur border-secondary/40 shadow-sm hover:bg-background transition-transform active:scale-90 z-10" />
-              <CarouselNext className="right-2 lg:right-3 top-1/2 -translate-y-1/2 h-9 w-9 min-h-[44px] min-w-[44px] rounded-full bg-background/85 backdrop-blur border-secondary/40 shadow-sm hover:bg-background transition-transform active:scale-90 z-10" />
+              <div className="flex lg:hidden items-center justify-center gap-3 mt-4 select-none [-webkit-user-select:none]">
+                <CarouselPrevious className="static left-auto top-auto translate-y-0 h-10 w-10 min-h-[44px] min-w-[44px] rounded-full bg-background border border-secondary/40 shadow-sm hover:bg-secondary/20 transition-transform active:scale-90" />
+                <CarouselNext className="static left-auto top-auto translate-y-0 h-10 w-10 min-h-[44px] min-w-[44px] rounded-full bg-background border border-secondary/40 shadow-sm hover:bg-secondary/20 transition-transform active:scale-90" />
+              </div>
+              <CarouselPrevious className="hidden lg:flex -left-12 top-1/2 -translate-y-1/2 h-9 w-9 min-h-[44px] min-w-[44px] rounded-full bg-background border border-secondary/40 shadow-sm hover:bg-secondary/20 transition-transform active:scale-90 z-10" />
+              <CarouselNext className="hidden lg:flex -right-12 top-1/2 -translate-y-1/2 h-9 w-9 min-h-[44px] min-w-[44px] rounded-full bg-background border border-secondary/40 shadow-sm hover:bg-secondary/20 transition-transform active:scale-90 z-10" />
             </Carousel>
           </motion.div>
         </div>
