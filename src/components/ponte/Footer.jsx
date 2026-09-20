@@ -36,7 +36,7 @@ export default function Footer() {
             {t("footer.followTitle")}
           </h4>
           <a
-            href="https://www.linkedin.com/company/ponte-social"
+            href="https://www.linkedin.com/company/pontesocialconsultoria"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-[#FFFFFF]/75 hover:text-[#FFFFFF] transition-colors min-h-[36px]"
