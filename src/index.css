@@ -175,6 +175,9 @@
     html.text-scale-lg {
       zoom: 1.12;
     }
+    html.text-scale-xl {
+      zoom: 1.24;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .section-reveal {

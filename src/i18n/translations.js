@@ -17,6 +17,7 @@ export const translations = {
       textScaleLabel: "Tamanho do texto",
       textScaleNormal: "Padrão",
       textScaleLarge: "Grande",
+      textScaleXLarge: "Extra grande",
       textScaleAria: "Ajustar tamanho do texto",
     },
     hero: {
@@ -506,6 +507,7 @@ export const translations = {
       textScaleLabel: "Text size",
       textScaleNormal: "Default",
       textScaleLarge: "Large",
+      textScaleXLarge: "Extra large",
       textScaleAria: "Adjust text size",
     },
     hero: {
@@ -926,6 +928,7 @@ export const translations = {
       textScaleLabel: "Tamaño del texto",
       textScaleNormal: "Predeterminado",
       textScaleLarge: "Grande",
+      textScaleXLarge: "Extra grande",
       textScaleAria: "Ajustar tamaño del texto",
     },
     hero: {

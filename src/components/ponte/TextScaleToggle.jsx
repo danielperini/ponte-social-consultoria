@@ -3,12 +3,12 @@ import { Type } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 const STORAGE_KEY = "ponte_text_scale";
-const LARGE_CLASS = "text-scale-lg";
+const SCALE_CLASSES = { large: "text-scale-lg", xlarge: "text-scale-xl" };
 
 function applyScale(scale) {
   const html = document.documentElement;
-  if (scale === "large") html.classList.add(LARGE_CLASS);
-  else html.classList.remove(LARGE_CLASS);
+  Object.values(SCALE_CLASSES).forEach((cls) => html.classList.remove(cls));
+  if (SCALE_CLASSES[scale]) html.classList.add(SCALE_CLASSES[scale]);
 }
 
 export default function TextScaleToggle() {
@@ -17,7 +17,7 @@ export default function TextScaleToggle() {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "large" || stored === "normal") {
+    if (stored === "large" || stored === "xlarge" || stored === "normal") {
       setScale(stored);
       applyScale(stored);
     }
@@ -64,6 +64,19 @@ export default function TextScaleToggle() {
         }`}
       >
         A+
+      </button>
+      <button
+        type="button"
+        onClick={() => choose("xlarge")}
+        aria-label={t("a11y.textScaleXLarge")}
+        aria-pressed={scale === "xlarge"}
+        className={`${baseBtn} ${
+          scale === "xlarge"
+            ? "bg-[#A8B7A0] text-[#073050]"
+            : "bg-[#0a3a5e] text-[#FFFFFF]/70 hover:text-[#FFFFFF]"
+        }`}
+      >
+        A++
       </button>
     </div>
   );
