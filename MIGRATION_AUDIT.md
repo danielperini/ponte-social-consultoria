@@ -1,6 +1,6 @@
 # Auditoria técnica de migração — Ponte Social Consultoria
 
-**Data:** 23/09/2026 · **Repositório:** `danielperini/ponte-social-consultoria` · **Escopo:** somente leitura do código e proposta técnica. Nenhuma migração ou publicação foi executada.
+**Data:** 23/09/2026 · **Repositório:** `danielperini/ponte-social-consultoria` · **Escopo:** leitura do código, conciliação de inventário informado pelo proprietário e proposta técnica. Nenhuma migração ou publicação foi executada.
 
 **Base examinada:** os 144 arquivos do ZIP recebido, comparados por SHA de cada arquivo com a árvore completa da branch `main` no GitHub (árvore `562da8ddae899f34d3aba4a5bdb5288c240d21a5`; sem diferenças). Contagem feita **antes** da inclusão deste relatório: **140 ocorrências textuais, sem distinguir maiúsculas, de “base44” em 28 arquivos**, incluindo 8 no `package-lock.json` e 53 em `README.md`/`AGENTS.md` (35 + 18). No diretório `src/` há **62 ocorrências em 20 arquivos**. “Ocorrência” aqui significa correspondência de texto, e não número de integrações distintas ou de recursos efetivamente usados. A leitura do ZIP não permite verificar configurações privadas, banco, usuários, funções hospedadas ou comportamento efetivo do painel Base44/Hostinger.
 
@@ -17,6 +17,23 @@
 | Operação | O README diz que o GitHub sincroniza com o Builder Base44 e que a publicação é feita no painel. Não há workflow GitHub Actions nem configuração de hospedagem independente no ZIP. | `README.md:1–5,46–55`; inventário de arquivos |
 
 **Limite importante:** código presente no repositório e funcionalidades habilitadas em produção não são necessariamente a mesma coisa. É necessária conferência em painel/exportação na etapa seguinte, sem interromper o serviço atual.
+
+### Complemento: inventário do painel fornecido em 23/09/2026
+
+O proprietário trouxe um inventário produzido no Base44 após a auditoria do Git. Os dados de painel abaixo são **informados, não verificados diretamente nesta auditoria**. Quando o inventário interpreta o código, prevalece a conferência nos arquivos e no roteador versionados.
+
+| Tema | Dado informado pelo inventário | Conciliação com o repositório e consequência |
+| --- | --- | --- |
+| Entidades e dados | Só a entidade embutida `User`, com **um registro de administrador**, sem entidades customizadas ou dados editoriais em tabelas. | Coerente com `base44/entities/User.jsonc` e conteúdo editorial em JS. Preparar exportação autorizada dos metadados da conta e conciliação do acesso; o Git não contém esse registro. |
+| Login do administrador | O inventário informa senha hash nula e existência de chave de API no registro; sugere OAuth ou chave como método. | **Esses dois campos não provam como a pessoa entra.** Validar o método efetivamente utilizado antes de decidir Google OAuth, senha, reset ou revogação. Não copiar, divulgar ou usar a chave como credencial de migração. |
+| Backend e conectores | Nenhuma function, automação, agente ou entidade customizada no painel; conector Google Drive registrado no workspace, sem uso aparente pelo app. | Condiz com a ausência de código servidor e chamadas a `base44.functions`/`base44.connectors`. O conector de workspace não justifica construir integração Google Drive para este site sem uso comprovado. |
+| MCP | Inventário informa MCP não configurado e ausência do arquivo de configuração. | O código **contém** `src/pages/OAuthConsent.jsx:39–41,90–95` com requisições de consentimento MCP, mas a tela não tem rota e não há servidor/configuração versionada. Registrar como código sem uso demonstrado, não como ausência de referências. |
+| E-mail | Formulário comercial oculto em `Constructions.jsx`; inventário conclui que nenhum envio acontece em produção. | A rota ativa `/conta/excluir` usa `Core.SendEmail` em `AccountDeletion.jsx:40–44`. Não é possível concluir que o envio esteja inativo; este fluxo permanece bloqueador para desligar Base44. O formulário comercial continua oculto. |
+| Rotas de autenticação | Inventário descreve `/login`, `/register`, `/forgot-password` e `/reset-password` como rotas disponíveis. | Esses arquivos existem, mas **`src/App.jsx:39–42` não registra essas rotas React**. Se o painel oferecer login por páginas da plataforma, isso é distinto de rotas desta SPA; verificar como o administrador entra de fato. |
+| Mídia e conteúdo | Dez imagens Base44 com URLs públicas; 12 imagens Unsplash; artigos e traduções em código. | Confirmam o inventário estático. As 12 URLs Unsplash estão nos arquivos `src/components/ponte/articles/a1.js` a `a12.js`; não atribuir seu uso às seções `Sectors` ou `Trajectories` sem referência no código. Antes do corte, guardar cópias autorizadas das dez imagens e verificar qualidade/licença. |
+| Domínio e publicação | Inventário informa publicação em `inteligecia-social-ponte.base44.app` e presume que o domínio personalizado não está conectado, baseado em histórico. | Tratar o estado dos domínios como **não verificado ao vivo**. Canonical e metadados no `index.html` não comprovam conexão, e esta auditoria não consultou nem alterou DNS ou configuração do hPanel. |
+
+Assim, o inventário reduz a **migração de dados conhecida** a uma conta, mas não elimina as dependências de autenticação, e-mail de exclusão, SDK/build e imagens.
 
 ## 2. Dependências Base44 encontradas
 
@@ -80,17 +97,17 @@ O `AuthProvider` inicia buscando configurações públicas e, quando existe toke
 | Logout/redirecionamento | `src/lib/AuthContext.jsx:105–121`; `src/lib/authReturnTo.js:5–29` | Provider montado; `navigateToLogin` invocado para erro `auth_required`. | Cookies `HttpOnly`, `Secure`, `SameSite`, proteção CSRF e retorno seguro. |
 | Consentimento MCP | `src/pages/OAuthConsent.jsx:23–135` | Sem rota e sem servidor/config MCP no ZIP. | Validar se há serviço real; só implementar se requerido, mantendo semântica de sessão, handle de uso único e consentimento. |
 
-**Migração de contas:** o ZIP não contém lista de usuários, hashes ou configuração Google. Confirmar exportação permitida pelo Base44; se senhas/hashes não puderem ser migrados com segurança, planejar redefinição de senha controlada. Não transportar tokens ou senhas em claro para Git ou frontend. O status real do login em produção depende também das configurações privadas do Builder.
+**Migração de contas:** o ZIP não contém lista de usuários, hashes ou configuração Google. O inventário fornecido pelo proprietário informa uma conta admin e hash de senha nulo, mas não estabelece o método real de acesso. Confirmar exportação permitida pelo Base44 e testar, em momento apropriado, o fluxo efetivamente usado; se senhas/hashes não puderem ser migrados com segurança, planejar redefinição de senha controlada. Não transportar chaves de API, tokens ou senhas para Git ou frontend. O status real do login em produção depende também das configurações privadas do Builder.
 
 ## 4. Dados e entidades
 
 Existe **uma** declaração de entidade versionada: `base44/entities/User.jsonc` com campo `role` obrigatório (valores `admin` e `user`). Não há código de CRUD dessa entidade e não há tabela própria versionada. Artigos, perfis, parceiros e traduções estão no código (`src/components/ponte/articles-data.js`, `articles/a1.js` a `a12.js`, `src/i18n/translations.js`), logo sua leitura não requer MySQL. Preferências de interface ficam no navegador e não são dados do servidor.
 
-MySQL do plano Hostinger é adequado para **usuários, sessões/recuperação/OTP e eventual registro de contatos/pedidos**, se esses fluxos forem confirmados como necessários. Senhas devem ser hashes e a regra `role` precisa ser imposta no backend. A auditoria do Git não permite estimar volume de dados privados, migração de histórico ou esquema efetivo no Base44. Exportar e inventariar dados pela interface/recursos autorizados antes de desenhar migração de dados; não criar tabelas desnecessárias apenas para artigos estáticos.
+O inventário de painel fornecido pelo proprietário informa **um usuário admin, nenhuma entidade customizada e nenhum outro dado de negócio no banco**; são dados operacionais ainda sem exportação conferida. MySQL do plano Hostinger é adequado para **usuários, sessões/recuperação/OTP e eventual registro de contatos/pedidos**, se esses fluxos forem confirmados como necessários. Senhas devem ser hashes e a regra `role` precisa ser imposta no backend. Exportar e inventariar os dados pela interface/recursos autorizados antes de desenhar migração de dados; não criar tabelas desnecessárias apenas para artigos estáticos. O perfil do usuário deve ser conciliado com o login de destino sem pressupor que senhas ou chaves de API sejam transferíveis.
 
 ## 5. Backend/functions
 
-Não existem funções Deno/Node versionadas nem chamadas a `base44.functions`. O README (`12–13,31–34`) descreve Deno e um backend local Base44 com entidades em memória, além de integrações/OAuth encaminhadas ao aplicativo hospedado: é documentação do ambiente Base44, não um backend independente incluído no ZIP.
+Não existem funções Deno/Node versionadas nem chamadas a `base44.functions`. O inventário informado pelo proprietário acrescenta que também **não há functions, workflows nem agentes no painel**. O README (`12–13,31–34`) descreve Deno e um backend local Base44 com entidades em memória, além de integrações/OAuth encaminhadas ao aplicativo hospedado: é documentação do ambiente Base44, não um backend independente incluído no ZIP.
 
 Endpoints efetivamente **chamados pelo frontend**: configurações públicas (`AuthContext`), autenticação (`Login`/`Register`/`ForgotPassword`/`ResetPassword`/`AuthContext`/`PageNotFound`), envio Core de e-mail (`Constructions`/`AccountDeletion`) e GET/POST de consentimento MCP em `OAuthConsent.jsx:39–41,90–95`. Estes últimos não têm servidor neste repositório e a tela não está ligada ao roteador. Um serviço MCP completo pode exigir emissão de tokens, callbacks, conexões de longa duração, SSE ou processos persistentes; **tais requisitos não estão demonstrados pelo código entregue**. Se existirem na instância, a versão atual do Premium não deve ser presumida compatível com um servidor Deno/Node persistente. Os fluxos HTTP curtos comprovados (contato, exclusão, login e recuperação) podem ser implementados em PHP sem VPS.
 
@@ -173,7 +190,7 @@ Fontes oficiais consultadas em 23/09/2026: [limites e MySQL/PHP/e-mail](https://
 
 | Etapa futura | Ações e critério de conclusão | Produção |
 | --- | --- | --- |
-| 1. Inventário operacional | Confirmar no Base44: política pública/privada, usuários, exportações, Google OAuth, e-mails, possíveis funções/MCP e dados fora do Git; verificar contrato Premium, MySQL e caixa de e-mail no hPanel. | Apenas leitura. |
+| 1. Inventário operacional | Confrontar o inventário de painel já fornecido com exportação/fluxos efetivos: confirmar a conta admin e seu método de login, disponibilidade de e-mail de exclusão, MCP e estado do domínio; verificar contrato Premium, MySQL e caixa de e-mail no hPanel. | Apenas leitura. |
 | 2. Preparação isolada | Criar branch de trabalho e ambiente de build Node compatível; copiar imagens autorizadas; comparar visuais, responsividade, SEO e rotas. | Base44 permanece intacto. |
 | 3. Backend mínimo | Implementar PHP para serviços efetivamente usados, MySQL só quando necessário, sessão segura e SMTP; reconciliar dados/contas. | Teste sem tráfego real de produção. |
 | 4. Substituição do cliente | Trocar chamadas SDK/plugin após testes; preservar componentes e fluxos; registrar/examinar rotas de autenticação hoje órfãs e opção MCP. | Sem alteração no domínio. |
@@ -208,7 +225,7 @@ Fontes oficiais consultadas em 23/09/2026: [limites e MySQL/PHP/e-mail](https://
 
 **Pendente para a próxima fase (não executado)**
 
-- [ ] Conferir painel Base44, fluxos reais, dados de usuários, funções e MCP; conferir plano e caixa Hostinger.
+- [ ] Verificar/exportar os dados informados pelo inventário de painel (um admin, sem entidades customizadas), método real de login, envio de e-mail de exclusão, domínio e MCP; conferir plano e caixa Hostinger.
 - [ ] Obter/autorizar cópia das 10 imagens, inventariar outros arquivos que só existam na plataforma.
 - [ ] Decidir e implementar substitutos de autenticação, e-mail, configurações e eventuais endpoints MCP; preservar funcionalidades existentes.
 - [ ] Validar `npm ci`/build, caminhos profundos, visual, segurança, e-mails, backup/restore e rollback em ambiente isolado.
