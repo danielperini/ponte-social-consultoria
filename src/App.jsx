@@ -20,7 +20,7 @@ const pageTransition = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
-  transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
 };
 
 const RouteFallback = () => (
@@ -33,7 +33,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <motion.div key={location.pathname} {...pageTransition}>
+      <motion.div key={location.pathname} {...pageTransition} className="bg-background">
         <Routes location={location}>
           {/* Add your page Route elements here */}
           <Route path="/" element={<Home />} />
