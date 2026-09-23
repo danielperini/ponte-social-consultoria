@@ -46,7 +46,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 select-none [-webkit-user-select:none] safe-top ${
         solid
-          ? "bg-[#073050]/95 backdrop-blur-md border-b border-[#5B8AA8]/30"
+          ? "bg-[#073050]/95 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
